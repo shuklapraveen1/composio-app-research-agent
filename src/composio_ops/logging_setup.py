@@ -19,6 +19,7 @@ from . import constants as C
 from .config import Settings
 
 _configured = False
+_configured_stderr = None
 
 
 def generate_run_id() -> str:
@@ -32,27 +33,44 @@ def configure_logging(
     run_id: Optional[str] = None,
     force: bool = False,
 ) -> str:
-    """Configure structlog once per process and return the active run id.
+    """Configure structlog and return the active run id.
 
-    Explicit arguments win over ``settings``; ``force`` re-applies configuration,
-    which tests use to switch renderers.
+    Configuration is reused while the process is using the same stderr stream.
+    Test runners such as Click's CliRunner replace sys.stderr between
+    invocations, so a changed stream must trigger reconfiguration.
     """
-    global _configured
+    global _configured, _configured_stderr
 
-    resolved_level = (level or (settings.log_level if settings else "INFO")).upper()
+    resolved_level = (
+        level or (settings.log_level if settings else "INFO")
+    ).upper()
+
     if resolved_level not in C.LOG_LEVELS:
         resolved_level = "INFO"
-    resolved_format = log_format or (settings.log_format if settings else C.LogFormat.CONSOLE)
-    resolved_run_id = run_id or (settings.run_id if settings else None) or generate_run_id()
 
-    if _configured and not force:
+    resolved_format = (
+        log_format
+        or (settings.log_format if settings else C.LogFormat.CONSOLE)
+    )
+
+    resolved_run_id = (
+        run_id
+        or (settings.run_id if settings else None)
+        or generate_run_id()
+    )
+
+    stderr_changed = _configured_stderr is not sys.stderr
+
+    if _configured and not force and not stderr_changed:
         structlog.contextvars.bind_contextvars(run_id=resolved_run_id)
         return resolved_run_id
 
     if resolved_format == C.LogFormat.JSON:
         renderer: Any = structlog.processors.JSONRenderer(sort_keys=True)
     else:
-        renderer = structlog.dev.ConsoleRenderer(colors=sys.stderr.isatty())
+        renderer = structlog.dev.ConsoleRenderer(
+            colors=sys.stderr.isatty()
+        )
 
     structlog.configure(
         processors=[
@@ -73,24 +91,32 @@ def configure_logging(
 
     structlog.contextvars.clear_contextvars()
     structlog.contextvars.bind_contextvars(
-        run_id=resolved_run_id, schema_version=C.SCHEMA_VERSION
+        run_id=resolved_run_id,
+        schema_version=C.SCHEMA_VERSION,
     )
+
     _configured = True
+    _configured_stderr = sys.stderr
+
     return resolved_run_id
 
 
 def reset_logging() -> None:
     """Return logging to its unconfigured state (used by tests)."""
-    global _configured
+    global _configured, _configured_stderr
+
     structlog.reset_defaults()
     structlog.contextvars.clear_contextvars()
+
     _configured = False
+    _configured_stderr = None
 
 
 def get_logger(name: Optional[str] = None) -> Any:
     """Return a bound logger, configuring defaults lazily if needed."""
-    if not _configured:
+    if not _configured or _configured_stderr is not sys.stderr:
         configure_logging()
+
     return structlog.get_logger(name or C.PACKAGE_NAME)
 
 
@@ -99,7 +125,9 @@ def stage_context(stage: C.PipelineStage, **fields: Any) -> Iterator[Any]:
     """Bind a pipeline stage for the duration of a block and log its outcome."""
     logger = get_logger().bind(stage=stage.value, **fields)
     started = time.monotonic()
+
     logger.info("stage.start")
+
     try:
         yield logger
     except Exception as exc:
@@ -112,5 +140,6 @@ def stage_context(stage: C.PipelineStage, **fields: Any) -> Iterator[Any]:
         raise
     else:
         logger.info(
-            "stage.complete", duration_seconds=round(time.monotonic() - started, 3)
+            "stage.complete",
+            duration_seconds=round(time.monotonic() - started, 3),
         )
