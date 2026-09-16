@@ -65,7 +65,6 @@ def _explicit(ctx: typer.Context, name: str) -> bool:
     source = ctx.get_parameter_source(name)
     return source is not None and source != click.core.ParameterSource.DEFAULT
 
-
 @handle_errors
 def global_options_callback(
     ctx: typer.Context,
@@ -85,42 +84,41 @@ def global_options_callback(
         None, "--run-id", help="Fixed run identifier, for reproducible log streams."
     ),
     dry_run: bool = typer.Option(
-        False, "--dry-run", help="Plan only: make no outbound calls and write nothing."
+        False,
+        "--dry-run",
+        help="Plan only: make no outbound calls and write nothing.",
     ),
 ) -> None:
     """Resolve configuration and logging for this invocation."""
     overrides: Dict[str, Any] = {}
-    if _explicit(ctx, "log_level") and log_level is not None:
+
+    if log_level is not None:
         overrides["log_level"] = log_level
-    if _explicit(ctx, "log_format") and log_format is not None:
+
+    if log_format is not None:
         overrides["log_format"] = log_format
-    if _explicit(ctx, "seed") and seed is not None:
+
+    if seed is not None:
         overrides["seed"] = seed
-    if _explicit(ctx, "data_dir") and data_dir is not None:
+
+    if data_dir is not None:
         overrides["data_dir"] = data_dir
-    if _explicit(ctx, "run_id") and run_id is not None:
+
+    if run_id is not None:
         overrides["run_id"] = run_id
-    if _explicit(ctx, "dry_run"):
-        overrides["dry_run"] = dry_run
 
-    root = ctx.find_root()
-    existing: Optional[AppContext] = root.obj if isinstance(root.obj, AppContext) else None
-
-    if existing is not None and not overrides:
-        ctx.obj = existing
-        return
-
-    if existing is not None:
-        base = existing.settings.model_dump(exclude_none=True)
-        base.update(overrides)
-        overrides = base
+    if dry_run:
+        overrides["dry_run"] = True
 
     settings = load_settings(**overrides)
-    resolved_run_id = configure_logging(settings=settings, force=existing is not None)
-    context = AppContext(settings=settings, run_id=resolved_run_id)
-    root.obj = context
-    ctx.obj = context
+    resolved_run_id = configure_logging(settings=settings)
 
+    context = AppContext(
+        settings=settings,
+        run_id=resolved_run_id,
+    )
+
+    ctx.obj = context
 
 def get_context(ctx: typer.Context) -> AppContext:
     """Return the resolved context, building a default one if none exists."""

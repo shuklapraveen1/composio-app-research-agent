@@ -232,6 +232,6 @@ class ArtifactPaths:
     def relative(self, path: Path) -> str:
         """Render a path relative to the project root for logs and reports."""
         try:
-            return str(path.relative_to(self.project_root))
+            return path.relative_to(self.project_root).as_posix()
         except ValueError:
             return str(path)
