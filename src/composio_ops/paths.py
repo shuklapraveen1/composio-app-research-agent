@@ -198,6 +198,23 @@ class ArtifactPaths:
         return self.site_data_dir / C.ACCURACY_FILENAME
 
     @property
+    def site_styles(self) -> Path:
+        return self.site_dir / C.SITE_STYLES_FILENAME
+
+    @property
+    def site_script(self) -> Path:
+        return self.site_dir / C.SITE_SCRIPT_FILENAME
+
+    @property
+    def site_payload(self) -> Path:
+        """The dataset projection the page explores, as a plain script.
+
+        A script rather than JSON so the page works when it is opened straight
+        from the file system, where `fetch` of a sibling file is blocked.
+        """
+        return self.site_dir / C.SITE_PAYLOAD_FILENAME
+
+    @property
     def site_nojekyll(self) -> Path:
         """GitHub Pages serves the directory verbatim when this file is present."""
         return self.site_dir / ".nojekyll"
@@ -234,4 +251,4 @@ class ArtifactPaths:
         try:
             return path.relative_to(self.project_root).as_posix()
         except ValueError:
-            return str(path)
+            return path.as_posix()

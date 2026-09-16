@@ -92,23 +92,27 @@ def global_options_callback(
     """Resolve configuration and logging for this invocation."""
     overrides: Dict[str, Any] = {}
 
-    if log_level is not None:
+    if _explicit(ctx, "log_level") and log_level is not None:
         overrides["log_level"] = log_level
-
-    if log_format is not None:
+    if _explicit(ctx, "log_format") and log_format is not None:
         overrides["log_format"] = log_format
-
-    if seed is not None:
+    if _explicit(ctx, "seed") and seed is not None:
         overrides["seed"] = seed
-
-    if data_dir is not None:
+    if _explicit(ctx, "data_dir") and data_dir is not None:
         overrides["data_dir"] = data_dir
-
-    if run_id is not None:
+    if _explicit(ctx, "run_id") and run_id is not None:
         overrides["run_id"] = run_id
+    if _explicit(ctx, "dry_run"):
+        overrides["dry_run"] = dry_run
 
-    if dry_run:
-        overrides["dry_run"] = True
+    root = ctx.find_root()
+    existing: Optional[AppContext] = (
+        root.obj if isinstance(root.obj, AppContext) else None
+    )
+
+    if existing is not None:
+        ctx.obj = existing
+        return
 
     settings = load_settings(**overrides)
     resolved_run_id = configure_logging(settings=settings)
@@ -117,9 +121,9 @@ def global_options_callback(
         settings=settings,
         run_id=resolved_run_id,
     )
-
+    root.obj = context
     ctx.obj = context
-
+    
 def get_context(ctx: typer.Context) -> AppContext:
     """Return the resolved context, building a default one if none exists."""
     root = ctx.find_root()

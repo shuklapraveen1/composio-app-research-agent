@@ -11,10 +11,18 @@ Three properties hold throughout:
 - **`unknown` is an answer.** "Not found", "unavailable", "unclear" and "not
   applicable" are distinct outcomes, and the dataset keeps them apart.
 - **Re-runs are byte-identical.** One seed and a fixed pipeline clock drive
-  everything, so the same input always produces the same 147 artifact files.
+  everything, so the same input always produces the same 150 artifact files.
 
 The published case study is `site/index.html`; the dataset behind it is
 `data/final/final_dataset.json` and `data/final/final_dataset.csv`.
+
+The page is a small research explorer: filter and sort all 100 applications,
+open any one of them for its fields, rationales and cited evidence, and jump
+from a finding straight to the applications that support it. It ships as four
+generated files — `index.html`, `styles.css`, `app.js` and `dataset.js` (a
+projection of the final dataset) — with no build step, no framework and no
+network requests, so it works served from GitHub Pages or opened straight from
+disk. Without scripting it is still the complete report, static table included.
 
 ## Quick start
 
@@ -138,7 +146,7 @@ data/raw/          verbatim research responses kept as provenance  (generated)
 data/interim/      evidence, classification, validation, queue     (generated)
 data/verification/ samples, channel outputs, reconciliation
 data/final/        final dataset, analytics, patterns, accuracy
-site/              the published case study and its data exports
+site/              the published case study, its assets and data exports
 apps.json          the supplied application registry
 ```
 
@@ -189,10 +197,11 @@ failure count automatically.
 .venv/bin/python -m pytest
 ```
 
-224 tests covering schema invariants, classifier rules and the v1/v2 divergences,
+245 tests covering schema invariants, classifier rules and the v1/v2 divergences,
 validation, sampling and the verification channels, reconciliation precedence,
-analytics and patterns, corpus integrity, and a full end-to-end run over the real
-100-app registry that asserts the artifacts are byte-stable.
+analytics and patterns, corpus integrity, the published page against the
+artifacts it renders, and a full end-to-end run over the real 100-app registry
+that asserts the artifacts are byte-stable.
 
 ## Publishing
 

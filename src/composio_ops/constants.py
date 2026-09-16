@@ -253,6 +253,12 @@ FINAL_DATASET_CSV_FILENAME: Final[str] = "final_dataset.csv"
 ANALYTICS_FILENAME: Final[str] = "analytics.json"
 PATTERNS_FILENAME: Final[str] = "patterns.json"
 CASE_STUDY_FILENAME: Final[str] = "index.html"
+SITE_STYLES_FILENAME: Final[str] = "styles.css"
+SITE_SCRIPT_FILENAME: Final[str] = "app.js"
+SITE_PAYLOAD_FILENAME: Final[str] = "dataset.js"
+
+#: Global the payload script defines and the page reads.
+SITE_PAYLOAD_GLOBAL: Final[str] = "COMPOSIO_RESEARCH"
 
 #: Seed namespaces, so two stages never share an RNG stream.
 SEED_NAMESPACE_SAMPLE_A: Final[str] = "sample_selection:A"

@@ -249,9 +249,7 @@ def run_all(settings: Settings, write: bool = True) -> PipelineResult:
 
     # --- first pass: classifier v1 -----------------------------------------
     research_v1, evidence_v1 = research(settings, registry, C.CLASSIFIER_V1, write=write)
-    validation_report = validate(
-        settings, registry, research_v1, evidence_v1, write=write
-    )
+    validate(settings, registry, research_v1, evidence_v1, write=write)
     initial = initial_dataset(settings, registry, research_v1, evidence_v1, write=write)
     queue_v1 = review_queue(settings, research_v1, write=write)
     sample_a, sample_b_preview = samples(settings, registry, research_v1, write=write)
@@ -285,7 +283,9 @@ def run_all(settings: Settings, write: bool = True) -> PipelineResult:
 
     # --- second pass: classifier v2 ----------------------------------------
     research_v2, evidence_v2 = research(settings, registry, C.CLASSIFIER_V2, write=write)
-    validate(settings, registry, research_v2, evidence_v2, write=write)
+    # The second pass overwrites validation_report.json, so this is the report
+    # the published page and the committed artifact both have to agree on.
+    validation_report = validate(settings, registry, research_v2, evidence_v2, write=write)
     queue_v2 = review_queue(settings, research_v2, write=write)
     sample_a_v2, sample_b = samples(settings, registry, research_v2, write=write)
     if sorted(sample_b.app_ids()) == sorted(sample_a.app_ids()):

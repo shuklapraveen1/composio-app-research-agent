@@ -50,7 +50,7 @@ dataset.
 | Accuracy, improvements | `verification/accuracy.py`, `review/improvements.py` | `data/final/accuracy.json`, `data/interim/improvements.json` |
 | Final dataset | `dataset.py` | `data/final/final_dataset.{json,csv}` |
 | Analytics, patterns | `analytics/compute.py`, `analytics/patterns.py` | `data/final/{analytics,patterns}.json` |
-| Case study, publication | `publish/case_study.py`, `publish/exports.py` | `site/index.html`, `site/data/` |
+| Case study, publication | `publish/case_study.py`, `publish/viewmodel.py`, `publish/assets.py`, `publish/exports.py` | `site/index.html`, `site/{styles.css,app.js,dataset.js}`, `site/data/` |
 
 ## 3. Decisions the architecture left open
 
