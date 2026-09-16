@@ -1,0 +1,235 @@
+{
+  "channel": "channel_d",
+  "metadata": {
+    "generated_at": "2026-09-16T00:00:00Z",
+    "notes": "channel_d: Human review (sampled and triggered)",
+    "record_count": 7,
+    "schema_version": "2.0.0",
+    "seed": 20260916,
+    "source_fingerprint": "647e4cc502d6e952",
+    "stage": "verification"
+  },
+  "results": [
+    {
+      "app_id": "anthropic",
+      "channel": "channel_d",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [
+        {
+          "field": "api_breadth",
+          "reason": "The API is the product: messages, batches, files, models and administration together cover essentially all of it.",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        }
+      ],
+      "discrepancies": [
+        "api_breadth"
+      ],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "anthropic::ant-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "The API is the product: messages, batches, files, models and administration together cover essentially all of it.",
+          "outcome": "disagrees",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        }
+      ],
+      "notes": "Human review against the recorded sources.",
+      "reviewer": "product-ops-reviewer",
+      "sample": "B"
+    },
+    {
+      "app_id": "ashby",
+      "channel": "channel_d",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [
+        {
+          "field": "api_breadth",
+          "reason": "The documented groups span candidates, applications, jobs, interviews and offers, which is most of an ATS.",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        }
+      ],
+      "discrepancies": [
+        "api_breadth"
+      ],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "ashby::ashby-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "The documented groups span candidates, applications, jobs, interviews and offers, which is most of an ATS.",
+          "outcome": "disagrees",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        }
+      ],
+      "notes": "Human review against the recorded sources.",
+      "reviewer": "product-ops-reviewer",
+      "sample": "B"
+    },
+    {
+      "app_id": "help-scout",
+      "channel": "channel_d",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "help-scout::hsc-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "Mailbox surfaces are well covered, but Docs and Beacon sit outside the documented groups.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        }
+      ],
+      "notes": "Human review against the recorded sources.",
+      "reviewer": "product-ops-reviewer",
+      "sample": "B"
+    },
+    {
+      "app_id": "lever",
+      "channel": "channel_d",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [
+        {
+          "field": "api_breadth",
+          "reason": "Postings, opportunities, interviews, offers and archive reasons cover most of the product.",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        }
+      ],
+      "discrepancies": [
+        "api_breadth"
+      ],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "lever::lever-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "Postings, opportunities, interviews, offers and archive reasons cover most of the product.",
+          "outcome": "disagrees",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        }
+      ],
+      "notes": "Human review against the recorded sources.",
+      "reviewer": "product-ops-reviewer",
+      "sample": "B"
+    },
+    {
+      "app_id": "nextcloud",
+      "channel": "channel_d",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "nextcloud::nc-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "The client APIs cover the core server; the app ecosystem that makes up much of Nextcloud is not part of them.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        }
+      ],
+      "notes": "Human review against the recorded sources.",
+      "reviewer": "product-ops-reviewer",
+      "sample": "B"
+    },
+    {
+      "app_id": "twenty",
+      "channel": "channel_d",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [
+        {
+          "field": "blocker",
+          "reason": "Buildable only after the reviewer deploys an instance. The blocker taxonomy has no member for self-hosting, so 'other' carries it and the limitation is reported.",
+          "status": "resolved",
+          "value": [
+            "other"
+          ]
+        }
+      ],
+      "discrepancies": [
+        "blocker"
+      ],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "twenty::twenty-docs",
+            "twenty::twenty-repo",
+            "twenty::twenty-selfhost"
+          ],
+          "field": "blocker",
+          "notes": "Buildable only after the reviewer deploys an instance. The blocker taxonomy has no member for self-hosting, so 'other' carries it and the limitation is reported.",
+          "outcome": "disagrees",
+          "status": "resolved",
+          "value": [
+            "other"
+          ]
+        }
+      ],
+      "notes": "Human review against the recorded sources.",
+      "reviewer": "product-ops-reviewer",
+      "sample": "B"
+    },
+    {
+      "app_id": "zoho-desk",
+      "channel": "channel_d",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "zoho-desk::zdesk-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "Ticketing is well covered; large parts of the admin and automation surface are not documented as API resources.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        }
+      ],
+      "notes": "Human review against the recorded sources.",
+      "reviewer": "product-ops-reviewer",
+      "sample": "B"
+    }
+  ]
+}

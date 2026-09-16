@@ -1,0 +1,1149 @@
+{
+  "category": "Finance & Payments",
+  "entries": [
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "event_subscriptions",
+          "bulk_or_batch",
+          "reporting_analytics",
+          "scheduling"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The product is the API; every money-movement and billing surface is documented.",
+        "resource_groups": [
+          "balance",
+          "billing",
+          "charges",
+          "checkout",
+          "connect",
+          "customers",
+          "disputes",
+          "invoices",
+          "issuing",
+          "payment intents",
+          "payouts",
+          "prices",
+          "products",
+          "radar",
+          "subscriptions",
+          "terminal",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk",
+          "cli",
+          "webhooks"
+        ]
+      },
+      "app_id": "stripe",
+      "application_type": "api_platform",
+      "auth_methods": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ],
+      "auth_notes": "Secret API keys sent as bearer tokens; OAuth 2.0 for Connect platforms acting on behalf of connected accounts.",
+      "canonical_name": "Stripe",
+      "description": "Payments infrastructure covering charges, billing, invoicing and payouts.",
+      "docs_url": "https://docs.stripe.com/api",
+      "homepage_url": "https://stripe.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://docs.stripe.com/mcp",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST resources for payment intents, customers, subscriptions, invoices, payouts, Connect and webhooks, authenticated with secret keys.",
+          "id": "stripe-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "application_type",
+            "authentication",
+            "description"
+          ],
+          "title": "Stripe API reference",
+          "type": "first_party_docs",
+          "url": "https://docs.stripe.com/api"
+        },
+        {
+          "claim": "Test and live API keys are available in the dashboard immediately after a free self-serve signup.",
+          "id": "stripe-keys",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Stripe API keys",
+          "type": "first_party_docs",
+          "url": "https://docs.stripe.com/keys"
+        },
+        {
+          "claim": "Publishes read and write requests-per-second ceilings for live and test mode.",
+          "id": "stripe-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Stripe rate limits",
+          "type": "first_party_docs",
+          "url": "https://docs.stripe.com/rate-limits"
+        },
+        {
+          "claim": "Stripe documents and hosts its own MCP server.",
+          "id": "stripe-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "Stripe MCP server",
+          "type": "first_party_docs",
+          "url": "https://docs.stripe.com/mcp"
+        },
+        {
+          "claim": "Webhook endpoints receive a documented catalogue of signed events.",
+          "id": "stripe-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Stripe webhooks",
+          "type": "first_party_docs",
+          "url": "https://docs.stripe.com/webhooks"
+        }
+      ],
+      "vendor": "Stripe, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "event_subscriptions",
+          "bulk_or_batch",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Checkout, subscriptions, invoicing, payouts and disputes are all documented.",
+        "resource_groups": [
+          "catalog products",
+          "disputes",
+          "identity",
+          "invoicing",
+          "orders",
+          "payments",
+          "payouts",
+          "subscriptions",
+          "tracking",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "paypal",
+      "application_type": "api_platform",
+      "auth_methods": [
+        "oauth2",
+        "basic_auth"
+      ],
+      "auth_notes": "Client id and secret exchanged for an OAuth 2.0 access token via the client-credentials grant.",
+      "canonical_name": "PayPal",
+      "description": "Global payments network with checkout, subscriptions, invoicing and payouts.",
+      "docs_url": "https://developer.paypal.com/api/rest/",
+      "homepage_url": "https://www.paypal.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://www.paypal.ai/docs/tools/mcp-quickstart",
+        "status": "official"
+      },
+      "rate_limits": "documented_qualitative",
+      "sources": [
+        {
+          "claim": "Sandbox and live app credentials are created self-serve from the developer dashboard.",
+          "id": "pp-apps",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "PayPal developer dashboard",
+          "type": "first_party_site",
+          "url": "https://developer.paypal.com/dashboard/applications/sandbox"
+        },
+        {
+          "claim": "Documents REST APIs for orders, payments, subscriptions, invoicing, payouts and webhooks using OAuth client credentials.",
+          "id": "pp-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "application_type",
+            "authentication",
+            "description"
+          ],
+          "title": "PayPal REST APIs",
+          "type": "first_party_docs",
+          "url": "https://developer.paypal.com/api/rest/"
+        },
+        {
+          "claim": "Describes rate limiting and backoff behaviour without publishing fixed numeric ceilings for most endpoints.",
+          "id": "pp-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "PayPal rate limiting",
+          "type": "first_party_docs",
+          "url": "https://developer.paypal.com/api/rest/reference/rate-limiting/"
+        },
+        {
+          "claim": "PayPal documents its own MCP server for agent access to its APIs.",
+          "id": "pp-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "PayPal MCP quickstart",
+          "type": "first_party_docs",
+          "url": "https://www.paypal.ai/docs/tools/mcp-quickstart"
+        },
+        {
+          "claim": "Webhook subscriptions deliver payment and dispute events with signature verification.",
+          "id": "pp-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "PayPal webhooks",
+          "type": "first_party_docs",
+          "url": "https://developer.paypal.com/api/rest/webhooks/"
+        }
+      ],
+      "vendor": "PayPal Holdings, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "event_subscriptions",
+          "bulk_or_batch",
+          "reporting_analytics",
+          "scheduling"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Payments, catalog, orders, inventory, bookings and team management are all documented.",
+        "resource_groups": [
+          "bookings",
+          "catalog",
+          "customers",
+          "inventory",
+          "invoices",
+          "locations",
+          "loyalty",
+          "orders",
+          "payments",
+          "subscriptions",
+          "team",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "square",
+      "application_type": "api_platform",
+      "auth_methods": [
+        "oauth2",
+        "bearer_token"
+      ],
+      "auth_notes": "Personal access tokens for a developer's own account and OAuth 2.0 for apps serving other sellers.",
+      "canonical_name": "Square",
+      "description": "Commerce platform covering in-person and online payments, catalog and bookings.",
+      "docs_url": "https://developer.squareup.com/reference/square",
+      "homepage_url": "https://squareup.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://developer.squareup.com/docs/mcp",
+        "status": "official"
+      },
+      "rate_limits": "enforced_but_undisclosed",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for payments, orders, catalog, customers, inventory, bookings and webhooks.",
+          "id": "sq-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "application_type",
+            "authentication",
+            "description"
+          ],
+          "title": "Square API reference",
+          "type": "first_party_docs",
+          "url": "https://developer.squareup.com/reference/square"
+        },
+        {
+          "claim": "States that requests are rate limited and that specific thresholds are not published.",
+          "id": "sq-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Square rate limits",
+          "type": "first_party_docs",
+          "url": "https://developer.squareup.com/docs/build-basics/general-considerations/rate-limits"
+        },
+        {
+          "claim": "Square documents its own MCP server.",
+          "id": "sq-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "Square MCP server",
+          "type": "first_party_docs",
+          "url": "https://developer.squareup.com/docs/mcp"
+        },
+        {
+          "claim": "Sandbox and production access tokens are issued from the developer dashboard after a free signup.",
+          "id": "sq-tokens",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Square access tokens",
+          "type": "first_party_docs",
+          "url": "https://developer.squareup.com/docs/build-basics/access-tokens"
+        },
+        {
+          "claim": "Webhook subscriptions deliver signed payment, order and catalog events.",
+          "id": "sq-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Square webhooks overview",
+          "type": "first_party_docs",
+          "url": "https://developer.squareup.com/docs/webhooks/overview"
+        }
+      ],
+      "vendor": "Block, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "event_subscriptions",
+          "bulk_or_batch",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The accounting API alone covers invoices, contacts, accounts, payments and journals; payroll and projects sit alongside it.",
+        "resource_groups": [
+          "accounting",
+          "assets",
+          "bank feeds",
+          "files",
+          "payroll",
+          "projects"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "xero",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2"
+      ],
+      "auth_notes": "OAuth 2.0 with tenant selection; custom connections provide a machine-to-machine flow on paid plans.",
+      "canonical_name": "Xero",
+      "conflicts": [
+        "A free Xero developer account with a demo company can call the API, while connecting to a real organisation requires a paid Xero subscription."
+      ],
+      "description": "Cloud accounting for invoicing, bank reconciliation, payroll and reporting.",
+      "docs_url": "https://developer.xero.com/documentation/api/accounting/overview",
+      "homepage_url": "https://www.xero.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://github.com/XeroAPI/xero-mcp-server",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Apps are registered free in the developer portal and authorise a tenant through OAuth 2.0.",
+          "id": "xero-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Xero OAuth 2.0 overview",
+          "type": "first_party_docs",
+          "url": "https://developer.xero.com/documentation/guides/oauth2/overview/"
+        },
+        {
+          "claim": "Documents REST endpoints for invoices, contacts, accounts, payments, journals and reports.",
+          "id": "xero-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Xero accounting API overview",
+          "type": "first_party_docs",
+          "url": "https://developer.xero.com/documentation/api/accounting/overview"
+        },
+        {
+          "claim": "Publishes per-minute, daily and concurrent request ceilings per tenant and per app.",
+          "id": "xero-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Xero API limits",
+          "type": "first_party_docs",
+          "url": "https://developer.xero.com/documentation/guides/oauth2/limits/"
+        },
+        {
+          "claim": "Xero publishes an MCP server under its official XeroAPI organisation.",
+          "id": "xero-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "XeroAPI/xero-mcp-server",
+          "type": "repository",
+          "url": "https://github.com/XeroAPI/xero-mcp-server"
+        },
+        {
+          "claim": "Connecting to a live organisation requires a paid Xero subscription; only the demo company is free.",
+          "id": "xero-pricing",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Xero pricing",
+          "type": "first_party_pricing",
+          "url": "https://www.xero.com/pricing/"
+        },
+        {
+          "claim": "Webhooks deliver contact and invoice events to a registered endpoint.",
+          "current": true,
+          "id": "xero-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Xero webhooks",
+          "type": "first_party_docs",
+          "url": "https://developer.xero.com/documentation/guides/webhooks/overview/"
+        }
+      ],
+      "vendor": "Xero Limited",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "paid",
+        "approval_required": true,
+        "restrictions": [
+          "approval_required",
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "event_subscriptions",
+          "bulk_or_batch",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The accounting API exposes the full entity set (customers, invoices, items, payments, vendors, journal entries) plus reports.",
+        "resource_groups": [
+          "accounting entities",
+          "attachments",
+          "batch",
+          "reports",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "quickbooks-online",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2"
+      ],
+      "auth_notes": "OAuth 2.0 against an Intuit developer app; production keys are released after an app assessment.",
+      "canonical_name": "QuickBooks Online",
+      "description": "Small-business accounting covering invoicing, expenses, payroll and reporting.",
+      "docs_url": "https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities/account",
+      "homepage_url": "https://quickbooks.intuit.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Apps authorise through OAuth 2.0; sandbox credentials are self-serve from the developer portal.",
+          "id": "qbo-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Intuit OAuth 2.0",
+          "type": "first_party_docs",
+          "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/authentication-and-authorization/oauth-2.0"
+        },
+        {
+          "claim": "Documents REST endpoints for the full accounting entity set plus batch operations and reports.",
+          "id": "qbo-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "QuickBooks Online accounting API",
+          "type": "first_party_docs",
+          "url": "https://developer.intuit.com/app/developer/qbo/docs/api/accounting/all-entities/account"
+        },
+        {
+          "claim": "Publishes per-minute and per-app request ceilings per realm.",
+          "id": "qbo-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "QuickBooks API limits and throttles",
+          "type": "first_party_docs",
+          "url": "https://developer.intuit.com/app/developer/qbo/docs/learn/rest-api-features#limits-and-throttles"
+        },
+        {
+          "claim": "Production keys are issued only after Intuit reviews a security and compliance questionnaire.",
+          "id": "qbo-production",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Intuit app assessment questionnaire",
+          "type": "first_party_docs",
+          "url": "https://developer.intuit.com/app/developer/qbo/docs/go-live/app-assessment-questionnaire"
+        },
+        {
+          "claim": "Webhooks notify an endpoint of entity changes within a realm.",
+          "id": "qbo-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "QuickBooks webhooks",
+          "type": "first_party_docs",
+          "url": "https://developer.intuit.com/app/developer/qbo/docs/develop/webhooks"
+        }
+      ],
+      "vendor": "Intuit Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free",
+        "approval_required": true,
+        "restrictions": [
+          "identity_verification_required",
+          "region_restricted"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "search",
+          "event_subscriptions",
+          "bulk_or_batch",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Collections, payouts, subscriptions and settlement reporting are all documented.",
+        "resource_groups": [
+          "customers",
+          "invoices",
+          "orders",
+          "payment links",
+          "payments",
+          "payouts",
+          "refunds",
+          "settlements",
+          "subscriptions",
+          "virtual accounts",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "razorpay",
+      "application_type": "api_platform",
+      "auth_methods": [
+        "api_key",
+        "basic_auth"
+      ],
+      "auth_notes": "Key id and key secret presented over HTTP basic auth; separate keys exist for test and live mode.",
+      "canonical_name": "Razorpay",
+      "description": "Indian payments platform with collections, payouts, subscriptions and invoicing.",
+      "docs_url": "https://razorpay.com/docs/api/",
+      "homepage_url": "https://razorpay.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://github.com/razorpay/razorpay-mcp-server",
+        "status": "official"
+      },
+      "rate_limits": "documented_qualitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for orders, payments, refunds, subscriptions, payouts and webhooks using key-based basic auth.",
+          "id": "rzp-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "application_type",
+            "authentication",
+            "description"
+          ],
+          "title": "Razorpay API documentation",
+          "type": "first_party_docs",
+          "url": "https://razorpay.com/docs/api/"
+        },
+        {
+          "claim": "Test keys are self-serve, but live keys are released only after business KYC verification, and the platform serves Indian businesses.",
+          "id": "rzp-kyc",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Razorpay KYC",
+          "type": "first_party_docs",
+          "url": "https://razorpay.com/docs/payments/dashboard/account-settings/kyc/"
+        },
+        {
+          "claim": "Describes rate limiting and retry guidance without a single published numeric ceiling for all endpoints.",
+          "id": "rzp-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Razorpay rate limits",
+          "type": "first_party_docs",
+          "url": "https://razorpay.com/docs/api/rate-limits/"
+        },
+        {
+          "claim": "Razorpay publishes an MCP server under its own GitHub organisation.",
+          "id": "rzp-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "razorpay/razorpay-mcp-server",
+          "type": "repository",
+          "url": "https://github.com/razorpay/razorpay-mcp-server"
+        },
+        {
+          "claim": "Webhooks deliver payment, refund and settlement events with signature verification.",
+          "id": "rzp-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Razorpay webhooks",
+          "type": "first_party_docs",
+          "url": "https://razorpay.com/docs/webhooks/"
+        }
+      ],
+      "vendor": "Razorpay Software Private Limited",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free",
+        "approval_required": true,
+        "restrictions": [
+          "approval_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "search",
+          "event_subscriptions",
+          "bulk_or_batch",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Every data product is documented with the same item and access-token model.",
+        "resource_groups": [
+          "assets",
+          "auth",
+          "balance",
+          "identity",
+          "income",
+          "investments",
+          "item",
+          "liabilities",
+          "link",
+          "payment initiation",
+          "transactions",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "plaid",
+      "application_type": "api_platform",
+      "auth_methods": [
+        "api_key"
+      ],
+      "auth_notes": "Client id and secret sent in the request body; separate secrets exist per environment.",
+      "canonical_name": "Plaid",
+      "description": "Financial data network connecting applications to bank accounts and transactions.",
+      "docs_url": "https://plaid.com/docs/api/",
+      "homepage_url": "https://plaid.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Sandbox keys are self-serve; production access requires submitting an application that Plaid reviews.",
+          "id": "plaid-access",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Plaid production access",
+          "type": "first_party_docs",
+          "url": "https://plaid.com/docs/account/production/"
+        },
+        {
+          "claim": "Documents REST endpoints for Link, auth, transactions, balance, identity, investments and liabilities.",
+          "id": "plaid-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "application_type",
+            "authentication",
+            "description"
+          ],
+          "title": "Plaid API reference",
+          "type": "first_party_docs",
+          "url": "https://plaid.com/docs/api/"
+        },
+        {
+          "claim": "Publishes per-product and per-item request ceilings alongside the rate-limit error codes.",
+          "id": "plaid-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Plaid rate limit errors",
+          "type": "first_party_docs",
+          "url": "https://plaid.com/docs/errors/rate-limit-exceeded/"
+        },
+        {
+          "claim": "Item and product webhooks notify an endpoint of new transactions and status changes.",
+          "id": "plaid-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Plaid webhooks",
+          "type": "first_party_docs",
+          "url": "https://plaid.com/docs/api/webhooks/"
+        }
+      ],
+      "vendor": "Plaid Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "contact_sales",
+        "admin_only": true,
+        "api_plan": "paid",
+        "restrictions": [
+          "approval_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "user_management",
+          "event_subscriptions",
+          "reporting_analytics"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Transactions, cards, budgets and expenses are documented; ledger-level administration is not.",
+        "resource_groups": [
+          "budgets",
+          "cards",
+          "expenses",
+          "team",
+          "transactions",
+          "users",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "brex",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "bearer_token"
+      ],
+      "auth_notes": "User-scoped API tokens created by an account administrator, or OAuth 2.0 for partner applications.",
+      "canonical_name": "Brex",
+      "description": "Corporate cards and spend management with budgets, expenses and reimbursements.",
+      "docs_url": "https://developer.brex.com/",
+      "homepage_url": "https://www.brex.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "enforced_but_undisclosed",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for transactions, cards, users, budgets, expenses and webhooks.",
+          "id": "brex-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Brex developer documentation",
+          "type": "first_party_docs",
+          "url": "https://developer.brex.com/"
+        },
+        {
+          "claim": "Accounts are opened through an application process for qualifying businesses.",
+          "id": "brex-signup",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Brex business account",
+          "type": "first_party_site",
+          "url": "https://www.brex.com/product/business-account"
+        },
+        {
+          "claim": "API tokens are created by an account administrator inside an existing Brex account; there is no open developer signup.",
+          "id": "brex-tokens",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Brex authentication",
+          "type": "first_party_docs",
+          "url": "https://developer.brex.com/docs/authentication/"
+        },
+        {
+          "claim": "Webhooks deliver transaction and expense events; request ceilings are not published.",
+          "id": "brex-webhooks",
+          "supports": [
+            "webhook_support",
+            "rate_limit_info"
+          ],
+          "title": "Brex webhooks",
+          "type": "first_party_docs",
+          "url": "https://developer.brex.com/docs/webhooks/"
+        }
+      ],
+      "vendor": "Brex Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "contact_sales",
+        "admin_only": true,
+        "api_plan": "paid",
+        "restrictions": [
+          "approval_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "user_management",
+          "event_subscriptions",
+          "reporting_analytics",
+          "file_transfer"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Cards, spend limits, transactions, bills and reimbursements are all documented.",
+        "resource_groups": [
+          "bills",
+          "cards",
+          "departments",
+          "limits",
+          "locations",
+          "receipts",
+          "reimbursements",
+          "transactions",
+          "users",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "ramp",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2"
+      ],
+      "auth_notes": "OAuth 2.0 client-credentials grant using an API client created by an account administrator.",
+      "canonical_name": "Ramp",
+      "description": "Corporate cards, bill pay and spend management for finance teams.",
+      "docs_url": "https://docs.ramp.com/developer-api/v1/overview/introduction",
+      "homepage_url": "https://ramp.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "API clients are created from the developer settings of an existing Ramp account by an administrator.",
+          "id": "ramp-clients",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Ramp API authorization",
+          "type": "first_party_docs",
+          "url": "https://docs.ramp.com/developer-api/v1/authorization/overview"
+        },
+        {
+          "claim": "Documents REST endpoints for transactions, cards, spend limits, bills, reimbursements and webhooks using OAuth client credentials.",
+          "id": "ramp-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Ramp developer API",
+          "type": "first_party_docs",
+          "url": "https://docs.ramp.com/developer-api/v1/overview/introduction"
+        },
+        {
+          "claim": "Publishes explicit per-minute request ceilings per API client.",
+          "id": "ramp-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Ramp rate limits",
+          "type": "first_party_docs",
+          "url": "https://docs.ramp.com/developer-api/v1/overview/rate-limits"
+        },
+        {
+          "claim": "Accounts are opened through a qualification and application process rather than open self-serve signup.",
+          "id": "ramp-signup",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Ramp get started",
+          "type": "first_party_site",
+          "url": "https://ramp.com/get-started"
+        },
+        {
+          "claim": "Webhooks deliver transaction and card lifecycle events.",
+          "current": true,
+          "id": "ramp-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Ramp webhooks",
+          "type": "first_party_docs",
+          "url": "https://docs.ramp.com/developer-api/v1/webhooks/overview"
+        }
+      ],
+      "vendor": "Ramp Business Corporation",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "search",
+          "event_subscriptions",
+          "reporting_analytics"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Quote, recipient, transfer and balance flows are documented; some partner products require a separate agreement.",
+        "resource_groups": [
+          "balances",
+          "cards",
+          "profiles",
+          "quotes",
+          "recipients",
+          "simulation",
+          "transfers",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "wise",
+      "application_type": "api_platform",
+      "auth_methods": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ],
+      "auth_notes": "Personal API tokens presented as bearer tokens; OAuth 2.0 for platforms acting on behalf of Wise users.",
+      "canonical_name": "Wise",
+      "description": "Cross-border money transfers and multi-currency accounts for people and businesses.",
+      "docs_url": "https://docs.wise.com/api-docs",
+      "homepage_url": "https://wise.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_qualitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for profiles, quotes, recipients, transfers, balances and webhooks.",
+          "id": "wise-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "application_type",
+            "authentication",
+            "description"
+          ],
+          "title": "Wise API documentation",
+          "type": "first_party_docs",
+          "url": "https://docs.wise.com/api-docs"
+        },
+        {
+          "claim": "Describes rate limiting behaviour and retry guidance without a single published numeric ceiling.",
+          "id": "wise-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Wise rate limiting",
+          "type": "first_party_docs",
+          "url": "https://docs.wise.com/api-docs/features/rate-limiting"
+        },
+        {
+          "claim": "Personal API tokens are created from account settings; a sandbox environment is available self-serve.",
+          "id": "wise-tokens",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Wise authentication and access",
+          "type": "first_party_docs",
+          "url": "https://docs.wise.com/api-docs/features/authentication-access"
+        },
+        {
+          "claim": "Webhook subscriptions deliver transfer state changes and balance events.",
+          "id": "wise-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Wise webhooks and notifications",
+          "type": "first_party_docs",
+          "url": "https://docs.wise.com/api-docs/features/webhooks-notifications"
+        }
+      ],
+      "vendor": "Wise Payments Limited",
+      "webhooks": "native_webhooks"
+    }
+  ]
+}

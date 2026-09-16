@@ -1,0 +1,670 @@
+{
+  "cross_tabs": [
+    {
+      "cells": {
+        "ai-and-data": {
+          "blocked": 0,
+          "buildable": 3,
+          "buildable_with_friction": 6,
+          "not_applicable": 1
+        },
+        "communication-and-messaging": {
+          "blocked": 0,
+          "buildable": 4,
+          "buildable_with_friction": 6,
+          "not_applicable": 0
+        },
+        "crm-and-sales": {
+          "blocked": 1,
+          "buildable": 4,
+          "buildable_with_friction": 5,
+          "not_applicable": 0
+        },
+        "developer-tools": {
+          "blocked": 0,
+          "buildable": 8,
+          "buildable_with_friction": 0,
+          "not_applicable": 2
+        },
+        "finance-and-payments": {
+          "blocked": 2,
+          "buildable": 4,
+          "buildable_with_friction": 4,
+          "not_applicable": 0
+        },
+        "hr-and-recruiting": {
+          "blocked": 8,
+          "buildable": 0,
+          "buildable_with_friction": 2,
+          "not_applicable": 0
+        },
+        "marketing-and-analytics": {
+          "blocked": 1,
+          "buildable": 6,
+          "buildable_with_friction": 3,
+          "not_applicable": 0
+        },
+        "productivity-and-collaboration": {
+          "blocked": 0,
+          "buildable": 10,
+          "buildable_with_friction": 0,
+          "not_applicable": 0
+        },
+        "storage-and-documents": {
+          "blocked": 2,
+          "buildable": 4,
+          "buildable_with_friction": 4,
+          "not_applicable": 0
+        },
+        "support-and-ticketing": {
+          "blocked": 1,
+          "buildable": 4,
+          "buildable_with_friction": 5,
+          "not_applicable": 0
+        }
+      },
+      "column_attribute": "buildability",
+      "columns": [
+        "blocked",
+        "buildable",
+        "buildable_with_friction",
+        "not_applicable"
+      ],
+      "key": "buildability_by_category",
+      "label": "Buildability by supplied category",
+      "row_attribute": "category_id",
+      "rows": [
+        "ai-and-data",
+        "communication-and-messaging",
+        "crm-and-sales",
+        "developer-tools",
+        "finance-and-payments",
+        "hr-and-recruiting",
+        "marketing-and-analytics",
+        "productivity-and-collaboration",
+        "storage-and-documents",
+        "support-and-ticketing"
+      ]
+    },
+    {
+      "cells": {
+        "admin_approval": {
+          "blocked": 0,
+          "buildable": 0,
+          "buildable_with_friction": 15,
+          "not_applicable": 0
+        },
+        "contact_sales": {
+          "blocked": 10,
+          "buildable": 0,
+          "buildable_with_friction": 0,
+          "not_applicable": 0
+        },
+        "enterprise": {
+          "blocked": 5,
+          "buildable": 0,
+          "buildable_with_friction": 0,
+          "not_applicable": 0
+        },
+        "self_hosted_deployment_dependent": {
+          "blocked": 0,
+          "buildable": 0,
+          "buildable_with_friction": 5,
+          "not_applicable": 3
+        },
+        "self_serve_free": {
+          "blocked": 0,
+          "buildable": 46,
+          "buildable_with_friction": 0,
+          "not_applicable": 0
+        },
+        "self_serve_paid": {
+          "blocked": 0,
+          "buildable": 0,
+          "buildable_with_friction": 13,
+          "not_applicable": 0
+        },
+        "self_serve_trial": {
+          "blocked": 0,
+          "buildable": 1,
+          "buildable_with_friction": 1,
+          "not_applicable": 0
+        },
+        "unclear": {
+          "blocked": 0,
+          "buildable": 0,
+          "buildable_with_friction": 1,
+          "not_applicable": 0
+        }
+      },
+      "column_attribute": "buildability",
+      "columns": [
+        "blocked",
+        "buildable",
+        "buildable_with_friction",
+        "not_applicable"
+      ],
+      "key": "buildability_by_credential_access",
+      "label": "Buildability by how credentials are obtained",
+      "row_attribute": "credential_access",
+      "rows": [
+        "admin_approval",
+        "contact_sales",
+        "enterprise",
+        "self_hosted_deployment_dependent",
+        "self_serve_free",
+        "self_serve_paid",
+        "self_serve_trial",
+        "unclear"
+      ]
+    },
+    {
+      "cells": {
+        "ai-and-data": {
+          "not_found": 2,
+          "official": 7,
+          "third_party": 1,
+          "unavailable": 0
+        },
+        "communication-and-messaging": {
+          "not_found": 3,
+          "official": 2,
+          "third_party": 5,
+          "unavailable": 0
+        },
+        "crm-and-sales": {
+          "not_found": 6,
+          "official": 3,
+          "third_party": 1,
+          "unavailable": 0
+        },
+        "developer-tools": {
+          "not_found": 2,
+          "official": 6,
+          "third_party": 1,
+          "unavailable": 1
+        },
+        "finance-and-payments": {
+          "not_found": 5,
+          "official": 5,
+          "third_party": 0,
+          "unavailable": 0
+        },
+        "hr-and-recruiting": {
+          "not_found": 10,
+          "official": 0,
+          "third_party": 0,
+          "unavailable": 0
+        },
+        "marketing-and-analytics": {
+          "not_found": 7,
+          "official": 3,
+          "third_party": 0,
+          "unavailable": 0
+        },
+        "productivity-and-collaboration": {
+          "not_found": 1,
+          "official": 4,
+          "third_party": 5,
+          "unavailable": 0
+        },
+        "storage-and-documents": {
+          "not_found": 7,
+          "official": 0,
+          "third_party": 3,
+          "unavailable": 0
+        },
+        "support-and-ticketing": {
+          "not_found": 7,
+          "official": 2,
+          "third_party": 1,
+          "unavailable": 0
+        }
+      },
+      "column_attribute": "mcp",
+      "columns": [
+        "not_found",
+        "official",
+        "third_party",
+        "unavailable"
+      ],
+      "key": "mcp_by_category",
+      "label": "MCP server availability by supplied category",
+      "row_attribute": "category_id",
+      "rows": [
+        "ai-and-data",
+        "communication-and-messaging",
+        "crm-and-sales",
+        "developer-tools",
+        "finance-and-payments",
+        "hr-and-recruiting",
+        "marketing-and-analytics",
+        "productivity-and-collaboration",
+        "storage-and-documents",
+        "support-and-ticketing"
+      ]
+    },
+    {
+      "cells": {
+        "broad": {
+          "event_streaming": 0,
+          "native_webhooks": 35,
+          "no_events": 4,
+          "not_found": 1,
+          "polling_only": 4
+        },
+        "moderate": {
+          "event_streaming": 0,
+          "native_webhooks": 5,
+          "no_events": 2,
+          "not_found": 0,
+          "polling_only": 0
+        },
+        "narrow": {
+          "event_streaming": 0,
+          "native_webhooks": 0,
+          "no_events": 1,
+          "not_found": 2,
+          "polling_only": 0
+        },
+        "not_applicable": {
+          "event_streaming": 0,
+          "native_webhooks": 0,
+          "no_events": 0,
+          "not_found": 2,
+          "polling_only": 0
+        },
+        "very_broad": {
+          "event_streaming": 3,
+          "native_webhooks": 39,
+          "no_events": 1,
+          "not_found": 0,
+          "polling_only": 1
+        }
+      },
+      "column_attribute": "webhook_support",
+      "columns": [
+        "event_streaming",
+        "native_webhooks",
+        "no_events",
+        "not_found",
+        "polling_only"
+      ],
+      "key": "webhooks_by_api_breadth",
+      "label": "Event delivery by API breadth",
+      "row_attribute": "api_breadth",
+      "rows": [
+        "broad",
+        "moderate",
+        "narrow",
+        "not_applicable",
+        "very_broad"
+      ]
+    }
+  ],
+  "dataset_fingerprint": "12b21759a526dcd4",
+  "distributions": [
+    {
+      "attribute": "access_restrictions",
+      "counts": {
+        "approval_required": 31,
+        "deployment_required": 8,
+        "enterprise_plan_required": 5,
+        "identity_verification_required": 3,
+        "none": 47,
+        "paid_plan_required": 34,
+        "region_restricted": 1
+      },
+      "label": "Conditions on API access",
+      "multi_valued": true,
+      "total": 100,
+      "unresolved": {}
+    },
+    {
+      "attribute": "api_breadth",
+      "counts": {
+        "broad": 44,
+        "moderate": 7,
+        "narrow": 3,
+        "very_broad": 44
+      },
+      "label": "API breadth",
+      "multi_valued": false,
+      "total": 100,
+      "unresolved": {
+        "not_applicable": 2
+      }
+    },
+    {
+      "attribute": "api_capabilities",
+      "counts": {
+        "admin": 34,
+        "bulk_or_batch": 31,
+        "delete": 85,
+        "event_subscriptions": 73,
+        "file_transfer": 29,
+        "messaging": 16,
+        "read": 98,
+        "reporting_analytics": 42,
+        "scheduling": 13,
+        "search": 77,
+        "streaming": 8,
+        "user_management": 64,
+        "write": 97
+      },
+      "label": "API capabilities",
+      "multi_valued": true,
+      "total": 100,
+      "unresolved": {
+        "not_applicable": 2
+      }
+    },
+    {
+      "attribute": "api_types",
+      "counts": {
+        "cli": 14,
+        "graphql": 8,
+        "other": 4,
+        "rest": 95,
+        "sdk": 60,
+        "webhooks": 8
+      },
+      "label": "Interface types",
+      "multi_valued": true,
+      "total": 100,
+      "unresolved": {
+        "not_applicable": 2
+      }
+    },
+    {
+      "attribute": "application_type",
+      "counts": {
+        "api_platform": 12,
+        "cli_tool": 2,
+        "open_source_self_hosted": 7,
+        "saas_application": 78,
+        "third_party_wrapper": 1
+      },
+      "label": "Application type",
+      "multi_valued": false,
+      "total": 100,
+      "unresolved": {}
+    },
+    {
+      "attribute": "authentication",
+      "counts": {
+        "api_key": 46,
+        "basic_auth": 22,
+        "bearer_token": 34,
+        "oauth2": 71,
+        "other": 1,
+        "pat": 15,
+        "service_account": 13,
+        "token": 5
+      },
+      "label": "Authentication mechanisms",
+      "multi_valued": true,
+      "total": 100,
+      "unresolved": {
+        "not_applicable": 3
+      }
+    },
+    {
+      "attribute": "blocker",
+      "counts": {
+        "admin_approval": 28,
+        "enterprise_only": 15,
+        "insufficient_api_surface": 2,
+        "non_saas_tool": 3,
+        "none": 49,
+        "other": 1,
+        "paid_access": 34
+      },
+      "label": "Blockers",
+      "multi_valued": true,
+      "total": 100,
+      "unresolved": {}
+    },
+    {
+      "attribute": "buildability",
+      "counts": {
+        "blocked": 15,
+        "buildable": 47,
+        "buildable_with_friction": 35
+      },
+      "label": "Buildability",
+      "multi_valued": false,
+      "total": 100,
+      "unresolved": {
+        "not_applicable": 3
+      }
+    },
+    {
+      "attribute": "credential_access",
+      "counts": {
+        "admin_approval": 15,
+        "contact_sales": 10,
+        "enterprise": 5,
+        "self_hosted_deployment_dependent": 8,
+        "self_serve_free": 46,
+        "self_serve_paid": 13,
+        "self_serve_trial": 2
+      },
+      "label": "How credentials are obtained",
+      "multi_valued": false,
+      "total": 100,
+      "unresolved": {
+        "unclear": 1
+      }
+    },
+    {
+      "attribute": "mcp",
+      "counts": {
+        "official": 32,
+        "third_party": 17
+      },
+      "label": "MCP server availability",
+      "multi_valued": false,
+      "total": 100,
+      "unresolved": {
+        "not_found": 50,
+        "unavailable": 1
+      }
+    },
+    {
+      "attribute": "rate_limit_info",
+      "counts": {
+        "documented_qualitative": 15,
+        "documented_quantitative": 75,
+        "enforced_but_undisclosed": 3,
+        "no_published_limits": 5
+      },
+      "label": "Published rate limits",
+      "multi_valued": false,
+      "total": 100,
+      "unresolved": {
+        "not_found": 2
+      }
+    },
+    {
+      "attribute": "webhook_support",
+      "counts": {
+        "event_streaming": 3,
+        "native_webhooks": 79,
+        "no_events": 8,
+        "polling_only": 5
+      },
+      "label": "Event delivery",
+      "multi_valued": false,
+      "total": 100,
+      "unresolved": {
+        "not_found": 5
+      }
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-09-16T00:00:00Z",
+    "notes": "Computed from the final dataset; no model involved.",
+    "record_count": 100,
+    "schema_version": "2.0.0",
+    "seed": 20260916,
+    "source_fingerprint": "12b21759a526dcd4",
+    "stage": "analytics"
+  },
+  "metrics": [
+    {
+      "description": null,
+      "key": "apps_total",
+      "label": "Applications researched",
+      "unit": null,
+      "value": 100
+    },
+    {
+      "description": null,
+      "key": "blocked",
+      "label": "Blocked",
+      "unit": null,
+      "value": 15
+    },
+    {
+      "description": null,
+      "key": "blocked_share",
+      "label": "Share blocked",
+      "unit": "share",
+      "value": 0.15
+    },
+    {
+      "description": null,
+      "key": "broad_apis",
+      "label": "Applications with broad or very broad APIs",
+      "unit": null,
+      "value": 88
+    },
+    {
+      "description": null,
+      "key": "buildable",
+      "label": "Buildable today",
+      "unit": null,
+      "value": 47
+    },
+    {
+      "description": null,
+      "key": "buildable_share",
+      "label": "Share buildable today",
+      "unit": "share",
+      "value": 0.47
+    },
+    {
+      "description": null,
+      "key": "buildable_with_friction",
+      "label": "Buildable with friction",
+      "unit": null,
+      "value": 35
+    },
+    {
+      "description": null,
+      "key": "categories_total",
+      "label": "Supplied categories",
+      "unit": null,
+      "value": 10
+    },
+    {
+      "description": null,
+      "key": "confidence_high",
+      "label": "Records at high confidence",
+      "unit": null,
+      "value": 88
+    },
+    {
+      "description": null,
+      "key": "confidence_low",
+      "label": "Records at low confidence",
+      "unit": null,
+      "value": 3
+    },
+    {
+      "description": null,
+      "key": "confidence_medium",
+      "label": "Records at medium confidence",
+      "unit": null,
+      "value": 9
+    },
+    {
+      "description": null,
+      "key": "mcp_any",
+      "label": "Applications with an MCP server",
+      "unit": null,
+      "value": 49
+    },
+    {
+      "description": null,
+      "key": "mcp_official",
+      "label": "Applications with a vendor-published MCP server",
+      "unit": null,
+      "value": 32
+    },
+    {
+      "description": null,
+      "key": "mcp_share",
+      "label": "Share with any MCP server",
+      "unit": "share",
+      "value": 0.49
+    },
+    {
+      "description": null,
+      "key": "native_webhooks",
+      "label": "Applications with native webhooks",
+      "unit": null,
+      "value": 79
+    },
+    {
+      "description": null,
+      "key": "no_blocker",
+      "label": "Applications with nothing in the way",
+      "unit": null,
+      "value": 49
+    },
+    {
+      "description": null,
+      "key": "quantitative_rate_limits",
+      "label": "Applications publishing numeric rate limits",
+      "unit": null,
+      "value": 75
+    },
+    {
+      "description": null,
+      "key": "self_serve_credentials",
+      "label": "Credentials obtainable free or on a trial",
+      "unit": null,
+      "value": 48
+    },
+    {
+      "description": null,
+      "key": "self_serve_share",
+      "label": "Share with self-serve credentials",
+      "unit": "share",
+      "value": 0.48
+    },
+    {
+      "description": null,
+      "key": "unresolved_field_share",
+      "label": "Share of verified field values left unresolved",
+      "unit": "share",
+      "value": 0.0527
+    },
+    {
+      "description": "Counted across 100 apps x 11 verified fields.",
+      "key": "unresolved_field_values",
+      "label": "Verified field values left unresolved",
+      "unit": null,
+      "value": 58
+    },
+    {
+      "description": null,
+      "key": "verified_apps",
+      "label": "Applications carried through verification",
+      "unit": null,
+      "value": 30
+    }
+  ]
+}

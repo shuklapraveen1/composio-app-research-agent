@@ -1,0 +1,1100 @@
+{
+  "category": "Productivity & Collaboration",
+  "entries": [
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "search",
+          "user_management"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Reference covers page and database content plus search and users; workspace administration is largely out of scope.",
+        "resource_groups": [
+          "blocks",
+          "comments",
+          "databases",
+          "file uploads",
+          "pages",
+          "search",
+          "users"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "notion",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "token"
+      ],
+      "auth_notes": "Public integrations authenticate via OAuth 2.0; internal integrations use a bearer integration token issued from the workspace settings.",
+      "canonical_name": "Notion",
+      "description": "Connected workspace combining documents, wikis and lightweight databases.",
+      "docs_url": "https://developers.notion.com/reference/intro",
+      "homepage_url": "https://www.notion.so",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://github.com/makenotion/notion-mcp-server",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Any Notion account, including the free plan, can create an integration and issue a token without approval.",
+          "id": "notion-creds",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Notion integrations console",
+          "type": "first_party_site",
+          "url": "https://www.notion.so/profile/integrations"
+        },
+        {
+          "claim": "Documents a REST API over pages, databases, blocks, users, comments, search and file uploads, authenticated with a bearer token or OAuth 2.0.",
+          "id": "notion-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Notion API reference",
+          "type": "first_party_docs",
+          "url": "https://developers.notion.com/reference/intro"
+        },
+        {
+          "claim": "Publishes an average rate of three requests per second per integration plus size limits.",
+          "id": "notion-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Notion request limits",
+          "type": "first_party_docs",
+          "url": "https://developers.notion.com/reference/request-limits"
+        },
+        {
+          "claim": "Notion publishes and maintains its own MCP server under the makenotion organisation.",
+          "id": "notion-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "makenotion/notion-mcp-server",
+          "type": "repository",
+          "url": "https://github.com/makenotion/notion-mcp-server"
+        },
+        {
+          "claim": "Integrations can subscribe to workspace events delivered to a webhook endpoint.",
+          "id": "notion-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Notion webhooks",
+          "type": "first_party_docs",
+          "url": "https://developers.notion.com/reference/webhooks"
+        }
+      ],
+      "vendor": "Notion Labs, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "event_subscriptions",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The reference covers nearly every object visible in the product, including goals and portfolios.",
+        "resource_groups": [
+          "attachments",
+          "custom fields",
+          "goals",
+          "portfolios",
+          "projects",
+          "sections",
+          "tags",
+          "tasks",
+          "teams",
+          "users",
+          "webhooks",
+          "workspaces"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "asana",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "pat"
+      ],
+      "auth_notes": "Personal access tokens for single-user scripts, OAuth 2.0 for distributed apps.",
+      "canonical_name": "Asana",
+      "description": "Work management platform for tasks, projects, portfolios and goals.",
+      "docs_url": "https://developers.asana.com/docs/overview",
+      "homepage_url": "https://asana.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://developers.asana.com/docs/using-asanas-mcp-server",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Personal access tokens are created from the developer console on any account; OAuth 2.0 is used for third-party apps.",
+          "id": "asana-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Asana authentication",
+          "type": "first_party_docs",
+          "url": "https://developers.asana.com/docs/authentication"
+        },
+        {
+          "claim": "Documents a REST API and official client libraries covering tasks, projects, portfolios, goals, teams and users.",
+          "id": "asana-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Asana API overview",
+          "type": "first_party_docs",
+          "url": "https://developers.asana.com/docs/overview"
+        },
+        {
+          "claim": "Publishes per-minute request ceilings that differ between free and paid plans.",
+          "id": "asana-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Asana rate limits",
+          "type": "first_party_docs",
+          "url": "https://developers.asana.com/docs/rate-limits"
+        },
+        {
+          "claim": "Asana documents its own hosted MCP server in its developer documentation.",
+          "id": "asana-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "Using Asana's MCP server",
+          "type": "first_party_docs",
+          "url": "https://developers.asana.com/docs/using-asanas-mcp-server"
+        },
+        {
+          "claim": "Webhooks deliver resource change events to a registered target URL.",
+          "id": "asana-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Asana webhooks",
+          "type": "first_party_docs",
+          "url": "https://developers.asana.com/docs/webhooks"
+        }
+      ],
+      "vendor": "Asana, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The REST reference covers essentially the whole product surface.",
+        "resource_groups": [
+          "actions",
+          "boards",
+          "cards",
+          "checklists",
+          "labels",
+          "lists",
+          "members",
+          "notifications",
+          "organizations",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "trello",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "token",
+        "other"
+      ],
+      "auth_notes": "API key plus user token for most calls; OAuth 1.0a is offered for distributed apps and has no dedicated member in the architecture's auth taxonomy.",
+      "canonical_name": "Trello",
+      "description": "Kanban-style board, list and card tool for lightweight project tracking.",
+      "docs_url": "https://developer.atlassian.com/cloud/trello/rest/",
+      "homepage_url": "https://trello.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "source_url": "https://github.com/delorenj/mcp-server-trello",
+        "status": "third_party"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Requests are authorised with an API key and a user token obtained from the Trello power-up admin portal, available on free accounts.",
+          "id": "trello-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Trello API introduction",
+          "type": "first_party_docs",
+          "url": "https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/"
+        },
+        {
+          "claim": "Documents REST endpoints for boards, lists, cards, checklists, members, organisations and webhooks.",
+          "id": "trello-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Trello REST API reference",
+          "type": "first_party_docs",
+          "url": "https://developer.atlassian.com/cloud/trello/rest/"
+        },
+        {
+          "claim": "Publishes 300 requests per 10 seconds per API key and 100 per 10 seconds per token.",
+          "id": "trello-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Trello rate limits",
+          "type": "first_party_docs",
+          "url": "https://developer.atlassian.com/cloud/trello/guides/rest-api/rate-limits/"
+        },
+        {
+          "claim": "A community MCP server exposes Trello boards and cards; Atlassian does not publish a Trello-specific server.",
+          "id": "trello-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "delorenj/mcp-server-trello",
+          "type": "repository",
+          "url": "https://github.com/delorenj/mcp-server-trello"
+        },
+        {
+          "claim": "Webhooks can be registered against any model and post change events to a callback URL.",
+          "id": "trello-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Trello webhooks",
+          "type": "first_party_docs",
+          "url": "https://developer.atlassian.com/cloud/trello/guides/rest-api/webhooks/"
+        }
+      ],
+      "vendor": "Atlassian",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "event_subscriptions",
+          "scheduling"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Reference covers the hierarchy from teams down to tasks plus docs, goals and time entries.",
+        "resource_groups": [
+          "comments",
+          "custom fields",
+          "docs",
+          "folders",
+          "goals",
+          "lists",
+          "spaces",
+          "tasks",
+          "teams",
+          "time tracking",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "clickup",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "pat"
+      ],
+      "auth_notes": "Personal API token from user settings, or OAuth 2.0 for published apps.",
+      "canonical_name": "ClickUp",
+      "description": "All-in-one work platform spanning tasks, docs, goals and time tracking.",
+      "docs_url": "https://developer.clickup.com/reference/",
+      "homepage_url": "https://clickup.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "source_url": "https://github.com/taazkareem/clickup-mcp-server",
+        "status": "third_party"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "A personal token is generated from user settings on any plan; OAuth 2.0 is available to published apps.",
+          "id": "clickup-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "ClickUp authentication",
+          "type": "first_party_docs",
+          "url": "https://developer.clickup.com/docs/authentication"
+        },
+        {
+          "claim": "Documents REST endpoints across teams, spaces, folders, lists, tasks, docs, goals and time tracking.",
+          "id": "clickup-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "ClickUp API reference",
+          "type": "first_party_docs",
+          "url": "https://developer.clickup.com/reference/"
+        },
+        {
+          "claim": "Publishes per-minute request ceilings that scale with the workspace plan.",
+          "id": "clickup-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "ClickUp rate limits",
+          "type": "first_party_docs",
+          "url": "https://developer.clickup.com/docs/rate-limits"
+        },
+        {
+          "claim": "Community MCP servers exist for ClickUp; no vendor-published server was found.",
+          "id": "clickup-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "taazkareem/clickup-mcp-server",
+          "type": "repository",
+          "url": "https://github.com/taazkareem/clickup-mcp-server"
+        },
+        {
+          "claim": "Webhooks post task and list events to a registered endpoint.",
+          "id": "clickup-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "ClickUp webhooks",
+          "type": "first_party_docs",
+          "url": "https://developer.clickup.com/docs/webhooks"
+        }
+      ],
+      "vendor": "Mango Technologies, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "event_subscriptions"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "A single GraphQL endpoint covers boards, items, users and workspaces; some administrative surfaces are enterprise-only.",
+        "resource_groups": [
+          "boards",
+          "columns",
+          "docs",
+          "items",
+          "teams",
+          "updates",
+          "users",
+          "webhooks",
+          "workspaces"
+        ],
+        "types": [
+          "graphql",
+          "sdk"
+        ]
+      },
+      "app_id": "monday-com",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "api_key"
+      ],
+      "auth_notes": "Personal API token from the developer section, or OAuth 2.0 for marketplace apps.",
+      "canonical_name": "monday.com",
+      "description": "Work operating system built on configurable boards, items and automations.",
+      "docs_url": "https://developer.monday.com/api-reference/docs",
+      "homepage_url": "https://monday.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://github.com/mondaycom/mcp",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "A personal API token is available from the developer section of any account; OAuth 2.0 is used by marketplace apps.",
+          "id": "monday-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "monday.com authentication",
+          "type": "first_party_docs",
+          "url": "https://developer.monday.com/api-reference/docs/authentication"
+        },
+        {
+          "claim": "Documents a GraphQL API over boards, items, columns, users, workspaces and webhooks.",
+          "id": "monday-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "monday.com API reference",
+          "type": "first_party_docs",
+          "url": "https://developer.monday.com/api-reference/docs"
+        },
+        {
+          "claim": "Publishes a complexity budget per minute alongside absolute request ceilings.",
+          "id": "monday-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "monday.com rate limits",
+          "type": "first_party_docs",
+          "url": "https://developer.monday.com/api-reference/docs/rate-limits"
+        },
+        {
+          "claim": "monday.com publishes its own MCP server under its GitHub organisation.",
+          "id": "monday-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "mondaycom/mcp",
+          "type": "repository",
+          "url": "https://github.com/mondaycom/mcp"
+        },
+        {
+          "claim": "Webhooks deliver board and item events to a subscribed endpoint.",
+          "current": true,
+          "id": "monday-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "monday.com webhooks",
+          "type": "first_party_docs",
+          "url": "https://developer.monday.com/api-reference/reference/webhooks"
+        }
+      ],
+      "vendor": "monday.com Ltd.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "event_subscriptions"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Covers record and schema manipulation; enterprise administration sits behind a separate admin API.",
+        "resource_groups": [
+          "attachments",
+          "bases",
+          "comments",
+          "fields",
+          "records",
+          "tables",
+          "views",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "airtable",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "pat"
+      ],
+      "auth_notes": "Personal access tokens with scoped permissions; OAuth 2.0 for integrations acting on behalf of other users.",
+      "canonical_name": "Airtable",
+      "description": "Spreadsheet-database hybrid for structured collaborative data.",
+      "docs_url": "https://airtable.com/developers/web/api/introduction",
+      "homepage_url": "https://airtable.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": false,
+        "source_url": "https://github.com/domdomegg/airtable-mcp-server",
+        "status": "third_party"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Scoped personal access tokens are created from the builder hub on any plan, including free.",
+          "id": "airtable-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Airtable personal access tokens",
+          "type": "first_party_docs",
+          "url": "https://airtable.com/developers/web/guides/personal-access-tokens"
+        },
+        {
+          "claim": "Documents REST endpoints for records, fields, tables, bases, comments and webhooks.",
+          "id": "airtable-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Airtable Web API",
+          "type": "first_party_docs",
+          "url": "https://airtable.com/developers/web/api/introduction"
+        },
+        {
+          "claim": "Publishes a five requests per second per base ceiling with a 30 second penalty on breach.",
+          "id": "airtable-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Airtable rate limits",
+          "type": "first_party_docs",
+          "url": "https://airtable.com/developers/web/api/rate-limits"
+        },
+        {
+          "claim": "An actively maintained community MCP server exposes Airtable bases and records.",
+          "id": "airtable-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "domdomegg/airtable-mcp-server",
+          "type": "repository",
+          "url": "https://github.com/domdomegg/airtable-mcp-server"
+        },
+        {
+          "claim": "Webhooks notify a registered endpoint of base changes and expose a cursor-based payload feed.",
+          "id": "airtable-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Airtable webhooks overview",
+          "type": "first_party_docs",
+          "url": "https://airtable.com/developers/web/api/webhooks-overview"
+        }
+      ],
+      "vendor": "Airtable (Formagrid, Inc.)",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Covers document and table manipulation; Packs are built through a separate SDK.",
+        "resource_groups": [
+          "automations",
+          "columns",
+          "controls",
+          "docs",
+          "formulas",
+          "pages",
+          "permissions",
+          "rows",
+          "tables"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "coda",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "bearer_token"
+      ],
+      "auth_notes": "API tokens issued from account settings and presented as a bearer token.",
+      "canonical_name": "Coda",
+      "description": "Document platform that merges documents, tables and applications in one surface.",
+      "docs_url": "https://coda.io/developers/apis/v1",
+      "homepage_url": "https://coda.io",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Coda accepts inbound webhook triggers for automations but does not document an outbound event subscription API.",
+          "id": "coda-automations",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Coda automations",
+          "type": "first_party_site",
+          "url": "https://help.coda.io/en/articles/4788092-automations"
+        },
+        {
+          "claim": "Documents REST endpoints for docs, pages, tables, rows, columns, controls and permissions using a bearer API token.",
+          "id": "coda-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Coda API v1 reference",
+          "type": "first_party_docs",
+          "url": "https://coda.io/developers/apis/v1"
+        },
+        {
+          "claim": "Publishes explicit per-endpoint request ceilings and returns 429 on breach.",
+          "id": "coda-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Coda rate limits",
+          "type": "first_party_docs",
+          "url": "https://coda.io/developers/apis/v1#section/Introduction/Rate-limits"
+        },
+        {
+          "claim": "API tokens are generated from account settings without approval on any plan.",
+          "id": "coda-tokens",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Coda account settings",
+          "type": "first_party_site",
+          "url": "https://coda.io/account"
+        }
+      ],
+      "vendor": "Coda Project, Inc.",
+      "webhooks": "polling_only"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search"
+        ],
+        "coverage": "subset",
+        "exists": true,
+        "notes": "The REST API covers the core task objects; reminders, filters and karma are only exposed through the separate sync API.",
+        "resource_groups": [
+          "comments",
+          "labels",
+          "projects",
+          "sections",
+          "tasks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "todoist",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "token"
+      ],
+      "auth_notes": "API token from integrations settings, or OAuth 2.0 for third-party apps.",
+      "canonical_name": "Todoist",
+      "description": "Personal and shared task manager with projects, labels and filters.",
+      "docs_url": "https://developer.todoist.com/",
+      "homepage_url": "https://todoist.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "source_url": "https://github.com/abhiz123/todoist-mcp-server",
+        "status": "third_party"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "An API token is available from integration settings on any account; OAuth 2.0 is used for distributed apps.",
+          "id": "todoist-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Todoist authorisation",
+          "type": "first_party_docs",
+          "url": "https://developer.todoist.com/guides/#authorization"
+        },
+        {
+          "claim": "Documents a REST API over tasks, projects, sections, labels and comments plus a separate sync API.",
+          "id": "todoist-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Todoist developer documentation",
+          "type": "first_party_docs",
+          "url": "https://developer.todoist.com/"
+        },
+        {
+          "claim": "Community MCP servers wrap the Todoist REST API; no vendor-published server was found.",
+          "id": "todoist-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "abhiz123/todoist-mcp-server",
+          "type": "repository",
+          "url": "https://github.com/abhiz123/todoist-mcp-server"
+        },
+        {
+          "claim": "Webhooks require an app-console application and deliver item events; request limits are published per token.",
+          "id": "todoist-webhooks",
+          "supports": [
+            "webhook_support",
+            "rate_limit_info"
+          ],
+          "title": "Todoist webhooks",
+          "type": "first_party_docs",
+          "url": "https://developer.todoist.com/guides/#webhooks"
+        }
+      ],
+      "vendor": "Doist Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "user_management",
+          "event_subscriptions"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Board and item manipulation is well covered; organisation endpoints are enterprise-only.",
+        "resource_groups": [
+          "boards",
+          "connectors",
+          "items",
+          "members",
+          "organizations",
+          "tags",
+          "teams",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "miro",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2"
+      ],
+      "auth_notes": "All REST access is via OAuth 2.0; the developer console issues a token for the installing user.",
+      "canonical_name": "Miro",
+      "description": "Collaborative online whiteboard for diagramming and workshops.",
+      "docs_url": "https://developers.miro.com/reference/api-reference",
+      "homepage_url": "https://miro.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "source_url": "https://github.com/k-jarzyna/mcp-miro",
+        "status": "third_party"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Apps are created in the developer console on a free account and authorise through OAuth 2.0.",
+          "id": "miro-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Getting started with Miro OAuth",
+          "type": "first_party_docs",
+          "url": "https://developers.miro.com/docs/getting-started-with-oauth"
+        },
+        {
+          "claim": "Documents REST endpoints for boards, items, connectors, tags, members and organisations.",
+          "id": "miro-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Miro REST API reference",
+          "type": "first_party_docs",
+          "url": "https://developers.miro.com/reference/api-reference"
+        },
+        {
+          "claim": "Organisation and audit endpoints require an Enterprise plan.",
+          "id": "miro-enterprise",
+          "supports": [
+            "access_restrictions"
+          ],
+          "title": "Miro enterprise API",
+          "type": "first_party_docs",
+          "url": "https://developers.miro.com/docs/enterprise-api"
+        },
+        {
+          "claim": "Publishes a credit-based per-minute budget with per-endpoint costs.",
+          "id": "miro-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Miro rate limiting",
+          "type": "first_party_docs",
+          "url": "https://developers.miro.com/docs/rate-limiting"
+        },
+        {
+          "claim": "A community MCP server exposes Miro boards and items.",
+          "current": true,
+          "id": "miro-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "k-jarzyna/mcp-miro",
+          "type": "repository",
+          "url": "https://github.com/k-jarzyna/mcp-miro"
+        },
+        {
+          "claim": "Board-level webhook subscriptions deliver item change events.",
+          "id": "miro-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Miro webhooks overview",
+          "type": "first_party_docs",
+          "url": "https://developers.miro.com/docs/webhooks-overview"
+        }
+      ],
+      "vendor": "Miro (RealtimeBoard Inc.)",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "admin"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "The v2 REST API covers content and space management; some administrative operations remain on the v1 API.",
+        "resource_groups": [
+          "attachments",
+          "blog posts",
+          "comments",
+          "content properties",
+          "labels",
+          "pages",
+          "permissions",
+          "spaces",
+          "users"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "confluence",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "basic_auth",
+        "pat"
+      ],
+      "auth_notes": "Cloud uses OAuth 2.0 (3LO) or basic auth with an Atlassian API token; Data Center uses personal access tokens.",
+      "canonical_name": "Confluence Cloud",
+      "description": "Team workspace for documentation, knowledge bases and meeting notes.",
+      "docs_url": "https://developer.atlassian.com/cloud/confluence/rest/v2/intro/",
+      "homepage_url": "https://www.atlassian.com/software/confluence",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://www.atlassian.com/platform/remote-mcp-server",
+        "status": "official"
+      },
+      "rate_limits": "documented_qualitative",
+      "sources": [
+        {
+          "claim": "Atlassian publishes an official remote MCP server covering Jira and Confluence Cloud.",
+          "id": "atlassian-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "Atlassian remote MCP server",
+          "type": "first_party_site",
+          "url": "https://www.atlassian.com/platform/remote-mcp-server"
+        },
+        {
+          "claim": "An Atlassian API token created from account settings authorises REST calls; OAuth 2.0 is used for distributed apps.",
+          "id": "confluence-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Basic auth for Confluence REST APIs",
+          "type": "first_party_docs",
+          "url": "https://developer.atlassian.com/cloud/confluence/basic-auth-for-rest-apis/"
+        },
+        {
+          "claim": "Documents REST endpoints for pages, spaces, blog posts, attachments, comments, labels and users.",
+          "id": "confluence-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Confluence Cloud REST API v2",
+          "type": "first_party_docs",
+          "url": "https://developer.atlassian.com/cloud/confluence/rest/v2/intro/"
+        },
+        {
+          "claim": "Describes cost-based limiting and retry headers without committing to fixed numeric ceilings.",
+          "id": "confluence-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Confluence rate limiting",
+          "type": "first_party_docs",
+          "url": "https://developer.atlassian.com/cloud/confluence/rate-limiting/"
+        },
+        {
+          "claim": "Connect apps register webhook modules for content events.",
+          "id": "confluence-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Confluence webhook module",
+          "type": "first_party_docs",
+          "url": "https://developer.atlassian.com/cloud/confluence/modules/webhook/"
+        }
+      ],
+      "vendor": "Atlassian",
+      "webhooks": "native_webhooks"
+    }
+  ]
+}

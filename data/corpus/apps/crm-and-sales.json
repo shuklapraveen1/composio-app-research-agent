@@ -1,0 +1,1132 @@
+{
+  "category": "CRM & Sales",
+  "entries": [
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "enterprise",
+        "restrictions": [
+          "enterprise_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "bulk_or_batch",
+          "streaming",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Documented across REST, Bulk, Metadata, Tooling and GraphQL APIs covering essentially every object in the platform.",
+        "resource_groups": [
+          "analytics",
+          "apex rest",
+          "bulk",
+          "chatter",
+          "composite",
+          "limits",
+          "metadata",
+          "query",
+          "search",
+          "sobjects",
+          "tooling",
+          "ui api"
+        ],
+        "types": [
+          "rest",
+          "graphql",
+          "sdk",
+          "cli"
+        ]
+      },
+      "app_id": "salesforce",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "service_account"
+      ],
+      "auth_notes": "OAuth 2.0 web-server and JWT bearer flows; the JWT flow backs server-to-server integrations.",
+      "canonical_name": "Salesforce Sales Cloud",
+      "conflicts": [
+        "A free Developer Edition org exposes the full API, but a customer production org needs Enterprise, Unlimited or Performance edition (or a paid add-on on Professional). Credential accessibility therefore differs between the evaluation path and the deployment path."
+      ],
+      "description": "Enterprise CRM platform covering sales, service and custom business objects.",
+      "docs_url": "https://developer.salesforce.com/docs/apis",
+      "homepage_url": "https://www.salesforce.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://github.com/salesforcecli/mcp",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Connected apps authorise through OAuth 2.0 web-server, device and JWT bearer flows.",
+          "id": "sf-auth",
+          "supports": [
+            "authentication"
+          ],
+          "title": "Salesforce OAuth authorisation flows",
+          "type": "first_party_docs",
+          "url": "https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_flows.htm"
+        },
+        {
+          "claim": "A free Developer Edition org can be created self-serve and exposes the API for development.",
+          "id": "sf-devorg",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Salesforce Developer Edition signup",
+          "type": "first_party_site",
+          "url": "https://developer.salesforce.com/signup"
+        },
+        {
+          "claim": "Documents REST, Bulk, Metadata, Tooling and GraphQL APIs over the full object model.",
+          "id": "sf-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Salesforce API documentation",
+          "type": "first_party_docs",
+          "url": "https://developer.salesforce.com/docs/apis"
+        },
+        {
+          "claim": "API access is included with Enterprise, Unlimited and Performance editions and is a paid add-on on Professional.",
+          "id": "sf-editions",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Salesforce API access by edition",
+          "type": "first_party_docs",
+          "url": "https://help.salesforce.com/s/articleView?id=sf.integrate_what_is_api.htm"
+        },
+        {
+          "claim": "Change notification is delivered through platform events and the Pub/Sub API rather than classic webhooks.",
+          "id": "sf-events",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Salesforce platform events",
+          "type": "first_party_docs",
+          "url": "https://developer.salesforce.com/docs/atlas.en-us.platform_events.meta/platform_events/platform_events_intro.htm"
+        },
+        {
+          "claim": "Publishes daily API request allocations that scale with edition and licence count.",
+          "id": "sf-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Salesforce API request limits",
+          "type": "first_party_docs",
+          "url": "https://developer.salesforce.com/docs/atlas.en-us.salesforce_app_limits_cheatsheet.meta/salesforce_app_limits_cheatsheet/salesforce_app_limits_platform_api.htm"
+        },
+        {
+          "claim": "Salesforce publishes an MCP server under its CLI organisation.",
+          "id": "sf-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "salesforcecli/mcp",
+          "type": "repository",
+          "url": "https://github.com/salesforcecli/mcp"
+        }
+      ],
+      "vendor": "Salesforce, Inc.",
+      "webhooks": "event_streaming"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "event_subscriptions",
+          "bulk_or_batch",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "CRM objects, associations, properties and marketing assets are all documented; some endpoints require a paid hub.",
+        "resource_groups": [
+          "associations",
+          "companies",
+          "contacts",
+          "custom objects",
+          "deals",
+          "engagements",
+          "files",
+          "forms",
+          "line items",
+          "marketing emails",
+          "owners",
+          "pipelines",
+          "products",
+          "properties",
+          "tickets",
+          "webhooks",
+          "workflows"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "hubspot",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "pat"
+      ],
+      "auth_notes": "Private app access tokens for single-account integrations; OAuth 2.0 for listed apps.",
+      "canonical_name": "HubSpot",
+      "description": "CRM suite spanning marketing, sales, service and content management.",
+      "docs_url": "https://developers.hubspot.com/docs/reference/api/overview",
+      "homepage_url": "https://www.hubspot.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://developers.hubspot.com/mcp",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "A private app access token is created from settings on any account, including the free CRM.",
+          "id": "hs-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "HubSpot private apps",
+          "type": "first_party_docs",
+          "url": "https://developers.hubspot.com/docs/guides/apps/private-apps/overview"
+        },
+        {
+          "claim": "Documents REST endpoints across CRM objects, associations, properties, marketing assets and automation.",
+          "id": "hs-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "HubSpot API reference",
+          "type": "first_party_docs",
+          "url": "https://developers.hubspot.com/docs/reference/api/overview"
+        },
+        {
+          "claim": "Publishes per-ten-second and daily request ceilings that vary by subscription tier.",
+          "id": "hs-limits",
+          "supports": [
+            "rate_limit_info",
+            "access_restrictions"
+          ],
+          "title": "HubSpot API usage details",
+          "type": "first_party_docs",
+          "url": "https://developers.hubspot.com/docs/guides/apps/api-usage/usage-details"
+        },
+        {
+          "claim": "HubSpot documents its own MCP server for agent access to the CRM.",
+          "id": "hs-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "HubSpot MCP server",
+          "type": "first_party_docs",
+          "url": "https://developers.hubspot.com/mcp"
+        },
+        {
+          "claim": "Apps subscribe to CRM object events delivered to a webhook URL.",
+          "id": "hs-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "HubSpot webhooks",
+          "type": "first_party_docs",
+          "url": "https://developers.hubspot.com/docs/guides/api/app-management/webhooks"
+        }
+      ],
+      "vendor": "HubSpot, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "trial",
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The reference covers the entire CRM object model.",
+        "resource_groups": [
+          "activities",
+          "deals",
+          "files",
+          "leads",
+          "notes",
+          "organizations",
+          "persons",
+          "pipelines",
+          "products",
+          "stages",
+          "users",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "pipedrive",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "api_key"
+      ],
+      "auth_notes": "Personal API token from user settings, or OAuth 2.0 for marketplace apps.",
+      "canonical_name": "Pipedrive",
+      "description": "Sales-focused CRM organised around deals moving through pipeline stages.",
+      "docs_url": "https://developers.pipedrive.com/docs/api/v1",
+      "homepage_url": "https://www.pipedrive.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://github.com/pipedrive/mcp-server",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "An API token is available from personal preferences once a paid seat exists; OAuth 2.0 serves marketplace apps.",
+          "id": "pd-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Finding the Pipedrive API token",
+          "type": "first_party_docs",
+          "url": "https://pipedrive.readme.io/docs/how-to-find-the-api-token"
+        },
+        {
+          "claim": "Documents REST endpoints for deals, persons, organisations, activities, pipelines, products and webhooks.",
+          "id": "pd-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Pipedrive API v1 reference",
+          "type": "first_party_docs",
+          "url": "https://developers.pipedrive.com/docs/api/v1"
+        },
+        {
+          "claim": "Publishes a token-budget rate limit per company per two-second window.",
+          "id": "pd-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Pipedrive rate limiting",
+          "type": "first_party_docs",
+          "url": "https://pipedrive.readme.io/docs/core-api-concepts-rate-limiting"
+        },
+        {
+          "claim": "Pipedrive offers a time-limited trial and no permanently free tier, so sustained API access requires a paid subscription.",
+          "id": "pd-pricing",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Pipedrive pricing",
+          "type": "first_party_pricing",
+          "url": "https://www.pipedrive.com/en/pricing"
+        },
+        {
+          "claim": "Webhooks push create, change and delete events for CRM objects.",
+          "id": "pd-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Pipedrive webhooks guide",
+          "type": "first_party_docs",
+          "url": "https://pipedrive.readme.io/docs/guide-for-webhooks"
+        },
+        {
+          "claim": "Pipedrive publishes an MCP server in its own GitHub organisation.",
+          "current": true,
+          "id": "pipedrive-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "pipedrive/mcp-server",
+          "type": "repository",
+          "url": "https://github.com/pipedrive/mcp-server"
+        }
+      ],
+      "vendor": "Pipedrive OÜ",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "bulk_or_batch",
+          "event_subscriptions"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Record, module and metadata APIs are documented, with bulk and notification APIs alongside.",
+        "resource_groups": [
+          "attachments",
+          "bulk read",
+          "bulk write",
+          "metadata",
+          "modules",
+          "notes",
+          "notifications",
+          "records",
+          "territories",
+          "users"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "zoho-crm",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2"
+      ],
+      "auth_notes": "All API access is OAuth 2.0 with self-client, server-based or mobile flows registered in the Zoho API console.",
+      "canonical_name": "Zoho CRM",
+      "description": "CRM within the wider Zoho business suite, covering leads, deals and modules.",
+      "docs_url": "https://www.zoho.com/crm/developer/docs/api/v7/",
+      "homepage_url": "https://www.zoho.com/crm/",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Clients are registered in the Zoho API console on any account and authorise through OAuth 2.0.",
+          "id": "zcrm-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Zoho CRM OAuth overview",
+          "type": "first_party_docs",
+          "url": "https://www.zoho.com/crm/developer/docs/api/v7/oauth-overview.html"
+        },
+        {
+          "claim": "Publishes daily API credit allocations that scale with edition and user count; the free edition receives a small allocation.",
+          "id": "zcrm-credits",
+          "supports": [
+            "rate_limit_info",
+            "access_restrictions"
+          ],
+          "title": "Zoho CRM API limits",
+          "type": "first_party_docs",
+          "url": "https://www.zoho.com/crm/developer/docs/api/v7/api-limits.html"
+        },
+        {
+          "claim": "Documents REST endpoints for records, modules, metadata, bulk operations, notes and users.",
+          "id": "zcrm-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Zoho CRM API v7",
+          "type": "first_party_docs",
+          "url": "https://www.zoho.com/crm/developer/docs/api/v7/"
+        },
+        {
+          "claim": "The notification API subscribes a callback URL to record change events.",
+          "id": "zcrm-notify",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Zoho CRM notification API",
+          "type": "first_party_docs",
+          "url": "https://www.zoho.com/crm/developer/docs/api/v7/notifications/"
+        }
+      ],
+      "vendor": "Zoho Corporation",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "trial",
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "event_subscriptions",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The reference covers the whole CRM including call and email activities.",
+        "resource_groups": [
+          "activities",
+          "contacts",
+          "custom fields",
+          "leads",
+          "opportunities",
+          "smart views",
+          "tasks",
+          "users",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "close",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "oauth2"
+      ],
+      "auth_notes": "API keys from organisation settings, presented with basic auth; OAuth 2.0 for third-party apps.",
+      "canonical_name": "Close",
+      "description": "Inside-sales CRM with built-in calling, email sequencing and reporting.",
+      "docs_url": "https://developer.close.com/",
+      "homepage_url": "https://close.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for leads, contacts, opportunities, activities, tasks and webhooks authenticated with an API key.",
+          "id": "close-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Close API documentation",
+          "type": "first_party_docs",
+          "url": "https://developer.close.com/"
+        },
+        {
+          "claim": "Publishes per-endpoint-group request ceilings and rate-limit headers.",
+          "id": "close-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Close rate limits",
+          "type": "first_party_docs",
+          "url": "https://developer.close.com/resources/rate-limits/"
+        },
+        {
+          "claim": "Close offers a trial and paid plans only; there is no permanently free tier from which to issue an API key.",
+          "id": "close-pricing",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Close pricing",
+          "type": "first_party_pricing",
+          "url": "https://close.com/pricing/"
+        },
+        {
+          "claim": "Webhook subscriptions deliver create, update and delete events for CRM objects.",
+          "id": "close-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Close webhook subscriptions",
+          "type": "first_party_docs",
+          "url": "https://developer.close.com/resources/webhook-subscriptions/"
+        }
+      ],
+      "vendor": "Close (Elastic Inc.)",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "trial",
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Covers the full CRM object model including projects and related items.",
+        "resource_groups": [
+          "activities",
+          "companies",
+          "leads",
+          "opportunities",
+          "people",
+          "projects",
+          "related items",
+          "tasks",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "copper",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key"
+      ],
+      "auth_notes": "An API key plus the account email address is sent in request headers; there is no OAuth flow for the public API.",
+      "canonical_name": "Copper",
+      "description": "CRM built around Google Workspace for relationship-led sales teams.",
+      "docs_url": "https://developer.copper.com/",
+      "homepage_url": "https://www.copper.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for people, companies, opportunities, leads, tasks and webhooks using an API key header.",
+          "id": "copper-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Copper developer API",
+          "type": "first_party_docs",
+          "url": "https://developer.copper.com/"
+        },
+        {
+          "claim": "Publishes a fixed request-per-second ceiling per API key.",
+          "id": "copper-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Copper requests and responses",
+          "type": "first_party_docs",
+          "url": "https://developer.copper.com/introduction/requests-and-responses.html"
+        },
+        {
+          "claim": "Copper sells paid seats with a trial and no free tier, so API keys require a subscription.",
+          "id": "copper-pricing",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Copper pricing",
+          "type": "first_party_pricing",
+          "url": "https://www.copper.com/pricing"
+        },
+        {
+          "claim": "Webhook subscriptions post entity change events to a callback URL.",
+          "id": "copper-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Copper webhooks overview",
+          "type": "first_party_docs",
+          "url": "https://developer.copper.com/webhooks/overview.html"
+        }
+      ],
+      "vendor": "Copper CRM, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "scheduling"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Core CRM objects are covered; sequences and reporting are not in the public reference.",
+        "resource_groups": [
+          "accounts",
+          "appointments",
+          "contacts",
+          "deals",
+          "notes",
+          "sales activities",
+          "search",
+          "tasks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "freshsales",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key"
+      ],
+      "auth_notes": "A per-user API key is sent as a token in the Authorization header.",
+      "canonical_name": "Freshsales",
+      "description": "Sales CRM in the Freshworks suite, with contacts, deals and sales sequences.",
+      "docs_url": "https://developers.freshworks.com/crm/api/",
+      "homepage_url": "https://www.freshworks.com/crm/sales/",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for contacts, accounts, deals, sales activities, tasks and appointments using an API key.",
+          "id": "fs-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Freshsales API reference",
+          "type": "first_party_docs",
+          "url": "https://developers.freshworks.com/crm/api/"
+        },
+        {
+          "claim": "Publishes hourly request ceilings per account that vary by plan.",
+          "id": "fs-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Freshsales rate limits",
+          "type": "first_party_docs",
+          "url": "https://developers.freshworks.com/crm/api/#ratelimit"
+        },
+        {
+          "claim": "Freshsales publishes a free tier from which a user API key can be generated.",
+          "id": "fs-pricing",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Freshsales pricing",
+          "type": "first_party_pricing",
+          "url": "https://www.freshworks.com/crm/pricing/"
+        },
+        {
+          "claim": "Workflow automations can post record events to an external webhook URL.",
+          "id": "fs-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Freshsales webhooks",
+          "type": "first_party_site",
+          "url": "https://support.freshsales.io/support/solutions/articles/220207-webhooks"
+        }
+      ],
+      "vendor": "Freshworks Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free",
+        "restrictions": [
+          "deployment_required"
+        ],
+        "self_hosted": true
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "event_subscriptions"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Both a REST and a GraphQL surface are generated over the workspace object model, including custom objects.",
+        "resource_groups": [
+          "companies",
+          "custom objects",
+          "fields",
+          "notes",
+          "opportunities",
+          "people",
+          "tasks",
+          "webhooks",
+          "workflows"
+        ],
+        "types": [
+          "rest",
+          "graphql"
+        ]
+      },
+      "app_id": "twenty",
+      "application_type": "open_source_self_hosted",
+      "auth_methods": [
+        "api_key",
+        "bearer_token"
+      ],
+      "auth_notes": "API keys are minted inside a workspace and presented as bearer tokens; the same scheme works on a self-hosted instance.",
+      "canonical_name": "Twenty",
+      "conflicts": [
+        "Twenty is distributed as self-hostable open source and also sold as a managed cloud workspace, so credential accessibility depends on which deployment the integrator targets."
+      ],
+      "description": "Open-source CRM with a customisable object model, offered self-hosted or as a managed cloud.",
+      "docs_url": "https://twenty.com/developers",
+      "homepage_url": "https://twenty.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "no_published_limits",
+      "sources": [
+        {
+          "claim": "Documents REST and GraphQL APIs over the workspace object model with API-key authentication.",
+          "id": "twenty-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Twenty developer documentation",
+          "type": "first_party_docs",
+          "url": "https://twenty.com/developers"
+        },
+        {
+          "claim": "The product is published as open source under the twentyhq organisation with self-hosting instructions.",
+          "id": "twenty-repo",
+          "supports": [
+            "application_type",
+            "credential_access"
+          ],
+          "title": "twentyhq/twenty",
+          "type": "repository",
+          "url": "https://github.com/twentyhq/twenty"
+        },
+        {
+          "claim": "Credentials come from a workspace on an instance the integrator deploys; the managed cloud is the alternative path.",
+          "id": "twenty-selfhost",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Twenty self-hosting guide",
+          "type": "first_party_docs",
+          "url": "https://twenty.com/developers/section/self-hosting"
+        },
+        {
+          "claim": "Webhooks are configurable per workspace; no rate limits are published for self-hosted deployments.",
+          "id": "twenty-webhooks",
+          "supports": [
+            "webhook_support",
+            "rate_limit_info"
+          ],
+          "title": "Twenty APIs and webhooks",
+          "type": "first_party_docs",
+          "url": "https://twenty.com/developers/section/api-and-webhooks"
+        }
+      ],
+      "vendor": "Twenty (open-source project)",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The API mirrors the full user-defined object model including custom objects and attributes.",
+        "resource_groups": [
+          "attributes",
+          "comments",
+          "entries",
+          "lists",
+          "notes",
+          "objects",
+          "records",
+          "tasks",
+          "webhooks",
+          "workspace members"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "attio",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "api_key"
+      ],
+      "auth_notes": "Workspace access tokens for internal use, OAuth 2.0 for third-party apps.",
+      "canonical_name": "Attio",
+      "description": "Data-model-first CRM where objects, attributes and lists are user-defined.",
+      "docs_url": "https://developers.attio.com/reference/get_v2-objects",
+      "homepage_url": "https://attio.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": false,
+        "source_url": "https://github.com/hmk/attio-mcp-server",
+        "status": "third_party"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Workspace access tokens are generated from workspace settings; OAuth 2.0 is used for distributed integrations.",
+          "id": "attio-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Attio integration types",
+          "type": "first_party_docs",
+          "url": "https://developers.attio.com/docs/integration-types"
+        },
+        {
+          "claim": "Documents REST endpoints for objects, records, attributes, lists, entries, notes, tasks and webhooks.",
+          "id": "attio-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Attio API reference",
+          "type": "first_party_docs",
+          "url": "https://developers.attio.com/reference/get_v2-objects"
+        },
+        {
+          "claim": "Publishes per-second and per-hour request ceilings per workspace.",
+          "id": "attio-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Attio rate limiting",
+          "type": "first_party_docs",
+          "url": "https://developers.attio.com/docs/rate-limiting"
+        },
+        {
+          "claim": "An actively maintained community MCP server wraps the Attio API.",
+          "id": "attio-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "hmk/attio-mcp-server",
+          "type": "repository",
+          "url": "https://github.com/hmk/attio-mcp-server"
+        },
+        {
+          "claim": "Webhooks deliver record and list change events to a subscribed endpoint.",
+          "current": true,
+          "id": "attio-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Attio webhooks",
+          "type": "first_party_docs",
+          "url": "https://developers.attio.com/docs/webhooks"
+        }
+      ],
+      "vendor": "Attio Ltd.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "search",
+          "user_management",
+          "bulk_or_batch"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Search, enrichment and engagement endpoints are documented; several are gated behind higher plans.",
+        "resource_groups": [
+          "accounts",
+          "contacts",
+          "opportunities",
+          "organization search",
+          "people search",
+          "sequences",
+          "tasks",
+          "users"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "apollo-io",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key"
+      ],
+      "auth_notes": "A master API key is issued from the developer settings page and sent in a header.",
+      "canonical_name": "Apollo.io",
+      "description": "Sales intelligence and engagement platform with a contact and company database.",
+      "docs_url": "https://docs.apollo.io/reference/introduction",
+      "homepage_url": "https://www.apollo.io",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "API keys are available to paid plans; master API key creation is restricted to eligible subscriptions.",
+          "id": "apollo-access",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Create an Apollo API key",
+          "type": "first_party_docs",
+          "url": "https://docs.apollo.io/docs/create-api-key"
+        },
+        {
+          "claim": "Documents REST endpoints for people and organisation search, enrichment, contacts, accounts and sequences using an API key.",
+          "id": "apollo-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Apollo.io API reference",
+          "type": "first_party_docs",
+          "url": "https://docs.apollo.io/reference/introduction"
+        },
+        {
+          "claim": "Publishes per-minute, per-hour and per-day request ceilings that vary by plan.",
+          "id": "apollo-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Apollo.io rate limits",
+          "type": "first_party_docs",
+          "url": "https://docs.apollo.io/reference/rate-limits"
+        },
+        {
+          "claim": "Webhooks deliver sequence and contact events to a registered endpoint.",
+          "id": "apollo-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Apollo.io webhooks",
+          "type": "first_party_docs",
+          "url": "https://docs.apollo.io/docs/webhooks"
+        }
+      ],
+      "vendor": "Apollo.io (ZenLeads, Inc.)",
+      "webhooks": "native_webhooks"
+    }
+  ]
+}

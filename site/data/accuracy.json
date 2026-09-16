@@ -1,0 +1,174 @@
+{
+  "headline_metric": "sample_b_field_level_accuracy",
+  "metadata": {
+    "generated_at": "2026-09-16T00:00:00Z",
+    "notes": "Sample A measures classifier v1 before the improvement phase; Sample B measures classifier v2 on apps it had never been evaluated against.",
+    "record_count": 2,
+    "schema_version": "2.0.0",
+    "seed": 20260916,
+    "source_fingerprint": "76ddb0934a3d5496",
+    "stage": "accuracy"
+  },
+  "samples": [
+    {
+      "apps": 15,
+      "claims_checked": 68,
+      "claims_with_valid_evidence": 61,
+      "classifier_version": "v1",
+      "fields_checked": 165,
+      "fields_correct": 142,
+      "group": "A",
+      "measurement": "first_pass",
+      "per_field": [
+        {
+          "checked": 15,
+          "correct": 14,
+          "field": "api_breadth"
+        },
+        {
+          "checked": 15,
+          "correct": 15,
+          "field": "api_exists"
+        },
+        {
+          "checked": 15,
+          "correct": 15,
+          "field": "api_types"
+        },
+        {
+          "checked": 15,
+          "correct": 15,
+          "field": "application_type"
+        },
+        {
+          "checked": 15,
+          "correct": 15,
+          "field": "authentication"
+        },
+        {
+          "checked": 15,
+          "correct": 1,
+          "field": "blocker"
+        },
+        {
+          "checked": 15,
+          "correct": 14,
+          "field": "buildability"
+        },
+        {
+          "checked": 15,
+          "correct": 9,
+          "field": "credential_access"
+        },
+        {
+          "checked": 15,
+          "correct": 15,
+          "field": "mcp"
+        },
+        {
+          "checked": 15,
+          "correct": 15,
+          "field": "rate_limit_info"
+        },
+        {
+          "checked": 15,
+          "correct": 14,
+          "field": "webhook_support"
+        }
+      ],
+      "rows_checked": 15,
+      "rows_correct": 0,
+      "trigger_reviewed_apps": [
+        "intercom",
+        "xero"
+      ]
+    },
+    {
+      "apps": 15,
+      "claims_checked": 65,
+      "claims_with_valid_evidence": 65,
+      "classifier_version": "v2",
+      "fields_checked": 165,
+      "fields_correct": 161,
+      "group": "B",
+      "measurement": "final",
+      "per_field": [
+        {
+          "checked": 15,
+          "correct": 12,
+          "field": "api_breadth"
+        },
+        {
+          "checked": 15,
+          "correct": 15,
+          "field": "api_exists"
+        },
+        {
+          "checked": 15,
+          "correct": 15,
+          "field": "api_types"
+        },
+        {
+          "checked": 15,
+          "correct": 15,
+          "field": "application_type"
+        },
+        {
+          "checked": 15,
+          "correct": 15,
+          "field": "authentication"
+        },
+        {
+          "checked": 15,
+          "correct": 14,
+          "field": "blocker"
+        },
+        {
+          "checked": 15,
+          "correct": 15,
+          "field": "buildability"
+        },
+        {
+          "checked": 15,
+          "correct": 15,
+          "field": "credential_access"
+        },
+        {
+          "checked": 15,
+          "correct": 15,
+          "field": "mcp"
+        },
+        {
+          "checked": 15,
+          "correct": 15,
+          "field": "rate_limit_info"
+        },
+        {
+          "checked": 15,
+          "correct": 15,
+          "field": "webhook_support"
+        }
+      ],
+      "rows_checked": 15,
+      "rows_correct": 11,
+      "trigger_reviewed_apps": [
+        "nextcloud",
+        "sherlock",
+        "twenty"
+      ]
+    }
+  ],
+  "verified_fields": [
+    "application_type",
+    "authentication",
+    "credential_access",
+    "api_exists",
+    "api_types",
+    "api_breadth",
+    "mcp",
+    "webhook_support",
+    "rate_limit_info",
+    "buildability",
+    "blocker"
+  ]
+}

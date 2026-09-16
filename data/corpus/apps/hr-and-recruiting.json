@@ -1,0 +1,1056 @@
+{
+  "category": "HR & Recruiting",
+  "entries": [
+    {
+      "access": {
+        "account": "contact_sales",
+        "admin_only": true,
+        "api_plan": "enterprise",
+        "approval_required": true,
+        "restrictions": [
+          "enterprise_plan_required",
+          "approval_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "admin",
+          "user_management",
+          "bulk_or_batch",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "REST services sit alongside the older SOAP web services and report-as-a-service; together they cover the suite.",
+        "resource_groups": [
+          "absence",
+          "common",
+          "compensation",
+          "financials",
+          "learning",
+          "payroll",
+          "recruiting",
+          "staffing",
+          "time tracking"
+        ],
+        "types": [
+          "rest",
+          "other"
+        ]
+      },
+      "app_id": "workday",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "service_account",
+        "basic_auth"
+      ],
+      "auth_notes": "Tenant-registered API clients using OAuth 2.0, or an integration system user with basic auth for SOAP services.",
+      "canonical_name": "Workday",
+      "description": "Enterprise suite for human capital management, payroll and financials.",
+      "docs_url": "https://community.workday.com/sites/default/files/file-hosting/restapi/index.html",
+      "homepage_url": "https://www.workday.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "no_published_limits",
+      "sources": [
+        {
+          "claim": "API clients and integration system users are registered inside a customer tenant by an administrator.",
+          "id": "wd-auth",
+          "supports": [
+            "authentication",
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Workday API client registration",
+          "type": "first_party_docs",
+          "url": "https://community.workday.com/articles/833156"
+        },
+        {
+          "claim": "Documents REST services across staffing, compensation, absence, payroll and recruiting.",
+          "id": "wd-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Workday REST API reference",
+          "type": "first_party_docs",
+          "url": "https://community.workday.com/sites/default/files/file-hosting/restapi/index.html"
+        },
+        {
+          "claim": "Outbound integration is built on scheduled integration systems rather than event webhooks, and no public request ceilings are published.",
+          "id": "wd-integrations",
+          "supports": [
+            "webhook_support",
+            "rate_limit_info"
+          ],
+          "title": "Workday integrations",
+          "type": "first_party_docs",
+          "url": "https://community.workday.com/topics/integrations"
+        },
+        {
+          "claim": "Workday is sold through enterprise contracts; there is no self-serve signup or public sandbox.",
+          "id": "wd-pricing",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Workday contact sales",
+          "type": "first_party_site",
+          "url": "https://www.workday.com/en-us/why-workday/contact-sales.html"
+        }
+      ],
+      "vendor": "Workday, Inc.",
+      "webhooks": "polling_only"
+    },
+    {
+      "access": {
+        "account": "trial",
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "event_subscriptions",
+          "file_transfer",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Employee records, tables, time off, files and reports are documented.",
+        "resource_groups": [
+          "applicant tracking",
+          "benefits",
+          "employees",
+          "files",
+          "reports",
+          "tables",
+          "time off",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "bamboohr",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "basic_auth"
+      ],
+      "auth_notes": "A per-user API key is sent as the basic-auth username against the company subdomain.",
+      "canonical_name": "BambooHR",
+      "description": "HR information system for employee records, time off and onboarding.",
+      "docs_url": "https://documentation.bamboohr.com/reference/get-employee",
+      "homepage_url": "https://www.bamboohr.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_qualitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for employees, tables, time off, files and reports authorised by an API key.",
+          "id": "bhr-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "BambooHR API reference",
+          "type": "first_party_docs",
+          "url": "https://documentation.bamboohr.com/reference/get-employee"
+        },
+        {
+          "claim": "Users generate an API key from their own account inside a paying company instance.",
+          "id": "bhr-key",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "BambooHR getting started",
+          "type": "first_party_docs",
+          "url": "https://documentation.bamboohr.com/docs/getting-started"
+        },
+        {
+          "claim": "BambooHR is sold on paid plans with a trial; there is no free tier.",
+          "id": "bhr-pricing",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "BambooHR pricing",
+          "type": "first_party_pricing",
+          "url": "https://www.bamboohr.com/pricing/"
+        },
+        {
+          "claim": "Webhooks post employee field changes to a callback URL; rate limiting is described in general terms.",
+          "id": "bhr-webhooks",
+          "supports": [
+            "webhook_support",
+            "rate_limit_info"
+          ],
+          "title": "BambooHR webhooks",
+          "type": "first_party_docs",
+          "url": "https://documentation.bamboohr.com/docs/webhooks"
+        }
+      ],
+      "vendor": "BambooHR LLC",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "contact_sales",
+        "admin_only": true,
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "event_subscriptions",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The Harvest API covers the whole hiring pipeline; separate job board and ingestion APIs sit alongside it.",
+        "resource_groups": [
+          "applications",
+          "candidates",
+          "interviews",
+          "job posts",
+          "jobs",
+          "offers",
+          "scorecards",
+          "sources",
+          "users",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "greenhouse",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "basic_auth"
+      ],
+      "auth_notes": "Harvest API keys created by a site administrator and sent over basic auth.",
+      "canonical_name": "Greenhouse",
+      "description": "Applicant tracking system for structured hiring and interview scorecards.",
+      "docs_url": "https://developers.greenhouse.io/harvest.html",
+      "homepage_url": "https://www.greenhouse.io",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for candidates, applications, jobs, interviews, scorecards and offers using basic-auth API keys.",
+          "id": "gh-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Greenhouse Harvest API",
+          "type": "first_party_docs",
+          "url": "https://developers.greenhouse.io/harvest.html"
+        },
+        {
+          "claim": "Only site administrators can create Harvest API keys inside a customer account.",
+          "id": "gh-keys",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Creating a Greenhouse API key",
+          "type": "first_party_site",
+          "url": "https://support.greenhouse.io/hc/en-us/articles/115000521723"
+        },
+        {
+          "claim": "Greenhouse is sold through sales-led contracts with no self-serve signup.",
+          "id": "gh-pricing",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Greenhouse pricing",
+          "type": "first_party_pricing",
+          "url": "https://www.greenhouse.io/pricing"
+        },
+        {
+          "claim": "Webhooks deliver candidate and application events; the Harvest documentation publishes request ceilings per key.",
+          "id": "gh-webhooks",
+          "supports": [
+            "webhook_support",
+            "rate_limit_info"
+          ],
+          "title": "Greenhouse webhooks",
+          "type": "first_party_docs",
+          "url": "https://developers.greenhouse.io/webhooks.html"
+        }
+      ],
+      "vendor": "Greenhouse Software, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "contact_sales",
+        "admin_only": true,
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Opportunities, postings, interviews and offers are documented, with a sandbox for partners.",
+        "resource_groups": [
+          "feedback",
+          "interviews",
+          "offers",
+          "opportunities",
+          "postings",
+          "requisitions",
+          "stages",
+          "users",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "lever",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "basic_auth",
+        "oauth2"
+      ],
+      "auth_notes": "API keys over basic auth for a single account, or OAuth 2.0 for partner integrations.",
+      "canonical_name": "Lever",
+      "description": "Talent acquisition suite combining applicant tracking and candidate relationship management.",
+      "docs_url": "https://hire.lever.co/developer/documentation",
+      "homepage_url": "https://www.lever.co",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for opportunities, postings, interviews, offers and feedback.",
+          "id": "lever-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Lever API documentation",
+          "type": "first_party_docs",
+          "url": "https://hire.lever.co/developer/documentation"
+        },
+        {
+          "claim": "API keys are generated by a super admin inside a customer account.",
+          "id": "lever-keys",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Lever API credentials",
+          "type": "first_party_site",
+          "url": "https://help.lever.co/hc/en-us/articles/360042364412"
+        },
+        {
+          "claim": "Pricing is quoted through sales; there is no self-serve plan.",
+          "id": "lever-pricing",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Lever pricing",
+          "type": "first_party_pricing",
+          "url": "https://www.lever.co/pricing/"
+        },
+        {
+          "claim": "Webhooks deliver candidate stage and hire events; rate limits are published per API key.",
+          "id": "lever-webhooks",
+          "supports": [
+            "webhook_support",
+            "rate_limit_info"
+          ],
+          "title": "Lever webhooks",
+          "type": "first_party_docs",
+          "url": "https://hire.lever.co/developer/documentation#webhooks"
+        }
+      ],
+      "vendor": "Lever, Inc. (Employ Inc.)",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "paid",
+        "approval_required": true,
+        "restrictions": [
+          "approval_required",
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "user_management",
+          "event_subscriptions",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Companies, employees, payrolls, contractors and benefits are documented against a demo environment.",
+        "resource_groups": [
+          "benefits",
+          "companies",
+          "compensations",
+          "contractors",
+          "employees",
+          "jobs",
+          "payrolls",
+          "time off",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "gusto",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2"
+      ],
+      "auth_notes": "OAuth 2.0 against a developer application; demo credentials are self-serve while production requires review.",
+      "canonical_name": "Gusto",
+      "description": "Payroll, benefits and HR administration for small and medium businesses.",
+      "docs_url": "https://docs.gusto.com/app-integrations/reference/overview",
+      "homepage_url": "https://gusto.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Developer accounts and demo companies are self-serve; production access requires Gusto to review the integration.",
+          "id": "gusto-access",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Gusto getting started",
+          "type": "first_party_docs",
+          "url": "https://docs.gusto.com/app-integrations/docs/getting-started"
+        },
+        {
+          "claim": "Documents REST endpoints for companies, employees, payrolls, contractors and benefits using OAuth 2.0.",
+          "id": "gusto-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Gusto API reference",
+          "type": "first_party_docs",
+          "url": "https://docs.gusto.com/app-integrations/reference/overview"
+        },
+        {
+          "claim": "Publishes per-minute request ceilings per token.",
+          "id": "gusto-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Gusto rate limits",
+          "type": "first_party_docs",
+          "url": "https://docs.gusto.com/app-integrations/docs/rate-limits"
+        },
+        {
+          "claim": "Webhook subscriptions deliver payroll and employee events.",
+          "id": "gusto-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Gusto webhooks",
+          "type": "first_party_docs",
+          "url": "https://docs.gusto.com/app-integrations/docs/webhooks"
+        }
+      ],
+      "vendor": "Gusto, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "contact_sales",
+        "admin_only": true,
+        "api_plan": "paid",
+        "approval_required": true,
+        "restrictions": [
+          "approval_required",
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "user_management",
+          "event_subscriptions",
+          "admin"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Employee, company and leave data plus app provisioning; payroll write access is restricted to approved partners.",
+        "resource_groups": [
+          "app management",
+          "companies",
+          "custom objects",
+          "employees",
+          "groups",
+          "leaves",
+          "time entries",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "rippling",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "api_key",
+        "bearer_token"
+      ],
+      "auth_notes": "API keys for a single customer installation, or OAuth 2.0 for partner apps listed in the Rippling marketplace.",
+      "canonical_name": "Rippling",
+      "description": "Workforce platform unifying HR, IT device management and payroll.",
+      "docs_url": "https://developer.rippling.com/documentation/rest-api/reference",
+      "homepage_url": "https://www.rippling.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for employees, companies, groups, leaves, time entries and custom objects.",
+          "id": "rip-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Rippling REST API reference",
+          "type": "first_party_docs",
+          "url": "https://developer.rippling.com/documentation/rest-api/reference"
+        },
+        {
+          "claim": "Publishes per-minute request ceilings per access token.",
+          "id": "rip-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Rippling rate limits",
+          "type": "first_party_docs",
+          "url": "https://developer.rippling.com/documentation/rest-api/rate-limits"
+        },
+        {
+          "claim": "Credentials come from a customer installation or from the partner programme after Rippling review.",
+          "id": "rip-partner",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Rippling getting started",
+          "type": "first_party_docs",
+          "url": "https://developer.rippling.com/documentation/getting-started"
+        },
+        {
+          "claim": "Webhooks deliver employee lifecycle events to a registered endpoint.",
+          "id": "rip-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Rippling webhooks",
+          "type": "first_party_docs",
+          "url": "https://developer.rippling.com/documentation/rest-api/webhooks"
+        }
+      ],
+      "vendor": "Rippling People Center Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "contact_sales",
+        "admin_only": true,
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "event_subscriptions",
+          "reporting_analytics"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "People, contracts, invoices and payments are documented; several endpoints depend on the contract type.",
+        "resource_groups": [
+          "contracts",
+          "invoices",
+          "organizations",
+          "payments",
+          "people",
+          "time off",
+          "timesheets",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "deel",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "api_key",
+        "bearer_token"
+      ],
+      "auth_notes": "Organisation API tokens created in developer settings, or OAuth 2.0 for marketplace apps.",
+      "canonical_name": "Deel",
+      "description": "Global payroll, contractor management and employer-of-record platform.",
+      "docs_url": "https://developer.deel.com/reference",
+      "homepage_url": "https://www.deel.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for people, contracts, invoices, payments, time off and webhooks.",
+          "id": "deel-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Deel API reference",
+          "type": "first_party_docs",
+          "url": "https://developer.deel.com/reference"
+        },
+        {
+          "claim": "Publishes per-minute request ceilings per token.",
+          "id": "deel-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Deel rate limits",
+          "type": "first_party_docs",
+          "url": "https://developer.deel.com/docs/rate-limits"
+        },
+        {
+          "claim": "Tokens are created by an organisation administrator inside an existing Deel account.",
+          "id": "deel-tokens",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Deel API tokens",
+          "type": "first_party_docs",
+          "url": "https://developer.deel.com/docs/api-tokens"
+        },
+        {
+          "claim": "Webhooks deliver contract and payment lifecycle events.",
+          "id": "deel-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Deel webhooks",
+          "type": "first_party_docs",
+          "url": "https://developer.deel.com/docs/webhooks-1"
+        }
+      ],
+      "vendor": "Deel, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "contact_sales",
+        "admin_only": true,
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "user_management",
+          "file_transfer",
+          "reporting_analytics"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Employee, attendance, absence and recruiting data is documented; scopes are toggled per credential.",
+        "resource_groups": [
+          "absences",
+          "attendances",
+          "custom reports",
+          "documents",
+          "employees",
+          "recruiting"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "personio",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "api_key"
+      ],
+      "auth_notes": "Client id and secret issued from the customer's API credentials screen and exchanged for a bearer token.",
+      "canonical_name": "Personio",
+      "description": "HR management platform for European SMEs covering people data, absences and recruiting.",
+      "docs_url": "https://developer.personio.de/reference",
+      "homepage_url": "https://www.personio.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "notes": "No general outbound webhook mechanism was found in the developer reference, so webhook support is left unestablished.",
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Credentials are generated by an administrator inside a paying Personio account with per-scope toggles.",
+          "id": "personio-creds",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Personio API credentials",
+          "type": "first_party_site",
+          "url": "https://support.personio.de/hc/en-us/articles/360000603558"
+        },
+        {
+          "claim": "Documents REST endpoints for employees, attendances, absences, documents and recruiting.",
+          "id": "personio-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Personio API reference",
+          "type": "first_party_docs",
+          "url": "https://developer.personio.de/reference"
+        },
+        {
+          "claim": "Publishes per-minute request ceilings per credential.",
+          "id": "personio-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Personio rate limits",
+          "type": "first_party_docs",
+          "url": "https://developer.personio.de/docs/rate-limits"
+        }
+      ],
+      "vendor": "Personio SE & Co. KG"
+    },
+    {
+      "access": {
+        "account": "contact_sales",
+        "admin_only": true,
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "search",
+          "user_management",
+          "event_subscriptions",
+          "scheduling",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Candidates, applications, interviews, offers and feedback are documented.",
+        "resource_groups": [
+          "applications",
+          "candidates",
+          "feedback",
+          "interviews",
+          "jobs",
+          "offers",
+          "users",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "ashby",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "basic_auth"
+      ],
+      "auth_notes": "An API key created by an administrator is sent as the basic-auth username.",
+      "canonical_name": "Ashby",
+      "description": "Recruiting platform combining applicant tracking, scheduling and analytics.",
+      "docs_url": "https://developers.ashbyhq.com/reference/introduction",
+      "homepage_url": "https://www.ashbyhq.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for candidates, applications, interviews, offers and webhooks using API-key basic auth.",
+          "id": "ashby-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Ashby API reference",
+          "type": "first_party_docs",
+          "url": "https://developers.ashbyhq.com/reference/introduction"
+        },
+        {
+          "claim": "API keys are created by an administrator inside a customer workspace.",
+          "id": "ashby-keys",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Ashby authentication",
+          "type": "first_party_docs",
+          "url": "https://developers.ashbyhq.com/docs/authentication"
+        },
+        {
+          "claim": "Publishes per-minute request ceilings per API key.",
+          "id": "ashby-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Ashby rate limits",
+          "type": "first_party_docs",
+          "url": "https://developers.ashbyhq.com/docs/rate-limits"
+        },
+        {
+          "claim": "Webhooks deliver candidate and interview events to a registered endpoint.",
+          "id": "ashby-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Ashby webhooks",
+          "type": "first_party_docs",
+          "url": "https://developers.ashbyhq.com/docs/webhooks"
+        }
+      ],
+      "vendor": "Ashby, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "contact_sales",
+        "admin_only": true,
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Jobs, candidates, applications and offers are documented, with a public postings API alongside.",
+        "resource_groups": [
+          "applications",
+          "candidates",
+          "interviews",
+          "jobs",
+          "offers",
+          "postings",
+          "users",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "smartrecruiters",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "api_key"
+      ],
+      "auth_notes": "SmartToken API keys for a single company, or OAuth 2.0 for marketplace partners.",
+      "canonical_name": "SmartRecruiters",
+      "description": "Talent acquisition suite with job posting, candidate management and onboarding.",
+      "docs_url": "https://developers.smartrecruiters.com/reference/overview",
+      "homepage_url": "https://www.smartrecruiters.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for jobs, candidates, applications, interviews and offers.",
+          "id": "sr-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "SmartRecruiters API overview",
+          "type": "first_party_docs",
+          "url": "https://developers.smartrecruiters.com/reference/overview"
+        },
+        {
+          "claim": "SmartToken keys are issued by a company administrator; OAuth is reserved for approved marketplace apps.",
+          "id": "sr-keys",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "SmartRecruiters authentication",
+          "type": "first_party_docs",
+          "url": "https://developers.smartrecruiters.com/docs/authentication"
+        },
+        {
+          "claim": "Publishes per-second and daily request ceilings per token.",
+          "id": "sr-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "SmartRecruiters rate limits",
+          "type": "first_party_docs",
+          "url": "https://developers.smartrecruiters.com/docs/rate-limits"
+        },
+        {
+          "claim": "Webhooks deliver candidate and job status events.",
+          "id": "sr-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "SmartRecruiters webhooks",
+          "type": "first_party_docs",
+          "url": "https://developers.smartrecruiters.com/docs/webhooks"
+        }
+      ],
+      "vendor": "SmartRecruiters Inc.",
+      "webhooks": "native_webhooks"
+    }
+  ]
+}

@@ -1,0 +1,1109 @@
+{
+  "category": "Support & Ticketing",
+  "entries": [
+    {
+      "access": {
+        "account": "trial",
+        "admin_only": true,
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "event_subscriptions",
+          "bulk_or_batch",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Ticketing, help centre, administration and reporting are documented across a large reference.",
+        "resource_groups": [
+          "automations",
+          "help center",
+          "macros",
+          "organizations",
+          "search",
+          "talk",
+          "tickets",
+          "triggers",
+          "users",
+          "views",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "zendesk",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "basic_auth",
+        "oauth2"
+      ],
+      "auth_notes": "API tokens paired with an agent email over basic auth, or OAuth 2.0 for installed apps.",
+      "canonical_name": "Zendesk Support",
+      "description": "Customer service suite built around tickets, help centre and omnichannel messaging.",
+      "docs_url": "https://developer.zendesk.com/api-reference/ticketing/introduction/",
+      "homepage_url": "https://www.zendesk.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "source_url": "https://github.com/reinier-millo/zendesk-mcp",
+        "status": "third_party"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "API tokens must be enabled by an administrator in the admin centre of a subscribed account.",
+          "id": "zd-auth",
+          "supports": [
+            "authentication",
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Zendesk security and auth",
+          "type": "first_party_docs",
+          "url": "https://developer.zendesk.com/api-reference/introduction/security-and-auth/"
+        },
+        {
+          "claim": "Documents REST endpoints for tickets, users, organisations, views, macros, triggers and webhooks.",
+          "id": "zd-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Zendesk ticketing API reference",
+          "type": "first_party_docs",
+          "url": "https://developer.zendesk.com/api-reference/ticketing/introduction/"
+        },
+        {
+          "claim": "Publishes per-minute request ceilings that vary by plan.",
+          "id": "zd-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Zendesk rate limits",
+          "type": "first_party_docs",
+          "url": "https://developer.zendesk.com/api-reference/introduction/rate-limits/"
+        },
+        {
+          "claim": "Zendesk sells paid agent seats with a trial; there is no permanent free tier.",
+          "id": "zd-pricing",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Zendesk pricing",
+          "type": "first_party_pricing",
+          "url": "https://www.zendesk.com/pricing/"
+        },
+        {
+          "claim": "Webhooks deliver ticket and account events to a subscribed endpoint.",
+          "id": "zd-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Zendesk webhooks",
+          "type": "first_party_docs",
+          "url": "https://developer.zendesk.com/documentation/webhooks/"
+        },
+        {
+          "claim": "A community MCP server exposes Zendesk tickets and users.",
+          "current": true,
+          "id": "zendesk-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "reinier-millo/zendesk-mcp",
+          "type": "repository",
+          "url": "https://github.com/reinier-millo/zendesk-mcp"
+        }
+      ],
+      "vendor": "Zendesk, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "event_subscriptions",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Tickets, contacts, companies, agents and the knowledge base are documented.",
+        "resource_groups": [
+          "agents",
+          "canned responses",
+          "companies",
+          "contacts",
+          "groups",
+          "satisfaction ratings",
+          "solutions",
+          "tickets",
+          "time entries",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "freshdesk",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "basic_auth"
+      ],
+      "auth_notes": "A per-agent API key is sent as the basic-auth username against the account subdomain.",
+      "canonical_name": "Freshdesk",
+      "description": "Helpdesk software with ticketing, knowledge base and automation.",
+      "docs_url": "https://developers.freshdesk.com/api/",
+      "homepage_url": "https://www.freshworks.com/freshdesk/",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for tickets, contacts, companies, agents, groups and solutions using an API key.",
+          "id": "fd-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Freshdesk API reference",
+          "type": "first_party_docs",
+          "url": "https://developers.freshdesk.com/api/"
+        },
+        {
+          "claim": "Publishes hourly request ceilings per account that vary by plan.",
+          "id": "fd-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Freshdesk rate limits",
+          "type": "first_party_docs",
+          "url": "https://developers.freshdesk.com/api/#ratelimit"
+        },
+        {
+          "claim": "Freshdesk publishes a free plan from which an agent API key can be generated.",
+          "id": "fd-pricing",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Freshdesk pricing",
+          "type": "first_party_pricing",
+          "url": "https://www.freshworks.com/freshdesk/pricing/"
+        },
+        {
+          "claim": "Automation rules post ticket events to an external webhook URL.",
+          "id": "fd-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Freshdesk webhooks",
+          "type": "first_party_site",
+          "url": "https://support.freshdesk.com/support/solutions/articles/226176"
+        }
+      ],
+      "vendor": "Freshworks Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "trial",
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "messaging",
+          "event_subscriptions",
+          "bulk_or_batch"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Contacts, conversations, tickets, companies and help-centre articles are documented.",
+        "resource_groups": [
+          "admins",
+          "articles",
+          "companies",
+          "contacts",
+          "conversations",
+          "data attributes",
+          "events",
+          "tags",
+          "teams",
+          "tickets",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "intercom",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "bearer_token"
+      ],
+      "auth_notes": "Workspace access tokens presented as bearer credentials; OAuth 2.0 for apps installed into other workspaces.",
+      "canonical_name": "Intercom",
+      "conflicts": [
+        "A free Intercom developer workspace can issue an access token for building, while a production workspace requires a paid subscription."
+      ],
+      "description": "Customer messaging platform with inbox, help centre and AI agents.",
+      "docs_url": "https://developers.intercom.com/docs/references/introduction",
+      "homepage_url": "https://www.intercom.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://developers.intercom.com/docs/guides/mcp",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "A free development workspace issues an access token; production use requires a paying workspace.",
+          "id": "ic-dev",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Intercom developer getting started",
+          "type": "first_party_docs",
+          "url": "https://developers.intercom.com/docs/build-an-integration/getting-started/"
+        },
+        {
+          "claim": "Documents REST endpoints for contacts, conversations, companies, tickets, articles and events.",
+          "id": "ic-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Intercom API reference",
+          "type": "first_party_docs",
+          "url": "https://developers.intercom.com/docs/references/introduction"
+        },
+        {
+          "claim": "Publishes per-minute request ceilings per app and workspace.",
+          "id": "ic-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Intercom rate limiting",
+          "type": "first_party_docs",
+          "url": "https://developers.intercom.com/docs/references/rest-api/errors/rate-limiting/"
+        },
+        {
+          "claim": "Intercom documents its own hosted MCP server.",
+          "id": "ic-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "Intercom MCP",
+          "type": "first_party_docs",
+          "url": "https://developers.intercom.com/docs/guides/mcp"
+        },
+        {
+          "claim": "Webhook subscriptions deliver conversation and contact events.",
+          "id": "ic-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Intercom webhooks",
+          "type": "first_party_docs",
+          "url": "https://developers.intercom.com/docs/references/webhooks/webhook-models"
+        }
+      ],
+      "vendor": "Intercom, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "trial",
+        "admin_only": true,
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "event_subscriptions",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Conversations, customers, mailboxes and reporting are documented.",
+        "resource_groups": [
+          "conversations",
+          "customers",
+          "mailboxes",
+          "reports",
+          "tags",
+          "users",
+          "webhooks",
+          "workflows"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "help-scout",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2"
+      ],
+      "auth_notes": "OAuth 2.0 with a client-credentials grant for private integrations.",
+      "canonical_name": "Help Scout",
+      "description": "Shared inbox and knowledge base for small support teams.",
+      "docs_url": "https://developer.helpscout.com/mailbox-api/",
+      "homepage_url": "https://www.helpscout.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "OAuth applications are created by an account owner inside a subscribed account.",
+          "id": "hsc-apps",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Help Scout authentication",
+          "type": "first_party_docs",
+          "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/"
+        },
+        {
+          "claim": "Documents REST endpoints for conversations, customers, mailboxes, tags and reports using OAuth 2.0.",
+          "id": "hsc-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Help Scout Mailbox API",
+          "type": "first_party_docs",
+          "url": "https://developer.helpscout.com/mailbox-api/"
+        },
+        {
+          "claim": "Publishes a per-minute request ceiling per application.",
+          "id": "hsc-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Help Scout rate limits",
+          "type": "first_party_docs",
+          "url": "https://developer.helpscout.com/mailbox-api/overview/rate-limits/"
+        },
+        {
+          "claim": "Webhooks deliver conversation and customer events with signature verification.",
+          "id": "hsc-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Help Scout webhooks",
+          "type": "first_party_docs",
+          "url": "https://developer.helpscout.com/webhooks/"
+        }
+      ],
+      "vendor": "Help Scout PBC",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "trial",
+        "admin_only": true,
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "messaging",
+          "event_subscriptions",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Conversations, messages, contacts, inboxes and analytics are all documented.",
+        "resource_groups": [
+          "analytics",
+          "comments",
+          "contacts",
+          "conversations",
+          "drafts",
+          "inboxes",
+          "messages",
+          "rules",
+          "tags",
+          "teammates",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "front",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ],
+      "auth_notes": "API tokens created in company settings and sent as bearer tokens; OAuth 2.0 for partner apps.",
+      "canonical_name": "Front",
+      "description": "Shared inbox platform that turns email and messaging channels into team workflows.",
+      "docs_url": "https://dev.frontapp.com/reference/introduction",
+      "homepage_url": "https://front.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for conversations, messages, contacts, inboxes, tags and analytics using bearer tokens.",
+          "id": "front-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Front API reference",
+          "type": "first_party_docs",
+          "url": "https://dev.frontapp.com/reference/introduction"
+        },
+        {
+          "claim": "Publishes per-minute request ceilings that scale with the plan.",
+          "id": "front-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Front rate limiting",
+          "type": "first_party_docs",
+          "url": "https://dev.frontapp.com/docs/rate-limiting"
+        },
+        {
+          "claim": "API tokens are created by an administrator inside a paying company account.",
+          "id": "front-tokens",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Front API tokens",
+          "type": "first_party_docs",
+          "url": "https://dev.frontapp.com/docs/create-and-revoke-api-tokens"
+        },
+        {
+          "claim": "Event subscriptions deliver conversation activity to a registered endpoint.",
+          "id": "front-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Front webhooks",
+          "type": "first_party_docs",
+          "url": "https://dev.frontapp.com/docs/webhooks"
+        }
+      ],
+      "vendor": "FrontApp, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "messaging",
+          "user_management",
+          "event_subscriptions",
+          "file_transfer"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Website, conversation, people and helpdesk resources are documented for plugin authors.",
+        "resource_groups": [
+          "buckets",
+          "campaigns",
+          "conversations",
+          "helpdesk",
+          "messages",
+          "people",
+          "plugins",
+          "website"
+        ],
+        "types": [
+          "rest",
+          "sdk",
+          "webhooks"
+        ]
+      },
+      "app_id": "crisp",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "basic_auth"
+      ],
+      "auth_notes": "A plugin identifier and key pair is sent over basic auth against the REST API.",
+      "canonical_name": "Crisp",
+      "description": "Business messaging suite with live chat, shared inbox and help centre.",
+      "docs_url": "https://docs.crisp.chat/references/rest-api/v1/",
+      "homepage_url": "https://crisp.chat",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_qualitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for websites, conversations, messages, people and helpdesk using plugin credentials.",
+          "id": "crisp-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Crisp REST API v1",
+          "type": "first_party_docs",
+          "url": "https://docs.crisp.chat/references/rest-api/v1/"
+        },
+        {
+          "claim": "Describes throttling behaviour and quotas in general terms.",
+          "id": "crisp-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Crisp rate limits",
+          "type": "first_party_docs",
+          "url": "https://docs.crisp.chat/guides/rest-api/rate-limits/"
+        },
+        {
+          "claim": "Plugin credentials are created from the Crisp marketplace on a free account.",
+          "id": "crisp-plugins",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Crisp API authentication",
+          "type": "first_party_docs",
+          "url": "https://docs.crisp.chat/guides/rest-api/authentication/"
+        },
+        {
+          "claim": "Webhooks deliver message and session events to a plugin endpoint.",
+          "id": "crisp-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Crisp webhooks",
+          "type": "first_party_docs",
+          "url": "https://docs.crisp.chat/guides/rest-api/webhooks/"
+        }
+      ],
+      "vendor": "Crisp IM SAS",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Tickets, contacts, agents, departments and the knowledge base are documented.",
+        "resource_groups": [
+          "accounts",
+          "agents",
+          "contacts",
+          "departments",
+          "knowledge base",
+          "tasks",
+          "tickets",
+          "time entries",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "zoho-desk",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2"
+      ],
+      "auth_notes": "OAuth 2.0 clients registered in the Zoho API console, scoped per Desk module.",
+      "canonical_name": "Zoho Desk",
+      "description": "Context-aware helpdesk in the Zoho suite with tickets, agents and knowledge base.",
+      "docs_url": "https://desk.zoho.com/DeskAPIDocument",
+      "homepage_url": "https://www.zoho.com/desk/",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for tickets, contacts, accounts, agents, departments and the knowledge base.",
+          "id": "zdesk-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Zoho Desk API documentation",
+          "type": "first_party_docs",
+          "url": "https://desk.zoho.com/DeskAPIDocument"
+        },
+        {
+          "claim": "Publishes credit-based daily API allocations per organisation.",
+          "id": "zdesk-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Zoho Desk API limits",
+          "type": "first_party_docs",
+          "url": "https://desk.zoho.com/DeskAPIDocument#Introduction#APILimits"
+        },
+        {
+          "claim": "A free plan for a small number of agents is published, from which OAuth clients can be registered.",
+          "id": "zdesk-pricing",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Zoho Desk pricing",
+          "type": "first_party_pricing",
+          "url": "https://www.zoho.com/desk/pricing.html"
+        },
+        {
+          "claim": "Webhooks push ticket and contact events to a configured URL.",
+          "id": "zdesk-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Zoho Desk webhooks",
+          "type": "first_party_docs",
+          "url": "https://desk.zoho.com/DeskAPIDocument#Webhooks"
+        }
+      ],
+      "vendor": "Zoho Corporation",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "trial",
+        "admin_only": true,
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "messaging",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Tickets, messages, customers, rules and macros are documented.",
+        "resource_groups": [
+          "customers",
+          "events",
+          "integrations",
+          "macros",
+          "messages",
+          "rules",
+          "tickets",
+          "views",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "gorgias",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "basic_auth",
+        "oauth2"
+      ],
+      "auth_notes": "Account email and API key over basic auth, or OAuth 2.0 for apps published to other merchants.",
+      "canonical_name": "Gorgias",
+      "description": "Ecommerce-focused helpdesk that centralises support tickets across channels.",
+      "docs_url": "https://developers.gorgias.com/reference/introduction",
+      "homepage_url": "https://www.gorgias.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for tickets, messages, customers, macros and rules using basic auth.",
+          "id": "gorgias-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Gorgias API reference",
+          "type": "first_party_docs",
+          "url": "https://developers.gorgias.com/reference/introduction"
+        },
+        {
+          "claim": "API keys are created from the settings of a paying merchant account.",
+          "id": "gorgias-keys",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Gorgias authentication",
+          "type": "first_party_docs",
+          "url": "https://developers.gorgias.com/reference/authentication"
+        },
+        {
+          "claim": "Publishes per-minute request ceilings per account.",
+          "id": "gorgias-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Gorgias rate limits",
+          "type": "first_party_docs",
+          "url": "https://developers.gorgias.com/reference/rate-limit"
+        },
+        {
+          "claim": "Webhook integrations deliver ticket and message events.",
+          "id": "gorgias-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Gorgias webhooks",
+          "type": "first_party_docs",
+          "url": "https://developers.gorgias.com/reference/webhooks"
+        }
+      ],
+      "vendor": "Gorgias Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "contact_sales",
+        "admin_only": true,
+        "api_plan": "enterprise",
+        "restrictions": [
+          "enterprise_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "messaging",
+          "event_subscriptions",
+          "bulk_or_batch"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Customers, conversations, messages and custom objects are documented.",
+        "resource_groups": [
+          "conversations",
+          "customers",
+          "kobjects",
+          "messages",
+          "search",
+          "shortcuts",
+          "teams",
+          "users",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "kustomer",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "bearer_token"
+      ],
+      "auth_notes": "Signed API keys issued from organisation settings and presented as bearer tokens.",
+      "canonical_name": "Kustomer",
+      "description": "CRM-style customer service platform organised around customer timelines.",
+      "docs_url": "https://developer.kustomer.com/kustomer-api-docs/reference/introduction",
+      "homepage_url": "https://www.kustomer.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for customers, conversations, messages, custom objects and webhooks using API keys.",
+          "id": "kus-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Kustomer API reference",
+          "type": "first_party_docs",
+          "url": "https://developer.kustomer.com/kustomer-api-docs/reference/introduction"
+        },
+        {
+          "claim": "API keys are created by an administrator inside a contracted organisation.",
+          "id": "kus-keys",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Kustomer API keys",
+          "type": "first_party_site",
+          "url": "https://help.kustomer.com/en_us/api-keys-SJs5YTIIS"
+        },
+        {
+          "claim": "Publishes per-minute request ceilings per organisation and documents outbound webhooks.",
+          "id": "kus-limits",
+          "supports": [
+            "rate_limit_info",
+            "webhook_support"
+          ],
+          "title": "Kustomer rate limiting",
+          "type": "first_party_docs",
+          "url": "https://developer.kustomer.com/kustomer-api-docs/reference/rate-limiting"
+        },
+        {
+          "claim": "Kustomer is sold through sales-led contracts without self-serve signup.",
+          "id": "kus-pricing",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Kustomer pricing",
+          "type": "first_party_pricing",
+          "url": "https://www.kustomer.com/pricing/"
+        }
+      ],
+      "vendor": "Kustomer, LLC",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The service-desk API sits on top of the full Jira platform API, so both request and issue surfaces are available.",
+        "resource_groups": [
+          "approvals",
+          "customers",
+          "knowledge base",
+          "organizations",
+          "queues",
+          "request types",
+          "requests",
+          "servicedesk",
+          "sla",
+          "webhooks"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "jira-service-management",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "basic_auth",
+        "pat"
+      ],
+      "auth_notes": "Atlassian API tokens over basic auth, or OAuth 2.0 (3LO) for apps.",
+      "canonical_name": "Jira Service Management",
+      "description": "IT service management on the Jira platform, with request types, queues and SLAs.",
+      "docs_url": "https://developer.atlassian.com/cloud/jira/service-desk/rest/intro/",
+      "homepage_url": "https://www.atlassian.com/software/jira/service-management",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://www.atlassian.com/platform/remote-mcp-server",
+        "status": "official"
+      },
+      "rate_limits": "documented_qualitative",
+      "sources": [
+        {
+          "claim": "An Atlassian API token authorises REST calls; a free tier with a small agent count is available.",
+          "id": "jsm-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Basic auth for JSM REST APIs",
+          "type": "first_party_docs",
+          "url": "https://developer.atlassian.com/cloud/jira/service-desk/basic-auth-for-rest-apis/"
+        },
+        {
+          "claim": "Documents REST endpoints for service desks, request types, requests, queues, SLAs and organisations.",
+          "id": "jsm-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Jira Service Management REST API",
+          "type": "first_party_docs",
+          "url": "https://developer.atlassian.com/cloud/jira/service-desk/rest/intro/"
+        },
+        {
+          "claim": "Describes cost-based rate limiting without fixed published numeric ceilings.",
+          "id": "jsm-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Atlassian rate limiting",
+          "type": "first_party_docs",
+          "url": "https://developer.atlassian.com/cloud/jira/platform/rate-limiting/"
+        },
+        {
+          "claim": "Atlassian's official remote MCP server covers Jira Cloud, which includes Jira Service Management projects.",
+          "id": "jsm-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "Atlassian remote MCP server",
+          "type": "first_party_site",
+          "url": "https://www.atlassian.com/platform/remote-mcp-server"
+        },
+        {
+          "claim": "Webhooks deliver issue and service request events to a registered endpoint.",
+          "current": true,
+          "id": "jsm-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Jira Cloud webhooks",
+          "type": "first_party_docs",
+          "url": "https://developer.atlassian.com/cloud/jira/platform/webhooks/"
+        }
+      ],
+      "vendor": "Atlassian",
+      "webhooks": "native_webhooks"
+    }
+  ]
+}

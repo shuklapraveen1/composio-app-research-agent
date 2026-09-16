@@ -1,0 +1,1229 @@
+{
+  "category": "AI & Data",
+  "entries": [
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required",
+          "identity_verification_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "file_transfer",
+          "streaming",
+          "bulk_or_batch",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The reference enumerates model inference, file, batch, fine-tuning and vector store resources.",
+        "resource_groups": [
+          "audio",
+          "batch",
+          "embeddings",
+          "files",
+          "fine-tuning",
+          "images",
+          "models",
+          "moderations",
+          "responses",
+          "vector stores"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "openai",
+      "application_type": "api_platform",
+      "auth_methods": [
+        "api_key",
+        "bearer_token"
+      ],
+      "auth_notes": "Project-scoped API keys created in the platform dashboard and sent as bearer tokens.",
+      "canonical_name": "OpenAI",
+      "description": "Developer platform for OpenAI's language, embedding, image and audio models.",
+      "docs_url": "https://platform.openai.com/docs/api-reference",
+      "homepage_url": "https://openai.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "notes": "Some models require organisation identity verification before access is granted.",
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Requests authenticate with a project API key in an Authorization bearer header.",
+          "id": "oai-auth",
+          "supports": [
+            "authentication"
+          ],
+          "title": "OpenAI authentication",
+          "type": "first_party_docs",
+          "url": "https://platform.openai.com/docs/api-reference/authentication"
+        },
+        {
+          "claim": "Documents REST resources for responses, embeddings, images, audio, files, batches, fine-tuning and vector stores.",
+          "id": "oai-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description",
+            "application_type"
+          ],
+          "title": "OpenAI API reference",
+          "type": "first_party_docs",
+          "url": "https://platform.openai.com/docs/api-reference"
+        },
+        {
+          "claim": "Publishes requests-per-minute and tokens-per-minute ceilings by usage tier.",
+          "id": "oai-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "OpenAI rate limits",
+          "type": "first_party_docs",
+          "url": "https://platform.openai.com/docs/guides/rate-limits"
+        },
+        {
+          "claim": "Account signup is free but API calls require prepaid credit on a paid billing account.",
+          "id": "oai-pricing",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "OpenAI API pricing",
+          "type": "first_party_pricing",
+          "url": "https://openai.com/api/pricing/"
+        },
+        {
+          "claim": "Webhooks deliver batch, fine-tuning and response completion events to a registered endpoint.",
+          "id": "oai-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "OpenAI webhooks",
+          "type": "first_party_docs",
+          "url": "https://platform.openai.com/docs/guides/webhooks"
+        }
+      ],
+      "vendor": "OpenAI, L.L.C.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "admin",
+          "user_management",
+          "file_transfer",
+          "streaming",
+          "bulk_or_batch",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Messages, batches, files, models and organisation administration are documented.",
+        "resource_groups": [
+          "admin",
+          "files",
+          "message batches",
+          "messages",
+          "models",
+          "usage and cost"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "anthropic",
+      "application_type": "api_platform",
+      "auth_methods": [
+        "api_key"
+      ],
+      "auth_notes": "Workspace API keys created in the Anthropic Console and sent in an x-api-key header.",
+      "canonical_name": "Anthropic",
+      "description": "Developer platform for the Claude family of models.",
+      "docs_url": "https://docs.anthropic.com/en/api/overview",
+      "homepage_url": "https://www.anthropic.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://github.com/modelcontextprotocol/servers",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Batch completion is observed by polling the batch resource; the API documents no outbound event delivery.",
+          "id": "ant-batches",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Anthropic batch processing",
+          "type": "first_party_docs",
+          "url": "https://docs.anthropic.com/en/docs/build-with-claude/batch-processing"
+        },
+        {
+          "claim": "Documents REST endpoints for messages, message batches, files, models and admin, authenticated with an API key.",
+          "id": "ant-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description",
+            "application_type"
+          ],
+          "title": "Anthropic API overview",
+          "type": "first_party_docs",
+          "url": "https://docs.anthropic.com/en/api/overview"
+        },
+        {
+          "claim": "Publishes per-minute request and token ceilings by usage tier.",
+          "id": "ant-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Anthropic rate limits",
+          "type": "first_party_docs",
+          "url": "https://docs.anthropic.com/en/api/rate-limits"
+        },
+        {
+          "claim": "Anthropic publishes and maintains reference MCP servers in the Model Context Protocol organisation.",
+          "id": "ant-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "modelcontextprotocol/servers",
+          "type": "repository",
+          "url": "https://github.com/modelcontextprotocol/servers"
+        },
+        {
+          "claim": "Console signup is free; API usage is billed against purchased credits.",
+          "id": "ant-pricing",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Anthropic pricing",
+          "type": "first_party_pricing",
+          "url": "https://www.anthropic.com/pricing"
+        }
+      ],
+      "vendor": "Anthropic PBC",
+      "webhooks": "polling_only"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "file_transfer",
+          "event_subscriptions",
+          "streaming"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Hub repository, discussion, collection and inference surfaces are documented, plus a Python client and CLI.",
+        "resource_groups": [
+          "collections",
+          "datasets",
+          "discussions",
+          "inference",
+          "models",
+          "organizations",
+          "repos",
+          "spaces",
+          "users",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk",
+          "cli"
+        ]
+      },
+      "app_id": "hugging-face",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ],
+      "auth_notes": "User access tokens created in account settings and sent as bearer tokens; OAuth is available for apps signing in users.",
+      "canonical_name": "Hugging Face",
+      "description": "Hub for models, datasets and Spaces, with hosted inference.",
+      "docs_url": "https://huggingface.co/docs/hub/api",
+      "homepage_url": "https://huggingface.co",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://huggingface.co/mcp",
+        "status": "official"
+      },
+      "rate_limits": "documented_qualitative",
+      "sources": [
+        {
+          "claim": "A first-party CLI and Python client wrap the Hub API.",
+          "id": "hf-cli",
+          "supports": [
+            "api_types"
+          ],
+          "title": "huggingface-cli",
+          "type": "first_party_docs",
+          "url": "https://huggingface.co/docs/huggingface_hub/guides/cli"
+        },
+        {
+          "claim": "Documents REST endpoints for models, datasets, Spaces, repositories, collections and discussions.",
+          "id": "hf-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description",
+            "application_type"
+          ],
+          "title": "Hugging Face Hub API",
+          "type": "first_party_docs",
+          "url": "https://huggingface.co/docs/hub/api"
+        },
+        {
+          "claim": "States that rate limits apply and vary by plan without publishing a single numeric ceiling for Hub endpoints.",
+          "id": "hf-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Hugging Face inference rate limits",
+          "type": "first_party_docs",
+          "url": "https://huggingface.co/docs/api-inference/rate-limits"
+        },
+        {
+          "claim": "Hugging Face hosts a first-party MCP server exposing Hub search and Spaces tools.",
+          "id": "hf-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "Hugging Face MCP server",
+          "type": "first_party_site",
+          "url": "https://huggingface.co/mcp"
+        },
+        {
+          "claim": "Fine-grained access tokens are created self-serve on a free account.",
+          "id": "hf-tokens",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Hugging Face user access tokens",
+          "type": "first_party_docs",
+          "url": "https://huggingface.co/docs/hub/security-tokens"
+        },
+        {
+          "claim": "Webhooks deliver repository and discussion events to a configured endpoint.",
+          "id": "hf-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Hugging Face webhooks",
+          "type": "first_party_docs",
+          "url": "https://huggingface.co/docs/hub/webhooks"
+        }
+      ],
+      "vendor": "Hugging Face, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "bulk_or_batch"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Control-plane index management and data-plane vector operations are both documented; gRPC is offered alongside REST.",
+        "resource_groups": [
+          "api keys",
+          "assistants",
+          "backups",
+          "indexes",
+          "inference",
+          "namespaces",
+          "vectors"
+        ],
+        "types": [
+          "rest",
+          "sdk",
+          "other"
+        ]
+      },
+      "app_id": "pinecone",
+      "application_type": "api_platform",
+      "auth_methods": [
+        "api_key"
+      ],
+      "auth_notes": "Project API keys created in the Pinecone console and sent in an Api-Key header.",
+      "canonical_name": "Pinecone",
+      "description": "Managed vector database for similarity search and retrieval.",
+      "docs_url": "https://docs.pinecone.io/reference/api/introduction",
+      "homepage_url": "https://www.pinecone.io",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://docs.pinecone.io/guides/operations/mcp-server",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents control-plane and data-plane REST endpoints for indexes, namespaces, vectors, backups and inference.",
+          "id": "pc-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description",
+            "application_type"
+          ],
+          "title": "Pinecone API reference",
+          "type": "first_party_docs",
+          "url": "https://docs.pinecone.io/reference/api/introduction"
+        },
+        {
+          "claim": "Publishes numeric request, upsert and query ceilings per plan.",
+          "id": "pc-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Pinecone limits",
+          "type": "first_party_docs",
+          "url": "https://docs.pinecone.io/reference/api/database-limits"
+        },
+        {
+          "claim": "Pinecone documents and maintains its own MCP server.",
+          "id": "pc-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "Pinecone MCP server",
+          "type": "first_party_docs",
+          "url": "https://docs.pinecone.io/guides/operations/mcp-server"
+        },
+        {
+          "claim": "Data and control plane operations are request-response; no event subscription mechanism is documented.",
+          "id": "pc-ops",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Pinecone data operations",
+          "type": "first_party_docs",
+          "url": "https://docs.pinecone.io/guides/index-data/upsert-data"
+        },
+        {
+          "claim": "A free Starter plan includes API access with no payment method.",
+          "id": "pc-pricing",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Pinecone pricing",
+          "type": "first_party_pricing",
+          "url": "https://www.pinecone.io/pricing/"
+        }
+      ],
+      "vendor": "Pinecone Systems, Inc.",
+      "webhooks": "no_events"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free",
+        "restrictions": [
+          "deployment_required"
+        ],
+        "self_hosted": true
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "bulk_or_batch"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "REST, GraphQL and gRPC interfaces cover schema, objects, batch, search, multi-tenancy and RBAC.",
+        "resource_groups": [
+          "backups",
+          "batch",
+          "classification",
+          "collections",
+          "graphql search",
+          "nodes",
+          "objects",
+          "schema",
+          "tenants",
+          "users and roles"
+        ],
+        "types": [
+          "rest",
+          "graphql",
+          "sdk",
+          "other"
+        ]
+      },
+      "app_id": "weaviate",
+      "application_type": "open_source_self_hosted",
+      "auth_methods": [
+        "api_key",
+        "oauth2",
+        "bearer_token"
+      ],
+      "auth_notes": "API key or OIDC authentication configured on the instance; Weaviate Cloud issues keys per cluster.",
+      "canonical_name": "Weaviate",
+      "conflicts": [
+        "Weaviate is both an open-source server the reviewer deploys and a hosted Weaviate Cloud service with managed credentials; access characteristics differ between the two."
+      ],
+      "description": "Open-source vector database available self-hosted or as Weaviate Cloud.",
+      "docs_url": "https://docs.weaviate.io/weaviate/api",
+      "homepage_url": "https://weaviate.io",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://github.com/weaviate/mcp-server-weaviate",
+        "status": "official"
+      },
+      "rate_limits": "no_published_limits",
+      "sources": [
+        {
+          "claim": "Instances are configured with API key or OIDC authentication by the operator.",
+          "id": "wv-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Weaviate authentication",
+          "type": "first_party_docs",
+          "url": "https://docs.weaviate.io/weaviate/configuration/authentication"
+        },
+        {
+          "claim": "Documents REST, GraphQL and gRPC interfaces for schema, objects, batch, search and cluster nodes.",
+          "id": "wv-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Weaviate API reference",
+          "type": "first_party_docs",
+          "url": "https://docs.weaviate.io/weaviate/api"
+        },
+        {
+          "claim": "Weaviate publishes an MCP server in its own GitHub organisation.",
+          "id": "wv-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "weaviate/mcp-server-weaviate",
+          "type": "repository",
+          "url": "https://github.com/weaviate/mcp-server-weaviate"
+        },
+        {
+          "claim": "Weaviate is published as open source under BSD-3 and can be run on the operator's own infrastructure.",
+          "id": "wv-repo",
+          "supports": [
+            "application_type",
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "weaviate/weaviate",
+          "type": "repository",
+          "url": "https://github.com/weaviate/weaviate"
+        },
+        {
+          "claim": "The REST reference documents no event subscriptions and no vendor-imposed request ceilings for self-hosted instances.",
+          "id": "wv-rest",
+          "supports": [
+            "webhook_support",
+            "rate_limit_info"
+          ],
+          "title": "Weaviate REST API",
+          "type": "first_party_docs",
+          "url": "https://docs.weaviate.io/weaviate/api/rest"
+        }
+      ],
+      "vendor": "Weaviate B.V.",
+      "webhooks": "no_events"
+    },
+    {
+      "access": {
+        "account": "trial",
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "admin",
+          "user_management",
+          "search",
+          "bulk_or_batch",
+          "scheduling",
+          "reporting_analytics"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "The REST API covers SQL execution plus account objects; some administration remains SQL-only.",
+        "resource_groups": [
+          "cortex",
+          "databases",
+          "grants",
+          "pipes",
+          "roles",
+          "schemas",
+          "sql statements",
+          "stages",
+          "tables",
+          "tasks",
+          "users",
+          "warehouses"
+        ],
+        "types": [
+          "rest",
+          "sdk",
+          "cli"
+        ]
+      },
+      "app_id": "snowflake",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "service_account",
+        "pat",
+        "basic_auth"
+      ],
+      "auth_notes": "Key-pair JWT for service connections, OAuth 2.0 for delegated access, and programmatic access tokens for users.",
+      "canonical_name": "Snowflake",
+      "conflicts": [
+        "The MCP server lives in a Snowflake-owned GitHub organisation but is labelled as not officially supported, so it reads as vendor-adjacent rather than official."
+      ],
+      "description": "Cloud data platform for warehousing, analytics and data applications.",
+      "docs_url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/snowflake-rest-api",
+      "homepage_url": "https://www.snowflake.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": false,
+        "source_url": "https://github.com/Snowflake-Labs/mcp",
+        "status": "third_party"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Supports key-pair JWT, OAuth and programmatic access tokens.",
+          "id": "sf-auth",
+          "supports": [
+            "authentication"
+          ],
+          "title": "Snowflake API authentication",
+          "type": "first_party_docs",
+          "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/authentication"
+        },
+        {
+          "claim": "Documents REST resources for SQL statements, databases, schemas, tables, warehouses, users, roles, tasks and pipes.",
+          "id": "sf-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description",
+            "application_type"
+          ],
+          "title": "Snowflake REST API",
+          "type": "first_party_docs",
+          "url": "https://docs.snowflake.com/en/developer-guide/snowflake-rest-api/snowflake-rest-api"
+        },
+        {
+          "claim": "Publishes numeric statement size, result size and concurrency limits.",
+          "id": "sf-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Snowflake SQL API limits",
+          "type": "first_party_docs",
+          "url": "https://docs.snowflake.com/en/developer-guide/sql-api/limitations"
+        },
+        {
+          "claim": "An MCP server is published under Snowflake Labs, which states its projects are not officially supported products.",
+          "id": "sf-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "Snowflake-Labs/mcp",
+          "type": "repository",
+          "url": "https://github.com/Snowflake-Labs/mcp"
+        },
+        {
+          "claim": "Asynchronous statements are tracked by polling a statement handle rather than by outbound callbacks.",
+          "id": "sf-tasks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Snowflake API responses",
+          "type": "first_party_docs",
+          "url": "https://docs.snowflake.com/en/developer-guide/sql-api/handling-responses"
+        },
+        {
+          "claim": "Access starts with a time-limited free trial account; continued use requires a paid account.",
+          "id": "sf-trial",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Snowflake free trial",
+          "type": "first_party_site",
+          "url": "https://signup.snowflake.com/"
+        }
+      ],
+      "vendor": "Snowflake Inc.",
+      "webhooks": "polling_only"
+    },
+    {
+      "access": {
+        "account": "trial",
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "file_transfer",
+          "scheduling",
+          "event_subscriptions",
+          "bulk_or_batch"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Workspace, compute, jobs, catalog, serving and identity surfaces all have documented REST endpoints.",
+        "resource_groups": [
+          "clusters",
+          "dbfs",
+          "jobs",
+          "permissions",
+          "pipelines",
+          "repos",
+          "secrets",
+          "serving endpoints",
+          "sql warehouses",
+          "unity catalog",
+          "users",
+          "workspace"
+        ],
+        "types": [
+          "rest",
+          "sdk",
+          "cli"
+        ]
+      },
+      "app_id": "databricks",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "pat",
+        "service_account"
+      ],
+      "auth_notes": "OAuth machine-to-machine with service principals, or personal access tokens scoped to a workspace.",
+      "canonical_name": "Databricks",
+      "description": "Unified analytics and AI platform built on Apache Spark and Unity Catalog.",
+      "docs_url": "https://docs.databricks.com/api/workspace/introduction",
+      "homepage_url": "https://www.databricks.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://docs.databricks.com/aws/en/generative-ai/mcp/",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Supports OAuth service principals and personal access tokens issued within a workspace.",
+          "id": "dbx-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Databricks authentication",
+          "type": "first_party_docs",
+          "url": "https://docs.databricks.com/aws/en/dev-tools/auth/"
+        },
+        {
+          "claim": "Documents REST endpoints for clusters, jobs, workspace files, Unity Catalog, SQL warehouses, serving endpoints and identity.",
+          "id": "dbx-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description",
+            "application_type"
+          ],
+          "title": "Databricks REST API reference",
+          "type": "first_party_docs",
+          "url": "https://docs.databricks.com/api/workspace/introduction"
+        },
+        {
+          "claim": "Publishes numeric API request-per-second and concurrency limits per workspace.",
+          "id": "dbx-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Databricks resource limits",
+          "type": "first_party_docs",
+          "url": "https://docs.databricks.com/aws/en/resources/limits"
+        },
+        {
+          "claim": "Databricks documents managed first-party MCP servers for Unity Catalog and Genie.",
+          "id": "dbx-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "Databricks MCP",
+          "type": "first_party_docs",
+          "url": "https://docs.databricks.com/aws/en/generative-ai/mcp/"
+        },
+        {
+          "claim": "Access begins with a time-limited trial; ongoing workspaces are billed on a paid subscription.",
+          "id": "dbx-trial",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Try Databricks",
+          "type": "first_party_site",
+          "url": "https://www.databricks.com/try-databricks"
+        },
+        {
+          "claim": "HTTP webhooks deliver model registry and job events to an external endpoint.",
+          "id": "dbx-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Databricks webhooks",
+          "type": "first_party_docs",
+          "url": "https://docs.databricks.com/aws/en/mlflow/webhooks"
+        }
+      ],
+      "vendor": "Databricks, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "file_transfer",
+          "streaming",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "PostgREST data access, auth administration, storage and project management are all documented.",
+        "resource_groups": [
+          "auth",
+          "database rest",
+          "edge functions",
+          "management api",
+          "organizations",
+          "projects",
+          "realtime",
+          "secrets",
+          "storage"
+        ],
+        "types": [
+          "rest",
+          "graphql",
+          "sdk",
+          "cli"
+        ]
+      },
+      "app_id": "supabase",
+      "application_type": "open_source_self_hosted",
+      "auth_methods": [
+        "api_key",
+        "bearer_token",
+        "pat",
+        "oauth2"
+      ],
+      "auth_notes": "Project anon and service-role keys for data APIs; personal access tokens or OAuth for the Management API.",
+      "canonical_name": "Supabase",
+      "conflicts": [
+        "Supabase is both an Apache-licensed self-hostable stack and a hosted service with a free tier; credential access differs between the two deployment models."
+      ],
+      "description": "Open-source Postgres backend with auth, storage, realtime and edge functions.",
+      "docs_url": "https://supabase.com/docs/reference/api/introduction",
+      "homepage_url": "https://supabase.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://supabase.com/docs/guides/getting-started/mcp",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for projects, organisations, secrets, functions and database configuration.",
+          "id": "sb-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Supabase Management API",
+          "type": "first_party_docs",
+          "url": "https://supabase.com/docs/reference/api/introduction"
+        },
+        {
+          "claim": "Database webhooks post row-level change events to an HTTP endpoint.",
+          "id": "sb-hooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Supabase database webhooks",
+          "type": "first_party_docs",
+          "url": "https://supabase.com/docs/guides/database/webhooks"
+        },
+        {
+          "claim": "Publishes numeric per-hour limits for auth and messaging endpoints.",
+          "id": "sb-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Supabase rate limits",
+          "type": "first_party_docs",
+          "url": "https://supabase.com/docs/guides/auth/rate-limits"
+        },
+        {
+          "claim": "Supabase documents its own MCP server for project and database operations.",
+          "id": "sb-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "Supabase MCP server",
+          "type": "first_party_docs",
+          "url": "https://supabase.com/docs/guides/getting-started/mcp"
+        },
+        {
+          "claim": "A free hosted tier provides full API access without payment details.",
+          "id": "sb-pricing",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Supabase pricing",
+          "type": "first_party_pricing",
+          "url": "https://supabase.com/pricing"
+        },
+        {
+          "claim": "The platform is published as open source under Apache 2.0 and can be self-hosted.",
+          "id": "sb-repo",
+          "supports": [
+            "application_type",
+            "credential_access"
+          ],
+          "title": "supabase/supabase",
+          "type": "repository",
+          "url": "https://github.com/supabase/supabase"
+        },
+        {
+          "claim": "Each project exposes an auto-generated REST API plus GraphQL, addressed with project API keys.",
+          "id": "sb-rest",
+          "supports": [
+            "api_types",
+            "api_capabilities",
+            "authentication"
+          ],
+          "title": "Supabase auto-generated APIs",
+          "type": "first_party_docs",
+          "url": "https://supabase.com/docs/guides/api"
+        }
+      ],
+      "vendor": "Supabase, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "search",
+          "streaming",
+          "bulk_or_batch"
+        ],
+        "coverage": "subset",
+        "exists": true,
+        "notes": "The API exposes grounded completions and search only; the consumer product's spaces, threads and collections have no endpoints.",
+        "resource_groups": [
+          "async chat completions",
+          "chat completions",
+          "models",
+          "search"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "perplexity",
+      "application_type": "api_platform",
+      "auth_methods": [
+        "api_key",
+        "bearer_token"
+      ],
+      "auth_notes": "API keys generated in the account portal and sent as bearer tokens.",
+      "canonical_name": "Perplexity",
+      "description": "Answer engine offering search-grounded model completions through an API.",
+      "docs_url": "https://docs.perplexity.ai/api-reference",
+      "homepage_url": "https://www.perplexity.ai",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://github.com/perplexityai/modelcontextprotocol",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Asynchronous requests are collected by polling a request id; no callback delivery is documented.",
+          "id": "pplx-async",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Perplexity async chat completions",
+          "type": "first_party_docs",
+          "url": "https://docs.perplexity.ai/api-reference/async-chat-completions-post"
+        },
+        {
+          "claim": "Documents chat completions, async completions and search endpoints authenticated with a bearer API key.",
+          "id": "pplx-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description",
+            "application_type"
+          ],
+          "title": "Perplexity API reference",
+          "type": "first_party_docs",
+          "url": "https://docs.perplexity.ai/api-reference"
+        },
+        {
+          "claim": "API keys require a billing method and purchased credits before requests succeed.",
+          "id": "pplx-keys",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Perplexity quickstart",
+          "type": "first_party_docs",
+          "url": "https://docs.perplexity.ai/getting-started/quickstart"
+        },
+        {
+          "claim": "Publishes requests-per-minute ceilings per usage tier.",
+          "id": "pplx-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Perplexity rate limits and tiers",
+          "type": "first_party_docs",
+          "url": "https://docs.perplexity.ai/getting-started/rate-limits-usage-tiers"
+        },
+        {
+          "claim": "Perplexity publishes an MCP server in its own GitHub organisation.",
+          "id": "pplx-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "perplexityai/modelcontextprotocol",
+          "type": "repository",
+          "url": "https://github.com/perplexityai/modelcontextprotocol"
+        }
+      ],
+      "vendor": "Perplexity AI, Inc.",
+      "webhooks": "no_events"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "none",
+        "restrictions": [
+          "deployment_required"
+        ],
+        "self_hosted": true
+      },
+      "api": {
+        "capabilities": [
+          "read"
+        ],
+        "coverage": "slice",
+        "exists": true,
+        "notes": "A single capability - fetching and listing transcripts - exposed as a Python package and command-line entry point, not as a hosted service.",
+        "resource_groups": [
+          "transcripts"
+        ],
+        "types": [
+          "sdk",
+          "cli"
+        ]
+      },
+      "app_id": "youtube-transcript-api",
+      "application_type": "third_party_wrapper",
+      "auth_methods": [],
+      "auth_notes": "No credentials are issued: the library reads the transcript endpoints YouTube's web player uses, optionally through a proxy.",
+      "canonical_name": "youtube-transcript-api",
+      "conflicts": [
+        "The supplied name matches this community Python library and also several commercial transcript endpoints resold on API marketplaces; the library is the dominant referent but the name is not unique."
+      ],
+      "description": "Open-source Python library and CLI that retrieves transcripts for YouTube videos.",
+      "docs_url": "https://github.com/jdepoix/youtube-transcript-api#readme",
+      "homepage_url": "https://github.com/jdepoix/youtube-transcript-api",
+      "integration_model": false,
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "notes": "Not a SaaS product: no vendor, no account, no credentials. Routes to the not-applicable branch of the buildability decision tree.",
+      "rate_limits": "enforced_but_undisclosed",
+      "sources": [
+        {
+          "claim": "YouTube blocks requesting IP addresses at an undisclosed threshold, and the library offers no event mechanism.",
+          "id": "yta-blocks",
+          "supports": [
+            "rate_limit_info",
+            "access_restrictions",
+            "webhook_support"
+          ],
+          "title": "Working around IP bans",
+          "type": "repository",
+          "url": "https://github.com/jdepoix/youtube-transcript-api#working-around-ip-bans-requestblocked-or-ipblocked-exception"
+        },
+        {
+          "claim": "Distributed as a Python package; there is no hosted service or vendor account behind it.",
+          "id": "yta-pypi",
+          "supports": [
+            "application_type",
+            "api_types"
+          ],
+          "title": "youtube-transcript-api on PyPI",
+          "type": "registry_listing",
+          "url": "https://pypi.org/project/youtube-transcript-api/"
+        },
+        {
+          "claim": "An MIT-licensed Python library and CLI that fetches YouTube transcripts without an API key.",
+          "id": "yta-repo",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "application_type",
+            "description",
+            "credential_access",
+            "authentication"
+          ],
+          "title": "jdepoix/youtube-transcript-api",
+          "type": "repository",
+          "url": "https://github.com/jdepoix/youtube-transcript-api"
+        },
+        {
+          "claim": "YouTube's own supported captions API is a different, credentialed product from this community library.",
+          "id": "yta-ytdocs",
+          "supports": [
+            "identity",
+            "application_type"
+          ],
+          "title": "YouTube Data API captions",
+          "type": "first_party_docs",
+          "url": "https://developers.google.com/youtube/v3/docs/captions"
+        }
+      ],
+      "vendor": "Jonas Depoix (community project)",
+      "webhooks": "no_events"
+    }
+  ]
+}

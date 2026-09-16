@@ -1,0 +1,965 @@
+{
+  "categories": [
+    {
+      "app_count": 10,
+      "category_id": "ai-and-data",
+      "name": "AI & Data"
+    },
+    {
+      "app_count": 10,
+      "category_id": "communication-and-messaging",
+      "name": "Communication & Messaging"
+    },
+    {
+      "app_count": 10,
+      "category_id": "crm-and-sales",
+      "name": "CRM & Sales"
+    },
+    {
+      "app_count": 10,
+      "category_id": "developer-tools",
+      "name": "Developer Tools"
+    },
+    {
+      "app_count": 10,
+      "category_id": "finance-and-payments",
+      "name": "Finance & Payments"
+    },
+    {
+      "app_count": 10,
+      "category_id": "hr-and-recruiting",
+      "name": "HR & Recruiting"
+    },
+    {
+      "app_count": 10,
+      "category_id": "marketing-and-analytics",
+      "name": "Marketing & Analytics"
+    },
+    {
+      "app_count": 10,
+      "category_id": "productivity-and-collaboration",
+      "name": "Productivity & Collaboration"
+    },
+    {
+      "app_count": 10,
+      "category_id": "storage-and-documents",
+      "name": "Storage & Documents"
+    },
+    {
+      "app_count": 10,
+      "category_id": "support-and-ticketing",
+      "name": "Support & Ticketing"
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-09-16T00:00:00Z",
+    "notes": "Normalized from apps.json",
+    "record_count": 100,
+    "schema_version": "2.0.0",
+    "seed": 20260916,
+    "source_fingerprint": "26a34ae7425259d5",
+    "stage": "normalization"
+  },
+  "records": [
+    {
+      "aliases": [],
+      "app_id": "adobe-acrobat-sign",
+      "canonical_name": "Adobe Acrobat Sign",
+      "category_id": "storage-and-documents",
+      "homepage_url": "https://www.adobe.com/sign.html",
+      "name": "Adobe Acrobat Sign",
+      "source_index": 85
+    },
+    {
+      "aliases": [],
+      "app_id": "airtable",
+      "canonical_name": "Airtable",
+      "category_id": "productivity-and-collaboration",
+      "homepage_url": "https://airtable.com",
+      "name": "Airtable",
+      "source_index": 5
+    },
+    {
+      "aliases": [],
+      "app_id": "amplitude",
+      "canonical_name": "Amplitude",
+      "category_id": "marketing-and-analytics",
+      "homepage_url": "https://amplitude.com",
+      "name": "Amplitude",
+      "source_index": 43
+    },
+    {
+      "aliases": [],
+      "app_id": "anthropic",
+      "canonical_name": "Anthropic",
+      "category_id": "ai-and-data",
+      "homepage_url": "https://www.anthropic.com",
+      "name": "Anthropic",
+      "source_index": 91
+    },
+    {
+      "aliases": [],
+      "app_id": "apollo-io",
+      "canonical_name": "Apollo.io",
+      "category_id": "crm-and-sales",
+      "homepage_url": "https://www.apollo.io",
+      "name": "Apollo.io",
+      "source_index": 19
+    },
+    {
+      "aliases": [],
+      "app_id": "asana",
+      "canonical_name": "Asana",
+      "category_id": "productivity-and-collaboration",
+      "homepage_url": "https://asana.com",
+      "name": "Asana",
+      "source_index": 1
+    },
+    {
+      "aliases": [],
+      "app_id": "ashby",
+      "canonical_name": "Ashby",
+      "category_id": "hr-and-recruiting",
+      "homepage_url": "https://www.ashbyhq.com",
+      "name": "Ashby",
+      "source_index": 68
+    },
+    {
+      "aliases": [],
+      "app_id": "attio",
+      "canonical_name": "Attio",
+      "category_id": "crm-and-sales",
+      "homepage_url": "https://attio.com",
+      "name": "Attio",
+      "source_index": 18
+    },
+    {
+      "aliases": [],
+      "app_id": "bamboohr",
+      "canonical_name": "BambooHR",
+      "category_id": "hr-and-recruiting",
+      "homepage_url": "https://www.bamboohr.com",
+      "name": "BambooHR",
+      "source_index": 61
+    },
+    {
+      "aliases": [],
+      "app_id": "bitbucket",
+      "canonical_name": "Bitbucket",
+      "category_id": "developer-tools",
+      "homepage_url": "https://bitbucket.org",
+      "name": "Bitbucket",
+      "source_index": 22
+    },
+    {
+      "aliases": [],
+      "app_id": "box",
+      "canonical_name": "Box",
+      "category_id": "storage-and-documents",
+      "homepage_url": "https://www.box.com",
+      "name": "Box",
+      "source_index": 82
+    },
+    {
+      "aliases": [],
+      "app_id": "braze",
+      "canonical_name": "Braze",
+      "category_id": "marketing-and-analytics",
+      "homepage_url": "https://www.braze.com",
+      "name": "Braze",
+      "source_index": 45
+    },
+    {
+      "aliases": [],
+      "app_id": "brex",
+      "canonical_name": "Brex",
+      "category_id": "finance-and-payments",
+      "homepage_url": "https://www.brex.com",
+      "name": "Brex",
+      "source_index": 57
+    },
+    {
+      "aliases": [],
+      "app_id": "buffer",
+      "canonical_name": "Buffer",
+      "category_id": "marketing-and-analytics",
+      "homepage_url": "https://buffer.com",
+      "name": "Buffer",
+      "source_index": 49
+    },
+    {
+      "aliases": [],
+      "app_id": "circleci",
+      "canonical_name": "CircleCI",
+      "category_id": "developer-tools",
+      "homepage_url": "https://circleci.com",
+      "name": "CircleCI",
+      "source_index": 26
+    },
+    {
+      "aliases": [],
+      "app_id": "clickup",
+      "canonical_name": "ClickUp",
+      "category_id": "productivity-and-collaboration",
+      "homepage_url": "https://clickup.com",
+      "name": "ClickUp",
+      "source_index": 3
+    },
+    {
+      "aliases": [],
+      "app_id": "close",
+      "canonical_name": "Close",
+      "category_id": "crm-and-sales",
+      "homepage_url": "https://close.com",
+      "name": "Close",
+      "source_index": 14
+    },
+    {
+      "aliases": [],
+      "app_id": "coda",
+      "canonical_name": "Coda",
+      "category_id": "productivity-and-collaboration",
+      "homepage_url": "https://coda.io",
+      "name": "Coda",
+      "source_index": 6
+    },
+    {
+      "aliases": [],
+      "app_id": "confluence",
+      "canonical_name": "Confluence",
+      "category_id": "productivity-and-collaboration",
+      "homepage_url": "https://www.atlassian.com/software/confluence",
+      "name": "Confluence",
+      "source_index": 9
+    },
+    {
+      "aliases": [],
+      "app_id": "copper",
+      "canonical_name": "Copper",
+      "category_id": "crm-and-sales",
+      "homepage_url": "https://www.copper.com",
+      "name": "Copper",
+      "source_index": 15
+    },
+    {
+      "aliases": [],
+      "app_id": "crisp",
+      "canonical_name": "Crisp",
+      "category_id": "support-and-ticketing",
+      "homepage_url": "https://crisp.chat",
+      "name": "Crisp",
+      "source_index": 75
+    },
+    {
+      "aliases": [],
+      "app_id": "customer-io",
+      "canonical_name": "Customer.io",
+      "category_id": "marketing-and-analytics",
+      "homepage_url": "https://customer.io",
+      "name": "Customer.io",
+      "source_index": 46
+    },
+    {
+      "aliases": [],
+      "app_id": "databricks",
+      "canonical_name": "Databricks",
+      "category_id": "ai-and-data",
+      "homepage_url": "https://www.databricks.com",
+      "name": "Databricks",
+      "source_index": 96
+    },
+    {
+      "aliases": [],
+      "app_id": "deel",
+      "canonical_name": "Deel",
+      "category_id": "hr-and-recruiting",
+      "homepage_url": "https://www.deel.com",
+      "name": "Deel",
+      "source_index": 66
+    },
+    {
+      "aliases": [],
+      "app_id": "discord",
+      "canonical_name": "Discord",
+      "category_id": "communication-and-messaging",
+      "homepage_url": "https://discord.com",
+      "name": "Discord",
+      "source_index": 32
+    },
+    {
+      "aliases": [],
+      "app_id": "docusign",
+      "canonical_name": "DocuSign",
+      "category_id": "storage-and-documents",
+      "homepage_url": "https://www.docusign.com",
+      "name": "DocuSign",
+      "source_index": 84
+    },
+    {
+      "aliases": [],
+      "app_id": "dropbox",
+      "canonical_name": "Dropbox",
+      "category_id": "storage-and-documents",
+      "homepage_url": "https://www.dropbox.com",
+      "name": "Dropbox",
+      "source_index": 81
+    },
+    {
+      "aliases": [],
+      "app_id": "egnyte",
+      "canonical_name": "Egnyte",
+      "category_id": "storage-and-documents",
+      "homepage_url": "https://www.egnyte.com",
+      "name": "Egnyte",
+      "source_index": 87
+    },
+    {
+      "aliases": [],
+      "app_id": "freshdesk",
+      "canonical_name": "Freshdesk",
+      "category_id": "support-and-ticketing",
+      "homepage_url": "https://www.freshworks.com/freshdesk/",
+      "name": "Freshdesk",
+      "source_index": 71
+    },
+    {
+      "aliases": [],
+      "app_id": "freshsales",
+      "canonical_name": "Freshsales",
+      "category_id": "crm-and-sales",
+      "homepage_url": "https://www.freshworks.com/crm/sales/",
+      "name": "Freshsales",
+      "source_index": 16
+    },
+    {
+      "aliases": [],
+      "app_id": "front",
+      "canonical_name": "Front",
+      "category_id": "support-and-ticketing",
+      "homepage_url": "https://front.com",
+      "name": "Front",
+      "source_index": 74
+    },
+    {
+      "aliases": [],
+      "app_id": "github",
+      "canonical_name": "GitHub",
+      "category_id": "developer-tools",
+      "homepage_url": "https://github.com",
+      "name": "GitHub",
+      "source_index": 20
+    },
+    {
+      "aliases": [],
+      "app_id": "gitlab",
+      "canonical_name": "GitLab",
+      "category_id": "developer-tools",
+      "homepage_url": "https://gitlab.com",
+      "name": "GitLab",
+      "source_index": 21
+    },
+    {
+      "aliases": [],
+      "app_id": "google-analytics-4",
+      "canonical_name": "Google Analytics 4",
+      "category_id": "marketing-and-analytics",
+      "homepage_url": "https://marketingplatform.google.com/about/analytics/",
+      "name": "Google Analytics 4",
+      "source_index": 41
+    },
+    {
+      "aliases": [],
+      "app_id": "google-chat",
+      "canonical_name": "Google Chat",
+      "category_id": "communication-and-messaging",
+      "homepage_url": "https://workspace.google.com/products/chat/",
+      "name": "Google Chat",
+      "source_index": 36
+    },
+    {
+      "aliases": [],
+      "app_id": "google-drive",
+      "canonical_name": "Google Drive",
+      "category_id": "storage-and-documents",
+      "homepage_url": "https://workspace.google.com/products/drive/",
+      "name": "Google Drive",
+      "source_index": 80
+    },
+    {
+      "aliases": [],
+      "app_id": "gorgias",
+      "canonical_name": "Gorgias",
+      "category_id": "support-and-ticketing",
+      "homepage_url": "https://www.gorgias.com",
+      "name": "Gorgias",
+      "source_index": 77
+    },
+    {
+      "aliases": [],
+      "app_id": "greenhouse",
+      "canonical_name": "Greenhouse",
+      "category_id": "hr-and-recruiting",
+      "homepage_url": "https://www.greenhouse.io",
+      "name": "Greenhouse",
+      "source_index": 62
+    },
+    {
+      "aliases": [],
+      "app_id": "gusto",
+      "canonical_name": "Gusto",
+      "category_id": "hr-and-recruiting",
+      "homepage_url": "https://gusto.com",
+      "name": "Gusto",
+      "source_index": 64
+    },
+    {
+      "aliases": [],
+      "app_id": "help-scout",
+      "canonical_name": "Help Scout",
+      "category_id": "support-and-ticketing",
+      "homepage_url": "https://www.helpscout.com",
+      "name": "Help Scout",
+      "source_index": 73
+    },
+    {
+      "aliases": [],
+      "app_id": "hootsuite",
+      "canonical_name": "Hootsuite",
+      "category_id": "marketing-and-analytics",
+      "homepage_url": "https://www.hootsuite.com",
+      "name": "Hootsuite",
+      "source_index": 48
+    },
+    {
+      "aliases": [],
+      "app_id": "hubspot",
+      "canonical_name": "HubSpot",
+      "category_id": "crm-and-sales",
+      "homepage_url": "https://www.hubspot.com",
+      "name": "HubSpot",
+      "source_index": 11
+    },
+    {
+      "aliases": [],
+      "app_id": "hugging-face",
+      "canonical_name": "Hugging Face",
+      "category_id": "ai-and-data",
+      "homepage_url": "https://huggingface.co",
+      "name": "Hugging Face",
+      "source_index": 92
+    },
+    {
+      "aliases": [],
+      "app_id": "intercom",
+      "canonical_name": "Intercom",
+      "category_id": "support-and-ticketing",
+      "homepage_url": "https://www.intercom.com",
+      "name": "Intercom",
+      "source_index": 72
+    },
+    {
+      "aliases": [],
+      "app_id": "jira",
+      "canonical_name": "Jira",
+      "category_id": "developer-tools",
+      "homepage_url": "https://www.atlassian.com/software/jira",
+      "name": "Jira",
+      "source_index": 23
+    },
+    {
+      "aliases": [],
+      "app_id": "jira-service-management",
+      "canonical_name": "Jira Service Management",
+      "category_id": "support-and-ticketing",
+      "homepage_url": "https://www.atlassian.com/software/jira/service-management",
+      "name": "Jira Service Management",
+      "source_index": 79
+    },
+    {
+      "aliases": [],
+      "app_id": "klaviyo",
+      "canonical_name": "Klaviyo",
+      "category_id": "marketing-and-analytics",
+      "homepage_url": "https://www.klaviyo.com",
+      "name": "Klaviyo",
+      "source_index": 44
+    },
+    {
+      "aliases": [],
+      "app_id": "kustomer",
+      "canonical_name": "Kustomer",
+      "category_id": "support-and-ticketing",
+      "homepage_url": "https://www.kustomer.com",
+      "name": "Kustomer",
+      "source_index": 78
+    },
+    {
+      "aliases": [],
+      "app_id": "lever",
+      "canonical_name": "Lever",
+      "category_id": "hr-and-recruiting",
+      "homepage_url": "https://www.lever.co",
+      "name": "Lever",
+      "source_index": 63
+    },
+    {
+      "aliases": [],
+      "app_id": "linear",
+      "canonical_name": "Linear",
+      "category_id": "developer-tools",
+      "homepage_url": "https://linear.app",
+      "name": "Linear",
+      "source_index": 24
+    },
+    {
+      "aliases": [],
+      "app_id": "mailchimp",
+      "canonical_name": "Mailchimp",
+      "category_id": "marketing-and-analytics",
+      "homepage_url": "https://mailchimp.com",
+      "name": "Mailchimp",
+      "source_index": 40
+    },
+    {
+      "aliases": [],
+      "app_id": "mattermost",
+      "canonical_name": "Mattermost",
+      "category_id": "communication-and-messaging",
+      "homepage_url": "https://mattermost.com",
+      "name": "Mattermost",
+      "source_index": 37
+    },
+    {
+      "aliases": [],
+      "app_id": "mermaid-cli",
+      "canonical_name": "Mermaid CLI",
+      "category_id": "developer-tools",
+      "homepage_url": "https://github.com/mermaid-js/mermaid-cli",
+      "name": "Mermaid CLI",
+      "source_index": 29
+    },
+    {
+      "aliases": [],
+      "app_id": "microsoft-teams",
+      "canonical_name": "Microsoft Teams",
+      "category_id": "communication-and-messaging",
+      "homepage_url": "https://www.microsoft.com/microsoft-teams/group-chat-software",
+      "name": "Microsoft Teams",
+      "source_index": 31
+    },
+    {
+      "aliases": [],
+      "app_id": "miro",
+      "canonical_name": "Miro",
+      "category_id": "productivity-and-collaboration",
+      "homepage_url": "https://miro.com",
+      "name": "Miro",
+      "source_index": 8
+    },
+    {
+      "aliases": [],
+      "app_id": "mixpanel",
+      "canonical_name": "Mixpanel",
+      "category_id": "marketing-and-analytics",
+      "homepage_url": "https://mixpanel.com",
+      "name": "Mixpanel",
+      "source_index": 42
+    },
+    {
+      "aliases": [],
+      "app_id": "monday-com",
+      "canonical_name": "Monday.com",
+      "category_id": "productivity-and-collaboration",
+      "homepage_url": "https://monday.com",
+      "name": "Monday.com",
+      "source_index": 4
+    },
+    {
+      "aliases": [],
+      "app_id": "nextcloud",
+      "canonical_name": "Nextcloud",
+      "category_id": "storage-and-documents",
+      "homepage_url": "https://nextcloud.com",
+      "name": "Nextcloud",
+      "source_index": 89
+    },
+    {
+      "aliases": [],
+      "app_id": "notion",
+      "canonical_name": "Notion",
+      "category_id": "productivity-and-collaboration",
+      "homepage_url": "https://www.notion.so",
+      "name": "Notion",
+      "source_index": 0
+    },
+    {
+      "aliases": [],
+      "app_id": "onedrive",
+      "canonical_name": "OneDrive",
+      "category_id": "storage-and-documents",
+      "homepage_url": "https://www.microsoft.com/microsoft-365/onedrive/online-cloud-storage",
+      "name": "OneDrive",
+      "source_index": 83
+    },
+    {
+      "aliases": [],
+      "app_id": "openai",
+      "canonical_name": "OpenAI",
+      "category_id": "ai-and-data",
+      "homepage_url": "https://openai.com",
+      "name": "OpenAI",
+      "source_index": 90
+    },
+    {
+      "aliases": [],
+      "app_id": "pandadoc",
+      "canonical_name": "PandaDoc",
+      "category_id": "storage-and-documents",
+      "homepage_url": "https://www.pandadoc.com",
+      "name": "PandaDoc",
+      "source_index": 86
+    },
+    {
+      "aliases": [],
+      "app_id": "paypal",
+      "canonical_name": "PayPal",
+      "category_id": "finance-and-payments",
+      "homepage_url": "https://www.paypal.com",
+      "name": "PayPal",
+      "source_index": 51
+    },
+    {
+      "aliases": [],
+      "app_id": "pcloud",
+      "canonical_name": "pCloud",
+      "category_id": "storage-and-documents",
+      "homepage_url": "https://www.pcloud.com",
+      "name": "pCloud",
+      "source_index": 88
+    },
+    {
+      "aliases": [],
+      "app_id": "perplexity",
+      "canonical_name": "Perplexity",
+      "category_id": "ai-and-data",
+      "homepage_url": "https://www.perplexity.ai",
+      "name": "Perplexity",
+      "source_index": 98
+    },
+    {
+      "aliases": [],
+      "app_id": "personio",
+      "canonical_name": "Personio",
+      "category_id": "hr-and-recruiting",
+      "homepage_url": "https://www.personio.com",
+      "name": "Personio",
+      "source_index": 67
+    },
+    {
+      "aliases": [],
+      "app_id": "pinecone",
+      "canonical_name": "Pinecone",
+      "category_id": "ai-and-data",
+      "homepage_url": "https://www.pinecone.io",
+      "name": "Pinecone",
+      "source_index": 93
+    },
+    {
+      "aliases": [],
+      "app_id": "pipedrive",
+      "canonical_name": "Pipedrive",
+      "category_id": "crm-and-sales",
+      "homepage_url": "https://www.pipedrive.com",
+      "name": "Pipedrive",
+      "source_index": 12
+    },
+    {
+      "aliases": [],
+      "app_id": "plaid",
+      "canonical_name": "Plaid",
+      "category_id": "finance-and-payments",
+      "homepage_url": "https://plaid.com",
+      "name": "Plaid",
+      "source_index": 56
+    },
+    {
+      "aliases": [],
+      "app_id": "posthog",
+      "canonical_name": "PostHog",
+      "category_id": "marketing-and-analytics",
+      "homepage_url": "https://posthog.com",
+      "name": "PostHog",
+      "source_index": 47
+    },
+    {
+      "aliases": [],
+      "app_id": "quickbooks-online",
+      "canonical_name": "QuickBooks Online",
+      "category_id": "finance-and-payments",
+      "homepage_url": "https://quickbooks.intuit.com",
+      "name": "QuickBooks Online",
+      "source_index": 54
+    },
+    {
+      "aliases": [],
+      "app_id": "ramp",
+      "canonical_name": "Ramp",
+      "category_id": "finance-and-payments",
+      "homepage_url": "https://ramp.com",
+      "name": "Ramp",
+      "source_index": 58
+    },
+    {
+      "aliases": [],
+      "app_id": "razorpay",
+      "canonical_name": "Razorpay",
+      "category_id": "finance-and-payments",
+      "homepage_url": "https://razorpay.com",
+      "name": "Razorpay",
+      "source_index": 55
+    },
+    {
+      "aliases": [],
+      "app_id": "rippling",
+      "canonical_name": "Rippling",
+      "category_id": "hr-and-recruiting",
+      "homepage_url": "https://www.rippling.com",
+      "name": "Rippling",
+      "source_index": 65
+    },
+    {
+      "aliases": [],
+      "app_id": "rocket-chat",
+      "canonical_name": "Rocket.Chat",
+      "category_id": "communication-and-messaging",
+      "homepage_url": "https://www.rocket.chat",
+      "name": "Rocket.Chat",
+      "source_index": 38
+    },
+    {
+      "aliases": [],
+      "app_id": "salesforce",
+      "canonical_name": "Salesforce",
+      "category_id": "crm-and-sales",
+      "homepage_url": "https://www.salesforce.com",
+      "name": "Salesforce",
+      "source_index": 10
+    },
+    {
+      "aliases": [],
+      "app_id": "sentry",
+      "canonical_name": "Sentry",
+      "category_id": "developer-tools",
+      "homepage_url": "https://sentry.io",
+      "name": "Sentry",
+      "source_index": 25
+    },
+    {
+      "aliases": [],
+      "app_id": "sherlock",
+      "canonical_name": "Sherlock",
+      "category_id": "developer-tools",
+      "homepage_url": "https://github.com/sherlock-project/sherlock",
+      "name": "Sherlock",
+      "source_index": 28
+    },
+    {
+      "aliases": [],
+      "app_id": "slack",
+      "canonical_name": "Slack",
+      "category_id": "communication-and-messaging",
+      "homepage_url": "https://slack.com",
+      "name": "Slack",
+      "source_index": 30
+    },
+    {
+      "aliases": [],
+      "app_id": "smartrecruiters",
+      "canonical_name": "SmartRecruiters",
+      "category_id": "hr-and-recruiting",
+      "homepage_url": "https://www.smartrecruiters.com",
+      "name": "SmartRecruiters",
+      "source_index": 69
+    },
+    {
+      "aliases": [],
+      "app_id": "snowflake",
+      "canonical_name": "Snowflake",
+      "category_id": "ai-and-data",
+      "homepage_url": "https://www.snowflake.com",
+      "name": "Snowflake",
+      "source_index": 95
+    },
+    {
+      "aliases": [],
+      "app_id": "square",
+      "canonical_name": "Square",
+      "category_id": "finance-and-payments",
+      "homepage_url": "https://squareup.com",
+      "name": "Square",
+      "source_index": 52
+    },
+    {
+      "aliases": [],
+      "app_id": "stripe",
+      "canonical_name": "Stripe",
+      "category_id": "finance-and-payments",
+      "homepage_url": "https://stripe.com",
+      "name": "Stripe",
+      "source_index": 50
+    },
+    {
+      "aliases": [],
+      "app_id": "supabase",
+      "canonical_name": "Supabase",
+      "category_id": "ai-and-data",
+      "homepage_url": "https://supabase.com",
+      "name": "Supabase",
+      "source_index": 97
+    },
+    {
+      "aliases": [],
+      "app_id": "telegram",
+      "canonical_name": "Telegram",
+      "category_id": "communication-and-messaging",
+      "homepage_url": "https://telegram.org",
+      "name": "Telegram",
+      "source_index": 33
+    },
+    {
+      "aliases": [],
+      "app_id": "todoist",
+      "canonical_name": "Todoist",
+      "category_id": "productivity-and-collaboration",
+      "homepage_url": "https://todoist.com",
+      "name": "Todoist",
+      "source_index": 7
+    },
+    {
+      "aliases": [],
+      "app_id": "trello",
+      "canonical_name": "Trello",
+      "category_id": "productivity-and-collaboration",
+      "homepage_url": "https://trello.com",
+      "name": "Trello",
+      "source_index": 2
+    },
+    {
+      "aliases": [],
+      "app_id": "twenty",
+      "canonical_name": "Twenty",
+      "category_id": "crm-and-sales",
+      "homepage_url": "https://twenty.com",
+      "name": "Twenty",
+      "source_index": 17
+    },
+    {
+      "aliases": [],
+      "app_id": "twilio",
+      "canonical_name": "Twilio",
+      "category_id": "communication-and-messaging",
+      "homepage_url": "https://www.twilio.com",
+      "name": "Twilio",
+      "source_index": 34
+    },
+    {
+      "aliases": [],
+      "app_id": "vercel",
+      "canonical_name": "Vercel",
+      "category_id": "developer-tools",
+      "homepage_url": "https://vercel.com",
+      "name": "Vercel",
+      "source_index": 27
+    },
+    {
+      "aliases": [],
+      "app_id": "weaviate",
+      "canonical_name": "Weaviate",
+      "category_id": "ai-and-data",
+      "homepage_url": "https://weaviate.io",
+      "name": "Weaviate",
+      "source_index": 94
+    },
+    {
+      "aliases": [],
+      "app_id": "whatsapp-business-platform",
+      "canonical_name": "WhatsApp Business Platform",
+      "category_id": "communication-and-messaging",
+      "homepage_url": "https://business.whatsapp.com",
+      "name": "WhatsApp Business Platform",
+      "source_index": 39
+    },
+    {
+      "aliases": [],
+      "app_id": "wise",
+      "canonical_name": "Wise",
+      "category_id": "finance-and-payments",
+      "homepage_url": "https://wise.com",
+      "name": "Wise",
+      "source_index": 59
+    },
+    {
+      "aliases": [],
+      "app_id": "workday",
+      "canonical_name": "Workday",
+      "category_id": "hr-and-recruiting",
+      "homepage_url": "https://www.workday.com",
+      "name": "Workday",
+      "source_index": 60
+    },
+    {
+      "aliases": [],
+      "app_id": "xero",
+      "canonical_name": "Xero",
+      "category_id": "finance-and-payments",
+      "homepage_url": "https://www.xero.com",
+      "name": "Xero",
+      "source_index": 53
+    },
+    {
+      "aliases": [],
+      "app_id": "youtube-transcript-api",
+      "canonical_name": "YouTube Transcript API",
+      "category_id": "ai-and-data",
+      "homepage_url": "https://transcriptapi.com",
+      "name": "YouTube Transcript API",
+      "source_index": 99
+    },
+    {
+      "aliases": [],
+      "app_id": "zendesk",
+      "canonical_name": "Zendesk",
+      "category_id": "support-and-ticketing",
+      "homepage_url": "https://www.zendesk.com",
+      "name": "Zendesk",
+      "source_index": 70
+    },
+    {
+      "aliases": [],
+      "app_id": "zoho-crm",
+      "canonical_name": "Zoho CRM",
+      "category_id": "crm-and-sales",
+      "homepage_url": "https://www.zoho.com/crm/",
+      "name": "Zoho CRM",
+      "source_index": 13
+    },
+    {
+      "aliases": [],
+      "app_id": "zoho-desk",
+      "canonical_name": "Zoho Desk",
+      "category_id": "support-and-ticketing",
+      "homepage_url": "https://www.zoho.com/desk/",
+      "name": "Zoho Desk",
+      "source_index": 76
+    },
+    {
+      "aliases": [],
+      "app_id": "zoom",
+      "canonical_name": "Zoom",
+      "category_id": "communication-and-messaging",
+      "homepage_url": "https://zoom.us",
+      "name": "Zoom",
+      "source_index": 35
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "decisions": [
+    {
+      "app_id": "anthropic",
+      "corrected_status": "resolved",
+      "corrected_value": [
+        "very_broad"
+      ],
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decision": "correct",
+      "entry_path": "sample",
+      "evidence_ids": [
+        "anthropic::ant-docs"
+      ],
+      "field": "api_breadth",
+      "original_status": "resolved",
+      "original_value": [
+        "broad"
+      ],
+      "reason": "The API is the product: messages, batches, files, models and administration together cover essentially all of it.",
+      "reviewer": "product-ops-reviewer"
+    },
+    {
+      "app_id": "ashby",
+      "corrected_status": "resolved",
+      "corrected_value": [
+        "very_broad"
+      ],
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decision": "correct",
+      "entry_path": "sample",
+      "evidence_ids": [
+        "ashby::ashby-docs"
+      ],
+      "field": "api_breadth",
+      "original_status": "resolved",
+      "original_value": [
+        "broad"
+      ],
+      "reason": "The documented groups span candidates, applications, jobs, interviews and offers, which is most of an ATS.",
+      "reviewer": "product-ops-reviewer"
+    },
+    {
+      "app_id": "help-scout",
+      "corrected_status": null,
+      "corrected_value": null,
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decision": "confirm",
+      "entry_path": "sample",
+      "evidence_ids": [
+        "help-scout::hsc-docs"
+      ],
+      "field": "api_breadth",
+      "original_status": "resolved",
+      "original_value": [
+        "broad"
+      ],
+      "reason": "Mailbox surfaces are well covered, but Docs and Beacon sit outside the documented groups.",
+      "reviewer": "product-ops-reviewer"
+    },
+    {
+      "app_id": "lever",
+      "corrected_status": "resolved",
+      "corrected_value": [
+        "very_broad"
+      ],
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decision": "correct",
+      "entry_path": "sample",
+      "evidence_ids": [
+        "lever::lever-docs"
+      ],
+      "field": "api_breadth",
+      "original_status": "resolved",
+      "original_value": [
+        "broad"
+      ],
+      "reason": "Postings, opportunities, interviews, offers and archive reasons cover most of the product.",
+      "reviewer": "product-ops-reviewer"
+    },
+    {
+      "app_id": "nextcloud",
+      "corrected_status": null,
+      "corrected_value": null,
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decision": "confirm",
+      "entry_path": "sample",
+      "evidence_ids": [
+        "nextcloud::nc-docs"
+      ],
+      "field": "api_breadth",
+      "original_status": "resolved",
+      "original_value": [
+        "broad"
+      ],
+      "reason": "The client APIs cover the core server; the app ecosystem that makes up much of Nextcloud is not part of them.",
+      "reviewer": "product-ops-reviewer"
+    },
+    {
+      "app_id": "twenty",
+      "corrected_status": "resolved",
+      "corrected_value": [
+        "other"
+      ],
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decision": "correct",
+      "entry_path": "sample",
+      "evidence_ids": [
+        "twenty::twenty-docs",
+        "twenty::twenty-repo",
+        "twenty::twenty-selfhost"
+      ],
+      "field": "blocker",
+      "original_status": "resolved",
+      "original_value": [
+        "none"
+      ],
+      "reason": "Buildable only after the reviewer deploys an instance. The blocker taxonomy has no member for self-hosting, so 'other' carries it and the limitation is reported.",
+      "reviewer": "product-ops-reviewer"
+    },
+    {
+      "app_id": "zoho-desk",
+      "corrected_status": null,
+      "corrected_value": null,
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decision": "confirm",
+      "entry_path": "sample",
+      "evidence_ids": [
+        "zoho-desk::zdesk-docs"
+      ],
+      "field": "api_breadth",
+      "original_status": "resolved",
+      "original_value": [
+        "broad"
+      ],
+      "reason": "Ticketing is well covered; large parts of the admin and automation surface are not documented as API resources.",
+      "reviewer": "product-ops-reviewer"
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-09-16T00:00:00Z",
+    "notes": "Channel D decisions by product-ops-reviewer.",
+    "record_count": 7,
+    "schema_version": "2.0.0",
+    "seed": 20260916,
+    "source_fingerprint": "7a2d0fdf9b7445ae",
+    "stage": "verification"
+  }
+}

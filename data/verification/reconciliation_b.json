@@ -1,0 +1,2482 @@
+{
+  "decisions": [
+    {
+      "app_id": "amplitude",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_breadth",
+      "final_status": "resolved",
+      "final_value": [
+        "broad"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "amplitude",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_exists",
+      "final_status": "resolved",
+      "final_value": [
+        "true"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "amplitude",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_types",
+      "final_status": "resolved",
+      "final_value": [
+        "rest",
+        "sdk"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "amplitude",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "application_type",
+      "final_status": "resolved",
+      "final_value": [
+        "saas_application"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "amplitude",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "authentication",
+      "final_status": "resolved",
+      "final_value": [
+        "api_key",
+        "basic_auth"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "amplitude",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "blocker",
+      "final_status": "resolved",
+      "final_value": [
+        "none"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "amplitude",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "buildability",
+      "final_status": "resolved",
+      "final_value": [
+        "buildable"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "amplitude",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "credential_access",
+      "final_status": "resolved",
+      "final_value": [
+        "self_serve_free"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "amplitude",
+      "authoritative_channel": "channel_a",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "mcp",
+      "final_status": "not_found",
+      "final_value": null,
+      "outcome": "unresolved",
+      "rationale": "No channel could establish the value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "amplitude",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "rate_limit_info",
+      "final_status": "resolved",
+      "final_value": [
+        "documented_quantitative"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "amplitude",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "webhook_support",
+      "final_status": "resolved",
+      "final_value": [
+        "no_events"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "anthropic",
+      "authoritative_channel": "channel_d",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": "product-ops-reviewer",
+      "field": "api_breadth",
+      "final_status": "resolved",
+      "final_value": [
+        "very_broad"
+      ],
+      "outcome": "corrected",
+      "rationale": "Human review corrected the value: The API is the product: messages, batches, files, models and administration together cover essentially all of it.",
+      "superseded_channel": "channel_a"
+    },
+    {
+      "app_id": "anthropic",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_exists",
+      "final_status": "resolved",
+      "final_value": [
+        "true"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "anthropic",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_types",
+      "final_status": "resolved",
+      "final_value": [
+        "rest",
+        "sdk"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "anthropic",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "application_type",
+      "final_status": "resolved",
+      "final_value": [
+        "api_platform"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "anthropic",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "authentication",
+      "final_status": "resolved",
+      "final_value": [
+        "api_key"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "anthropic",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "blocker",
+      "final_status": "resolved",
+      "final_value": [
+        "paid_access"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "anthropic",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "buildability",
+      "final_status": "resolved",
+      "final_value": [
+        "buildable_with_friction"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "anthropic",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "credential_access",
+      "final_status": "resolved",
+      "final_value": [
+        "self_serve_paid"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "anthropic",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "mcp",
+      "final_status": "resolved",
+      "final_value": [
+        "official"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "anthropic",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "rate_limit_info",
+      "final_status": "resolved",
+      "final_value": [
+        "documented_quantitative"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "anthropic",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "webhook_support",
+      "final_status": "resolved",
+      "final_value": [
+        "polling_only"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "apollo-io",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_breadth",
+      "final_status": "resolved",
+      "final_value": [
+        "broad"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "apollo-io",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_exists",
+      "final_status": "resolved",
+      "final_value": [
+        "true"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "apollo-io",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_types",
+      "final_status": "resolved",
+      "final_value": [
+        "rest"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "apollo-io",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "application_type",
+      "final_status": "resolved",
+      "final_value": [
+        "saas_application"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "apollo-io",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "authentication",
+      "final_status": "resolved",
+      "final_value": [
+        "api_key"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "apollo-io",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "blocker",
+      "final_status": "resolved",
+      "final_value": [
+        "paid_access"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "apollo-io",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "buildability",
+      "final_status": "resolved",
+      "final_value": [
+        "buildable_with_friction"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "apollo-io",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "credential_access",
+      "final_status": "resolved",
+      "final_value": [
+        "self_serve_paid"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "apollo-io",
+      "authoritative_channel": "channel_a",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "mcp",
+      "final_status": "not_found",
+      "final_value": null,
+      "outcome": "unresolved",
+      "rationale": "No channel could establish the value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "apollo-io",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "rate_limit_info",
+      "final_status": "resolved",
+      "final_value": [
+        "documented_quantitative"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "apollo-io",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "webhook_support",
+      "final_status": "resolved",
+      "final_value": [
+        "native_webhooks"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "ashby",
+      "authoritative_channel": "channel_d",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": "product-ops-reviewer",
+      "field": "api_breadth",
+      "final_status": "resolved",
+      "final_value": [
+        "very_broad"
+      ],
+      "outcome": "corrected",
+      "rationale": "Human review corrected the value: The documented groups span candidates, applications, jobs, interviews and offers, which is most of an ATS.",
+      "superseded_channel": "channel_a"
+    },
+    {
+      "app_id": "ashby",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_exists",
+      "final_status": "resolved",
+      "final_value": [
+        "true"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "ashby",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_types",
+      "final_status": "resolved",
+      "final_value": [
+        "rest"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "ashby",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "application_type",
+      "final_status": "resolved",
+      "final_value": [
+        "saas_application"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "ashby",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "authentication",
+      "final_status": "resolved",
+      "final_value": [
+        "api_key",
+        "basic_auth"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "ashby",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "blocker",
+      "final_status": "resolved",
+      "final_value": [
+        "admin_approval",
+        "enterprise_only",
+        "paid_access"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "ashby",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "buildability",
+      "final_status": "resolved",
+      "final_value": [
+        "blocked"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "ashby",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "credential_access",
+      "final_status": "resolved",
+      "final_value": [
+        "contact_sales"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "ashby",
+      "authoritative_channel": "channel_a",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "mcp",
+      "final_status": "not_found",
+      "final_value": null,
+      "outcome": "unresolved",
+      "rationale": "No channel could establish the value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "ashby",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "rate_limit_info",
+      "final_status": "resolved",
+      "final_value": [
+        "documented_quantitative"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "ashby",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "webhook_support",
+      "final_status": "resolved",
+      "final_value": [
+        "native_webhooks"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "buffer",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_breadth",
+      "final_status": "resolved",
+      "final_value": [
+        "narrow"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "buffer",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_exists",
+      "final_status": "resolved",
+      "final_value": [
+        "true"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "buffer",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_types",
+      "final_status": "resolved",
+      "final_value": [
+        "rest"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "buffer",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "application_type",
+      "final_status": "resolved",
+      "final_value": [
+        "saas_application"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "buffer",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "authentication",
+      "final_status": "resolved",
+      "final_value": [
+        "oauth2"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "buffer",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "blocker",
+      "final_status": "resolved",
+      "final_value": [
+        "admin_approval",
+        "insufficient_api_surface"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "buffer",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "buildability",
+      "final_status": "resolved",
+      "final_value": [
+        "buildable_with_friction"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "buffer",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "credential_access",
+      "final_status": "resolved",
+      "final_value": [
+        "admin_approval"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "buffer",
+      "authoritative_channel": "channel_a",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "mcp",
+      "final_status": "not_found",
+      "final_value": null,
+      "outcome": "unresolved",
+      "rationale": "No channel could establish the value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "buffer",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "rate_limit_info",
+      "final_status": "resolved",
+      "final_value": [
+        "documented_qualitative"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "buffer",
+      "authoritative_channel": "channel_a",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "webhook_support",
+      "final_status": "not_found",
+      "final_value": null,
+      "outcome": "unresolved",
+      "rationale": "No channel could establish the value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "clickup",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_breadth",
+      "final_status": "resolved",
+      "final_value": [
+        "very_broad"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "clickup",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_exists",
+      "final_status": "resolved",
+      "final_value": [
+        "true"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "clickup",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_types",
+      "final_status": "resolved",
+      "final_value": [
+        "rest"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "clickup",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "application_type",
+      "final_status": "resolved",
+      "final_value": [
+        "saas_application"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "clickup",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "authentication",
+      "final_status": "resolved",
+      "final_value": [
+        "oauth2",
+        "pat"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "clickup",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "blocker",
+      "final_status": "resolved",
+      "final_value": [
+        "none"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "clickup",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "buildability",
+      "final_status": "resolved",
+      "final_value": [
+        "buildable"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "clickup",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "credential_access",
+      "final_status": "resolved",
+      "final_value": [
+        "self_serve_free"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "clickup",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "mcp",
+      "final_status": "resolved",
+      "final_value": [
+        "third_party"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "clickup",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "rate_limit_info",
+      "final_status": "resolved",
+      "final_value": [
+        "documented_quantitative"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "clickup",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "webhook_support",
+      "final_status": "resolved",
+      "final_value": [
+        "native_webhooks"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "help-scout",
+      "authoritative_channel": "channel_d",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": "product-ops-reviewer",
+      "field": "api_breadth",
+      "final_status": "resolved",
+      "final_value": [
+        "broad"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Human review confirmed the value: Mailbox surfaces are well covered, but Docs and Beacon sit outside the documented groups.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "help-scout",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_exists",
+      "final_status": "resolved",
+      "final_value": [
+        "true"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "help-scout",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_types",
+      "final_status": "resolved",
+      "final_value": [
+        "rest"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "help-scout",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "application_type",
+      "final_status": "resolved",
+      "final_value": [
+        "saas_application"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "help-scout",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "authentication",
+      "final_status": "resolved",
+      "final_value": [
+        "oauth2"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "help-scout",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "blocker",
+      "final_status": "resolved",
+      "final_value": [
+        "admin_approval",
+        "paid_access"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "help-scout",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "buildability",
+      "final_status": "resolved",
+      "final_value": [
+        "buildable_with_friction"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "help-scout",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "credential_access",
+      "final_status": "resolved",
+      "final_value": [
+        "admin_approval"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "help-scout",
+      "authoritative_channel": "channel_a",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "mcp",
+      "final_status": "not_found",
+      "final_value": null,
+      "outcome": "unresolved",
+      "rationale": "No channel could establish the value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "help-scout",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "rate_limit_info",
+      "final_status": "resolved",
+      "final_value": [
+        "documented_quantitative"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "help-scout",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "webhook_support",
+      "final_status": "resolved",
+      "final_value": [
+        "native_webhooks"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "lever",
+      "authoritative_channel": "channel_d",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": "product-ops-reviewer",
+      "field": "api_breadth",
+      "final_status": "resolved",
+      "final_value": [
+        "very_broad"
+      ],
+      "outcome": "corrected",
+      "rationale": "Human review corrected the value: Postings, opportunities, interviews, offers and archive reasons cover most of the product.",
+      "superseded_channel": "channel_a"
+    },
+    {
+      "app_id": "lever",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_exists",
+      "final_status": "resolved",
+      "final_value": [
+        "true"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "lever",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_types",
+      "final_status": "resolved",
+      "final_value": [
+        "rest"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "lever",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "application_type",
+      "final_status": "resolved",
+      "final_value": [
+        "saas_application"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "lever",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "authentication",
+      "final_status": "resolved",
+      "final_value": [
+        "api_key",
+        "basic_auth",
+        "oauth2"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "lever",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "blocker",
+      "final_status": "resolved",
+      "final_value": [
+        "admin_approval",
+        "enterprise_only",
+        "paid_access"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "lever",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "buildability",
+      "final_status": "resolved",
+      "final_value": [
+        "blocked"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "lever",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "credential_access",
+      "final_status": "resolved",
+      "final_value": [
+        "contact_sales"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "lever",
+      "authoritative_channel": "channel_a",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "mcp",
+      "final_status": "not_found",
+      "final_value": null,
+      "outcome": "unresolved",
+      "rationale": "No channel could establish the value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "lever",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "rate_limit_info",
+      "final_status": "resolved",
+      "final_value": [
+        "documented_quantitative"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "lever",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "webhook_support",
+      "final_status": "resolved",
+      "final_value": [
+        "native_webhooks"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "microsoft-teams",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_breadth",
+      "final_status": "resolved",
+      "final_value": [
+        "broad"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "microsoft-teams",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_exists",
+      "final_status": "resolved",
+      "final_value": [
+        "true"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "microsoft-teams",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_types",
+      "final_status": "resolved",
+      "final_value": [
+        "rest",
+        "sdk"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "microsoft-teams",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "application_type",
+      "final_status": "resolved",
+      "final_value": [
+        "saas_application"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "microsoft-teams",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "authentication",
+      "final_status": "resolved",
+      "final_value": [
+        "oauth2",
+        "service_account"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "microsoft-teams",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "blocker",
+      "final_status": "resolved",
+      "final_value": [
+        "admin_approval"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "microsoft-teams",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "buildability",
+      "final_status": "resolved",
+      "final_value": [
+        "buildable_with_friction"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "microsoft-teams",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "credential_access",
+      "final_status": "resolved",
+      "final_value": [
+        "admin_approval"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "microsoft-teams",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "mcp",
+      "final_status": "resolved",
+      "final_value": [
+        "third_party"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "microsoft-teams",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "rate_limit_info",
+      "final_status": "resolved",
+      "final_value": [
+        "documented_quantitative"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "microsoft-teams",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "webhook_support",
+      "final_status": "resolved",
+      "final_value": [
+        "native_webhooks"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "nextcloud",
+      "authoritative_channel": "channel_d",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": "product-ops-reviewer",
+      "field": "api_breadth",
+      "final_status": "resolved",
+      "final_value": [
+        "broad"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Human review confirmed the value: The client APIs cover the core server; the app ecosystem that makes up much of Nextcloud is not part of them.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "nextcloud",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_exists",
+      "final_status": "resolved",
+      "final_value": [
+        "true"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "nextcloud",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_types",
+      "final_status": "resolved",
+      "final_value": [
+        "other",
+        "rest"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "nextcloud",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "application_type",
+      "final_status": "resolved",
+      "final_value": [
+        "open_source_self_hosted"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "nextcloud",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "authentication",
+      "final_status": "resolved",
+      "final_value": [
+        "basic_auth",
+        "bearer_token",
+        "oauth2"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "nextcloud",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "blocker",
+      "final_status": "resolved",
+      "final_value": [
+        "admin_approval"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "nextcloud",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "buildability",
+      "final_status": "resolved",
+      "final_value": [
+        "buildable_with_friction"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "nextcloud",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "credential_access",
+      "final_status": "resolved",
+      "final_value": [
+        "self_hosted_deployment_dependent"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "nextcloud",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "mcp",
+      "final_status": "resolved",
+      "final_value": [
+        "third_party"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "nextcloud",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "rate_limit_info",
+      "final_status": "resolved",
+      "final_value": [
+        "no_published_limits"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "nextcloud",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "webhook_support",
+      "final_status": "resolved",
+      "final_value": [
+        "native_webhooks"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "notion",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_breadth",
+      "final_status": "resolved",
+      "final_value": [
+        "broad"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "notion",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_exists",
+      "final_status": "resolved",
+      "final_value": [
+        "true"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "notion",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_types",
+      "final_status": "resolved",
+      "final_value": [
+        "rest",
+        "sdk"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "notion",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "application_type",
+      "final_status": "resolved",
+      "final_value": [
+        "saas_application"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "notion",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "authentication",
+      "final_status": "resolved",
+      "final_value": [
+        "oauth2",
+        "token"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "notion",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "blocker",
+      "final_status": "resolved",
+      "final_value": [
+        "none"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "notion",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "buildability",
+      "final_status": "resolved",
+      "final_value": [
+        "buildable"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "notion",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "credential_access",
+      "final_status": "resolved",
+      "final_value": [
+        "self_serve_free"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "notion",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "mcp",
+      "final_status": "resolved",
+      "final_value": [
+        "official"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "notion",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "rate_limit_info",
+      "final_status": "resolved",
+      "final_value": [
+        "documented_quantitative"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "notion",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "webhook_support",
+      "final_status": "resolved",
+      "final_value": [
+        "native_webhooks"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "sherlock",
+      "authoritative_channel": "channel_a",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_breadth",
+      "final_status": "not_applicable",
+      "final_value": null,
+      "outcome": "unresolved",
+      "rationale": "No channel could establish the value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "sherlock",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_exists",
+      "final_status": "unavailable",
+      "final_value": null,
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "sherlock",
+      "authoritative_channel": "channel_a",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_types",
+      "final_status": "not_applicable",
+      "final_value": null,
+      "outcome": "unresolved",
+      "rationale": "No channel could establish the value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "sherlock",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "application_type",
+      "final_status": "resolved",
+      "final_value": [
+        "cli_tool"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "sherlock",
+      "authoritative_channel": "channel_a",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "authentication",
+      "final_status": "not_applicable",
+      "final_value": null,
+      "outcome": "unresolved",
+      "rationale": "No channel could establish the value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "sherlock",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "blocker",
+      "final_status": "resolved",
+      "final_value": [
+        "non_saas_tool"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "sherlock",
+      "authoritative_channel": "channel_a",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "buildability",
+      "final_status": "not_applicable",
+      "final_value": null,
+      "outcome": "unresolved",
+      "rationale": "No channel could establish the value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "sherlock",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "credential_access",
+      "final_status": "resolved",
+      "final_value": [
+        "self_hosted_deployment_dependent"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "sherlock",
+      "authoritative_channel": "channel_a",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "mcp",
+      "final_status": "not_found",
+      "final_value": null,
+      "outcome": "unresolved",
+      "rationale": "No channel could establish the value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "sherlock",
+      "authoritative_channel": "channel_a",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "rate_limit_info",
+      "final_status": "not_found",
+      "final_value": null,
+      "outcome": "unresolved",
+      "rationale": "No channel could establish the value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "sherlock",
+      "authoritative_channel": "channel_a",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "webhook_support",
+      "final_status": "not_found",
+      "final_value": null,
+      "outcome": "unresolved",
+      "rationale": "No channel could establish the value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "stripe",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_breadth",
+      "final_status": "resolved",
+      "final_value": [
+        "very_broad"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "stripe",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_exists",
+      "final_status": "resolved",
+      "final_value": [
+        "true"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "stripe",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_types",
+      "final_status": "resolved",
+      "final_value": [
+        "cli",
+        "rest",
+        "sdk",
+        "webhooks"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "stripe",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "application_type",
+      "final_status": "resolved",
+      "final_value": [
+        "api_platform"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "stripe",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "authentication",
+      "final_status": "resolved",
+      "final_value": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "stripe",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "blocker",
+      "final_status": "resolved",
+      "final_value": [
+        "none"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "stripe",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "buildability",
+      "final_status": "resolved",
+      "final_value": [
+        "buildable"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "stripe",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "credential_access",
+      "final_status": "resolved",
+      "final_value": [
+        "self_serve_free"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "stripe",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "mcp",
+      "final_status": "resolved",
+      "final_value": [
+        "official"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "stripe",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "rate_limit_info",
+      "final_status": "resolved",
+      "final_value": [
+        "documented_quantitative"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "stripe",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "webhook_support",
+      "final_status": "resolved",
+      "final_value": [
+        "native_webhooks"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "twenty",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_breadth",
+      "final_status": "resolved",
+      "final_value": [
+        "broad"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "twenty",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_exists",
+      "final_status": "resolved",
+      "final_value": [
+        "true"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "twenty",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_types",
+      "final_status": "resolved",
+      "final_value": [
+        "graphql",
+        "rest"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "twenty",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "application_type",
+      "final_status": "resolved",
+      "final_value": [
+        "open_source_self_hosted"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "twenty",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "authentication",
+      "final_status": "resolved",
+      "final_value": [
+        "api_key",
+        "bearer_token"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "twenty",
+      "authoritative_channel": "channel_d",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": "product-ops-reviewer",
+      "field": "blocker",
+      "final_status": "resolved",
+      "final_value": [
+        "other"
+      ],
+      "outcome": "corrected",
+      "rationale": "Human review corrected the value: Buildable only after the reviewer deploys an instance. The blocker taxonomy has no member for self-hosting, so 'other' carries it and the limitation is reported.",
+      "superseded_channel": "channel_a"
+    },
+    {
+      "app_id": "twenty",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "buildability",
+      "final_status": "resolved",
+      "final_value": [
+        "buildable_with_friction"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "twenty",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "credential_access",
+      "final_status": "resolved",
+      "final_value": [
+        "self_hosted_deployment_dependent"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "twenty",
+      "authoritative_channel": "channel_a",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "mcp",
+      "final_status": "not_found",
+      "final_value": null,
+      "outcome": "unresolved",
+      "rationale": "No channel could establish the value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "twenty",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "rate_limit_info",
+      "final_status": "resolved",
+      "final_value": [
+        "no_published_limits"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "twenty",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "webhook_support",
+      "final_status": "resolved",
+      "final_value": [
+        "native_webhooks"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "zoho-desk",
+      "authoritative_channel": "channel_d",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": "product-ops-reviewer",
+      "field": "api_breadth",
+      "final_status": "resolved",
+      "final_value": [
+        "broad"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Human review confirmed the value: Ticketing is well covered; large parts of the admin and automation surface are not documented as API resources.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "zoho-desk",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_exists",
+      "final_status": "resolved",
+      "final_value": [
+        "true"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "zoho-desk",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "api_types",
+      "final_status": "resolved",
+      "final_value": [
+        "rest",
+        "sdk"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "zoho-desk",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "application_type",
+      "final_status": "resolved",
+      "final_value": [
+        "saas_application"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "zoho-desk",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "authentication",
+      "final_status": "resolved",
+      "final_value": [
+        "oauth2"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "zoho-desk",
+      "authoritative_channel": "channel_b",
+      "cardinality": "multi",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "blocker",
+      "final_status": "resolved",
+      "final_value": [
+        "none"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "zoho-desk",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "buildability",
+      "final_status": "resolved",
+      "final_value": [
+        "buildable"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "zoho-desk",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "credential_access",
+      "final_status": "resolved",
+      "final_value": [
+        "self_serve_free"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "zoho-desk",
+      "authoritative_channel": "channel_a",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "mcp",
+      "final_status": "not_found",
+      "final_value": null,
+      "outcome": "unresolved",
+      "rationale": "No channel could establish the value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "zoho-desk",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "rate_limit_info",
+      "final_status": "resolved",
+      "final_value": [
+        "documented_quantitative"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    },
+    {
+      "app_id": "zoho-desk",
+      "authoritative_channel": "channel_b",
+      "cardinality": "single",
+      "decided_at": "2026-09-16T00:00:00Z",
+      "decided_by": null,
+      "field": "webhook_support",
+      "final_status": "resolved",
+      "final_value": [
+        "native_webhooks"
+      ],
+      "outcome": "confirmed",
+      "rationale": "Independent checks agree with the recorded value.",
+      "superseded_channel": null
+    }
+  ],
+  "metadata": {
+    "generated_at": "2026-09-16T00:00:00Z",
+    "notes": "Reconciled 165 fields across 15 apps.",
+    "record_count": 165,
+    "schema_version": "2.0.0",
+    "seed": 20260916,
+    "source_fingerprint": "065868f002ef0681",
+    "stage": "reconciliation"
+  }
+}

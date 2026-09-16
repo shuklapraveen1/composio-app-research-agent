@@ -1,0 +1,1919 @@
+{
+  "channel": "channel_b",
+  "metadata": {
+    "generated_at": "2026-09-16T00:00:00Z",
+    "notes": "channel_b: Independent agent re-check (sampled)",
+    "record_count": 15,
+    "schema_version": "2.0.0",
+    "seed": 20260916,
+    "source_fingerprint": "4ff078bb8ea50b8b",
+    "stage": "verification"
+  },
+  "results": [
+    {
+      "app_id": "amplitude",
+      "channel": "channel_b",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [],
+          "field": "api_breadth",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_exists",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_types",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest",
+            "sdk"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "application_type",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "authentication",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_key",
+            "basic_auth"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "blocker",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "none"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "buildability",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "credential_access",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_serve_free"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": null,
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "rate_limit_info",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "webhook_support",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "no_events"
+          ]
+        }
+      ],
+      "notes": "Re-derived from the same sources with independent rules.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "anthropic",
+      "channel": "channel_b",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [
+        {
+          "field": "api_breadth",
+          "reason": "An independent reading of the same sources gives 'very_broad' where Channel A recorded 'broad'.",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        }
+      ],
+      "discrepancies": [
+        "api_breadth"
+      ],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [],
+          "field": "api_breadth",
+          "notes": null,
+          "outcome": "disagrees",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_exists",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_types",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest",
+            "sdk"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "application_type",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_platform"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "authentication",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_key"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "blocker",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "paid_access"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "buildability",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable_with_friction"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "credential_access",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_serve_paid"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "official"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "rate_limit_info",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "webhook_support",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "polling_only"
+          ]
+        }
+      ],
+      "notes": "Re-derived from the same sources with independent rules.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "apollo-io",
+      "channel": "channel_b",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [],
+          "field": "api_breadth",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_exists",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_types",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "application_type",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "authentication",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_key"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "blocker",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "paid_access"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "buildability",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable_with_friction"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "credential_access",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_serve_paid"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": null,
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "rate_limit_info",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "webhook_support",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Re-derived from the same sources with independent rules.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "ashby",
+      "channel": "channel_b",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [
+        {
+          "field": "api_breadth",
+          "reason": "An independent reading of the same sources gives 'very_broad' where Channel A recorded 'broad'.",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        }
+      ],
+      "discrepancies": [
+        "api_breadth"
+      ],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [],
+          "field": "api_breadth",
+          "notes": null,
+          "outcome": "disagrees",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_exists",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_types",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "application_type",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "authentication",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_key",
+            "basic_auth"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "blocker",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval",
+            "enterprise_only",
+            "paid_access"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "buildability",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "blocked"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "credential_access",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "contact_sales"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": null,
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "rate_limit_info",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "webhook_support",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Re-derived from the same sources with independent rules.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "buffer",
+      "channel": "channel_b",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [],
+          "field": "api_breadth",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "narrow"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_exists",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_types",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "application_type",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "authentication",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "oauth2"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "blocker",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval",
+            "insufficient_api_surface"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "buildability",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable_with_friction"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "credential_access",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": null,
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "rate_limit_info",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_qualitative"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "webhook_support",
+          "notes": null,
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        }
+      ],
+      "notes": "Re-derived from the same sources with independent rules.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "clickup",
+      "channel": "channel_b",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [],
+          "field": "api_breadth",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_exists",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_types",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "application_type",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "authentication",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "oauth2",
+            "pat"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "blocker",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "none"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "buildability",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "credential_access",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_serve_free"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "third_party"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "rate_limit_info",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "webhook_support",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Re-derived from the same sources with independent rules.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "help-scout",
+      "channel": "channel_b",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [
+        {
+          "field": "api_breadth",
+          "reason": "An independent reading of the same sources gives 'very_broad' where Channel A recorded 'broad'.",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        }
+      ],
+      "discrepancies": [
+        "api_breadth"
+      ],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [],
+          "field": "api_breadth",
+          "notes": null,
+          "outcome": "disagrees",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_exists",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_types",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "application_type",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "authentication",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "oauth2"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "blocker",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval",
+            "paid_access"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "buildability",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable_with_friction"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "credential_access",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": null,
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "rate_limit_info",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "webhook_support",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Re-derived from the same sources with independent rules.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "lever",
+      "channel": "channel_b",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [
+        {
+          "field": "api_breadth",
+          "reason": "An independent reading of the same sources gives 'very_broad' where Channel A recorded 'broad'.",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        }
+      ],
+      "discrepancies": [
+        "api_breadth"
+      ],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [],
+          "field": "api_breadth",
+          "notes": null,
+          "outcome": "disagrees",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_exists",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_types",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "application_type",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "authentication",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_key",
+            "basic_auth",
+            "oauth2"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "blocker",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval",
+            "enterprise_only",
+            "paid_access"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "buildability",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "blocked"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "credential_access",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "contact_sales"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": null,
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "rate_limit_info",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "webhook_support",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Re-derived from the same sources with independent rules.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "microsoft-teams",
+      "channel": "channel_b",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [],
+          "field": "api_breadth",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_exists",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_types",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest",
+            "sdk"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "application_type",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "authentication",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "oauth2",
+            "service_account"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "blocker",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "buildability",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable_with_friction"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "credential_access",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "third_party"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "rate_limit_info",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "webhook_support",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Re-derived from the same sources with independent rules.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "nextcloud",
+      "channel": "channel_b",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [
+        {
+          "field": "api_breadth",
+          "reason": "An independent reading of the same sources gives 'very_broad' where Channel A recorded 'broad'.",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        }
+      ],
+      "discrepancies": [
+        "api_breadth"
+      ],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [],
+          "field": "api_breadth",
+          "notes": null,
+          "outcome": "disagrees",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_exists",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_types",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "other",
+            "rest"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "application_type",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "open_source_self_hosted"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "authentication",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "basic_auth",
+            "bearer_token",
+            "oauth2"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "blocker",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "buildability",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable_with_friction"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "credential_access",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_hosted_deployment_dependent"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "third_party"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "rate_limit_info",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "no_published_limits"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "webhook_support",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Re-derived from the same sources with independent rules.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "notion",
+      "channel": "channel_b",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [],
+          "field": "api_breadth",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_exists",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_types",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest",
+            "sdk"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "application_type",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "authentication",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "oauth2",
+            "token"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "blocker",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "none"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "buildability",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "credential_access",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_serve_free"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "official"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "rate_limit_info",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "webhook_support",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Re-derived from the same sources with independent rules.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "sherlock",
+      "channel": "channel_b",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [],
+          "field": "api_breadth",
+          "notes": null,
+          "outcome": "inconclusive",
+          "status": "not_applicable",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_exists",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "unavailable",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_types",
+          "notes": null,
+          "outcome": "inconclusive",
+          "status": "not_applicable",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "application_type",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "cli_tool"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "authentication",
+          "notes": null,
+          "outcome": "inconclusive",
+          "status": "not_applicable",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "blocker",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "non_saas_tool"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "buildability",
+          "notes": null,
+          "outcome": "inconclusive",
+          "status": "not_applicable",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "credential_access",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_hosted_deployment_dependent"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": null,
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "rate_limit_info",
+          "notes": null,
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "webhook_support",
+          "notes": null,
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        }
+      ],
+      "notes": "Re-derived from the same sources with independent rules.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "stripe",
+      "channel": "channel_b",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [],
+          "field": "api_breadth",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_exists",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_types",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "cli",
+            "rest",
+            "sdk",
+            "webhooks"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "application_type",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_platform"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "authentication",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_key",
+            "bearer_token",
+            "oauth2"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "blocker",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "none"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "buildability",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "credential_access",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_serve_free"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "official"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "rate_limit_info",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "webhook_support",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Re-derived from the same sources with independent rules.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "twenty",
+      "channel": "channel_b",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [],
+          "field": "api_breadth",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_exists",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_types",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "graphql",
+            "rest"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "application_type",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "open_source_self_hosted"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "authentication",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_key",
+            "bearer_token"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "blocker",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "none"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "buildability",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable_with_friction"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "credential_access",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_hosted_deployment_dependent"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": null,
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "rate_limit_info",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "no_published_limits"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "webhook_support",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Re-derived from the same sources with independent rules.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "zoho-desk",
+      "channel": "channel_b",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [
+        {
+          "field": "api_breadth",
+          "reason": "An independent reading of the same sources gives 'very_broad' where Channel A recorded 'broad'.",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        }
+      ],
+      "discrepancies": [
+        "api_breadth"
+      ],
+      "evidence_results": [],
+      "field_results": [
+        {
+          "evidence_ids": [],
+          "field": "api_breadth",
+          "notes": null,
+          "outcome": "disagrees",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_exists",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_types",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest",
+            "sdk"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "application_type",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "authentication",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "oauth2"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "blocker",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "none"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "buildability",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "credential_access",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_serve_free"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": null,
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "rate_limit_info",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "webhook_support",
+          "notes": null,
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Re-derived from the same sources with independent rules.",
+      "reviewer": null,
+      "sample": "B"
+    }
+  ]
+}

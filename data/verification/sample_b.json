@@ -1,0 +1,1801 @@
+{
+  "assignments": [
+    {
+      "app_id": "amplitude",
+      "category_id": "marketing-and-analytics",
+      "group": "B",
+      "stratum_rank": 0
+    },
+    {
+      "app_id": "anthropic",
+      "category_id": "ai-and-data",
+      "group": "B",
+      "stratum_rank": 0
+    },
+    {
+      "app_id": "apollo-io",
+      "category_id": "crm-and-sales",
+      "group": "B",
+      "stratum_rank": 0
+    },
+    {
+      "app_id": "ashby",
+      "category_id": "hr-and-recruiting",
+      "group": "B",
+      "stratum_rank": 0
+    },
+    {
+      "app_id": "buffer",
+      "category_id": "marketing-and-analytics",
+      "group": "B",
+      "stratum_rank": 1
+    },
+    {
+      "app_id": "clickup",
+      "category_id": "productivity-and-collaboration",
+      "group": "B",
+      "stratum_rank": 0
+    },
+    {
+      "app_id": "help-scout",
+      "category_id": "support-and-ticketing",
+      "group": "B",
+      "stratum_rank": 0
+    },
+    {
+      "app_id": "lever",
+      "category_id": "hr-and-recruiting",
+      "group": "B",
+      "stratum_rank": 1
+    },
+    {
+      "app_id": "microsoft-teams",
+      "category_id": "communication-and-messaging",
+      "group": "B",
+      "stratum_rank": 0
+    },
+    {
+      "app_id": "nextcloud",
+      "category_id": "storage-and-documents",
+      "group": "B",
+      "stratum_rank": 0
+    },
+    {
+      "app_id": "notion",
+      "category_id": "productivity-and-collaboration",
+      "group": "B",
+      "stratum_rank": 1
+    },
+    {
+      "app_id": "sherlock",
+      "category_id": "developer-tools",
+      "group": "B",
+      "stratum_rank": 0
+    },
+    {
+      "app_id": "stripe",
+      "category_id": "finance-and-payments",
+      "group": "B",
+      "stratum_rank": 0
+    },
+    {
+      "app_id": "twenty",
+      "category_id": "crm-and-sales",
+      "group": "B",
+      "stratum_rank": 1
+    },
+    {
+      "app_id": "zoho-desk",
+      "category_id": "support-and-ticketing",
+      "group": "B",
+      "stratum_rank": 1
+    }
+  ],
+  "derived_seed": 12967953086292441151,
+  "excluded": {
+    "braze": [
+      "already drawn into the other sample"
+    ],
+    "confluence": [
+      "already drawn into the other sample"
+    ],
+    "databricks": [
+      "already drawn into the other sample"
+    ],
+    "freshsales": [
+      "already drawn into the other sample"
+    ],
+    "google-chat": [
+      "already drawn into the other sample"
+    ],
+    "greenhouse": [
+      "already drawn into the other sample"
+    ],
+    "intercom": [
+      "already drawn into the other sample"
+    ],
+    "jira": [
+      "already drawn into the other sample"
+    ],
+    "klaviyo": [
+      "already drawn into the other sample"
+    ],
+    "linear": [
+      "already drawn into the other sample"
+    ],
+    "pcloud": [
+      "already drawn into the other sample"
+    ],
+    "razorpay": [
+      "already drawn into the other sample"
+    ],
+    "rippling": [
+      "already drawn into the other sample"
+    ],
+    "xero": [
+      "already drawn into the other sample"
+    ],
+    "zoom": [
+      "already drawn into the other sample"
+    ]
+  },
+  "frozen_values": [
+    {
+      "app_id": "amplitude",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_breadth",
+      "status": "resolved",
+      "value": [
+        "broad"
+      ]
+    },
+    {
+      "app_id": "amplitude",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_exists",
+      "status": "resolved",
+      "value": [
+        "true"
+      ]
+    },
+    {
+      "app_id": "amplitude",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_types",
+      "status": "resolved",
+      "value": [
+        "rest",
+        "sdk"
+      ]
+    },
+    {
+      "app_id": "amplitude",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "application_type",
+      "status": "resolved",
+      "value": [
+        "saas_application"
+      ]
+    },
+    {
+      "app_id": "amplitude",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "authentication",
+      "status": "resolved",
+      "value": [
+        "api_key",
+        "basic_auth"
+      ]
+    },
+    {
+      "app_id": "amplitude",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "blocker",
+      "status": "resolved",
+      "value": [
+        "none"
+      ]
+    },
+    {
+      "app_id": "amplitude",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "buildability",
+      "status": "resolved",
+      "value": [
+        "buildable"
+      ]
+    },
+    {
+      "app_id": "amplitude",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "credential_access",
+      "status": "resolved",
+      "value": [
+        "self_serve_free"
+      ]
+    },
+    {
+      "app_id": "amplitude",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "mcp",
+      "status": "not_found",
+      "value": null
+    },
+    {
+      "app_id": "amplitude",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "rate_limit_info",
+      "status": "resolved",
+      "value": [
+        "documented_quantitative"
+      ]
+    },
+    {
+      "app_id": "amplitude",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "webhook_support",
+      "status": "resolved",
+      "value": [
+        "no_events"
+      ]
+    },
+    {
+      "app_id": "anthropic",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_breadth",
+      "status": "resolved",
+      "value": [
+        "broad"
+      ]
+    },
+    {
+      "app_id": "anthropic",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_exists",
+      "status": "resolved",
+      "value": [
+        "true"
+      ]
+    },
+    {
+      "app_id": "anthropic",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_types",
+      "status": "resolved",
+      "value": [
+        "rest",
+        "sdk"
+      ]
+    },
+    {
+      "app_id": "anthropic",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "application_type",
+      "status": "resolved",
+      "value": [
+        "api_platform"
+      ]
+    },
+    {
+      "app_id": "anthropic",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "authentication",
+      "status": "resolved",
+      "value": [
+        "api_key"
+      ]
+    },
+    {
+      "app_id": "anthropic",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "blocker",
+      "status": "resolved",
+      "value": [
+        "paid_access"
+      ]
+    },
+    {
+      "app_id": "anthropic",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "buildability",
+      "status": "resolved",
+      "value": [
+        "buildable_with_friction"
+      ]
+    },
+    {
+      "app_id": "anthropic",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "credential_access",
+      "status": "resolved",
+      "value": [
+        "self_serve_paid"
+      ]
+    },
+    {
+      "app_id": "anthropic",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "mcp",
+      "status": "resolved",
+      "value": [
+        "official"
+      ]
+    },
+    {
+      "app_id": "anthropic",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "rate_limit_info",
+      "status": "resolved",
+      "value": [
+        "documented_quantitative"
+      ]
+    },
+    {
+      "app_id": "anthropic",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "webhook_support",
+      "status": "resolved",
+      "value": [
+        "polling_only"
+      ]
+    },
+    {
+      "app_id": "apollo-io",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_breadth",
+      "status": "resolved",
+      "value": [
+        "broad"
+      ]
+    },
+    {
+      "app_id": "apollo-io",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_exists",
+      "status": "resolved",
+      "value": [
+        "true"
+      ]
+    },
+    {
+      "app_id": "apollo-io",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_types",
+      "status": "resolved",
+      "value": [
+        "rest"
+      ]
+    },
+    {
+      "app_id": "apollo-io",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "application_type",
+      "status": "resolved",
+      "value": [
+        "saas_application"
+      ]
+    },
+    {
+      "app_id": "apollo-io",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "authentication",
+      "status": "resolved",
+      "value": [
+        "api_key"
+      ]
+    },
+    {
+      "app_id": "apollo-io",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "blocker",
+      "status": "resolved",
+      "value": [
+        "paid_access"
+      ]
+    },
+    {
+      "app_id": "apollo-io",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "buildability",
+      "status": "resolved",
+      "value": [
+        "buildable_with_friction"
+      ]
+    },
+    {
+      "app_id": "apollo-io",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "credential_access",
+      "status": "resolved",
+      "value": [
+        "self_serve_paid"
+      ]
+    },
+    {
+      "app_id": "apollo-io",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "mcp",
+      "status": "not_found",
+      "value": null
+    },
+    {
+      "app_id": "apollo-io",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "rate_limit_info",
+      "status": "resolved",
+      "value": [
+        "documented_quantitative"
+      ]
+    },
+    {
+      "app_id": "apollo-io",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "webhook_support",
+      "status": "resolved",
+      "value": [
+        "native_webhooks"
+      ]
+    },
+    {
+      "app_id": "ashby",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_breadth",
+      "status": "resolved",
+      "value": [
+        "broad"
+      ]
+    },
+    {
+      "app_id": "ashby",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_exists",
+      "status": "resolved",
+      "value": [
+        "true"
+      ]
+    },
+    {
+      "app_id": "ashby",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_types",
+      "status": "resolved",
+      "value": [
+        "rest"
+      ]
+    },
+    {
+      "app_id": "ashby",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "application_type",
+      "status": "resolved",
+      "value": [
+        "saas_application"
+      ]
+    },
+    {
+      "app_id": "ashby",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "authentication",
+      "status": "resolved",
+      "value": [
+        "api_key",
+        "basic_auth"
+      ]
+    },
+    {
+      "app_id": "ashby",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "blocker",
+      "status": "resolved",
+      "value": [
+        "admin_approval",
+        "enterprise_only",
+        "paid_access"
+      ]
+    },
+    {
+      "app_id": "ashby",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "buildability",
+      "status": "resolved",
+      "value": [
+        "blocked"
+      ]
+    },
+    {
+      "app_id": "ashby",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "credential_access",
+      "status": "resolved",
+      "value": [
+        "contact_sales"
+      ]
+    },
+    {
+      "app_id": "ashby",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "mcp",
+      "status": "not_found",
+      "value": null
+    },
+    {
+      "app_id": "ashby",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "rate_limit_info",
+      "status": "resolved",
+      "value": [
+        "documented_quantitative"
+      ]
+    },
+    {
+      "app_id": "ashby",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "webhook_support",
+      "status": "resolved",
+      "value": [
+        "native_webhooks"
+      ]
+    },
+    {
+      "app_id": "buffer",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_breadth",
+      "status": "resolved",
+      "value": [
+        "narrow"
+      ]
+    },
+    {
+      "app_id": "buffer",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_exists",
+      "status": "resolved",
+      "value": [
+        "true"
+      ]
+    },
+    {
+      "app_id": "buffer",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_types",
+      "status": "resolved",
+      "value": [
+        "rest"
+      ]
+    },
+    {
+      "app_id": "buffer",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "application_type",
+      "status": "resolved",
+      "value": [
+        "saas_application"
+      ]
+    },
+    {
+      "app_id": "buffer",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "authentication",
+      "status": "resolved",
+      "value": [
+        "oauth2"
+      ]
+    },
+    {
+      "app_id": "buffer",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "blocker",
+      "status": "resolved",
+      "value": [
+        "admin_approval",
+        "insufficient_api_surface"
+      ]
+    },
+    {
+      "app_id": "buffer",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "buildability",
+      "status": "resolved",
+      "value": [
+        "buildable_with_friction"
+      ]
+    },
+    {
+      "app_id": "buffer",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "credential_access",
+      "status": "resolved",
+      "value": [
+        "admin_approval"
+      ]
+    },
+    {
+      "app_id": "buffer",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "mcp",
+      "status": "not_found",
+      "value": null
+    },
+    {
+      "app_id": "buffer",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "rate_limit_info",
+      "status": "resolved",
+      "value": [
+        "documented_qualitative"
+      ]
+    },
+    {
+      "app_id": "buffer",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "webhook_support",
+      "status": "not_found",
+      "value": null
+    },
+    {
+      "app_id": "clickup",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_breadth",
+      "status": "resolved",
+      "value": [
+        "very_broad"
+      ]
+    },
+    {
+      "app_id": "clickup",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_exists",
+      "status": "resolved",
+      "value": [
+        "true"
+      ]
+    },
+    {
+      "app_id": "clickup",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_types",
+      "status": "resolved",
+      "value": [
+        "rest"
+      ]
+    },
+    {
+      "app_id": "clickup",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "application_type",
+      "status": "resolved",
+      "value": [
+        "saas_application"
+      ]
+    },
+    {
+      "app_id": "clickup",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "authentication",
+      "status": "resolved",
+      "value": [
+        "oauth2",
+        "pat"
+      ]
+    },
+    {
+      "app_id": "clickup",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "blocker",
+      "status": "resolved",
+      "value": [
+        "none"
+      ]
+    },
+    {
+      "app_id": "clickup",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "buildability",
+      "status": "resolved",
+      "value": [
+        "buildable"
+      ]
+    },
+    {
+      "app_id": "clickup",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "credential_access",
+      "status": "resolved",
+      "value": [
+        "self_serve_free"
+      ]
+    },
+    {
+      "app_id": "clickup",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "mcp",
+      "status": "resolved",
+      "value": [
+        "third_party"
+      ]
+    },
+    {
+      "app_id": "clickup",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "rate_limit_info",
+      "status": "resolved",
+      "value": [
+        "documented_quantitative"
+      ]
+    },
+    {
+      "app_id": "clickup",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "webhook_support",
+      "status": "resolved",
+      "value": [
+        "native_webhooks"
+      ]
+    },
+    {
+      "app_id": "help-scout",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_breadth",
+      "status": "resolved",
+      "value": [
+        "broad"
+      ]
+    },
+    {
+      "app_id": "help-scout",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_exists",
+      "status": "resolved",
+      "value": [
+        "true"
+      ]
+    },
+    {
+      "app_id": "help-scout",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_types",
+      "status": "resolved",
+      "value": [
+        "rest"
+      ]
+    },
+    {
+      "app_id": "help-scout",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "application_type",
+      "status": "resolved",
+      "value": [
+        "saas_application"
+      ]
+    },
+    {
+      "app_id": "help-scout",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "authentication",
+      "status": "resolved",
+      "value": [
+        "oauth2"
+      ]
+    },
+    {
+      "app_id": "help-scout",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "blocker",
+      "status": "resolved",
+      "value": [
+        "admin_approval",
+        "paid_access"
+      ]
+    },
+    {
+      "app_id": "help-scout",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "buildability",
+      "status": "resolved",
+      "value": [
+        "buildable_with_friction"
+      ]
+    },
+    {
+      "app_id": "help-scout",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "credential_access",
+      "status": "resolved",
+      "value": [
+        "admin_approval"
+      ]
+    },
+    {
+      "app_id": "help-scout",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "mcp",
+      "status": "not_found",
+      "value": null
+    },
+    {
+      "app_id": "help-scout",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "rate_limit_info",
+      "status": "resolved",
+      "value": [
+        "documented_quantitative"
+      ]
+    },
+    {
+      "app_id": "help-scout",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "webhook_support",
+      "status": "resolved",
+      "value": [
+        "native_webhooks"
+      ]
+    },
+    {
+      "app_id": "lever",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_breadth",
+      "status": "resolved",
+      "value": [
+        "broad"
+      ]
+    },
+    {
+      "app_id": "lever",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_exists",
+      "status": "resolved",
+      "value": [
+        "true"
+      ]
+    },
+    {
+      "app_id": "lever",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_types",
+      "status": "resolved",
+      "value": [
+        "rest"
+      ]
+    },
+    {
+      "app_id": "lever",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "application_type",
+      "status": "resolved",
+      "value": [
+        "saas_application"
+      ]
+    },
+    {
+      "app_id": "lever",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "authentication",
+      "status": "resolved",
+      "value": [
+        "api_key",
+        "basic_auth",
+        "oauth2"
+      ]
+    },
+    {
+      "app_id": "lever",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "blocker",
+      "status": "resolved",
+      "value": [
+        "admin_approval",
+        "enterprise_only",
+        "paid_access"
+      ]
+    },
+    {
+      "app_id": "lever",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "buildability",
+      "status": "resolved",
+      "value": [
+        "blocked"
+      ]
+    },
+    {
+      "app_id": "lever",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "credential_access",
+      "status": "resolved",
+      "value": [
+        "contact_sales"
+      ]
+    },
+    {
+      "app_id": "lever",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "mcp",
+      "status": "not_found",
+      "value": null
+    },
+    {
+      "app_id": "lever",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "rate_limit_info",
+      "status": "resolved",
+      "value": [
+        "documented_quantitative"
+      ]
+    },
+    {
+      "app_id": "lever",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "webhook_support",
+      "status": "resolved",
+      "value": [
+        "native_webhooks"
+      ]
+    },
+    {
+      "app_id": "microsoft-teams",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_breadth",
+      "status": "resolved",
+      "value": [
+        "broad"
+      ]
+    },
+    {
+      "app_id": "microsoft-teams",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_exists",
+      "status": "resolved",
+      "value": [
+        "true"
+      ]
+    },
+    {
+      "app_id": "microsoft-teams",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_types",
+      "status": "resolved",
+      "value": [
+        "rest",
+        "sdk"
+      ]
+    },
+    {
+      "app_id": "microsoft-teams",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "application_type",
+      "status": "resolved",
+      "value": [
+        "saas_application"
+      ]
+    },
+    {
+      "app_id": "microsoft-teams",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "authentication",
+      "status": "resolved",
+      "value": [
+        "oauth2",
+        "service_account"
+      ]
+    },
+    {
+      "app_id": "microsoft-teams",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "blocker",
+      "status": "resolved",
+      "value": [
+        "admin_approval"
+      ]
+    },
+    {
+      "app_id": "microsoft-teams",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "buildability",
+      "status": "resolved",
+      "value": [
+        "buildable_with_friction"
+      ]
+    },
+    {
+      "app_id": "microsoft-teams",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "credential_access",
+      "status": "resolved",
+      "value": [
+        "admin_approval"
+      ]
+    },
+    {
+      "app_id": "microsoft-teams",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "mcp",
+      "status": "resolved",
+      "value": [
+        "third_party"
+      ]
+    },
+    {
+      "app_id": "microsoft-teams",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "rate_limit_info",
+      "status": "resolved",
+      "value": [
+        "documented_quantitative"
+      ]
+    },
+    {
+      "app_id": "microsoft-teams",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "webhook_support",
+      "status": "resolved",
+      "value": [
+        "native_webhooks"
+      ]
+    },
+    {
+      "app_id": "nextcloud",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_breadth",
+      "status": "resolved",
+      "value": [
+        "broad"
+      ]
+    },
+    {
+      "app_id": "nextcloud",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_exists",
+      "status": "resolved",
+      "value": [
+        "true"
+      ]
+    },
+    {
+      "app_id": "nextcloud",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_types",
+      "status": "resolved",
+      "value": [
+        "other",
+        "rest"
+      ]
+    },
+    {
+      "app_id": "nextcloud",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "application_type",
+      "status": "resolved",
+      "value": [
+        "open_source_self_hosted"
+      ]
+    },
+    {
+      "app_id": "nextcloud",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "authentication",
+      "status": "resolved",
+      "value": [
+        "basic_auth",
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    {
+      "app_id": "nextcloud",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "blocker",
+      "status": "resolved",
+      "value": [
+        "admin_approval"
+      ]
+    },
+    {
+      "app_id": "nextcloud",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "buildability",
+      "status": "resolved",
+      "value": [
+        "buildable_with_friction"
+      ]
+    },
+    {
+      "app_id": "nextcloud",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "credential_access",
+      "status": "resolved",
+      "value": [
+        "self_hosted_deployment_dependent"
+      ]
+    },
+    {
+      "app_id": "nextcloud",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "mcp",
+      "status": "resolved",
+      "value": [
+        "third_party"
+      ]
+    },
+    {
+      "app_id": "nextcloud",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "rate_limit_info",
+      "status": "resolved",
+      "value": [
+        "no_published_limits"
+      ]
+    },
+    {
+      "app_id": "nextcloud",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "webhook_support",
+      "status": "resolved",
+      "value": [
+        "native_webhooks"
+      ]
+    },
+    {
+      "app_id": "notion",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_breadth",
+      "status": "resolved",
+      "value": [
+        "broad"
+      ]
+    },
+    {
+      "app_id": "notion",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_exists",
+      "status": "resolved",
+      "value": [
+        "true"
+      ]
+    },
+    {
+      "app_id": "notion",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_types",
+      "status": "resolved",
+      "value": [
+        "rest",
+        "sdk"
+      ]
+    },
+    {
+      "app_id": "notion",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "application_type",
+      "status": "resolved",
+      "value": [
+        "saas_application"
+      ]
+    },
+    {
+      "app_id": "notion",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "authentication",
+      "status": "resolved",
+      "value": [
+        "oauth2",
+        "token"
+      ]
+    },
+    {
+      "app_id": "notion",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "blocker",
+      "status": "resolved",
+      "value": [
+        "none"
+      ]
+    },
+    {
+      "app_id": "notion",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "buildability",
+      "status": "resolved",
+      "value": [
+        "buildable"
+      ]
+    },
+    {
+      "app_id": "notion",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "credential_access",
+      "status": "resolved",
+      "value": [
+        "self_serve_free"
+      ]
+    },
+    {
+      "app_id": "notion",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "mcp",
+      "status": "resolved",
+      "value": [
+        "official"
+      ]
+    },
+    {
+      "app_id": "notion",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "rate_limit_info",
+      "status": "resolved",
+      "value": [
+        "documented_quantitative"
+      ]
+    },
+    {
+      "app_id": "notion",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "webhook_support",
+      "status": "resolved",
+      "value": [
+        "native_webhooks"
+      ]
+    },
+    {
+      "app_id": "sherlock",
+      "classifier_version": "v2",
+      "confidence": "low",
+      "field": "api_breadth",
+      "status": "not_applicable",
+      "value": null
+    },
+    {
+      "app_id": "sherlock",
+      "classifier_version": "v2",
+      "confidence": "low",
+      "field": "api_exists",
+      "status": "unavailable",
+      "value": null
+    },
+    {
+      "app_id": "sherlock",
+      "classifier_version": "v2",
+      "confidence": "low",
+      "field": "api_types",
+      "status": "not_applicable",
+      "value": null
+    },
+    {
+      "app_id": "sherlock",
+      "classifier_version": "v2",
+      "confidence": "low",
+      "field": "application_type",
+      "status": "resolved",
+      "value": [
+        "cli_tool"
+      ]
+    },
+    {
+      "app_id": "sherlock",
+      "classifier_version": "v2",
+      "confidence": "low",
+      "field": "authentication",
+      "status": "not_applicable",
+      "value": null
+    },
+    {
+      "app_id": "sherlock",
+      "classifier_version": "v2",
+      "confidence": "low",
+      "field": "blocker",
+      "status": "resolved",
+      "value": [
+        "non_saas_tool"
+      ]
+    },
+    {
+      "app_id": "sherlock",
+      "classifier_version": "v2",
+      "confidence": "low",
+      "field": "buildability",
+      "status": "not_applicable",
+      "value": null
+    },
+    {
+      "app_id": "sherlock",
+      "classifier_version": "v2",
+      "confidence": "low",
+      "field": "credential_access",
+      "status": "resolved",
+      "value": [
+        "self_hosted_deployment_dependent"
+      ]
+    },
+    {
+      "app_id": "sherlock",
+      "classifier_version": "v2",
+      "confidence": "low",
+      "field": "mcp",
+      "status": "not_found",
+      "value": null
+    },
+    {
+      "app_id": "sherlock",
+      "classifier_version": "v2",
+      "confidence": "low",
+      "field": "rate_limit_info",
+      "status": "not_found",
+      "value": null
+    },
+    {
+      "app_id": "sherlock",
+      "classifier_version": "v2",
+      "confidence": "low",
+      "field": "webhook_support",
+      "status": "not_found",
+      "value": null
+    },
+    {
+      "app_id": "stripe",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_breadth",
+      "status": "resolved",
+      "value": [
+        "very_broad"
+      ]
+    },
+    {
+      "app_id": "stripe",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_exists",
+      "status": "resolved",
+      "value": [
+        "true"
+      ]
+    },
+    {
+      "app_id": "stripe",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_types",
+      "status": "resolved",
+      "value": [
+        "cli",
+        "rest",
+        "sdk",
+        "webhooks"
+      ]
+    },
+    {
+      "app_id": "stripe",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "application_type",
+      "status": "resolved",
+      "value": [
+        "api_platform"
+      ]
+    },
+    {
+      "app_id": "stripe",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "authentication",
+      "status": "resolved",
+      "value": [
+        "api_key",
+        "bearer_token",
+        "oauth2"
+      ]
+    },
+    {
+      "app_id": "stripe",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "blocker",
+      "status": "resolved",
+      "value": [
+        "none"
+      ]
+    },
+    {
+      "app_id": "stripe",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "buildability",
+      "status": "resolved",
+      "value": [
+        "buildable"
+      ]
+    },
+    {
+      "app_id": "stripe",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "credential_access",
+      "status": "resolved",
+      "value": [
+        "self_serve_free"
+      ]
+    },
+    {
+      "app_id": "stripe",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "mcp",
+      "status": "resolved",
+      "value": [
+        "official"
+      ]
+    },
+    {
+      "app_id": "stripe",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "rate_limit_info",
+      "status": "resolved",
+      "value": [
+        "documented_quantitative"
+      ]
+    },
+    {
+      "app_id": "stripe",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "webhook_support",
+      "status": "resolved",
+      "value": [
+        "native_webhooks"
+      ]
+    },
+    {
+      "app_id": "twenty",
+      "classifier_version": "v2",
+      "confidence": "medium",
+      "field": "api_breadth",
+      "status": "resolved",
+      "value": [
+        "broad"
+      ]
+    },
+    {
+      "app_id": "twenty",
+      "classifier_version": "v2",
+      "confidence": "medium",
+      "field": "api_exists",
+      "status": "resolved",
+      "value": [
+        "true"
+      ]
+    },
+    {
+      "app_id": "twenty",
+      "classifier_version": "v2",
+      "confidence": "medium",
+      "field": "api_types",
+      "status": "resolved",
+      "value": [
+        "graphql",
+        "rest"
+      ]
+    },
+    {
+      "app_id": "twenty",
+      "classifier_version": "v2",
+      "confidence": "medium",
+      "field": "application_type",
+      "status": "resolved",
+      "value": [
+        "open_source_self_hosted"
+      ]
+    },
+    {
+      "app_id": "twenty",
+      "classifier_version": "v2",
+      "confidence": "medium",
+      "field": "authentication",
+      "status": "resolved",
+      "value": [
+        "api_key",
+        "bearer_token"
+      ]
+    },
+    {
+      "app_id": "twenty",
+      "classifier_version": "v2",
+      "confidence": "medium",
+      "field": "blocker",
+      "status": "resolved",
+      "value": [
+        "none"
+      ]
+    },
+    {
+      "app_id": "twenty",
+      "classifier_version": "v2",
+      "confidence": "medium",
+      "field": "buildability",
+      "status": "resolved",
+      "value": [
+        "buildable_with_friction"
+      ]
+    },
+    {
+      "app_id": "twenty",
+      "classifier_version": "v2",
+      "confidence": "medium",
+      "field": "credential_access",
+      "status": "resolved",
+      "value": [
+        "self_hosted_deployment_dependent"
+      ]
+    },
+    {
+      "app_id": "twenty",
+      "classifier_version": "v2",
+      "confidence": "medium",
+      "field": "mcp",
+      "status": "not_found",
+      "value": null
+    },
+    {
+      "app_id": "twenty",
+      "classifier_version": "v2",
+      "confidence": "medium",
+      "field": "rate_limit_info",
+      "status": "resolved",
+      "value": [
+        "no_published_limits"
+      ]
+    },
+    {
+      "app_id": "twenty",
+      "classifier_version": "v2",
+      "confidence": "medium",
+      "field": "webhook_support",
+      "status": "resolved",
+      "value": [
+        "native_webhooks"
+      ]
+    },
+    {
+      "app_id": "zoho-desk",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_breadth",
+      "status": "resolved",
+      "value": [
+        "broad"
+      ]
+    },
+    {
+      "app_id": "zoho-desk",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_exists",
+      "status": "resolved",
+      "value": [
+        "true"
+      ]
+    },
+    {
+      "app_id": "zoho-desk",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "api_types",
+      "status": "resolved",
+      "value": [
+        "rest",
+        "sdk"
+      ]
+    },
+    {
+      "app_id": "zoho-desk",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "application_type",
+      "status": "resolved",
+      "value": [
+        "saas_application"
+      ]
+    },
+    {
+      "app_id": "zoho-desk",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "authentication",
+      "status": "resolved",
+      "value": [
+        "oauth2"
+      ]
+    },
+    {
+      "app_id": "zoho-desk",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "blocker",
+      "status": "resolved",
+      "value": [
+        "none"
+      ]
+    },
+    {
+      "app_id": "zoho-desk",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "buildability",
+      "status": "resolved",
+      "value": [
+        "buildable"
+      ]
+    },
+    {
+      "app_id": "zoho-desk",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "credential_access",
+      "status": "resolved",
+      "value": [
+        "self_serve_free"
+      ]
+    },
+    {
+      "app_id": "zoho-desk",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "mcp",
+      "status": "not_found",
+      "value": null
+    },
+    {
+      "app_id": "zoho-desk",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "rate_limit_info",
+      "status": "resolved",
+      "value": [
+        "documented_quantitative"
+      ]
+    },
+    {
+      "app_id": "zoho-desk",
+      "classifier_version": "v2",
+      "confidence": "high",
+      "field": "webhook_support",
+      "status": "resolved",
+      "value": [
+        "native_webhooks"
+      ]
+    }
+  ],
+  "group": "B",
+  "master_seed": 20260916,
+  "metadata": {
+    "generated_at": "2026-09-16T00:00:00Z",
+    "notes": "Sample B stratified across 10 categories.",
+    "record_count": 15,
+    "schema_version": "2.0.0",
+    "seed": 20260916,
+    "source_fingerprint": "44288f931e15a2cf",
+    "stage": "sample_selection"
+  },
+  "population_size": 85,
+  "seed_namespace": "sample_selection:B"
+}

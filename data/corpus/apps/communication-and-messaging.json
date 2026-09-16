@@ -1,0 +1,1208 @@
+{
+  "category": "Communication & Messaging",
+  "entries": [
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "messaging",
+          "event_subscriptions",
+          "file_transfer"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The Web API covers messaging, conversations, users and app surfaces; some admin methods need a paid plan.",
+        "resource_groups": [
+          "admin",
+          "apps",
+          "chat",
+          "conversations",
+          "files",
+          "reactions",
+          "search",
+          "usergroups",
+          "users",
+          "views"
+        ],
+        "types": [
+          "rest",
+          "sdk",
+          "webhooks"
+        ]
+      },
+      "app_id": "slack",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "bearer_token"
+      ],
+      "auth_notes": "Apps obtain bot or user tokens through OAuth 2.0 install flows; tokens are presented as bearer credentials.",
+      "canonical_name": "Slack",
+      "description": "Team messaging platform organised around channels, threads and apps.",
+      "docs_url": "https://api.slack.com/apis",
+      "homepage_url": "https://slack.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": false,
+        "source_url": "https://github.com/korotovsky/slack-mcp-server",
+        "status": "third_party"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Apps are created free at api.slack.com/apps and install into a workspace through OAuth 2.0 to obtain bot tokens.",
+          "id": "slack-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Slack OAuth v2",
+          "type": "first_party_docs",
+          "url": "https://api.slack.com/authentication/oauth-v2"
+        },
+        {
+          "claim": "Documents the Web API, Events API and Socket Mode covering chat, conversations, users, files and views.",
+          "id": "slack-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Slack APIs",
+          "type": "first_party_docs",
+          "url": "https://api.slack.com/apis"
+        },
+        {
+          "claim": "The Events API delivers subscribed workspace events to an HTTP endpoint.",
+          "id": "slack-events",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Slack Events API",
+          "type": "first_party_docs",
+          "url": "https://api.slack.com/apis/events-api"
+        },
+        {
+          "claim": "Publishes per-method rate-limit tiers with explicit per-minute allowances.",
+          "id": "slack-limits",
+          "supports": [
+            "rate_limit_info",
+            "access_restrictions"
+          ],
+          "title": "Slack rate limits",
+          "type": "first_party_docs",
+          "url": "https://api.slack.com/apis/rate-limits"
+        },
+        {
+          "claim": "A maintained community MCP server wraps the Slack Web API; no vendor-published server was found.",
+          "id": "slack-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "korotovsky/slack-mcp-server",
+          "type": "repository",
+          "url": "https://github.com/korotovsky/slack-mcp-server"
+        }
+      ],
+      "vendor": "Slack Technologies (Salesforce)",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "admin_only": true,
+        "api_plan": "free",
+        "restrictions": [
+          "approval_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "admin",
+          "user_management",
+          "messaging",
+          "event_subscriptions",
+          "scheduling"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Teams functionality is exposed through Microsoft Graph; message-level access requires protected or metered permissions.",
+        "resource_groups": [
+          "apps",
+          "calls",
+          "channels",
+          "chats",
+          "meetings",
+          "members",
+          "messages",
+          "presence",
+          "tabs",
+          "teams"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "microsoft-teams",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "service_account"
+      ],
+      "auth_notes": "Microsoft Entra ID app registrations using delegated or application permissions; application permissions require tenant admin consent.",
+      "canonical_name": "Microsoft Teams",
+      "description": "Enterprise chat, meetings and collaboration hub inside Microsoft 365.",
+      "docs_url": "https://learn.microsoft.com/en-us/graph/api/resources/teams-api-overview",
+      "homepage_url": "https://www.microsoft.com/microsoft-teams/group-chat-software",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "source_url": "https://github.com/softeria/ms-365-mcp-server",
+        "status": "third_party"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "A community MCP server exposes Microsoft 365 surfaces including Teams.",
+          "current": true,
+          "id": "microsoft-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "softeria/ms-365-mcp-server",
+          "type": "repository",
+          "url": "https://github.com/softeria/ms-365-mcp-server"
+        },
+        {
+          "claim": "Apps register in Entra ID; application permissions require an administrator to grant tenant-wide consent.",
+          "id": "teams-auth",
+          "supports": [
+            "authentication",
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Microsoft Graph authentication concepts",
+          "type": "first_party_docs",
+          "url": "https://learn.microsoft.com/en-us/graph/auth/auth-concepts"
+        },
+        {
+          "claim": "Documents Graph endpoints for teams, channels, chats, messages, members and meetings.",
+          "id": "teams-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Microsoft Teams API overview",
+          "type": "first_party_docs",
+          "url": "https://learn.microsoft.com/en-us/graph/api/resources/teams-api-overview"
+        },
+        {
+          "claim": "Change notification subscriptions deliver resource events to a webhook endpoint.",
+          "id": "teams-notify",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Graph change notifications",
+          "type": "first_party_docs",
+          "url": "https://learn.microsoft.com/en-us/graph/change-notifications-overview"
+        },
+        {
+          "claim": "Reading Teams message content with application permissions requires a separate Microsoft approval and can be metered.",
+          "id": "teams-protected",
+          "supports": [
+            "access_restrictions",
+            "credential_access"
+          ],
+          "title": "Teams protected APIs",
+          "type": "first_party_docs",
+          "url": "https://learn.microsoft.com/en-us/graph/teams-protected-apis"
+        },
+        {
+          "claim": "Publishes per-service request ceilings per app and per tenant.",
+          "id": "teams-throttle",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Microsoft Graph throttling limits",
+          "type": "first_party_docs",
+          "url": "https://learn.microsoft.com/en-us/graph/throttling-limits"
+        }
+      ],
+      "vendor": "Microsoft Corporation",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "messaging",
+          "streaming",
+          "file_transfer"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The HTTP API covers guild, channel and message management; live events arrive over the Gateway websocket.",
+        "resource_groups": [
+          "channels",
+          "emojis",
+          "guilds",
+          "interactions",
+          "invites",
+          "messages",
+          "roles",
+          "scheduled events",
+          "threads",
+          "users",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk",
+          "webhooks"
+        ]
+      },
+      "app_id": "discord",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "bearer_token"
+      ],
+      "auth_notes": "Bot tokens from the developer portal, or OAuth 2.0 for user-authorised applications.",
+      "canonical_name": "Discord",
+      "description": "Voice, video and text community platform organised into servers and channels.",
+      "docs_url": "https://discord.com/developers/docs/reference",
+      "homepage_url": "https://discord.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "source_url": "https://github.com/v-3/discordmcp",
+        "status": "third_party"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Applications and bot tokens are created free in the developer portal; OAuth 2.0 authorises user-facing apps.",
+          "id": "discord-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Discord OAuth2",
+          "type": "first_party_docs",
+          "url": "https://discord.com/developers/docs/topics/oauth2"
+        },
+        {
+          "claim": "Documents HTTP endpoints for guilds, channels, messages, roles, invites and interactions.",
+          "id": "discord-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Discord API reference",
+          "type": "first_party_docs",
+          "url": "https://discord.com/developers/docs/reference"
+        },
+        {
+          "claim": "Server-side events are delivered over a persistent Gateway websocket; channel webhooks are inbound only.",
+          "id": "discord-gateway",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Discord Gateway",
+          "type": "first_party_docs",
+          "url": "https://discord.com/developers/docs/events/gateway"
+        },
+        {
+          "claim": "Publishes per-route and global request ceilings with rate-limit headers.",
+          "id": "discord-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Discord rate limits",
+          "type": "first_party_docs",
+          "url": "https://discord.com/developers/docs/topics/rate-limits"
+        },
+        {
+          "claim": "A community MCP server exposes Discord channel and message operations.",
+          "current": true,
+          "id": "discord-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "v-3/discordmcp",
+          "type": "repository",
+          "url": "https://github.com/v-3/discordmcp"
+        }
+      ],
+      "vendor": "Discord Inc.",
+      "webhooks": "event_streaming"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "messaging",
+          "file_transfer",
+          "event_subscriptions"
+        ],
+        "coverage": "subset",
+        "exists": true,
+        "notes": "The Bot API covers what a bot may see and do, which is a deliberate subset of the messenger.",
+        "resource_groups": [
+          "chats",
+          "files",
+          "games",
+          "inline queries",
+          "messages",
+          "payments",
+          "stickers",
+          "updates",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "webhooks"
+        ]
+      },
+      "app_id": "telegram",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "token"
+      ],
+      "auth_notes": "A bot token issued by BotFather is embedded in the request path; there is no OAuth flow.",
+      "canonical_name": "Telegram Bot Platform",
+      "description": "Messaging service whose bot platform exposes chats, messages and payments to programs.",
+      "docs_url": "https://core.telegram.org/bots/api",
+      "homepage_url": "https://telegram.org",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "source_url": "https://github.com/chigwell/telegram-mcp",
+        "status": "third_party"
+      },
+      "rate_limits": "documented_qualitative",
+      "sources": [
+        {
+          "claim": "A community MCP server exposes Telegram chats and messages.",
+          "current": true,
+          "id": "telegram-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "chigwell/telegram-mcp",
+          "type": "repository",
+          "url": "https://github.com/chigwell/telegram-mcp"
+        },
+        {
+          "claim": "Any Telegram user can create a bot and receive a token from BotFather at no cost.",
+          "id": "tg-botfather",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Telegram BotFather",
+          "type": "first_party_docs",
+          "url": "https://core.telegram.org/bots/features#botfather"
+        },
+        {
+          "claim": "Documents HTTP methods for sending messages, managing chats, handling updates and receiving webhooks, authorised by a bot token.",
+          "id": "tg-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Telegram Bot API",
+          "type": "first_party_docs",
+          "url": "https://core.telegram.org/bots/api"
+        },
+        {
+          "claim": "Describes broad message-rate guidance rather than a published numeric quota per method.",
+          "id": "tg-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Telegram bot limits FAQ",
+          "type": "first_party_docs",
+          "url": "https://core.telegram.org/bots/faq#my-bot-is-hitting-limits-how-do-i-avoid-this"
+        },
+        {
+          "claim": "setWebhook registers an HTTPS endpoint that receives bot updates.",
+          "current": true,
+          "id": "tg-webhook",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Telegram setWebhook",
+          "type": "first_party_docs",
+          "url": "https://core.telegram.org/bots/api#setwebhook"
+        }
+      ],
+      "vendor": "Telegram FZ-LLC",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "trial"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "messaging",
+          "event_subscriptions",
+          "streaming",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The product is the API; every channel and helper service is documented.",
+        "resource_groups": [
+          "conversations",
+          "lookup",
+          "messaging",
+          "phone numbers",
+          "serverless",
+          "studio",
+          "sync",
+          "taskrouter",
+          "verify",
+          "video",
+          "voice"
+        ],
+        "types": [
+          "rest",
+          "sdk",
+          "cli"
+        ]
+      },
+      "app_id": "twilio",
+      "application_type": "api_platform",
+      "auth_methods": [
+        "basic_auth",
+        "api_key"
+      ],
+      "auth_notes": "Account SID and auth token over HTTP basic auth, or scoped API key/secret pairs.",
+      "canonical_name": "Twilio",
+      "description": "Communications platform exposing SMS, voice, video and verification as APIs.",
+      "docs_url": "https://www.twilio.com/docs/api",
+      "homepage_url": "https://www.twilio.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://github.com/twilio-labs/mcp",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Credentials are issued immediately on signup; scoped API keys can be created from the console.",
+          "id": "twilio-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Twilio API keys",
+          "type": "first_party_docs",
+          "url": "https://www.twilio.com/docs/iam/api-keys"
+        },
+        {
+          "claim": "Documents REST APIs, helper libraries and a CLI across messaging, voice, video, verify and lookup.",
+          "id": "twilio-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "application_type",
+            "description"
+          ],
+          "title": "Twilio API documentation",
+          "type": "first_party_docs",
+          "url": "https://www.twilio.com/docs/api"
+        },
+        {
+          "claim": "Publishes concurrency and per-second ceilings per resource.",
+          "id": "twilio-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Twilio rate limiting",
+          "type": "first_party_docs",
+          "url": "https://www.twilio.com/docs/glossary/what-is-rate-limiting"
+        },
+        {
+          "claim": "Twilio publishes an MCP server through its Twilio Labs organisation.",
+          "id": "twilio-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "twilio-labs/mcp",
+          "type": "repository",
+          "url": "https://github.com/twilio-labs/mcp"
+        },
+        {
+          "claim": "A free trial account with credit can call the API, with verified-number restrictions until upgraded.",
+          "id": "twilio-trial",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Using a Twilio free trial account",
+          "type": "first_party_docs",
+          "url": "https://www.twilio.com/docs/messaging/guides/how-to-use-your-free-trial-account"
+        },
+        {
+          "claim": "Twilio posts message, call and verification events to configured webhook URLs.",
+          "current": true,
+          "id": "twilio-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Twilio webhooks",
+          "type": "first_party_docs",
+          "url": "https://www.twilio.com/docs/usage/webhooks"
+        }
+      ],
+      "vendor": "Twilio Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "admin_only": true,
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "admin",
+          "user_management",
+          "scheduling",
+          "event_subscriptions",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Meetings, webinars, recordings, phone and reporting are all documented; several scopes require a paid plan.",
+        "resource_groups": [
+          "chat",
+          "contacts",
+          "dashboards",
+          "meetings",
+          "phone",
+          "recordings",
+          "reports",
+          "rooms",
+          "users",
+          "webinars"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "zoom",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "service_account"
+      ],
+      "auth_notes": "Server-to-server OAuth apps for backend integrations and user-level OAuth for marketplace apps; JWT apps were retired.",
+      "canonical_name": "Zoom",
+      "description": "Video meetings, webinars and phone, with an app marketplace for integrations.",
+      "docs_url": "https://developers.zoom.us/docs/api/",
+      "homepage_url": "https://zoom.us",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "source_url": null,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for meetings, webinars, users, recordings, chat, phone and reports.",
+          "id": "zoom-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Zoom API reference",
+          "type": "first_party_docs",
+          "url": "https://developers.zoom.us/docs/api/"
+        },
+        {
+          "claim": "Publishes per-second request ceilings by endpoint category and account plan.",
+          "id": "zoom-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Zoom API rate limits",
+          "type": "first_party_docs",
+          "url": "https://developers.zoom.us/docs/api/rate-limits/"
+        },
+        {
+          "claim": "Creating a server-to-server OAuth app requires the account owner or an admin role with marketplace permissions.",
+          "id": "zoom-s2s",
+          "supports": [
+            "authentication",
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Zoom server-to-server OAuth",
+          "type": "first_party_docs",
+          "url": "https://developers.zoom.us/docs/internal-apps/s2s-oauth/"
+        },
+        {
+          "claim": "Event subscriptions deliver meeting and recording events to a validated endpoint.",
+          "id": "zoom-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Zoom webhooks",
+          "type": "first_party_docs",
+          "url": "https://developers.zoom.us/docs/api/webhooks/"
+        }
+      ],
+      "vendor": "Zoom Communications, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "paid",
+        "admin_only": true,
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required",
+          "approval_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "messaging",
+          "user_management",
+          "event_subscriptions"
+        ],
+        "coverage": "subset",
+        "exists": true,
+        "notes": "The REST surface covers spaces, memberships and messages only; administration lives in the Admin SDK.",
+        "resource_groups": [
+          "attachments",
+          "memberships",
+          "messages",
+          "reactions",
+          "spaces",
+          "users"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "google-chat",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "service_account"
+      ],
+      "auth_notes": "Google Cloud project credentials using OAuth 2.0 for user access or a service account for app access.",
+      "canonical_name": "Google Chat",
+      "description": "Messaging surface inside Google Workspace, with spaces, threads and chat apps.",
+      "docs_url": "https://developers.google.com/workspace/chat/api/reference/rest",
+      "homepage_url": "https://workspace.google.com/products/chat/",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "A Google Cloud project with OAuth or service-account credentials is required, and the Chat API is available to Google Workspace accounts.",
+          "id": "gchat-auth",
+          "supports": [
+            "authentication",
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Google Chat authentication",
+          "type": "first_party_docs",
+          "url": "https://developers.google.com/workspace/chat/authenticate-authorize"
+        },
+        {
+          "claim": "Documents REST resources for spaces, members, messages, reactions and attachments.",
+          "id": "gchat-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Google Chat API reference",
+          "type": "first_party_docs",
+          "url": "https://developers.google.com/workspace/chat/api/reference/rest"
+        },
+        {
+          "claim": "Chat apps receive interaction events over HTTP endpoints and can subscribe to space events.",
+          "id": "gchat-events",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Google Chat events",
+          "type": "first_party_docs",
+          "url": "https://developers.google.com/workspace/chat/events-overview"
+        },
+        {
+          "claim": "Publishes per-minute quotas per project and per space.",
+          "id": "gchat-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Google Chat usage limits",
+          "type": "first_party_docs",
+          "url": "https://developers.google.com/workspace/chat/limits"
+        }
+      ],
+      "vendor": "Google LLC",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "admin_only": true,
+        "api_plan": "free",
+        "restrictions": [
+          "deployment_required"
+        ],
+        "self_hosted": true
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "messaging",
+          "file_transfer",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The REST API mirrors the whole server, including system administration.",
+        "resource_groups": [
+          "bots",
+          "channels",
+          "files",
+          "plugins",
+          "posts",
+          "preferences",
+          "roles",
+          "system",
+          "teams",
+          "users",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk",
+          "webhooks"
+        ]
+      },
+      "app_id": "mattermost",
+      "application_type": "open_source_self_hosted",
+      "auth_methods": [
+        "pat",
+        "bearer_token",
+        "oauth2"
+      ],
+      "auth_notes": "Personal access tokens and session tokens are presented as bearer credentials; OAuth 2.0 is available for apps.",
+      "canonical_name": "Mattermost",
+      "description": "Open-source team messaging platform deployable on private infrastructure.",
+      "docs_url": "https://api.mattermost.com/",
+      "homepage_url": "https://mattermost.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "source_url": "https://github.com/jagan-shanmugam/mattermost-mcp-host",
+        "status": "third_party"
+      },
+      "rate_limits": "documented_qualitative",
+      "sources": [
+        {
+          "claim": "A community MCP server exposes Mattermost channels and messages.",
+          "current": true,
+          "id": "mattermost-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "jagan-shanmugam/mattermost-mcp-host",
+          "type": "repository",
+          "url": "https://github.com/jagan-shanmugam/mattermost-mcp-host"
+        },
+        {
+          "claim": "Documents REST endpoints for users, teams, channels, posts, files, plugins and system administration with token auth.",
+          "id": "mm-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Mattermost API reference",
+          "type": "first_party_docs",
+          "url": "https://api.mattermost.com/"
+        },
+        {
+          "claim": "Rate limiting is an operator-configured setting rather than a published vendor quota.",
+          "id": "mm-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Mattermost rate limiting configuration",
+          "type": "first_party_docs",
+          "url": "https://docs.mattermost.com/configure/rate-limiting-configuration-settings.html"
+        },
+        {
+          "claim": "Personal access tokens must be enabled by a system administrator on the instance before they can be issued.",
+          "id": "mm-pat",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Mattermost personal access tokens",
+          "type": "first_party_docs",
+          "url": "https://developers.mattermost.com/integrate/reference/personal-access-token/"
+        },
+        {
+          "claim": "The server is published as open source and is commonly self-hosted.",
+          "id": "mm-repo",
+          "supports": [
+            "application_type"
+          ],
+          "title": "mattermost/mattermost",
+          "type": "repository",
+          "url": "https://github.com/mattermost/mattermost"
+        },
+        {
+          "claim": "Outgoing webhooks post channel events to an external URL.",
+          "id": "mm-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Mattermost outgoing webhooks",
+          "type": "first_party_docs",
+          "url": "https://developers.mattermost.com/integrate/webhooks/outgoing/"
+        }
+      ],
+      "vendor": "Mattermost, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free",
+        "restrictions": [
+          "deployment_required"
+        ],
+        "self_hosted": true
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "messaging",
+          "file_transfer",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The REST API covers rooms, messages, users and administration; a realtime DDP API sits alongside it.",
+        "resource_groups": [
+          "channels",
+          "chat",
+          "groups",
+          "im",
+          "integrations",
+          "permissions",
+          "rooms",
+          "subscriptions",
+          "users",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk",
+          "webhooks"
+        ]
+      },
+      "app_id": "rocket-chat",
+      "application_type": "open_source_self_hosted",
+      "auth_methods": [
+        "pat",
+        "bearer_token",
+        "oauth2"
+      ],
+      "auth_notes": "Personal access tokens paired with a user id header; OAuth 2.0 is available on the server.",
+      "canonical_name": "Rocket.Chat",
+      "description": "Open-source communications platform with chat, omnichannel and federation.",
+      "docs_url": "https://developer.rocket.chat/apidocs",
+      "homepage_url": "https://www.rocket.chat",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://github.com/RocketChat/mcp-server",
+        "status": "official"
+      },
+      "rate_limits": "documented_qualitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for channels, groups, messages, users and administration using token headers.",
+          "id": "rc-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Rocket.Chat API docs",
+          "type": "first_party_docs",
+          "url": "https://developer.rocket.chat/apidocs"
+        },
+        {
+          "claim": "Rate limiting is configured per deployment rather than published as a vendor quota.",
+          "id": "rc-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Rocket.Chat rate limiter",
+          "type": "first_party_docs",
+          "url": "https://docs.rocket.chat/docs/rate-limiter"
+        },
+        {
+          "claim": "Personal access tokens are created from account settings on an instance the operator controls.",
+          "id": "rc-pat",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Rocket.Chat personal access tokens",
+          "type": "first_party_docs",
+          "url": "https://docs.rocket.chat/docs/personal-access-token"
+        },
+        {
+          "claim": "The server is open source and self-hostable, with outgoing webhook integrations built in.",
+          "id": "rc-repo",
+          "supports": [
+            "application_type",
+            "webhook_support"
+          ],
+          "title": "RocketChat/Rocket.Chat",
+          "type": "repository",
+          "url": "https://github.com/RocketChat/Rocket.Chat"
+        },
+        {
+          "claim": "Rocket.Chat publishes an MCP server in its own GitHub organisation.",
+          "current": true,
+          "id": "rocket-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "RocketChat/mcp-server",
+          "type": "repository",
+          "url": "https://github.com/RocketChat/mcp-server"
+        }
+      ],
+      "vendor": "Rocket.Chat Technologies Corp.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "paid",
+        "approval_required": true,
+        "restrictions": [
+          "approval_required",
+          "identity_verification_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "messaging",
+          "file_transfer",
+          "event_subscriptions"
+        ],
+        "coverage": "subset",
+        "exists": true,
+        "notes": "The Cloud API covers messaging, templates and media for a registered business number.",
+        "resource_groups": [
+          "business profile",
+          "flows",
+          "media",
+          "messages",
+          "phone numbers",
+          "templates",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "whatsapp-business-platform",
+      "application_type": "api_platform",
+      "auth_methods": [
+        "bearer_token",
+        "oauth2"
+      ],
+      "auth_notes": "System user access tokens issued from a Meta business app; embedded signup uses OAuth for partners.",
+      "canonical_name": "WhatsApp Business Platform",
+      "description": "Cloud API for businesses to send and receive WhatsApp messages programmatically.",
+      "docs_url": "https://developers.facebook.com/docs/whatsapp/cloud-api",
+      "homepage_url": "https://business.whatsapp.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Cloud API requests are authorised with system user access tokens issued from a Meta Business account.",
+          "current": true,
+          "id": "wa-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "WhatsApp Cloud API getting started",
+          "type": "first_party_docs",
+          "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/get-started"
+        },
+        {
+          "claim": "Documents REST endpoints for sending messages, managing templates, media and phone numbers.",
+          "id": "wa-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "application_type",
+            "description"
+          ],
+          "title": "WhatsApp Cloud API",
+          "type": "first_party_docs",
+          "url": "https://developers.facebook.com/docs/whatsapp/cloud-api"
+        },
+        {
+          "claim": "Publishes messaging tiers and per-second request ceilings.",
+          "id": "wa-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "WhatsApp Cloud API rate limits",
+          "type": "first_party_docs",
+          "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/overview#rate-limits"
+        },
+        {
+          "claim": "Conversations are billed per template or per message beyond the free allowance.",
+          "id": "wa-pricing",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "WhatsApp Business Platform pricing",
+          "type": "first_party_pricing",
+          "url": "https://developers.facebook.com/docs/whatsapp/pricing"
+        },
+        {
+          "claim": "Production messaging requires a verified Meta business account and an approved display name.",
+          "id": "wa-verify",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Meta business verification",
+          "type": "first_party_site",
+          "url": "https://www.facebook.com/business/help/2058515294227817"
+        },
+        {
+          "claim": "Inbound messages and status updates are delivered to a configured webhook endpoint.",
+          "id": "wa-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "WhatsApp webhooks setup",
+          "type": "first_party_docs",
+          "url": "https://developers.facebook.com/docs/whatsapp/cloud-api/guides/set-up-webhooks"
+        }
+      ],
+      "vendor": "Meta Platforms, Inc.",
+      "webhooks": "native_webhooks"
+    }
+  ]
+}

@@ -1,0 +1,3052 @@
+{
+  "channel": "channel_c",
+  "metadata": {
+    "generated_at": "2026-09-16T00:00:00Z",
+    "notes": "channel_c: Browser / page verification (sampled)",
+    "record_count": 15,
+    "schema_version": "2.0.0",
+    "seed": 20260916,
+    "source_fingerprint": "70e3de600f798c72",
+    "stage": "verification"
+  },
+  "results": [
+    {
+      "app_id": "amplitude",
+      "channel": "channel_c",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [
+        {
+          "evidence_id": "amplitude::amp-cohort-sync",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: application_type, identity, webhook_support.",
+          "supports": [
+            "application_type",
+            "identity",
+            "webhook_support"
+          ],
+          "supports_claim": true,
+          "url": "https://amplitude.com/docs/data/destination-catalog"
+        },
+        {
+          "evidence_id": "amplitude::amp-docs",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: api_breadth, api_capabilities, api_exists, api_types, authentication, blocker, buildability, description.",
+          "supports": [
+            "api_breadth",
+            "api_capabilities",
+            "api_exists",
+            "api_types",
+            "authentication",
+            "blocker",
+            "buildability",
+            "description"
+          ],
+          "supports_claim": true,
+          "url": "https://amplitude.com/docs/apis"
+        },
+        {
+          "evidence_id": "amplitude::amp-keys",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, blocker, buildability, credential_access.",
+          "supports": [
+            "access_restrictions",
+            "blocker",
+            "buildability",
+            "credential_access"
+          ],
+          "supports_claim": true,
+          "url": "https://amplitude.com/docs/apis/authentication"
+        },
+        {
+          "evidence_id": "amplitude::amp-limits",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: rate_limit_info.",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "supports_claim": true,
+          "url": "https://amplitude.com/docs/apis/analytics/http-v2#rate-limits"
+        }
+      ],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "amplitude::amp-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "amplitude::amp-docs"
+          ],
+          "field": "api_exists",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "amplitude::amp-docs"
+          ],
+          "field": "api_types",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest",
+            "sdk"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "amplitude::amp-cohort-sync"
+          ],
+          "field": "application_type",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "amplitude::amp-docs"
+          ],
+          "field": "authentication",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_key",
+            "basic_auth"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "amplitude::amp-docs",
+            "amplitude::amp-keys"
+          ],
+          "field": "blocker",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "none"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "amplitude::amp-docs",
+            "amplitude::amp-keys"
+          ],
+          "field": "buildability",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "amplitude::amp-keys"
+          ],
+          "field": "credential_access",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_serve_free"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": "Nothing was cited for this field to audit.",
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [
+            "amplitude::amp-limits"
+          ],
+          "field": "rate_limit_info",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "amplitude::amp-cohort-sync"
+          ],
+          "field": "webhook_support",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "no_events"
+          ]
+        }
+      ],
+      "notes": "Citation audit: the cited source must itself declare support for the field it is cited for.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "anthropic",
+      "channel": "channel_c",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [
+        {
+          "evidence_id": "anthropic::ant-batches",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: identity, webhook_support.",
+          "supports": [
+            "identity",
+            "webhook_support"
+          ],
+          "supports_claim": true,
+          "url": "https://docs.anthropic.com/en/docs/build-with-claude/batch-processing"
+        },
+        {
+          "evidence_id": "anthropic::ant-docs",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: api_breadth, api_capabilities, api_exists, api_types, application_type, authentication, blocker, buildability, description.",
+          "supports": [
+            "api_breadth",
+            "api_capabilities",
+            "api_exists",
+            "api_types",
+            "application_type",
+            "authentication",
+            "blocker",
+            "buildability",
+            "description"
+          ],
+          "supports_claim": true,
+          "url": "https://docs.anthropic.com/en/api/overview"
+        },
+        {
+          "evidence_id": "anthropic::ant-limits",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: rate_limit_info.",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "supports_claim": true,
+          "url": "https://docs.anthropic.com/en/api/rate-limits"
+        },
+        {
+          "evidence_id": "anthropic::ant-mcp",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: mcp.",
+          "supports": [
+            "mcp"
+          ],
+          "supports_claim": true,
+          "url": "https://github.com/modelcontextprotocol/servers"
+        },
+        {
+          "evidence_id": "anthropic::ant-pricing",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, blocker, buildability, credential_access.",
+          "supports": [
+            "access_restrictions",
+            "blocker",
+            "buildability",
+            "credential_access"
+          ],
+          "supports_claim": true,
+          "url": "https://www.anthropic.com/pricing"
+        }
+      ],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "anthropic::ant-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "anthropic::ant-docs"
+          ],
+          "field": "api_exists",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "anthropic::ant-docs"
+          ],
+          "field": "api_types",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest",
+            "sdk"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "anthropic::ant-docs"
+          ],
+          "field": "application_type",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_platform"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "anthropic::ant-docs"
+          ],
+          "field": "authentication",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_key"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "anthropic::ant-docs",
+            "anthropic::ant-pricing"
+          ],
+          "field": "blocker",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "paid_access"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "anthropic::ant-docs",
+            "anthropic::ant-pricing"
+          ],
+          "field": "buildability",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable_with_friction"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "anthropic::ant-pricing"
+          ],
+          "field": "credential_access",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_serve_paid"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "anthropic::ant-mcp"
+          ],
+          "field": "mcp",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "official"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "anthropic::ant-limits"
+          ],
+          "field": "rate_limit_info",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "anthropic::ant-batches"
+          ],
+          "field": "webhook_support",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "polling_only"
+          ]
+        }
+      ],
+      "notes": "Citation audit: the cited source must itself declare support for the field it is cited for.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "apollo-io",
+      "channel": "channel_c",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [
+        {
+          "evidence_id": "apollo-io::apollo-access",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, application_type, blocker, buildability, credential_access, identity.",
+          "supports": [
+            "access_restrictions",
+            "application_type",
+            "blocker",
+            "buildability",
+            "credential_access",
+            "identity"
+          ],
+          "supports_claim": true,
+          "url": "https://docs.apollo.io/docs/create-api-key"
+        },
+        {
+          "evidence_id": "apollo-io::apollo-docs",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: api_breadth, api_capabilities, api_exists, api_types, authentication, blocker, buildability, description.",
+          "supports": [
+            "api_breadth",
+            "api_capabilities",
+            "api_exists",
+            "api_types",
+            "authentication",
+            "blocker",
+            "buildability",
+            "description"
+          ],
+          "supports_claim": true,
+          "url": "https://docs.apollo.io/reference/introduction"
+        },
+        {
+          "evidence_id": "apollo-io::apollo-limits",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: rate_limit_info.",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "supports_claim": true,
+          "url": "https://docs.apollo.io/reference/rate-limits"
+        },
+        {
+          "evidence_id": "apollo-io::apollo-webhooks",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: webhook_support.",
+          "supports": [
+            "webhook_support"
+          ],
+          "supports_claim": true,
+          "url": "https://docs.apollo.io/docs/webhooks"
+        }
+      ],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "apollo-io::apollo-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "apollo-io::apollo-docs"
+          ],
+          "field": "api_exists",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "apollo-io::apollo-docs"
+          ],
+          "field": "api_types",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "apollo-io::apollo-access"
+          ],
+          "field": "application_type",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "apollo-io::apollo-docs"
+          ],
+          "field": "authentication",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_key"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "apollo-io::apollo-access",
+            "apollo-io::apollo-docs"
+          ],
+          "field": "blocker",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "paid_access"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "apollo-io::apollo-access",
+            "apollo-io::apollo-docs"
+          ],
+          "field": "buildability",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable_with_friction"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "apollo-io::apollo-access"
+          ],
+          "field": "credential_access",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_serve_paid"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": "Nothing was cited for this field to audit.",
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [
+            "apollo-io::apollo-limits"
+          ],
+          "field": "rate_limit_info",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "apollo-io::apollo-webhooks"
+          ],
+          "field": "webhook_support",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Citation audit: the cited source must itself declare support for the field it is cited for.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "ashby",
+      "channel": "channel_c",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [
+        {
+          "evidence_id": "ashby::ashby-docs",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: api_breadth, api_capabilities, api_exists, api_types, application_type, authentication, blocker, buildability, description, identity.",
+          "supports": [
+            "api_breadth",
+            "api_capabilities",
+            "api_exists",
+            "api_types",
+            "application_type",
+            "authentication",
+            "blocker",
+            "buildability",
+            "description",
+            "identity"
+          ],
+          "supports_claim": true,
+          "url": "https://developers.ashbyhq.com/reference/introduction"
+        },
+        {
+          "evidence_id": "ashby::ashby-keys",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, blocker, buildability, credential_access.",
+          "supports": [
+            "access_restrictions",
+            "blocker",
+            "buildability",
+            "credential_access"
+          ],
+          "supports_claim": true,
+          "url": "https://developers.ashbyhq.com/docs/authentication"
+        },
+        {
+          "evidence_id": "ashby::ashby-limits",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: rate_limit_info.",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "supports_claim": true,
+          "url": "https://developers.ashbyhq.com/docs/rate-limits"
+        },
+        {
+          "evidence_id": "ashby::ashby-webhooks",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: webhook_support.",
+          "supports": [
+            "webhook_support"
+          ],
+          "supports_claim": true,
+          "url": "https://developers.ashbyhq.com/docs/webhooks"
+        }
+      ],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "ashby::ashby-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "ashby::ashby-docs"
+          ],
+          "field": "api_exists",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "ashby::ashby-docs"
+          ],
+          "field": "api_types",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "ashby::ashby-docs"
+          ],
+          "field": "application_type",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "ashby::ashby-docs"
+          ],
+          "field": "authentication",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_key",
+            "basic_auth"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "ashby::ashby-docs",
+            "ashby::ashby-keys"
+          ],
+          "field": "blocker",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval",
+            "enterprise_only",
+            "paid_access"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "ashby::ashby-docs",
+            "ashby::ashby-keys"
+          ],
+          "field": "buildability",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "blocked"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "ashby::ashby-keys"
+          ],
+          "field": "credential_access",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "contact_sales"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": "Nothing was cited for this field to audit.",
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [
+            "ashby::ashby-limits"
+          ],
+          "field": "rate_limit_info",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "ashby::ashby-webhooks"
+          ],
+          "field": "webhook_support",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Citation audit: the cited source must itself declare support for the field it is cited for.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "buffer",
+      "channel": "channel_c",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [
+        {
+          "evidence_id": "buffer::buffer-access",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, blocker, buildability, credential_access.",
+          "supports": [
+            "access_restrictions",
+            "blocker",
+            "buildability",
+            "credential_access"
+          ],
+          "supports_claim": true,
+          "url": "https://buffer.com/developers/apps"
+        },
+        {
+          "evidence_id": "buffer::buffer-docs",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: api_breadth, api_capabilities, api_exists, api_types, application_type, authentication, blocker, buildability, description, identity.",
+          "supports": [
+            "api_breadth",
+            "api_capabilities",
+            "api_exists",
+            "api_types",
+            "application_type",
+            "authentication",
+            "blocker",
+            "buildability",
+            "description",
+            "identity"
+          ],
+          "supports_claim": true,
+          "url": "https://buffer.com/developers/api"
+        },
+        {
+          "evidence_id": "buffer::buffer-errors",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: rate_limit_info.",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "supports_claim": true,
+          "url": "https://buffer.com/developers/api/errors"
+        }
+      ],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "buffer::buffer-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "narrow"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "buffer::buffer-docs"
+          ],
+          "field": "api_exists",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "buffer::buffer-docs"
+          ],
+          "field": "api_types",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "buffer::buffer-docs"
+          ],
+          "field": "application_type",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "buffer::buffer-docs"
+          ],
+          "field": "authentication",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "oauth2"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "buffer::buffer-access",
+            "buffer::buffer-docs"
+          ],
+          "field": "blocker",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval",
+            "insufficient_api_surface"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "buffer::buffer-access",
+            "buffer::buffer-docs"
+          ],
+          "field": "buildability",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable_with_friction"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "buffer::buffer-access"
+          ],
+          "field": "credential_access",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": "Nothing was cited for this field to audit.",
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [
+            "buffer::buffer-errors"
+          ],
+          "field": "rate_limit_info",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_qualitative"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "webhook_support",
+          "notes": "Nothing was cited for this field to audit.",
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        }
+      ],
+      "notes": "Citation audit: the cited source must itself declare support for the field it is cited for.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "clickup",
+      "channel": "channel_c",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [
+        {
+          "evidence_id": "clickup::clickup-auth",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, application_type, authentication, blocker, buildability, credential_access, identity.",
+          "supports": [
+            "access_restrictions",
+            "application_type",
+            "authentication",
+            "blocker",
+            "buildability",
+            "credential_access",
+            "identity"
+          ],
+          "supports_claim": true,
+          "url": "https://developer.clickup.com/docs/authentication"
+        },
+        {
+          "evidence_id": "clickup::clickup-docs",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: api_breadth, api_capabilities, api_exists, api_types, blocker, buildability, description.",
+          "supports": [
+            "api_breadth",
+            "api_capabilities",
+            "api_exists",
+            "api_types",
+            "blocker",
+            "buildability",
+            "description"
+          ],
+          "supports_claim": true,
+          "url": "https://developer.clickup.com/reference/"
+        },
+        {
+          "evidence_id": "clickup::clickup-limits",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: rate_limit_info.",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "supports_claim": true,
+          "url": "https://developer.clickup.com/docs/rate-limits"
+        },
+        {
+          "evidence_id": "clickup::clickup-mcp",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: mcp.",
+          "supports": [
+            "mcp"
+          ],
+          "supports_claim": true,
+          "url": "https://github.com/taazkareem/clickup-mcp-server"
+        },
+        {
+          "evidence_id": "clickup::clickup-webhooks",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: webhook_support.",
+          "supports": [
+            "webhook_support"
+          ],
+          "supports_claim": true,
+          "url": "https://developer.clickup.com/docs/webhooks"
+        }
+      ],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "clickup::clickup-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "clickup::clickup-docs"
+          ],
+          "field": "api_exists",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "clickup::clickup-docs"
+          ],
+          "field": "api_types",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "clickup::clickup-auth"
+          ],
+          "field": "application_type",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "clickup::clickup-auth"
+          ],
+          "field": "authentication",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "oauth2",
+            "pat"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "clickup::clickup-auth",
+            "clickup::clickup-docs"
+          ],
+          "field": "blocker",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "none"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "clickup::clickup-auth",
+            "clickup::clickup-docs"
+          ],
+          "field": "buildability",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "clickup::clickup-auth"
+          ],
+          "field": "credential_access",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_serve_free"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "clickup::clickup-mcp"
+          ],
+          "field": "mcp",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "third_party"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "clickup::clickup-limits"
+          ],
+          "field": "rate_limit_info",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "clickup::clickup-webhooks"
+          ],
+          "field": "webhook_support",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Citation audit: the cited source must itself declare support for the field it is cited for.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "help-scout",
+      "channel": "channel_c",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [
+        {
+          "evidence_id": "help-scout::hsc-apps",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, application_type, blocker, buildability, credential_access, identity.",
+          "supports": [
+            "access_restrictions",
+            "application_type",
+            "blocker",
+            "buildability",
+            "credential_access",
+            "identity"
+          ],
+          "supports_claim": true,
+          "url": "https://developer.helpscout.com/mailbox-api/overview/authentication/"
+        },
+        {
+          "evidence_id": "help-scout::hsc-docs",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: api_breadth, api_capabilities, api_exists, api_types, authentication, blocker, buildability, description.",
+          "supports": [
+            "api_breadth",
+            "api_capabilities",
+            "api_exists",
+            "api_types",
+            "authentication",
+            "blocker",
+            "buildability",
+            "description"
+          ],
+          "supports_claim": true,
+          "url": "https://developer.helpscout.com/mailbox-api/"
+        },
+        {
+          "evidence_id": "help-scout::hsc-limits",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: rate_limit_info.",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "supports_claim": true,
+          "url": "https://developer.helpscout.com/mailbox-api/overview/rate-limits/"
+        },
+        {
+          "evidence_id": "help-scout::hsc-webhooks",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: webhook_support.",
+          "supports": [
+            "webhook_support"
+          ],
+          "supports_claim": true,
+          "url": "https://developer.helpscout.com/webhooks/"
+        }
+      ],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "help-scout::hsc-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "help-scout::hsc-docs"
+          ],
+          "field": "api_exists",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "help-scout::hsc-docs"
+          ],
+          "field": "api_types",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "help-scout::hsc-apps"
+          ],
+          "field": "application_type",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "help-scout::hsc-docs"
+          ],
+          "field": "authentication",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "oauth2"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "help-scout::hsc-apps",
+            "help-scout::hsc-docs"
+          ],
+          "field": "blocker",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval",
+            "paid_access"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "help-scout::hsc-apps",
+            "help-scout::hsc-docs"
+          ],
+          "field": "buildability",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable_with_friction"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "help-scout::hsc-apps"
+          ],
+          "field": "credential_access",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": "Nothing was cited for this field to audit.",
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [
+            "help-scout::hsc-limits"
+          ],
+          "field": "rate_limit_info",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "help-scout::hsc-webhooks"
+          ],
+          "field": "webhook_support",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Citation audit: the cited source must itself declare support for the field it is cited for.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "lever",
+      "channel": "channel_c",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [
+        {
+          "evidence_id": "lever::lever-docs",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: api_breadth, api_capabilities, api_exists, api_types, application_type, authentication, blocker, buildability, description, identity.",
+          "supports": [
+            "api_breadth",
+            "api_capabilities",
+            "api_exists",
+            "api_types",
+            "application_type",
+            "authentication",
+            "blocker",
+            "buildability",
+            "description",
+            "identity"
+          ],
+          "supports_claim": true,
+          "url": "https://hire.lever.co/developer/documentation"
+        },
+        {
+          "evidence_id": "lever::lever-keys",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, blocker, buildability, credential_access.",
+          "supports": [
+            "access_restrictions",
+            "blocker",
+            "buildability",
+            "credential_access"
+          ],
+          "supports_claim": true,
+          "url": "https://help.lever.co/hc/en-us/articles/360042364412"
+        },
+        {
+          "evidence_id": "lever::lever-pricing",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: blocker, buildability, credential_access.",
+          "supports": [
+            "blocker",
+            "buildability",
+            "credential_access"
+          ],
+          "supports_claim": true,
+          "url": "https://www.lever.co/pricing/"
+        },
+        {
+          "evidence_id": "lever::lever-webhooks",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: rate_limit_info, webhook_support.",
+          "supports": [
+            "rate_limit_info",
+            "webhook_support"
+          ],
+          "supports_claim": true,
+          "url": "https://hire.lever.co/developer/documentation#webhooks"
+        }
+      ],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "lever::lever-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "lever::lever-docs"
+          ],
+          "field": "api_exists",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "lever::lever-docs"
+          ],
+          "field": "api_types",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "lever::lever-docs"
+          ],
+          "field": "application_type",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "lever::lever-docs"
+          ],
+          "field": "authentication",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_key",
+            "basic_auth",
+            "oauth2"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "lever::lever-docs",
+            "lever::lever-keys",
+            "lever::lever-pricing"
+          ],
+          "field": "blocker",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval",
+            "enterprise_only",
+            "paid_access"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "lever::lever-docs",
+            "lever::lever-keys",
+            "lever::lever-pricing"
+          ],
+          "field": "buildability",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "blocked"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "lever::lever-keys",
+            "lever::lever-pricing"
+          ],
+          "field": "credential_access",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "contact_sales"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": "Nothing was cited for this field to audit.",
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [
+            "lever::lever-webhooks"
+          ],
+          "field": "rate_limit_info",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "lever::lever-webhooks"
+          ],
+          "field": "webhook_support",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Citation audit: the cited source must itself declare support for the field it is cited for.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "microsoft-teams",
+      "channel": "channel_c",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [
+        {
+          "evidence_id": "microsoft-teams::microsoft-mcp",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: mcp.",
+          "supports": [
+            "mcp"
+          ],
+          "supports_claim": true,
+          "url": "https://github.com/softeria/ms-365-mcp-server"
+        },
+        {
+          "evidence_id": "microsoft-teams::teams-auth",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, application_type, authentication, blocker, buildability, credential_access, identity.",
+          "supports": [
+            "access_restrictions",
+            "application_type",
+            "authentication",
+            "blocker",
+            "buildability",
+            "credential_access",
+            "identity"
+          ],
+          "supports_claim": true,
+          "url": "https://learn.microsoft.com/en-us/graph/auth/auth-concepts"
+        },
+        {
+          "evidence_id": "microsoft-teams::teams-docs",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: api_breadth, api_capabilities, api_exists, api_types, blocker, buildability, description.",
+          "supports": [
+            "api_breadth",
+            "api_capabilities",
+            "api_exists",
+            "api_types",
+            "blocker",
+            "buildability",
+            "description"
+          ],
+          "supports_claim": true,
+          "url": "https://learn.microsoft.com/en-us/graph/api/resources/teams-api-overview"
+        },
+        {
+          "evidence_id": "microsoft-teams::teams-notify",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: webhook_support.",
+          "supports": [
+            "webhook_support"
+          ],
+          "supports_claim": true,
+          "url": "https://learn.microsoft.com/en-us/graph/change-notifications-overview"
+        },
+        {
+          "evidence_id": "microsoft-teams::teams-protected",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, blocker, buildability, credential_access.",
+          "supports": [
+            "access_restrictions",
+            "blocker",
+            "buildability",
+            "credential_access"
+          ],
+          "supports_claim": true,
+          "url": "https://learn.microsoft.com/en-us/graph/teams-protected-apis"
+        },
+        {
+          "evidence_id": "microsoft-teams::teams-throttle",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: rate_limit_info.",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "supports_claim": true,
+          "url": "https://learn.microsoft.com/en-us/graph/throttling-limits"
+        }
+      ],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "microsoft-teams::teams-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "microsoft-teams::teams-docs"
+          ],
+          "field": "api_exists",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "microsoft-teams::teams-docs"
+          ],
+          "field": "api_types",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest",
+            "sdk"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "microsoft-teams::teams-auth"
+          ],
+          "field": "application_type",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "microsoft-teams::teams-auth"
+          ],
+          "field": "authentication",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "oauth2",
+            "service_account"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "microsoft-teams::teams-auth",
+            "microsoft-teams::teams-docs",
+            "microsoft-teams::teams-protected"
+          ],
+          "field": "blocker",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "microsoft-teams::teams-auth",
+            "microsoft-teams::teams-docs",
+            "microsoft-teams::teams-protected"
+          ],
+          "field": "buildability",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable_with_friction"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "microsoft-teams::teams-auth",
+            "microsoft-teams::teams-protected"
+          ],
+          "field": "credential_access",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "microsoft-teams::microsoft-mcp"
+          ],
+          "field": "mcp",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "third_party"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "microsoft-teams::teams-throttle"
+          ],
+          "field": "rate_limit_info",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "microsoft-teams::teams-notify"
+          ],
+          "field": "webhook_support",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Citation audit: the cited source must itself declare support for the field it is cited for.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "nextcloud",
+      "channel": "channel_c",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [
+        {
+          "evidence_id": "nextcloud::nc-apppw",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, blocker, buildability, credential_access, identity, rate_limit_info.",
+          "supports": [
+            "access_restrictions",
+            "blocker",
+            "buildability",
+            "credential_access",
+            "identity",
+            "rate_limit_info"
+          ],
+          "supports_claim": true,
+          "url": "https://docs.nextcloud.com/server/latest/user_manual/en/session_management.html"
+        },
+        {
+          "evidence_id": "nextcloud::nc-docs",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: api_breadth, api_capabilities, api_exists, api_types, authentication, blocker, buildability, description.",
+          "supports": [
+            "api_breadth",
+            "api_capabilities",
+            "api_exists",
+            "api_types",
+            "authentication",
+            "blocker",
+            "buildability",
+            "description"
+          ],
+          "supports_claim": true,
+          "url": "https://docs.nextcloud.com/server/latest/developer_manual/client_apis/index.html"
+        },
+        {
+          "evidence_id": "nextcloud::nc-repo",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, application_type, blocker, buildability, credential_access.",
+          "supports": [
+            "access_restrictions",
+            "application_type",
+            "blocker",
+            "buildability",
+            "credential_access"
+          ],
+          "supports_claim": true,
+          "url": "https://github.com/nextcloud/server"
+        },
+        {
+          "evidence_id": "nextcloud::nc-webhooks",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: webhook_support.",
+          "supports": [
+            "webhook_support"
+          ],
+          "supports_claim": true,
+          "url": "https://github.com/nextcloud/webhook_listeners"
+        },
+        {
+          "evidence_id": "nextcloud::nextcloud-mcp",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: mcp.",
+          "supports": [
+            "mcp"
+          ],
+          "supports_claim": true,
+          "url": "https://github.com/cbcoutinho/nextcloud-mcp-server"
+        }
+      ],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "nextcloud::nc-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "nextcloud::nc-docs"
+          ],
+          "field": "api_exists",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "nextcloud::nc-docs"
+          ],
+          "field": "api_types",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "other",
+            "rest"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "nextcloud::nc-repo"
+          ],
+          "field": "application_type",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "open_source_self_hosted"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "nextcloud::nc-docs"
+          ],
+          "field": "authentication",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "basic_auth",
+            "bearer_token",
+            "oauth2"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "nextcloud::nc-apppw",
+            "nextcloud::nc-docs",
+            "nextcloud::nc-repo"
+          ],
+          "field": "blocker",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "admin_approval"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "nextcloud::nc-apppw",
+            "nextcloud::nc-docs",
+            "nextcloud::nc-repo"
+          ],
+          "field": "buildability",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable_with_friction"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "nextcloud::nc-apppw",
+            "nextcloud::nc-repo"
+          ],
+          "field": "credential_access",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_hosted_deployment_dependent"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "nextcloud::nextcloud-mcp"
+          ],
+          "field": "mcp",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "third_party"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "nextcloud::nc-apppw"
+          ],
+          "field": "rate_limit_info",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "no_published_limits"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "nextcloud::nc-webhooks"
+          ],
+          "field": "webhook_support",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Citation audit: the cited source must itself declare support for the field it is cited for.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "notion",
+      "channel": "channel_c",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [
+        {
+          "evidence_id": "notion::notion-creds",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, blocker, buildability, credential_access.",
+          "supports": [
+            "access_restrictions",
+            "blocker",
+            "buildability",
+            "credential_access"
+          ],
+          "supports_claim": true,
+          "url": "https://www.notion.so/profile/integrations"
+        },
+        {
+          "evidence_id": "notion::notion-docs",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: api_breadth, api_capabilities, api_exists, api_types, application_type, authentication, blocker, buildability, description, identity.",
+          "supports": [
+            "api_breadth",
+            "api_capabilities",
+            "api_exists",
+            "api_types",
+            "application_type",
+            "authentication",
+            "blocker",
+            "buildability",
+            "description",
+            "identity"
+          ],
+          "supports_claim": true,
+          "url": "https://developers.notion.com/reference/intro"
+        },
+        {
+          "evidence_id": "notion::notion-limits",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: rate_limit_info.",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "supports_claim": true,
+          "url": "https://developers.notion.com/reference/request-limits"
+        },
+        {
+          "evidence_id": "notion::notion-mcp",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: mcp.",
+          "supports": [
+            "mcp"
+          ],
+          "supports_claim": true,
+          "url": "https://github.com/makenotion/notion-mcp-server"
+        },
+        {
+          "evidence_id": "notion::notion-webhooks",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: webhook_support.",
+          "supports": [
+            "webhook_support"
+          ],
+          "supports_claim": true,
+          "url": "https://developers.notion.com/reference/webhooks"
+        }
+      ],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "notion::notion-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "notion::notion-docs"
+          ],
+          "field": "api_exists",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "notion::notion-docs"
+          ],
+          "field": "api_types",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest",
+            "sdk"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "notion::notion-docs"
+          ],
+          "field": "application_type",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "notion::notion-docs"
+          ],
+          "field": "authentication",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "oauth2",
+            "token"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "notion::notion-creds",
+            "notion::notion-docs"
+          ],
+          "field": "blocker",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "none"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "notion::notion-creds",
+            "notion::notion-docs"
+          ],
+          "field": "buildability",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "notion::notion-creds"
+          ],
+          "field": "credential_access",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_serve_free"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "notion::notion-mcp"
+          ],
+          "field": "mcp",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "official"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "notion::notion-limits"
+          ],
+          "field": "rate_limit_info",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "notion::notion-webhooks"
+          ],
+          "field": "webhook_support",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Citation audit: the cited source must itself declare support for the field it is cited for.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "sherlock",
+      "channel": "channel_c",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [
+        {
+          "evidence_id": "sherlock::sherlock-pypi",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, application_type, blocker, credential_access, description.",
+          "supports": [
+            "access_restrictions",
+            "application_type",
+            "blocker",
+            "credential_access",
+            "description"
+          ],
+          "supports_claim": true,
+          "url": "https://pypi.org/project/sherlock-project/"
+        },
+        {
+          "evidence_id": "sherlock::sherlock-repo",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, api_exists, application_type, blocker, credential_access, description.",
+          "supports": [
+            "access_restrictions",
+            "api_exists",
+            "application_type",
+            "blocker",
+            "credential_access",
+            "description"
+          ],
+          "supports_claim": true,
+          "url": "https://github.com/sherlock-project/sherlock"
+        },
+        {
+          "evidence_id": "sherlock::sherlock-site",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: application_type, description, identity.",
+          "supports": [
+            "application_type",
+            "description",
+            "identity"
+          ],
+          "supports_claim": true,
+          "url": "https://sherlockproject.xyz/"
+        }
+      ],
+      "field_results": [
+        {
+          "evidence_ids": [],
+          "field": "api_breadth",
+          "notes": "Nothing was cited for this field to audit.",
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [
+            "sherlock::sherlock-repo"
+          ],
+          "field": "api_exists",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "unavailable",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "api_types",
+          "notes": "Nothing was cited for this field to audit.",
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [
+            "sherlock::sherlock-pypi",
+            "sherlock::sherlock-repo",
+            "sherlock::sherlock-site"
+          ],
+          "field": "application_type",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "cli_tool"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "authentication",
+          "notes": "Nothing was cited for this field to audit.",
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [
+            "sherlock::sherlock-pypi",
+            "sherlock::sherlock-repo"
+          ],
+          "field": "blocker",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "non_saas_tool"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "buildability",
+          "notes": "Nothing was cited for this field to audit.",
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [
+            "sherlock::sherlock-pypi",
+            "sherlock::sherlock-repo"
+          ],
+          "field": "credential_access",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_hosted_deployment_dependent"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": "Nothing was cited for this field to audit.",
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "rate_limit_info",
+          "notes": "Nothing was cited for this field to audit.",
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [],
+          "field": "webhook_support",
+          "notes": "Nothing was cited for this field to audit.",
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        }
+      ],
+      "notes": "Citation audit: the cited source must itself declare support for the field it is cited for.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "stripe",
+      "channel": "channel_c",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [
+        {
+          "evidence_id": "stripe::stripe-docs",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: api_breadth, api_capabilities, api_exists, api_types, application_type, authentication, blocker, buildability, description, identity.",
+          "supports": [
+            "api_breadth",
+            "api_capabilities",
+            "api_exists",
+            "api_types",
+            "application_type",
+            "authentication",
+            "blocker",
+            "buildability",
+            "description",
+            "identity"
+          ],
+          "supports_claim": true,
+          "url": "https://docs.stripe.com/api"
+        },
+        {
+          "evidence_id": "stripe::stripe-keys",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, blocker, buildability, credential_access.",
+          "supports": [
+            "access_restrictions",
+            "blocker",
+            "buildability",
+            "credential_access"
+          ],
+          "supports_claim": true,
+          "url": "https://docs.stripe.com/keys"
+        },
+        {
+          "evidence_id": "stripe::stripe-limits",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: rate_limit_info.",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "supports_claim": true,
+          "url": "https://docs.stripe.com/rate-limits"
+        },
+        {
+          "evidence_id": "stripe::stripe-mcp",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: mcp.",
+          "supports": [
+            "mcp"
+          ],
+          "supports_claim": true,
+          "url": "https://docs.stripe.com/mcp"
+        },
+        {
+          "evidence_id": "stripe::stripe-webhooks",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: webhook_support.",
+          "supports": [
+            "webhook_support"
+          ],
+          "supports_claim": true,
+          "url": "https://docs.stripe.com/webhooks"
+        }
+      ],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "stripe::stripe-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "very_broad"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "stripe::stripe-docs"
+          ],
+          "field": "api_exists",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "stripe::stripe-docs"
+          ],
+          "field": "api_types",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "cli",
+            "rest",
+            "sdk",
+            "webhooks"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "stripe::stripe-docs"
+          ],
+          "field": "application_type",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_platform"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "stripe::stripe-docs"
+          ],
+          "field": "authentication",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_key",
+            "bearer_token",
+            "oauth2"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "stripe::stripe-docs",
+            "stripe::stripe-keys"
+          ],
+          "field": "blocker",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "none"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "stripe::stripe-docs",
+            "stripe::stripe-keys"
+          ],
+          "field": "buildability",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "stripe::stripe-keys"
+          ],
+          "field": "credential_access",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_serve_free"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "stripe::stripe-mcp"
+          ],
+          "field": "mcp",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "official"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "stripe::stripe-limits"
+          ],
+          "field": "rate_limit_info",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "stripe::stripe-webhooks"
+          ],
+          "field": "webhook_support",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Citation audit: the cited source must itself declare support for the field it is cited for.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "twenty",
+      "channel": "channel_c",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [
+        {
+          "evidence_id": "twenty::twenty-docs",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: api_breadth, api_capabilities, api_exists, api_types, authentication, blocker, buildability, description, identity.",
+          "supports": [
+            "api_breadth",
+            "api_capabilities",
+            "api_exists",
+            "api_types",
+            "authentication",
+            "blocker",
+            "buildability",
+            "description",
+            "identity"
+          ],
+          "supports_claim": true,
+          "url": "https://twenty.com/developers"
+        },
+        {
+          "evidence_id": "twenty::twenty-repo",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: application_type, blocker, buildability, credential_access.",
+          "supports": [
+            "application_type",
+            "blocker",
+            "buildability",
+            "credential_access"
+          ],
+          "supports_claim": true,
+          "url": "https://github.com/twentyhq/twenty"
+        },
+        {
+          "evidence_id": "twenty::twenty-selfhost",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, blocker, buildability, credential_access.",
+          "supports": [
+            "access_restrictions",
+            "blocker",
+            "buildability",
+            "credential_access"
+          ],
+          "supports_claim": true,
+          "url": "https://twenty.com/developers/section/self-hosting"
+        },
+        {
+          "evidence_id": "twenty::twenty-webhooks",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: rate_limit_info, webhook_support.",
+          "supports": [
+            "rate_limit_info",
+            "webhook_support"
+          ],
+          "supports_claim": true,
+          "url": "https://twenty.com/developers/section/api-and-webhooks"
+        }
+      ],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "twenty::twenty-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "twenty::twenty-docs"
+          ],
+          "field": "api_exists",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "twenty::twenty-docs"
+          ],
+          "field": "api_types",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "graphql",
+            "rest"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "twenty::twenty-repo"
+          ],
+          "field": "application_type",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "open_source_self_hosted"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "twenty::twenty-docs"
+          ],
+          "field": "authentication",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "api_key",
+            "bearer_token"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "twenty::twenty-docs",
+            "twenty::twenty-repo",
+            "twenty::twenty-selfhost"
+          ],
+          "field": "blocker",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "none"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "twenty::twenty-docs",
+            "twenty::twenty-repo",
+            "twenty::twenty-selfhost"
+          ],
+          "field": "buildability",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable_with_friction"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "twenty::twenty-repo",
+            "twenty::twenty-selfhost"
+          ],
+          "field": "credential_access",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_hosted_deployment_dependent"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": "Nothing was cited for this field to audit.",
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [
+            "twenty::twenty-webhooks"
+          ],
+          "field": "rate_limit_info",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "no_published_limits"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "twenty::twenty-webhooks"
+          ],
+          "field": "webhook_support",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Citation audit: the cited source must itself declare support for the field it is cited for.",
+      "reviewer": null,
+      "sample": "B"
+    },
+    {
+      "app_id": "zoho-desk",
+      "channel": "channel_c",
+      "checked_at": "2026-09-16T00:00:00Z",
+      "corrected_values": [],
+      "discrepancies": [],
+      "evidence_results": [
+        {
+          "evidence_id": "zoho-desk::zdesk-docs",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: api_breadth, api_capabilities, api_exists, api_types, application_type, authentication, blocker, buildability, description, identity.",
+          "supports": [
+            "api_breadth",
+            "api_capabilities",
+            "api_exists",
+            "api_types",
+            "application_type",
+            "authentication",
+            "blocker",
+            "buildability",
+            "description",
+            "identity"
+          ],
+          "supports_claim": true,
+          "url": "https://desk.zoho.com/DeskAPIDocument"
+        },
+        {
+          "evidence_id": "zoho-desk::zdesk-limits",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: rate_limit_info.",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "supports_claim": true,
+          "url": "https://desk.zoho.com/DeskAPIDocument#Introduction#APILimits"
+        },
+        {
+          "evidence_id": "zoho-desk::zdesk-pricing",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: access_restrictions, blocker, buildability, credential_access.",
+          "supports": [
+            "access_restrictions",
+            "blocker",
+            "buildability",
+            "credential_access"
+          ],
+          "supports_claim": true,
+          "url": "https://www.zoho.com/desk/pricing.html"
+        },
+        {
+          "evidence_id": "zoho-desk::zdesk-webhooks",
+          "reachable": true,
+          "reason": "The source supports every field it is cited for: webhook_support.",
+          "supports": [
+            "webhook_support"
+          ],
+          "supports_claim": true,
+          "url": "https://desk.zoho.com/DeskAPIDocument#Webhooks"
+        }
+      ],
+      "field_results": [
+        {
+          "evidence_ids": [
+            "zoho-desk::zdesk-docs"
+          ],
+          "field": "api_breadth",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "broad"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "zoho-desk::zdesk-docs"
+          ],
+          "field": "api_exists",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "true"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "zoho-desk::zdesk-docs"
+          ],
+          "field": "api_types",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "rest",
+            "sdk"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "zoho-desk::zdesk-docs"
+          ],
+          "field": "application_type",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "saas_application"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "zoho-desk::zdesk-docs"
+          ],
+          "field": "authentication",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "oauth2"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "zoho-desk::zdesk-docs",
+            "zoho-desk::zdesk-pricing"
+          ],
+          "field": "blocker",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "none"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "zoho-desk::zdesk-docs",
+            "zoho-desk::zdesk-pricing"
+          ],
+          "field": "buildability",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "buildable"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "zoho-desk::zdesk-pricing"
+          ],
+          "field": "credential_access",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "self_serve_free"
+          ]
+        },
+        {
+          "evidence_ids": [],
+          "field": "mcp",
+          "notes": "Nothing was cited for this field to audit.",
+          "outcome": "inconclusive",
+          "status": "not_found",
+          "value": null
+        },
+        {
+          "evidence_ids": [
+            "zoho-desk::zdesk-limits"
+          ],
+          "field": "rate_limit_info",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "documented_quantitative"
+          ]
+        },
+        {
+          "evidence_ids": [
+            "zoho-desk::zdesk-webhooks"
+          ],
+          "field": "webhook_support",
+          "notes": "The cited pages declare support for this field.",
+          "outcome": "agrees",
+          "status": "resolved",
+          "value": [
+            "native_webhooks"
+          ]
+        }
+      ],
+      "notes": "Citation audit: the cited source must itself declare support for the field it is cited for.",
+      "reviewer": null,
+      "sample": "B"
+    }
+  ]
+}

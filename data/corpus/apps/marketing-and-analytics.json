@@ -1,0 +1,1051 @@
+{
+  "category": "Marketing & Analytics",
+  "entries": [
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "event_subscriptions",
+          "bulk_or_batch",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Audience, campaign, automation and reporting surfaces are all documented.",
+        "resource_groups": [
+          "automations",
+          "campaigns",
+          "ecommerce stores",
+          "file manager",
+          "lists",
+          "members",
+          "reports",
+          "segments",
+          "templates",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "mailchimp",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "oauth2"
+      ],
+      "auth_notes": "API keys from account settings, or OAuth 2.0 for apps acting on behalf of other accounts.",
+      "canonical_name": "Mailchimp Marketing",
+      "description": "Email marketing platform with audiences, campaigns, automations and reporting.",
+      "docs_url": "https://mailchimp.com/developer/marketing/api/",
+      "homepage_url": "https://mailchimp.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "An API key is generated from account settings on the free plan.",
+          "id": "mc-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Mailchimp marketing API quick start",
+          "type": "first_party_docs",
+          "url": "https://mailchimp.com/developer/marketing/guides/quick-start/"
+        },
+        {
+          "claim": "Documents REST endpoints for lists, members, campaigns, automations, templates and reports.",
+          "id": "mc-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Mailchimp Marketing API reference",
+          "type": "first_party_docs",
+          "url": "https://mailchimp.com/developer/marketing/api/"
+        },
+        {
+          "claim": "Publishes a concurrent-connection ceiling per API key and documents throttling responses.",
+          "id": "mc-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Mailchimp throttling",
+          "type": "first_party_docs",
+          "url": "https://mailchimp.com/developer/marketing/docs/fundamentals/#throttling"
+        },
+        {
+          "claim": "Audience webhooks post subscribe, unsubscribe and profile events to a callback URL.",
+          "id": "mc-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Mailchimp webhooks",
+          "type": "first_party_docs",
+          "url": "https://mailchimp.com/developer/marketing/guides/sync-audience-data-webhooks/"
+        }
+      ],
+      "vendor": "Intuit Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "admin",
+          "reporting_analytics"
+        ],
+        "coverage": "subset",
+        "exists": true,
+        "notes": "The Data API reads reports and the Admin API manages configuration; raw event export is only available through BigQuery.",
+        "resource_groups": [
+          "accounts",
+          "audiences",
+          "custom dimensions",
+          "data streams",
+          "properties",
+          "realtime reports",
+          "reports"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "google-analytics-4",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "service_account"
+      ],
+      "auth_notes": "Google Cloud credentials: OAuth 2.0 for user access, service accounts for server-side reporting.",
+      "canonical_name": "Google Analytics 4",
+      "description": "Web and app analytics with event-based measurement and configurable reports.",
+      "docs_url": "https://developers.google.com/analytics/devguides/reporting/data/v1",
+      "homepage_url": "https://marketingplatform.google.com/about/analytics/",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents configuration endpoints for accounts, properties, data streams, custom dimensions and audiences.",
+          "id": "ga4-admin",
+          "supports": [
+            "api_breadth",
+            "api_capabilities"
+          ],
+          "title": "GA4 Admin API v1",
+          "type": "first_party_docs",
+          "url": "https://developers.google.com/analytics/devguides/config/admin/v1"
+        },
+        {
+          "claim": "Access uses a Google Cloud project with OAuth or a service account; the analytics product itself is free.",
+          "id": "ga4-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "GA4 Data API quickstart",
+          "type": "first_party_docs",
+          "url": "https://developers.google.com/analytics/devguides/reporting/data/v1/quickstart-client-libraries"
+        },
+        {
+          "claim": "Documents report and realtime-report endpoints over GA4 properties.",
+          "id": "ga4-data",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "GA4 Data API v1",
+          "type": "first_party_docs",
+          "url": "https://developers.google.com/analytics/devguides/reporting/data/v1"
+        },
+        {
+          "claim": "Event-level data leaves GA4 through scheduled BigQuery export; no outbound webhook subscription is offered.",
+          "id": "ga4-export",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "GA4 BigQuery export",
+          "type": "first_party_site",
+          "url": "https://support.google.com/analytics/answer/9358801"
+        },
+        {
+          "claim": "Publishes token-based hourly and daily quotas per property.",
+          "id": "ga4-quota",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "GA4 Data API quotas",
+          "type": "first_party_docs",
+          "url": "https://developers.google.com/analytics/devguides/reporting/data/v1/quotas"
+        }
+      ],
+      "vendor": "Google LLC",
+      "webhooks": "no_events"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "bulk_or_batch",
+          "reporting_analytics"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Ingestion, query and export are documented; dashboard and board management is limited.",
+        "resource_groups": [
+          "annotations",
+          "cohorts",
+          "identity",
+          "ingestion",
+          "lexicon",
+          "query",
+          "raw export",
+          "service accounts"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "mixpanel",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "service_account",
+        "basic_auth",
+        "api_key"
+      ],
+      "auth_notes": "Service accounts for query APIs, project tokens for ingestion, and API secrets over basic auth for export.",
+      "canonical_name": "Mixpanel",
+      "description": "Product analytics platform for event tracking, funnels and cohort analysis.",
+      "docs_url": "https://developer.mixpanel.com/reference/overview",
+      "homepage_url": "https://mixpanel.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://github.com/mixpanel/mixpanel-mcp",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents ingestion, query, export, identity and lexicon APIs with service-account and secret authentication.",
+          "id": "mp-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Mixpanel API reference",
+          "type": "first_party_docs",
+          "url": "https://developer.mixpanel.com/reference/overview"
+        },
+        {
+          "claim": "Event data is pulled through export endpoints; the reference documents no outbound event subscriptions.",
+          "current": true,
+          "id": "mp-export",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Mixpanel raw event export",
+          "type": "first_party_docs",
+          "url": "https://developer.mixpanel.com/reference/raw-event-export"
+        },
+        {
+          "claim": "Publishes per-endpoint request and payload ceilings.",
+          "id": "mp-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Mixpanel rate limits",
+          "type": "first_party_docs",
+          "url": "https://developer.mixpanel.com/reference/import-events#rate-limits"
+        },
+        {
+          "claim": "Mixpanel publishes an MCP server under its own GitHub organisation.",
+          "id": "mp-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "mixpanel/mixpanel-mcp",
+          "type": "repository",
+          "url": "https://github.com/mixpanel/mixpanel-mcp"
+        },
+        {
+          "claim": "Service accounts are created from project settings, including on the free plan.",
+          "id": "mp-sa",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Mixpanel service accounts",
+          "type": "first_party_docs",
+          "url": "https://developer.mixpanel.com/reference/service-accounts"
+        }
+      ],
+      "vendor": "Mixpanel, Inc.",
+      "webhooks": "no_events"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "bulk_or_batch",
+          "reporting_analytics"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Ingestion, export, cohort and taxonomy APIs are documented; chart creation is not exposed.",
+        "resource_groups": [
+          "attribution",
+          "batch event upload",
+          "behavioral cohorts",
+          "dashboard rest",
+          "export",
+          "http v2",
+          "taxonomy",
+          "user privacy"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "amplitude",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "basic_auth"
+      ],
+      "auth_notes": "Project API key for ingestion; API key and secret over basic auth for export and query APIs.",
+      "canonical_name": "Amplitude",
+      "description": "Digital analytics platform for behavioural cohorts, funnels and experimentation.",
+      "docs_url": "https://amplitude.com/docs/apis",
+      "homepage_url": "https://amplitude.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Data leaves Amplitude through scheduled exports and destination syncs rather than event webhooks.",
+          "id": "amp-cohort-sync",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Amplitude destination catalogue",
+          "type": "first_party_docs",
+          "url": "https://amplitude.com/docs/data/destination-catalog"
+        },
+        {
+          "claim": "Documents HTTP ingestion, batch upload, export, dashboard query, cohort and taxonomy APIs.",
+          "id": "amp-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Amplitude API catalogue",
+          "type": "first_party_docs",
+          "url": "https://amplitude.com/docs/apis"
+        },
+        {
+          "claim": "API key and secret are shown in project settings, available on the free Starter plan.",
+          "id": "amp-keys",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Amplitude API authentication",
+          "type": "first_party_docs",
+          "url": "https://amplitude.com/docs/apis/authentication"
+        },
+        {
+          "claim": "Publishes per-device and per-project event throughput ceilings.",
+          "id": "amp-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Amplitude HTTP v2 rate limits",
+          "type": "first_party_docs",
+          "url": "https://amplitude.com/docs/apis/analytics/http-v2#rate-limits"
+        }
+      ],
+      "vendor": "Amplitude, Inc.",
+      "webhooks": "no_events"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "event_subscriptions",
+          "bulk_or_batch",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Profiles, events, campaigns, flows and catalogues are all documented.",
+        "resource_groups": [
+          "campaigns",
+          "catalogs",
+          "coupons",
+          "events",
+          "flows",
+          "lists",
+          "metrics",
+          "profiles",
+          "segments",
+          "templates",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "klaviyo",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "oauth2"
+      ],
+      "auth_notes": "Private API keys with scoped permissions, or OAuth 2.0 for integrations acting for other accounts.",
+      "canonical_name": "Klaviyo",
+      "description": "Marketing automation platform for ecommerce email, SMS and customer profiles.",
+      "docs_url": "https://developers.klaviyo.com/en/reference/api_overview",
+      "homepage_url": "https://www.klaviyo.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for profiles, events, lists, segments, campaigns, flows and catalogues.",
+          "id": "kl-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Klaviyo API overview",
+          "type": "first_party_docs",
+          "url": "https://developers.klaviyo.com/en/reference/api_overview"
+        },
+        {
+          "claim": "Private API keys with scopes are created from account settings, including on the free plan.",
+          "id": "kl-keys",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Manage Klaviyo API keys",
+          "type": "first_party_site",
+          "url": "https://help.klaviyo.com/hc/en-us/articles/7423954176283"
+        },
+        {
+          "claim": "Publishes burst and steady request ceilings per endpoint.",
+          "id": "kl-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Klaviyo rate limits",
+          "type": "first_party_docs",
+          "url": "https://developers.klaviyo.com/en/docs/rate_limits_and_error_handling"
+        },
+        {
+          "claim": "Klaviyo documents its own MCP server.",
+          "id": "kl-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "Klaviyo MCP server",
+          "type": "first_party_docs",
+          "url": "https://developers.klaviyo.com/en/docs/klaviyo_mcp_server"
+        },
+        {
+          "claim": "Webhooks deliver profile, metric and flow events to a subscribed endpoint.",
+          "id": "kl-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Klaviyo webhooks",
+          "type": "first_party_docs",
+          "url": "https://developers.klaviyo.com/en/docs/webhooks"
+        }
+      ],
+      "vendor": "Klaviyo, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "contact_sales",
+        "api_plan": "enterprise",
+        "restrictions": [
+          "enterprise_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "messaging",
+          "bulk_or_batch",
+          "reporting_analytics",
+          "scheduling"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "User, messaging, campaign and catalogue endpoints are documented in full.",
+        "resource_groups": [
+          "campaigns",
+          "canvas",
+          "catalogs",
+          "email templates",
+          "messaging",
+          "purchases",
+          "segments",
+          "sms",
+          "subscription",
+          "users"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "braze",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "bearer_token"
+      ],
+      "auth_notes": "REST API keys scoped per endpoint group, presented as bearer tokens against a workspace-specific cluster URL.",
+      "canonical_name": "Braze",
+      "description": "Customer engagement platform for cross-channel messaging and lifecycle campaigns.",
+      "docs_url": "https://www.braze.com/docs/api/basics/",
+      "homepage_url": "https://www.braze.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Event data is exported as a continuous stream to a data warehouse or storage destination.",
+          "id": "braze-currents",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Braze Currents",
+          "type": "first_party_docs",
+          "url": "https://www.braze.com/docs/user_guide/data/braze_currents/"
+        },
+        {
+          "claim": "Documents REST endpoints for users, messaging, campaigns, canvases and catalogues with scoped REST API keys.",
+          "id": "braze-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Braze API basics",
+          "type": "first_party_docs",
+          "url": "https://www.braze.com/docs/api/basics/"
+        },
+        {
+          "claim": "Publishes per-endpoint request ceilings per workspace.",
+          "id": "braze-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Braze API rate limits",
+          "type": "first_party_docs",
+          "url": "https://www.braze.com/docs/api/api_limits/"
+        },
+        {
+          "claim": "Braze is sold through sales-led contracts; there is no self-serve signup that yields API credentials.",
+          "id": "braze-pricing",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Braze pricing",
+          "type": "first_party_pricing",
+          "url": "https://www.braze.com/pricing"
+        }
+      ],
+      "vendor": "Braze, Inc.",
+      "webhooks": "event_streaming"
+    },
+    {
+      "access": {
+        "account": "trial",
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "messaging",
+          "bulk_or_batch",
+          "reporting_analytics"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Tracking, app and transactional APIs are documented; workspace administration is not exposed.",
+        "resource_groups": [
+          "campaigns",
+          "customers",
+          "events",
+          "messages",
+          "newsletters",
+          "segments",
+          "transactional"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "customer-io",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "basic_auth",
+        "bearer_token"
+      ],
+      "auth_notes": "Track API site id and key over basic auth; App API bearer tokens for campaign and messaging endpoints.",
+      "canonical_name": "Customer.io",
+      "description": "Behavioural messaging platform with campaigns, newsletters and transactional email.",
+      "docs_url": "https://docs.customer.io/api/",
+      "homepage_url": "https://customer.io",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents track, app and transactional REST APIs for customers, events, campaigns and messages.",
+          "id": "cio-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Customer.io API documentation",
+          "type": "first_party_docs",
+          "url": "https://docs.customer.io/api/"
+        },
+        {
+          "claim": "Publishes per-second request ceilings per workspace and endpoint.",
+          "id": "cio-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Customer.io rate limits",
+          "type": "first_party_docs",
+          "url": "https://docs.customer.io/api/track/#section/Rate-limits"
+        },
+        {
+          "claim": "Access starts with a time-limited trial and continues on paid plans; there is no permanent free tier.",
+          "id": "cio-pricing",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Customer.io pricing",
+          "type": "first_party_pricing",
+          "url": "https://customer.io/pricing"
+        },
+        {
+          "claim": "Reporting webhooks post message and subscription events to an endpoint.",
+          "id": "cio-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Customer.io reporting webhooks",
+          "type": "first_party_docs",
+          "url": "https://docs.customer.io/journeys/webhooks/"
+        }
+      ],
+      "vendor": "Peaberry Software, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "event_subscriptions",
+          "bulk_or_batch",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Ingestion, query and configuration endpoints cover the whole product on cloud and self-hosted deployments.",
+        "resource_groups": [
+          "annotations",
+          "cohorts",
+          "dashboards",
+          "events",
+          "experiments",
+          "feature flags",
+          "insights",
+          "persons",
+          "session recordings",
+          "surveys"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "posthog",
+      "application_type": "open_source_self_hosted",
+      "auth_methods": [
+        "api_key",
+        "bearer_token"
+      ],
+      "auth_notes": "Project API keys for ingestion and scoped personal API keys, sent as bearer tokens, for the management API.",
+      "canonical_name": "PostHog",
+      "conflicts": [
+        "PostHog is offered both as an open-source self-hostable deployment and as a managed cloud with a free tier, so the application type reading depends on which deployment is treated as canonical."
+      ],
+      "description": "Open-source product analytics suite with session replay, flags and experiments.",
+      "docs_url": "https://posthog.com/docs/api",
+      "homepage_url": "https://posthog.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://github.com/PostHog/mcp",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for events, persons, insights, feature flags, experiments and session recordings using personal API keys.",
+          "id": "ph-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "PostHog API documentation",
+          "type": "first_party_docs",
+          "url": "https://posthog.com/docs/api"
+        },
+        {
+          "claim": "Publishes per-minute and per-hour ceilings per personal API key.",
+          "id": "ph-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "PostHog API rate limiting",
+          "type": "first_party_docs",
+          "url": "https://posthog.com/docs/api#rate-limiting"
+        },
+        {
+          "claim": "PostHog publishes an MCP server under its own organisation.",
+          "id": "ph-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "PostHog/mcp",
+          "type": "repository",
+          "url": "https://github.com/PostHog/mcp"
+        },
+        {
+          "claim": "The platform is published as open source and can be self-hosted, alongside the managed cloud.",
+          "id": "ph-repo",
+          "supports": [
+            "application_type",
+            "credential_access"
+          ],
+          "title": "PostHog/posthog",
+          "type": "repository",
+          "url": "https://github.com/PostHog/posthog"
+        },
+        {
+          "claim": "Webhook destinations post matched events to an external endpoint.",
+          "id": "ph-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "PostHog webhook destination",
+          "type": "first_party_docs",
+          "url": "https://posthog.com/docs/cdp/destinations/webhook"
+        }
+      ],
+      "vendor": "PostHog, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "trial",
+        "api_plan": "paid",
+        "approval_required": true,
+        "restrictions": [
+          "approval_required",
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "scheduling"
+        ],
+        "coverage": "slice",
+        "exists": true,
+        "notes": "The public API covers scheduling and publishing against connected social profiles and little else.",
+        "resource_groups": [
+          "media",
+          "messages",
+          "social profiles"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "hootsuite",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2"
+      ],
+      "auth_notes": "OAuth 2.0 against a developer application; production credentials require review by the developer programme.",
+      "canonical_name": "Hootsuite",
+      "description": "Social media management suite for scheduling, publishing and monitoring.",
+      "docs_url": "https://developer.hootsuite.com/docs/api-overview",
+      "homepage_url": "https://www.hootsuite.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "notes": "No outbound event mechanism was found in the developer documentation, so webhook support is left unestablished rather than assumed absent.",
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Developer applications must be registered and approved, and a paid Hootsuite plan is required for production use.",
+          "id": "hs-access",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Hootsuite getting started",
+          "type": "first_party_docs",
+          "url": "https://developer.hootsuite.com/docs/getting-started"
+        },
+        {
+          "claim": "Documents REST endpoints for scheduled messages, social profiles and media uploads using OAuth 2.0.",
+          "id": "hs-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Hootsuite API overview",
+          "type": "first_party_docs",
+          "url": "https://developer.hootsuite.com/docs/api-overview"
+        },
+        {
+          "claim": "Publishes per-minute request ceilings per application and per member.",
+          "id": "hs-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Hootsuite rate limits",
+          "type": "first_party_docs",
+          "url": "https://developer.hootsuite.com/docs/rate-limits"
+        },
+        {
+          "claim": "Hootsuite sells paid plans with a trial; the previously free tier has been withdrawn.",
+          "id": "hs-pricing",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Hootsuite plans",
+          "type": "first_party_pricing",
+          "url": "https://www.hootsuite.com/plans"
+        }
+      ],
+      "vendor": "Hootsuite Inc."
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free",
+        "approval_required": true,
+        "restrictions": [
+          "approval_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "scheduling"
+        ],
+        "coverage": "slice",
+        "exists": true,
+        "notes": "The published API covers profiles and scheduled updates only; analytics and newer surfaces are absent.",
+        "resource_groups": [
+          "links",
+          "profiles",
+          "updates",
+          "user"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "buffer",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2"
+      ],
+      "auth_notes": "OAuth 2.0 against a registered application; Buffer reviews applications before granting production access.",
+      "canonical_name": "Buffer",
+      "description": "Social publishing tool for queueing and scheduling posts across networks.",
+      "docs_url": "https://buffer.com/developers/api",
+      "homepage_url": "https://buffer.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "notes": "No outbound webhook mechanism is documented for the public API, so webhook support is left unestablished.",
+      "rate_limits": "documented_qualitative",
+      "sources": [
+        {
+          "claim": "Applications must be created and approved before receiving production access tokens.",
+          "id": "buffer-access",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Buffer developer applications",
+          "type": "first_party_site",
+          "url": "https://buffer.com/developers/apps"
+        },
+        {
+          "claim": "Documents REST endpoints for profiles, updates, links and the authenticated user using OAuth 2.0.",
+          "id": "buffer-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Buffer developers API",
+          "type": "first_party_docs",
+          "url": "https://buffer.com/developers/api"
+        },
+        {
+          "claim": "Documents a rate-limit error response without publishing the numeric ceiling.",
+          "id": "buffer-errors",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Buffer API errors",
+          "type": "first_party_docs",
+          "url": "https://buffer.com/developers/api/errors"
+        }
+      ],
+      "vendor": "Buffer, Inc."
+    }
+  ]
+}

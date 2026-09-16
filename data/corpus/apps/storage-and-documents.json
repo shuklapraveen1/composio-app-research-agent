@@ -1,0 +1,1093 @@
+{
+  "category": "Storage & Documents",
+  "entries": [
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "file_transfer",
+          "user_management",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Files, shared drives, permissions, revisions and change tracking are all documented.",
+        "resource_groups": [
+          "about",
+          "changes",
+          "comments",
+          "drives",
+          "files",
+          "permissions",
+          "replies",
+          "revisions"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "google-drive",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "service_account"
+      ],
+      "auth_notes": "Google Cloud project credentials: OAuth 2.0 for user files, service accounts with domain delegation for workspace-wide access.",
+      "canonical_name": "Google Drive",
+      "description": "Cloud file storage and sharing integrated with Google Workspace.",
+      "docs_url": "https://developers.google.com/workspace/drive/api/reference/rest/v3",
+      "homepage_url": "https://workspace.google.com/products/drive/",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Access uses OAuth 2.0 scopes or a service account from a free Google Cloud project.",
+          "id": "gd-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Drive API authorisation",
+          "type": "first_party_docs",
+          "url": "https://developers.google.com/workspace/drive/api/guides/api-specific-auth"
+        },
+        {
+          "claim": "Documents REST resources for files, drives, permissions, comments, revisions and changes.",
+          "id": "gd-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Google Drive API v3 reference",
+          "type": "first_party_docs",
+          "url": "https://developers.google.com/workspace/drive/api/reference/rest/v3"
+        },
+        {
+          "claim": "Publishes per-minute per-project and per-user query quotas.",
+          "id": "gd-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Drive API usage limits",
+          "type": "first_party_docs",
+          "url": "https://developers.google.com/workspace/drive/api/guides/limits"
+        },
+        {
+          "claim": "Watch channels deliver resource change notifications to a webhook address.",
+          "id": "gd-push",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Drive push notifications",
+          "type": "first_party_docs",
+          "url": "https://developers.google.com/workspace/drive/api/guides/push"
+        }
+      ],
+      "vendor": "Google LLC",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "file_transfer",
+          "user_management",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "File, sharing, team and user surfaces are documented; team endpoints require a business plan.",
+        "resource_groups": [
+          "auth",
+          "file requests",
+          "files",
+          "paper",
+          "sharing",
+          "team",
+          "users"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "dropbox",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "bearer_token"
+      ],
+      "auth_notes": "OAuth 2.0 against an app created in the App Console; short-lived access tokens are sent as bearer credentials.",
+      "canonical_name": "Dropbox",
+      "description": "File sync and sharing service for individuals and teams.",
+      "docs_url": "https://www.dropbox.com/developers/documentation/http/documentation",
+      "homepage_url": "https://www.dropbox.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_qualitative",
+      "sources": [
+        {
+          "claim": "Apps and access tokens are created self-serve on a free Dropbox account.",
+          "id": "dbx-apps",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Dropbox App Console",
+          "type": "first_party_site",
+          "url": "https://www.dropbox.com/developers/apps"
+        },
+        {
+          "claim": "Documents HTTP endpoints for files, sharing, file requests, users and team administration.",
+          "id": "dbx-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Dropbox HTTP API documentation",
+          "type": "first_party_docs",
+          "url": "https://www.dropbox.com/developers/documentation/http/documentation"
+        },
+        {
+          "claim": "Describes rate limiting and retry-after handling without publishing fixed numeric ceilings.",
+          "id": "dbx-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Dropbox performance guide",
+          "type": "first_party_docs",
+          "url": "https://developers.dropbox.com/dbx-performance-guide"
+        },
+        {
+          "claim": "Webhooks notify an endpoint when files in a linked account change.",
+          "id": "dbx-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Dropbox webhooks",
+          "type": "first_party_docs",
+          "url": "https://www.dropbox.com/developers/reference/webhooks"
+        }
+      ],
+      "vendor": "Dropbox, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "file_transfer",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Content, collaboration, metadata, governance and signing are all documented.",
+        "resource_groups": [
+          "collaborations",
+          "files",
+          "folders",
+          "groups",
+          "metadata",
+          "retention",
+          "search",
+          "sign requests",
+          "users",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk",
+          "cli"
+        ]
+      },
+      "app_id": "box",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "service_account",
+        "bearer_token"
+      ],
+      "auth_notes": "OAuth 2.0 for user apps and JWT or client-credentials server authentication for service accounts.",
+      "canonical_name": "Box",
+      "description": "Enterprise content management with governance, metadata and e-signature.",
+      "docs_url": "https://developer.box.com/reference/",
+      "homepage_url": "https://www.box.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": false,
+        "source_url": "https://github.com/box-community/mcp-server-box",
+        "status": "third_party"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "A free developer account creates apps using OAuth 2.0, JWT or client credentials.",
+          "id": "box-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Box authentication",
+          "type": "first_party_docs",
+          "url": "https://developer.box.com/guides/authentication/"
+        },
+        {
+          "claim": "Documents REST endpoints for files, folders, collaborations, metadata, users, sign requests and webhooks.",
+          "id": "box-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Box API reference",
+          "type": "first_party_docs",
+          "url": "https://developer.box.com/reference/"
+        },
+        {
+          "claim": "Publishes per-second API and upload request ceilings per enterprise and per user.",
+          "id": "box-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Box rate limits",
+          "type": "first_party_docs",
+          "url": "https://developer.box.com/guides/api-calls/permissions-and-errors/rate-limits/"
+        },
+        {
+          "claim": "A maintained community MCP server exposes Box content operations.",
+          "id": "box-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "box-community/mcp-server-box",
+          "type": "repository",
+          "url": "https://github.com/box-community/mcp-server-box"
+        },
+        {
+          "claim": "Webhooks v2 deliver file and folder events to a registered endpoint.",
+          "id": "box-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Box webhooks",
+          "type": "first_party_docs",
+          "url": "https://developer.box.com/guides/webhooks/"
+        }
+      ],
+      "vendor": "Box, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "admin_only": true,
+        "api_plan": "free",
+        "restrictions": [
+          "approval_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "file_transfer",
+          "user_management",
+          "event_subscriptions"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Drive and item operations are documented through Microsoft Graph; tenant administration lives elsewhere in Graph.",
+        "resource_groups": [
+          "drives",
+          "items",
+          "permissions",
+          "shares",
+          "subscriptions",
+          "users"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "onedrive",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "service_account"
+      ],
+      "auth_notes": "Entra ID app registrations with delegated or application permissions; the latter require tenant admin consent.",
+      "canonical_name": "OneDrive",
+      "description": "Personal and business cloud file storage inside Microsoft 365.",
+      "docs_url": "https://learn.microsoft.com/en-us/graph/api/resources/onedrive",
+      "homepage_url": "https://www.microsoft.com/microsoft-365/onedrive/online-cloud-storage",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "source_url": "https://github.com/softeria/ms-365-mcp-server",
+        "status": "third_party"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Application permissions require an administrator to consent on behalf of the tenant.",
+          "id": "od-auth",
+          "supports": [
+            "authentication",
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Graph app-only authentication",
+          "type": "first_party_docs",
+          "url": "https://learn.microsoft.com/en-us/graph/auth-v2-service"
+        },
+        {
+          "claim": "Documents Graph resources for drives, drive items, permissions and sharing links.",
+          "id": "od-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "OneDrive in Microsoft Graph",
+          "type": "first_party_docs",
+          "url": "https://learn.microsoft.com/en-us/graph/api/resources/onedrive"
+        },
+        {
+          "claim": "Publishes per-app and per-tenant request ceilings for OneDrive endpoints.",
+          "id": "od-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Microsoft Graph throttling limits",
+          "type": "first_party_docs",
+          "url": "https://learn.microsoft.com/en-us/graph/throttling-limits"
+        },
+        {
+          "claim": "Subscriptions deliver drive item change notifications to a webhook endpoint.",
+          "id": "od-notify",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Graph change notifications",
+          "type": "first_party_docs",
+          "url": "https://learn.microsoft.com/en-us/graph/api/resources/webhooks"
+        },
+        {
+          "claim": "A community MCP server exposes Microsoft 365 surfaces including OneDrive files.",
+          "current": true,
+          "id": "onedrive-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "softeria/ms-365-mcp-server",
+          "type": "repository",
+          "url": "https://github.com/softeria/ms-365-mcp-server"
+        }
+      ],
+      "vendor": "Microsoft Corporation",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "paid",
+        "approval_required": true,
+        "restrictions": [
+          "approval_required",
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "file_transfer",
+          "event_subscriptions",
+          "bulk_or_batch"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Envelopes, templates, recipients, accounts and Connect event delivery are documented.",
+        "resource_groups": [
+          "accounts",
+          "bulk send",
+          "connect",
+          "documents",
+          "envelopes",
+          "folders",
+          "recipients",
+          "templates",
+          "users",
+          "workflows"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "docusign",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "service_account"
+      ],
+      "auth_notes": "Authorisation code grant for user apps and JWT grant for service integrations, both through the Docusign identity service.",
+      "canonical_name": "Docusign",
+      "description": "Electronic signature and agreement management platform.",
+      "docs_url": "https://developers.docusign.com/docs/esign-rest-api/reference/",
+      "homepage_url": "https://www.docusign.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "A free developer account issues integration keys using authorisation-code or JWT grants.",
+          "id": "ds-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Docusign authentication",
+          "type": "first_party_docs",
+          "url": "https://developers.docusign.com/platform/auth/"
+        },
+        {
+          "claim": "Connect delivers envelope and recipient events to a subscribed endpoint.",
+          "id": "ds-connect",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Docusign Connect",
+          "type": "first_party_docs",
+          "url": "https://developers.docusign.com/platform/webhooks/connect/"
+        },
+        {
+          "claim": "Documents REST endpoints for envelopes, templates, recipients, documents and accounts.",
+          "id": "ds-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Docusign eSignature REST API",
+          "type": "first_party_docs",
+          "url": "https://developers.docusign.com/docs/esign-rest-api/reference/"
+        },
+        {
+          "claim": "Promoting an integration key to production requires passing Docusign's go-live review and holding an eligible plan.",
+          "id": "ds-golive",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Docusign go-live",
+          "type": "first_party_docs",
+          "url": "https://developers.docusign.com/platform/go-live/"
+        },
+        {
+          "claim": "Publishes hourly API call limits per account.",
+          "id": "ds-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Docusign API guidelines",
+          "type": "first_party_docs",
+          "url": "https://developers.docusign.com/platform/api-guidelines/"
+        }
+      ],
+      "vendor": "Docusign, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "contact_sales",
+        "admin_only": true,
+        "api_plan": "enterprise",
+        "restrictions": [
+          "enterprise_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "file_transfer",
+          "event_subscriptions",
+          "bulk_or_batch"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Agreements, templates, workflows, users and webhooks are documented.",
+        "resource_groups": [
+          "agreements",
+          "groups",
+          "library documents",
+          "megaSign",
+          "reminders",
+          "users",
+          "webhooks",
+          "workflows"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "adobe-acrobat-sign",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "bearer_token"
+      ],
+      "auth_notes": "OAuth 2.0 against an application registered in the Acrobat Sign API portal, scoped per capability.",
+      "canonical_name": "Adobe Acrobat Sign",
+      "description": "Adobe's electronic signature service for agreements and approval workflows.",
+      "docs_url": "https://developer.adobe.com/adobesign-api/",
+      "homepage_url": "https://www.adobe.com/sign.html",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "API access is tied to enterprise-level Acrobat Sign plans arranged with Adobe sales.",
+          "id": "aas-access",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Acrobat Sign API plans",
+          "type": "first_party_site",
+          "url": "https://helpx.adobe.com/sign/using/adobe-sign-api-plans.html"
+        },
+        {
+          "claim": "Documents REST endpoints for agreements, library documents, workflows, users and webhooks using OAuth 2.0.",
+          "id": "aas-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Adobe Acrobat Sign API",
+          "type": "first_party_docs",
+          "url": "https://developer.adobe.com/adobesign-api/"
+        },
+        {
+          "claim": "Publishes transaction and request ceilings per account.",
+          "id": "aas-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Acrobat Sign API usage",
+          "type": "first_party_docs",
+          "url": "https://developer.adobe.com/adobesign-api/docs/v6/api-usage/"
+        },
+        {
+          "claim": "Webhooks deliver agreement lifecycle events.",
+          "id": "aas-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Acrobat Sign webhooks",
+          "type": "first_party_docs",
+          "url": "https://developer.adobe.com/adobesign-api/docs/v6/webhooks/"
+        }
+      ],
+      "vendor": "Adobe Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "paid",
+        "restrictions": [
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "file_transfer",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "Documents, templates, recipients, folders and webhooks are documented.",
+        "resource_groups": [
+          "content library",
+          "contacts",
+          "documents",
+          "folders",
+          "forms",
+          "recipients",
+          "templates",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "pandadoc",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key",
+        "oauth2",
+        "bearer_token"
+      ],
+      "auth_notes": "API keys presented as bearer tokens, or OAuth 2.0 for apps acting on behalf of other workspaces.",
+      "canonical_name": "PandaDoc",
+      "description": "Document automation for proposals, quotes and contracts with e-signature.",
+      "docs_url": "https://developers.pandadoc.com/reference/about",
+      "homepage_url": "https://www.pandadoc.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for documents, templates, recipients, folders and webhooks.",
+          "id": "pd-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "PandaDoc API reference",
+          "type": "first_party_docs",
+          "url": "https://developers.pandadoc.com/reference/about"
+        },
+        {
+          "claim": "Publishes per-minute request ceilings per workspace.",
+          "id": "pd-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "PandaDoc rate limits",
+          "type": "first_party_docs",
+          "url": "https://developers.pandadoc.com/reference/rate-limits"
+        },
+        {
+          "claim": "API access is included from the Business plan upward; the free eSign tier does not include it.",
+          "id": "pd-plans",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "PandaDoc pricing",
+          "type": "first_party_pricing",
+          "url": "https://www.pandadoc.com/pricing/"
+        },
+        {
+          "claim": "Webhooks deliver document state changes to a subscribed endpoint.",
+          "id": "pd-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "PandaDoc webhooks",
+          "type": "first_party_docs",
+          "url": "https://developers.pandadoc.com/reference/about-webhooks"
+        }
+      ],
+      "vendor": "PandaDoc Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "contact_sales",
+        "api_plan": "paid",
+        "approval_required": true,
+        "restrictions": [
+          "approval_required",
+          "paid_plan_required"
+        ]
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "file_transfer",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "File, permission, user and audit surfaces are documented for the customer domain.",
+        "resource_groups": [
+          "audit",
+          "events",
+          "files",
+          "folders",
+          "groups",
+          "links",
+          "permissions",
+          "search",
+          "users"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "egnyte",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "bearer_token"
+      ],
+      "auth_notes": "A developer API key is issued per registered application and exchanged for an OAuth access token against a customer domain.",
+      "canonical_name": "Egnyte",
+      "description": "Content collaboration and governance platform for regulated industries.",
+      "docs_url": "https://developers.egnyte.com/docs/read/Getting_Started",
+      "homepage_url": "https://www.egnyte.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for files, folders, permissions, users, links and audit reporting.",
+          "id": "eg-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Egnyte developer getting started",
+          "type": "first_party_docs",
+          "url": "https://developers.egnyte.com/docs/read/Getting_Started"
+        },
+        {
+          "claim": "Change detection is done by polling a cursor-based events endpoint rather than by outbound webhooks.",
+          "id": "eg-events",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Egnyte events API",
+          "type": "first_party_docs",
+          "url": "https://developers.egnyte.com/docs/read/Events_API"
+        },
+        {
+          "claim": "An API key is issued after registering an application, and calls run against a paying customer domain.",
+          "id": "eg-key",
+          "supports": [
+            "credential_access",
+            "access_restrictions"
+          ],
+          "title": "Egnyte developer registration",
+          "type": "first_party_site",
+          "url": "https://developers.egnyte.com/member/register"
+        },
+        {
+          "claim": "Publishes per-second and daily request ceilings per key and per domain.",
+          "id": "eg-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Egnyte rate limiting",
+          "type": "first_party_docs",
+          "url": "https://developers.egnyte.com/docs/read/Best_Practices#Rate-Limiting"
+        }
+      ],
+      "vendor": "Egnyte, Inc.",
+      "webhooks": "polling_only"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "file_transfer"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "File, folder, sharing and link operations are documented; there is no team administration surface.",
+        "resource_groups": [
+          "archiving",
+          "file operations",
+          "folder operations",
+          "links",
+          "sharing",
+          "thumbnails",
+          "trash",
+          "user"
+        ],
+        "types": [
+          "rest",
+          "sdk"
+        ]
+      },
+      "app_id": "pcloud",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "token",
+        "basic_auth"
+      ],
+      "auth_notes": "OAuth 2.0 for registered apps, or a login-derived auth token passed as a query parameter.",
+      "canonical_name": "pCloud",
+      "description": "Consumer and business cloud storage with lifetime plans and client-side encryption.",
+      "docs_url": "https://docs.pcloud.com/",
+      "homepage_url": "https://www.pcloud.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "no_published_limits",
+      "sources": [
+        {
+          "claim": "Applications and OAuth credentials are registered self-serve from a free pCloud account.",
+          "id": "pcloud-apps",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "pCloud my apps",
+          "type": "first_party_docs",
+          "url": "https://docs.pcloud.com/my_apps/"
+        },
+        {
+          "claim": "Documents HTTP methods for file and folder operations, sharing, links and thumbnails with token or OAuth authentication.",
+          "id": "pcloud-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "pCloud API documentation",
+          "type": "first_party_docs",
+          "url": "https://docs.pcloud.com/"
+        },
+        {
+          "claim": "The method index contains no event subscription mechanism and publishes no request ceilings.",
+          "id": "pcloud-methods",
+          "supports": [
+            "webhook_support",
+            "rate_limit_info"
+          ],
+          "title": "pCloud API methods",
+          "type": "first_party_docs",
+          "url": "https://docs.pcloud.com/methods/"
+        }
+      ],
+      "vendor": "pCloud AG",
+      "webhooks": "no_events"
+    },
+    {
+      "access": {
+        "account": "free",
+        "admin_only": true,
+        "api_plan": "free",
+        "restrictions": [
+          "deployment_required"
+        ],
+        "self_hosted": true
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "file_transfer",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "OCS REST endpoints cover provisioning, sharing and notifications; file access itself is WebDAV.",
+        "resource_groups": [
+          "activity",
+          "apps",
+          "calendar",
+          "files",
+          "groups",
+          "notifications",
+          "sharing",
+          "talk",
+          "users"
+        ],
+        "types": [
+          "rest",
+          "other"
+        ]
+      },
+      "app_id": "nextcloud",
+      "application_type": "open_source_self_hosted",
+      "auth_methods": [
+        "basic_auth",
+        "oauth2",
+        "bearer_token"
+      ],
+      "auth_notes": "App passwords over basic auth for client APIs; OAuth 2.0 is available for registered apps on the instance.",
+      "canonical_name": "Nextcloud",
+      "description": "Open-source content collaboration platform hosted on the operator's own servers.",
+      "docs_url": "https://docs.nextcloud.com/server/latest/developer_manual/client_apis/index.html",
+      "homepage_url": "https://nextcloud.com",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "source_url": "https://github.com/cbcoutinho/nextcloud-mcp-server",
+        "status": "third_party"
+      },
+      "rate_limits": "no_published_limits",
+      "sources": [
+        {
+          "claim": "Credentials are app passwords created on an instance the operator runs; no vendor request ceilings are published.",
+          "id": "nc-apppw",
+          "supports": [
+            "credential_access",
+            "rate_limit_info"
+          ],
+          "title": "Nextcloud app passwords",
+          "type": "first_party_docs",
+          "url": "https://docs.nextcloud.com/server/latest/user_manual/en/session_management.html"
+        },
+        {
+          "claim": "Documents OCS REST APIs for provisioning, sharing and notifications alongside WebDAV file access.",
+          "id": "nc-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Nextcloud client APIs",
+          "type": "first_party_docs",
+          "url": "https://docs.nextcloud.com/server/latest/developer_manual/client_apis/index.html"
+        },
+        {
+          "claim": "The server is published as open source and is installed on infrastructure the operator controls.",
+          "id": "nc-repo",
+          "supports": [
+            "application_type",
+            "credential_access"
+          ],
+          "title": "nextcloud/server",
+          "type": "repository",
+          "url": "https://github.com/nextcloud/server"
+        },
+        {
+          "claim": "A first-party app registers webhook listeners that post server events to an external endpoint.",
+          "id": "nc-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "nextcloud/webhook_listeners",
+          "type": "repository",
+          "url": "https://github.com/nextcloud/webhook_listeners"
+        },
+        {
+          "claim": "A community MCP server exposes Nextcloud files and notes.",
+          "current": true,
+          "id": "nextcloud-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "cbcoutinho/nextcloud-mcp-server",
+          "type": "repository",
+          "url": "https://github.com/cbcoutinho/nextcloud-mcp-server"
+        }
+      ],
+      "vendor": "Nextcloud GmbH",
+      "webhooks": "native_webhooks"
+    }
+  ]
+}

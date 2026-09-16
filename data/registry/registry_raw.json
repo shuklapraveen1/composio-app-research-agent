@@ -1,0 +1,1015 @@
+{
+  "metadata": {
+    "generated_at": "2026-09-16T00:00:00Z",
+    "notes": "Loaded verbatim from apps.json",
+    "record_count": 100,
+    "schema_version": "2.0.0",
+    "seed": 20260916,
+    "source_fingerprint": "26a34ae7425259d5",
+    "stage": "registry"
+  },
+  "records": [
+    {
+      "category": "Productivity & Collaboration",
+      "fields": {
+        "category": "Productivity & Collaboration",
+        "name": "Notion",
+        "url": "https://www.notion.so"
+      },
+      "name": "Notion",
+      "source_index": 0
+    },
+    {
+      "category": "Productivity & Collaboration",
+      "fields": {
+        "category": "Productivity & Collaboration",
+        "name": "Asana",
+        "url": "https://asana.com"
+      },
+      "name": "Asana",
+      "source_index": 1
+    },
+    {
+      "category": "Productivity & Collaboration",
+      "fields": {
+        "category": "Productivity & Collaboration",
+        "name": "Trello",
+        "url": "https://trello.com"
+      },
+      "name": "Trello",
+      "source_index": 2
+    },
+    {
+      "category": "Productivity & Collaboration",
+      "fields": {
+        "category": "Productivity & Collaboration",
+        "name": "ClickUp",
+        "url": "https://clickup.com"
+      },
+      "name": "ClickUp",
+      "source_index": 3
+    },
+    {
+      "category": "Productivity & Collaboration",
+      "fields": {
+        "category": "Productivity & Collaboration",
+        "name": "Monday.com",
+        "url": "https://monday.com"
+      },
+      "name": "Monday.com",
+      "source_index": 4
+    },
+    {
+      "category": "Productivity & Collaboration",
+      "fields": {
+        "category": "Productivity & Collaboration",
+        "name": "Airtable",
+        "url": "https://airtable.com"
+      },
+      "name": "Airtable",
+      "source_index": 5
+    },
+    {
+      "category": "Productivity & Collaboration",
+      "fields": {
+        "category": "Productivity & Collaboration",
+        "name": "Coda",
+        "url": "https://coda.io"
+      },
+      "name": "Coda",
+      "source_index": 6
+    },
+    {
+      "category": "Productivity & Collaboration",
+      "fields": {
+        "category": "Productivity & Collaboration",
+        "name": "Todoist",
+        "url": "https://todoist.com"
+      },
+      "name": "Todoist",
+      "source_index": 7
+    },
+    {
+      "category": "Productivity & Collaboration",
+      "fields": {
+        "category": "Productivity & Collaboration",
+        "name": "Miro",
+        "url": "https://miro.com"
+      },
+      "name": "Miro",
+      "source_index": 8
+    },
+    {
+      "category": "Productivity & Collaboration",
+      "fields": {
+        "category": "Productivity & Collaboration",
+        "name": "Confluence",
+        "url": "https://www.atlassian.com/software/confluence"
+      },
+      "name": "Confluence",
+      "source_index": 9
+    },
+    {
+      "category": "CRM & Sales",
+      "fields": {
+        "category": "CRM & Sales",
+        "name": "Salesforce",
+        "url": "https://www.salesforce.com"
+      },
+      "name": "Salesforce",
+      "source_index": 10
+    },
+    {
+      "category": "CRM & Sales",
+      "fields": {
+        "category": "CRM & Sales",
+        "name": "HubSpot",
+        "url": "https://www.hubspot.com"
+      },
+      "name": "HubSpot",
+      "source_index": 11
+    },
+    {
+      "category": "CRM & Sales",
+      "fields": {
+        "category": "CRM & Sales",
+        "name": "Pipedrive",
+        "url": "https://www.pipedrive.com"
+      },
+      "name": "Pipedrive",
+      "source_index": 12
+    },
+    {
+      "category": "CRM & Sales",
+      "fields": {
+        "category": "CRM & Sales",
+        "name": "Zoho CRM",
+        "url": "https://www.zoho.com/crm/"
+      },
+      "name": "Zoho CRM",
+      "source_index": 13
+    },
+    {
+      "category": "CRM & Sales",
+      "fields": {
+        "category": "CRM & Sales",
+        "name": "Close",
+        "url": "https://close.com"
+      },
+      "name": "Close",
+      "source_index": 14
+    },
+    {
+      "category": "CRM & Sales",
+      "fields": {
+        "category": "CRM & Sales",
+        "name": "Copper",
+        "url": "https://www.copper.com"
+      },
+      "name": "Copper",
+      "source_index": 15
+    },
+    {
+      "category": "CRM & Sales",
+      "fields": {
+        "category": "CRM & Sales",
+        "name": "Freshsales",
+        "url": "https://www.freshworks.com/crm/sales/"
+      },
+      "name": "Freshsales",
+      "source_index": 16
+    },
+    {
+      "category": "CRM & Sales",
+      "fields": {
+        "category": "CRM & Sales",
+        "name": "Twenty",
+        "url": "https://twenty.com"
+      },
+      "name": "Twenty",
+      "source_index": 17
+    },
+    {
+      "category": "CRM & Sales",
+      "fields": {
+        "category": "CRM & Sales",
+        "name": "Attio",
+        "url": "https://attio.com"
+      },
+      "name": "Attio",
+      "source_index": 18
+    },
+    {
+      "category": "CRM & Sales",
+      "fields": {
+        "category": "CRM & Sales",
+        "name": "Apollo.io",
+        "url": "https://www.apollo.io"
+      },
+      "name": "Apollo.io",
+      "source_index": 19
+    },
+    {
+      "category": "Developer Tools",
+      "fields": {
+        "category": "Developer Tools",
+        "name": "GitHub",
+        "url": "https://github.com"
+      },
+      "name": "GitHub",
+      "source_index": 20
+    },
+    {
+      "category": "Developer Tools",
+      "fields": {
+        "category": "Developer Tools",
+        "name": "GitLab",
+        "url": "https://gitlab.com"
+      },
+      "name": "GitLab",
+      "source_index": 21
+    },
+    {
+      "category": "Developer Tools",
+      "fields": {
+        "category": "Developer Tools",
+        "name": "Bitbucket",
+        "url": "https://bitbucket.org"
+      },
+      "name": "Bitbucket",
+      "source_index": 22
+    },
+    {
+      "category": "Developer Tools",
+      "fields": {
+        "category": "Developer Tools",
+        "name": "Jira",
+        "url": "https://www.atlassian.com/software/jira"
+      },
+      "name": "Jira",
+      "source_index": 23
+    },
+    {
+      "category": "Developer Tools",
+      "fields": {
+        "category": "Developer Tools",
+        "name": "Linear",
+        "url": "https://linear.app"
+      },
+      "name": "Linear",
+      "source_index": 24
+    },
+    {
+      "category": "Developer Tools",
+      "fields": {
+        "category": "Developer Tools",
+        "name": "Sentry",
+        "url": "https://sentry.io"
+      },
+      "name": "Sentry",
+      "source_index": 25
+    },
+    {
+      "category": "Developer Tools",
+      "fields": {
+        "category": "Developer Tools",
+        "name": "CircleCI",
+        "url": "https://circleci.com"
+      },
+      "name": "CircleCI",
+      "source_index": 26
+    },
+    {
+      "category": "Developer Tools",
+      "fields": {
+        "category": "Developer Tools",
+        "name": "Vercel",
+        "url": "https://vercel.com"
+      },
+      "name": "Vercel",
+      "source_index": 27
+    },
+    {
+      "category": "Developer Tools",
+      "fields": {
+        "category": "Developer Tools",
+        "name": "Sherlock",
+        "url": "https://github.com/sherlock-project/sherlock"
+      },
+      "name": "Sherlock",
+      "source_index": 28
+    },
+    {
+      "category": "Developer Tools",
+      "fields": {
+        "category": "Developer Tools",
+        "name": "Mermaid CLI",
+        "url": "https://github.com/mermaid-js/mermaid-cli"
+      },
+      "name": "Mermaid CLI",
+      "source_index": 29
+    },
+    {
+      "category": "Communication & Messaging",
+      "fields": {
+        "category": "Communication & Messaging",
+        "name": "Slack",
+        "url": "https://slack.com"
+      },
+      "name": "Slack",
+      "source_index": 30
+    },
+    {
+      "category": "Communication & Messaging",
+      "fields": {
+        "category": "Communication & Messaging",
+        "name": "Microsoft Teams",
+        "url": "https://www.microsoft.com/microsoft-teams/group-chat-software"
+      },
+      "name": "Microsoft Teams",
+      "source_index": 31
+    },
+    {
+      "category": "Communication & Messaging",
+      "fields": {
+        "category": "Communication & Messaging",
+        "name": "Discord",
+        "url": "https://discord.com"
+      },
+      "name": "Discord",
+      "source_index": 32
+    },
+    {
+      "category": "Communication & Messaging",
+      "fields": {
+        "category": "Communication & Messaging",
+        "name": "Telegram",
+        "url": "https://telegram.org"
+      },
+      "name": "Telegram",
+      "source_index": 33
+    },
+    {
+      "category": "Communication & Messaging",
+      "fields": {
+        "category": "Communication & Messaging",
+        "name": "Twilio",
+        "url": "https://www.twilio.com"
+      },
+      "name": "Twilio",
+      "source_index": 34
+    },
+    {
+      "category": "Communication & Messaging",
+      "fields": {
+        "category": "Communication & Messaging",
+        "name": "Zoom",
+        "url": "https://zoom.us"
+      },
+      "name": "Zoom",
+      "source_index": 35
+    },
+    {
+      "category": "Communication & Messaging",
+      "fields": {
+        "category": "Communication & Messaging",
+        "name": "Google Chat",
+        "url": "https://workspace.google.com/products/chat/"
+      },
+      "name": "Google Chat",
+      "source_index": 36
+    },
+    {
+      "category": "Communication & Messaging",
+      "fields": {
+        "category": "Communication & Messaging",
+        "name": "Mattermost",
+        "url": "https://mattermost.com"
+      },
+      "name": "Mattermost",
+      "source_index": 37
+    },
+    {
+      "category": "Communication & Messaging",
+      "fields": {
+        "category": "Communication & Messaging",
+        "name": "Rocket.Chat",
+        "url": "https://www.rocket.chat"
+      },
+      "name": "Rocket.Chat",
+      "source_index": 38
+    },
+    {
+      "category": "Communication & Messaging",
+      "fields": {
+        "category": "Communication & Messaging",
+        "name": "WhatsApp Business Platform",
+        "url": "https://business.whatsapp.com"
+      },
+      "name": "WhatsApp Business Platform",
+      "source_index": 39
+    },
+    {
+      "category": "Marketing & Analytics",
+      "fields": {
+        "category": "Marketing & Analytics",
+        "name": "Mailchimp",
+        "url": "https://mailchimp.com"
+      },
+      "name": "Mailchimp",
+      "source_index": 40
+    },
+    {
+      "category": "Marketing & Analytics",
+      "fields": {
+        "category": "Marketing & Analytics",
+        "name": "Google Analytics 4",
+        "url": "https://marketingplatform.google.com/about/analytics/"
+      },
+      "name": "Google Analytics 4",
+      "source_index": 41
+    },
+    {
+      "category": "Marketing & Analytics",
+      "fields": {
+        "category": "Marketing & Analytics",
+        "name": "Mixpanel",
+        "url": "https://mixpanel.com"
+      },
+      "name": "Mixpanel",
+      "source_index": 42
+    },
+    {
+      "category": "Marketing & Analytics",
+      "fields": {
+        "category": "Marketing & Analytics",
+        "name": "Amplitude",
+        "url": "https://amplitude.com"
+      },
+      "name": "Amplitude",
+      "source_index": 43
+    },
+    {
+      "category": "Marketing & Analytics",
+      "fields": {
+        "category": "Marketing & Analytics",
+        "name": "Klaviyo",
+        "url": "https://www.klaviyo.com"
+      },
+      "name": "Klaviyo",
+      "source_index": 44
+    },
+    {
+      "category": "Marketing & Analytics",
+      "fields": {
+        "category": "Marketing & Analytics",
+        "name": "Braze",
+        "url": "https://www.braze.com"
+      },
+      "name": "Braze",
+      "source_index": 45
+    },
+    {
+      "category": "Marketing & Analytics",
+      "fields": {
+        "category": "Marketing & Analytics",
+        "name": "Customer.io",
+        "url": "https://customer.io"
+      },
+      "name": "Customer.io",
+      "source_index": 46
+    },
+    {
+      "category": "Marketing & Analytics",
+      "fields": {
+        "category": "Marketing & Analytics",
+        "name": "PostHog",
+        "url": "https://posthog.com"
+      },
+      "name": "PostHog",
+      "source_index": 47
+    },
+    {
+      "category": "Marketing & Analytics",
+      "fields": {
+        "category": "Marketing & Analytics",
+        "name": "Hootsuite",
+        "url": "https://www.hootsuite.com"
+      },
+      "name": "Hootsuite",
+      "source_index": 48
+    },
+    {
+      "category": "Marketing & Analytics",
+      "fields": {
+        "category": "Marketing & Analytics",
+        "name": "Buffer",
+        "url": "https://buffer.com"
+      },
+      "name": "Buffer",
+      "source_index": 49
+    },
+    {
+      "category": "Finance & Payments",
+      "fields": {
+        "category": "Finance & Payments",
+        "name": "Stripe",
+        "url": "https://stripe.com"
+      },
+      "name": "Stripe",
+      "source_index": 50
+    },
+    {
+      "category": "Finance & Payments",
+      "fields": {
+        "category": "Finance & Payments",
+        "name": "PayPal",
+        "url": "https://www.paypal.com"
+      },
+      "name": "PayPal",
+      "source_index": 51
+    },
+    {
+      "category": "Finance & Payments",
+      "fields": {
+        "category": "Finance & Payments",
+        "name": "Square",
+        "url": "https://squareup.com"
+      },
+      "name": "Square",
+      "source_index": 52
+    },
+    {
+      "category": "Finance & Payments",
+      "fields": {
+        "category": "Finance & Payments",
+        "name": "Xero",
+        "url": "https://www.xero.com"
+      },
+      "name": "Xero",
+      "source_index": 53
+    },
+    {
+      "category": "Finance & Payments",
+      "fields": {
+        "category": "Finance & Payments",
+        "name": "QuickBooks Online",
+        "url": "https://quickbooks.intuit.com"
+      },
+      "name": "QuickBooks Online",
+      "source_index": 54
+    },
+    {
+      "category": "Finance & Payments",
+      "fields": {
+        "category": "Finance & Payments",
+        "name": "Razorpay",
+        "url": "https://razorpay.com"
+      },
+      "name": "Razorpay",
+      "source_index": 55
+    },
+    {
+      "category": "Finance & Payments",
+      "fields": {
+        "category": "Finance & Payments",
+        "name": "Plaid",
+        "url": "https://plaid.com"
+      },
+      "name": "Plaid",
+      "source_index": 56
+    },
+    {
+      "category": "Finance & Payments",
+      "fields": {
+        "category": "Finance & Payments",
+        "name": "Brex",
+        "url": "https://www.brex.com"
+      },
+      "name": "Brex",
+      "source_index": 57
+    },
+    {
+      "category": "Finance & Payments",
+      "fields": {
+        "category": "Finance & Payments",
+        "name": "Ramp",
+        "url": "https://ramp.com"
+      },
+      "name": "Ramp",
+      "source_index": 58
+    },
+    {
+      "category": "Finance & Payments",
+      "fields": {
+        "category": "Finance & Payments",
+        "name": "Wise",
+        "url": "https://wise.com"
+      },
+      "name": "Wise",
+      "source_index": 59
+    },
+    {
+      "category": "HR & Recruiting",
+      "fields": {
+        "category": "HR & Recruiting",
+        "name": "Workday",
+        "url": "https://www.workday.com"
+      },
+      "name": "Workday",
+      "source_index": 60
+    },
+    {
+      "category": "HR & Recruiting",
+      "fields": {
+        "category": "HR & Recruiting",
+        "name": "BambooHR",
+        "url": "https://www.bamboohr.com"
+      },
+      "name": "BambooHR",
+      "source_index": 61
+    },
+    {
+      "category": "HR & Recruiting",
+      "fields": {
+        "category": "HR & Recruiting",
+        "name": "Greenhouse",
+        "url": "https://www.greenhouse.io"
+      },
+      "name": "Greenhouse",
+      "source_index": 62
+    },
+    {
+      "category": "HR & Recruiting",
+      "fields": {
+        "category": "HR & Recruiting",
+        "name": "Lever",
+        "url": "https://www.lever.co"
+      },
+      "name": "Lever",
+      "source_index": 63
+    },
+    {
+      "category": "HR & Recruiting",
+      "fields": {
+        "category": "HR & Recruiting",
+        "name": "Gusto",
+        "url": "https://gusto.com"
+      },
+      "name": "Gusto",
+      "source_index": 64
+    },
+    {
+      "category": "HR & Recruiting",
+      "fields": {
+        "category": "HR & Recruiting",
+        "name": "Rippling",
+        "url": "https://www.rippling.com"
+      },
+      "name": "Rippling",
+      "source_index": 65
+    },
+    {
+      "category": "HR & Recruiting",
+      "fields": {
+        "category": "HR & Recruiting",
+        "name": "Deel",
+        "url": "https://www.deel.com"
+      },
+      "name": "Deel",
+      "source_index": 66
+    },
+    {
+      "category": "HR & Recruiting",
+      "fields": {
+        "category": "HR & Recruiting",
+        "name": "Personio",
+        "url": "https://www.personio.com"
+      },
+      "name": "Personio",
+      "source_index": 67
+    },
+    {
+      "category": "HR & Recruiting",
+      "fields": {
+        "category": "HR & Recruiting",
+        "name": "Ashby",
+        "url": "https://www.ashbyhq.com"
+      },
+      "name": "Ashby",
+      "source_index": 68
+    },
+    {
+      "category": "HR & Recruiting",
+      "fields": {
+        "category": "HR & Recruiting",
+        "name": "SmartRecruiters",
+        "url": "https://www.smartrecruiters.com"
+      },
+      "name": "SmartRecruiters",
+      "source_index": 69
+    },
+    {
+      "category": "Support & Ticketing",
+      "fields": {
+        "category": "Support & Ticketing",
+        "name": "Zendesk",
+        "url": "https://www.zendesk.com"
+      },
+      "name": "Zendesk",
+      "source_index": 70
+    },
+    {
+      "category": "Support & Ticketing",
+      "fields": {
+        "category": "Support & Ticketing",
+        "name": "Freshdesk",
+        "url": "https://www.freshworks.com/freshdesk/"
+      },
+      "name": "Freshdesk",
+      "source_index": 71
+    },
+    {
+      "category": "Support & Ticketing",
+      "fields": {
+        "category": "Support & Ticketing",
+        "name": "Intercom",
+        "url": "https://www.intercom.com"
+      },
+      "name": "Intercom",
+      "source_index": 72
+    },
+    {
+      "category": "Support & Ticketing",
+      "fields": {
+        "category": "Support & Ticketing",
+        "name": "Help Scout",
+        "url": "https://www.helpscout.com"
+      },
+      "name": "Help Scout",
+      "source_index": 73
+    },
+    {
+      "category": "Support & Ticketing",
+      "fields": {
+        "category": "Support & Ticketing",
+        "name": "Front",
+        "url": "https://front.com"
+      },
+      "name": "Front",
+      "source_index": 74
+    },
+    {
+      "category": "Support & Ticketing",
+      "fields": {
+        "category": "Support & Ticketing",
+        "name": "Crisp",
+        "url": "https://crisp.chat"
+      },
+      "name": "Crisp",
+      "source_index": 75
+    },
+    {
+      "category": "Support & Ticketing",
+      "fields": {
+        "category": "Support & Ticketing",
+        "name": "Zoho Desk",
+        "url": "https://www.zoho.com/desk/"
+      },
+      "name": "Zoho Desk",
+      "source_index": 76
+    },
+    {
+      "category": "Support & Ticketing",
+      "fields": {
+        "category": "Support & Ticketing",
+        "name": "Gorgias",
+        "url": "https://www.gorgias.com"
+      },
+      "name": "Gorgias",
+      "source_index": 77
+    },
+    {
+      "category": "Support & Ticketing",
+      "fields": {
+        "category": "Support & Ticketing",
+        "name": "Kustomer",
+        "url": "https://www.kustomer.com"
+      },
+      "name": "Kustomer",
+      "source_index": 78
+    },
+    {
+      "category": "Support & Ticketing",
+      "fields": {
+        "category": "Support & Ticketing",
+        "name": "Jira Service Management",
+        "url": "https://www.atlassian.com/software/jira/service-management"
+      },
+      "name": "Jira Service Management",
+      "source_index": 79
+    },
+    {
+      "category": "Storage & Documents",
+      "fields": {
+        "category": "Storage & Documents",
+        "name": "Google Drive",
+        "url": "https://workspace.google.com/products/drive/"
+      },
+      "name": "Google Drive",
+      "source_index": 80
+    },
+    {
+      "category": "Storage & Documents",
+      "fields": {
+        "category": "Storage & Documents",
+        "name": "Dropbox",
+        "url": "https://www.dropbox.com"
+      },
+      "name": "Dropbox",
+      "source_index": 81
+    },
+    {
+      "category": "Storage & Documents",
+      "fields": {
+        "category": "Storage & Documents",
+        "name": "Box",
+        "url": "https://www.box.com"
+      },
+      "name": "Box",
+      "source_index": 82
+    },
+    {
+      "category": "Storage & Documents",
+      "fields": {
+        "category": "Storage & Documents",
+        "name": "OneDrive",
+        "url": "https://www.microsoft.com/microsoft-365/onedrive/online-cloud-storage"
+      },
+      "name": "OneDrive",
+      "source_index": 83
+    },
+    {
+      "category": "Storage & Documents",
+      "fields": {
+        "category": "Storage & Documents",
+        "name": "DocuSign",
+        "url": "https://www.docusign.com"
+      },
+      "name": "DocuSign",
+      "source_index": 84
+    },
+    {
+      "category": "Storage & Documents",
+      "fields": {
+        "category": "Storage & Documents",
+        "name": "Adobe Acrobat Sign",
+        "url": "https://www.adobe.com/sign.html"
+      },
+      "name": "Adobe Acrobat Sign",
+      "source_index": 85
+    },
+    {
+      "category": "Storage & Documents",
+      "fields": {
+        "category": "Storage & Documents",
+        "name": "PandaDoc",
+        "url": "https://www.pandadoc.com"
+      },
+      "name": "PandaDoc",
+      "source_index": 86
+    },
+    {
+      "category": "Storage & Documents",
+      "fields": {
+        "category": "Storage & Documents",
+        "name": "Egnyte",
+        "url": "https://www.egnyte.com"
+      },
+      "name": "Egnyte",
+      "source_index": 87
+    },
+    {
+      "category": "Storage & Documents",
+      "fields": {
+        "category": "Storage & Documents",
+        "name": "pCloud",
+        "url": "https://www.pcloud.com"
+      },
+      "name": "pCloud",
+      "source_index": 88
+    },
+    {
+      "category": "Storage & Documents",
+      "fields": {
+        "category": "Storage & Documents",
+        "name": "Nextcloud",
+        "url": "https://nextcloud.com"
+      },
+      "name": "Nextcloud",
+      "source_index": 89
+    },
+    {
+      "category": "AI & Data",
+      "fields": {
+        "category": "AI & Data",
+        "name": "OpenAI",
+        "url": "https://openai.com"
+      },
+      "name": "OpenAI",
+      "source_index": 90
+    },
+    {
+      "category": "AI & Data",
+      "fields": {
+        "category": "AI & Data",
+        "name": "Anthropic",
+        "url": "https://www.anthropic.com"
+      },
+      "name": "Anthropic",
+      "source_index": 91
+    },
+    {
+      "category": "AI & Data",
+      "fields": {
+        "category": "AI & Data",
+        "name": "Hugging Face",
+        "url": "https://huggingface.co"
+      },
+      "name": "Hugging Face",
+      "source_index": 92
+    },
+    {
+      "category": "AI & Data",
+      "fields": {
+        "category": "AI & Data",
+        "name": "Pinecone",
+        "url": "https://www.pinecone.io"
+      },
+      "name": "Pinecone",
+      "source_index": 93
+    },
+    {
+      "category": "AI & Data",
+      "fields": {
+        "category": "AI & Data",
+        "name": "Weaviate",
+        "url": "https://weaviate.io"
+      },
+      "name": "Weaviate",
+      "source_index": 94
+    },
+    {
+      "category": "AI & Data",
+      "fields": {
+        "category": "AI & Data",
+        "name": "Snowflake",
+        "url": "https://www.snowflake.com"
+      },
+      "name": "Snowflake",
+      "source_index": 95
+    },
+    {
+      "category": "AI & Data",
+      "fields": {
+        "category": "AI & Data",
+        "name": "Databricks",
+        "url": "https://www.databricks.com"
+      },
+      "name": "Databricks",
+      "source_index": 96
+    },
+    {
+      "category": "AI & Data",
+      "fields": {
+        "category": "AI & Data",
+        "name": "Supabase",
+        "url": "https://supabase.com"
+      },
+      "name": "Supabase",
+      "source_index": 97
+    },
+    {
+      "category": "AI & Data",
+      "fields": {
+        "category": "AI & Data",
+        "name": "Perplexity",
+        "url": "https://www.perplexity.ai"
+      },
+      "name": "Perplexity",
+      "source_index": 98
+    },
+    {
+      "category": "AI & Data",
+      "fields": {
+        "category": "AI & Data",
+        "name": "YouTube Transcript API",
+        "url": "https://transcriptapi.com"
+      },
+      "name": "YouTube Transcript API",
+      "source_index": 99
+    }
+  ],
+  "retrieved_at": "2026-09-16T00:00:00Z",
+  "source_name": "apps.json"
+}

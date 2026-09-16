@@ -1,0 +1,1080 @@
+{
+  "category": "Developer Tools",
+  "entries": [
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "event_subscriptions",
+          "file_transfer",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "REST and GraphQL both cover essentially the entire product, including administration.",
+        "resource_groups": [
+          "actions",
+          "apps",
+          "checks",
+          "gists",
+          "issues",
+          "orgs",
+          "packages",
+          "projects",
+          "pulls",
+          "releases",
+          "repos",
+          "search",
+          "teams",
+          "users",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "graphql",
+          "sdk",
+          "cli",
+          "webhooks"
+        ]
+      },
+      "app_id": "github",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "pat",
+        "bearer_token"
+      ],
+      "auth_notes": "Fine-grained personal access tokens, GitHub App installation tokens, and OAuth 2.0 for user-facing apps.",
+      "canonical_name": "GitHub",
+      "description": "Code hosting and collaboration platform with issues, pull requests and CI.",
+      "docs_url": "https://docs.github.com/en/rest",
+      "homepage_url": "https://github.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://github.com/github/github-mcp-server",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Any free account can mint a fine-grained personal access token from developer settings without approval.",
+          "id": "gh-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Managing personal access tokens",
+          "type": "first_party_docs",
+          "url": "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens"
+        },
+        {
+          "claim": "Documents REST endpoints across repositories, issues, pull requests, actions, orgs, teams and packages, with a parallel GraphQL API.",
+          "id": "gh-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "GitHub REST API documentation",
+          "type": "first_party_docs",
+          "url": "https://docs.github.com/en/rest"
+        },
+        {
+          "claim": "Publishes 5,000 requests per hour for authenticated users with higher ceilings for apps.",
+          "id": "gh-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "GitHub REST rate limits",
+          "type": "first_party_docs",
+          "url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api"
+        },
+        {
+          "claim": "GitHub publishes and maintains its own MCP server.",
+          "id": "gh-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "github/github-mcp-server",
+          "type": "repository",
+          "url": "https://github.com/github/github-mcp-server"
+        },
+        {
+          "claim": "Repository, organisation and app webhooks deliver a documented event catalogue.",
+          "id": "gh-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "About GitHub webhooks",
+          "type": "first_party_docs",
+          "url": "https://docs.github.com/en/webhooks/about-webhooks"
+        }
+      ],
+      "vendor": "GitHub, Inc. (Microsoft)",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "event_subscriptions",
+          "file_transfer",
+          "reporting_analytics"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "REST and GraphQL both cover the full DevOps surface, including administration on self-managed instances.",
+        "resource_groups": [
+          "branches",
+          "commits",
+          "container registry",
+          "environments",
+          "epics",
+          "groups",
+          "issues",
+          "jobs",
+          "merge requests",
+          "packages",
+          "pipelines",
+          "projects",
+          "releases",
+          "runners",
+          "users",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "graphql",
+          "sdk",
+          "cli"
+        ]
+      },
+      "app_id": "gitlab",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "pat",
+        "bearer_token"
+      ],
+      "auth_notes": "Personal, project and group access tokens, plus OAuth 2.0; the same schemes work on self-managed instances.",
+      "canonical_name": "GitLab",
+      "conflicts": [
+        "GitLab is both a hosted SaaS product and self-managed open-core software, so the application type could reasonably be read as either saas_application or open_source_self_hosted."
+      ],
+      "description": "DevOps platform combining source control, CI/CD, packages and security scanning.",
+      "docs_url": "https://docs.gitlab.com/api/rest/",
+      "homepage_url": "https://gitlab.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": false,
+        "source_url": "https://github.com/zereight/gitlab-mcp",
+        "status": "third_party"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "A community MCP server exposes GitLab projects, issues and merge requests.",
+          "current": true,
+          "id": "gitlab-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "zereight/gitlab-mcp",
+          "type": "repository",
+          "url": "https://github.com/zereight/gitlab-mcp"
+        },
+        {
+          "claim": "A personal access token is created from user settings on the free tier of GitLab.com.",
+          "id": "gl-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "GitLab personal access tokens",
+          "type": "first_party_docs",
+          "url": "https://docs.gitlab.com/user/profile/personal_access_tokens/"
+        },
+        {
+          "claim": "Documents REST endpoints for projects, groups, issues, merge requests, pipelines, runners, packages and users.",
+          "id": "gl-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "GitLab REST API",
+          "type": "first_party_docs",
+          "url": "https://docs.gitlab.com/api/rest/"
+        },
+        {
+          "claim": "Publishes per-minute request ceilings per user and per IP for GitLab.com.",
+          "id": "gl-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "GitLab.com rate limits",
+          "type": "first_party_docs",
+          "url": "https://docs.gitlab.com/user/gitlab_com/#rate-limits-on-gitlabcom"
+        },
+        {
+          "claim": "The Community Edition source is published openly and can be self-managed, alongside the hosted offering.",
+          "id": "gl-source",
+          "supports": [
+            "application_type"
+          ],
+          "title": "gitlab-org/gitlab",
+          "type": "repository",
+          "url": "https://gitlab.com/gitlab-org/gitlab"
+        },
+        {
+          "claim": "Project and group webhooks deliver push, issue, merge request and pipeline events.",
+          "id": "gl-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "GitLab webhooks",
+          "type": "first_party_docs",
+          "url": "https://docs.gitlab.com/user/project/integrations/webhooks/"
+        }
+      ],
+      "vendor": "GitLab Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "event_subscriptions",
+          "file_transfer"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The reference covers repositories, pull requests, pipelines and workspace administration.",
+        "resource_groups": [
+          "branch restrictions",
+          "downloads",
+          "issues",
+          "pipelines",
+          "projects",
+          "pullrequests",
+          "repositories",
+          "users",
+          "webhooks",
+          "workspaces"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "bitbucket",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "basic_auth",
+        "pat"
+      ],
+      "auth_notes": "Repository, project and workspace access tokens, app passwords over basic auth, and OAuth 2.0 for apps.",
+      "canonical_name": "Bitbucket Cloud",
+      "description": "Git hosting with pull requests and pipelines, integrated with the Atlassian suite.",
+      "docs_url": "https://developer.atlassian.com/cloud/bitbucket/rest/intro/",
+      "homepage_url": "https://bitbucket.org",
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Repository and workspace access tokens are created from settings on a free workspace.",
+          "id": "bb-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Bitbucket access tokens",
+          "type": "first_party_docs",
+          "url": "https://support.atlassian.com/bitbucket-cloud/docs/access-tokens/"
+        },
+        {
+          "claim": "Documents REST endpoints for repositories, pull requests, pipelines, issues, workspaces and webhooks.",
+          "id": "bb-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Bitbucket Cloud REST API",
+          "type": "first_party_docs",
+          "url": "https://developer.atlassian.com/cloud/bitbucket/rest/intro/"
+        },
+        {
+          "claim": "Publishes hourly request ceilings per authenticated user and per IP.",
+          "id": "bb-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Bitbucket API request limits",
+          "type": "first_party_docs",
+          "url": "https://support.atlassian.com/bitbucket-cloud/docs/api-request-limits/"
+        },
+        {
+          "claim": "Atlassian's remote MCP server documents Jira and Confluence coverage; Bitbucket is not listed.",
+          "id": "bb-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "Atlassian remote MCP server",
+          "type": "first_party_site",
+          "url": "https://www.atlassian.com/platform/remote-mcp-server"
+        },
+        {
+          "claim": "Repository and workspace webhooks deliver push and pull request events.",
+          "id": "bb-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Manage Bitbucket webhooks",
+          "type": "first_party_docs",
+          "url": "https://support.atlassian.com/bitbucket-cloud/docs/manage-webhooks/"
+        }
+      ],
+      "vendor": "Atlassian",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "user_management",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The platform and software (agile) REST APIs together cover the whole product.",
+        "resource_groups": [
+          "attachments",
+          "boards",
+          "comments",
+          "fields",
+          "issues",
+          "permissions",
+          "projects",
+          "search",
+          "sprints",
+          "users",
+          "webhooks",
+          "workflows"
+        ],
+        "types": [
+          "rest"
+        ]
+      },
+      "app_id": "jira",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "basic_auth",
+        "pat"
+      ],
+      "auth_notes": "Atlassian API token over basic auth for scripts, OAuth 2.0 (3LO) for apps, personal access tokens on Data Center.",
+      "canonical_name": "Jira Cloud",
+      "description": "Issue tracking and agile project management for software teams.",
+      "docs_url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/",
+      "homepage_url": "https://www.atlassian.com/software/jira",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://www.atlassian.com/platform/remote-mcp-server",
+        "status": "official"
+      },
+      "rate_limits": "documented_qualitative",
+      "sources": [
+        {
+          "claim": "An Atlassian API token from account settings authorises REST calls on the free plan.",
+          "id": "jira-auth",
+          "supports": [
+            "authentication",
+            "credential_access"
+          ],
+          "title": "Basic auth for Jira REST APIs",
+          "type": "first_party_docs",
+          "url": "https://developer.atlassian.com/cloud/jira/platform/basic-auth-for-rest-apis/"
+        },
+        {
+          "claim": "Documents REST endpoints for issues, projects, fields, workflows, users, permissions and JQL search.",
+          "id": "jira-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Jira Cloud platform REST API",
+          "type": "first_party_docs",
+          "url": "https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/"
+        },
+        {
+          "claim": "Describes cost-based rate limiting and retry headers without fixed published ceilings.",
+          "id": "jira-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Jira rate limiting",
+          "type": "first_party_docs",
+          "url": "https://developer.atlassian.com/cloud/jira/platform/rate-limiting/"
+        },
+        {
+          "claim": "Atlassian publishes an official remote MCP server covering Jira Cloud.",
+          "id": "jira-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "Atlassian remote MCP server",
+          "type": "first_party_site",
+          "url": "https://www.atlassian.com/platform/remote-mcp-server"
+        },
+        {
+          "claim": "Webhooks deliver issue and project events to a registered URL.",
+          "id": "jira-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Jira webhooks",
+          "type": "first_party_docs",
+          "url": "https://developer.atlassian.com/cloud/jira/platform/webhooks/"
+        }
+      ],
+      "vendor": "Atlassian",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "user_management",
+          "event_subscriptions"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "A single GraphQL schema exposes the whole product, with a generated TypeScript SDK.",
+        "resource_groups": [
+          "attachments",
+          "comments",
+          "cycles",
+          "initiatives",
+          "issues",
+          "labels",
+          "projects",
+          "teams",
+          "users",
+          "webhooks",
+          "workflow states"
+        ],
+        "types": [
+          "graphql",
+          "sdk"
+        ]
+      },
+      "app_id": "linear",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "oauth2",
+        "api_key"
+      ],
+      "auth_notes": "Personal API keys from settings, or OAuth 2.0 for applications acting for other users.",
+      "canonical_name": "Linear",
+      "description": "Issue tracker and project planner aimed at fast-moving product teams.",
+      "docs_url": "https://linear.app/developers/graphql",
+      "homepage_url": "https://linear.app",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://linear.app/docs/mcp",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Personal API keys are created from settings on the free workspace tier; webhooks deliver entity change events.",
+          "id": "linear-auth",
+          "supports": [
+            "authentication",
+            "credential_access",
+            "webhook_support"
+          ],
+          "title": "Linear API and webhooks",
+          "type": "first_party_docs",
+          "url": "https://linear.app/developers/api-and-webhooks"
+        },
+        {
+          "claim": "Documents a GraphQL API covering issues, projects, cycles, teams, users, labels and webhooks.",
+          "id": "linear-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "description"
+          ],
+          "title": "Linear GraphQL API",
+          "type": "first_party_docs",
+          "url": "https://linear.app/developers/graphql"
+        },
+        {
+          "claim": "Publishes hourly request and complexity ceilings per API key and per OAuth app.",
+          "id": "linear-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Linear rate limiting",
+          "type": "first_party_docs",
+          "url": "https://linear.app/developers/rate-limiting"
+        },
+        {
+          "claim": "Linear documents its own hosted MCP server endpoint.",
+          "id": "linear-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "Linear MCP server",
+          "type": "first_party_docs",
+          "url": "https://linear.app/docs/mcp"
+        }
+      ],
+      "vendor": "Linear Orbit, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "search",
+          "admin",
+          "event_subscriptions",
+          "reporting_analytics"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Covers issue triage, releases and project administration; ingestion happens through the SDKs rather than this API.",
+        "resource_groups": [
+          "alerts",
+          "dashboards",
+          "events",
+          "issues",
+          "monitors",
+          "organizations",
+          "projects",
+          "releases",
+          "replays",
+          "teams"
+        ],
+        "types": [
+          "rest",
+          "cli"
+        ]
+      },
+      "app_id": "sentry",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "bearer_token",
+        "oauth2"
+      ],
+      "auth_notes": "Organisation auth tokens and internal-integration tokens sent as bearer tokens; OAuth for public integrations.",
+      "canonical_name": "Sentry",
+      "description": "Error monitoring and performance tracing for applications across languages.",
+      "docs_url": "https://docs.sentry.io/api/",
+      "homepage_url": "https://sentry.io",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://docs.sentry.io/product/sentry-mcp/",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for organisations, projects, issues, events, releases and alerts using bearer auth tokens.",
+          "id": "sentry-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Sentry Web API",
+          "type": "first_party_docs",
+          "url": "https://docs.sentry.io/api/"
+        },
+        {
+          "claim": "Publishes per-endpoint request ceilings and exposes remaining quota in response headers.",
+          "id": "sentry-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "Sentry API rate limits",
+          "type": "first_party_docs",
+          "url": "https://docs.sentry.io/api/ratelimits/"
+        },
+        {
+          "claim": "Sentry documents and hosts its own MCP server.",
+          "id": "sentry-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "Sentry MCP server",
+          "type": "first_party_docs",
+          "url": "https://docs.sentry.io/product/sentry-mcp/"
+        },
+        {
+          "claim": "Organisation auth tokens are created from settings on the free developer plan.",
+          "id": "sentry-tokens",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Sentry auth tokens",
+          "type": "first_party_docs",
+          "url": "https://docs.sentry.io/account/auth-tokens/"
+        },
+        {
+          "claim": "Internal and public integrations receive issue and error events by webhook.",
+          "id": "sentry-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Sentry integration webhooks",
+          "type": "first_party_docs",
+          "url": "https://docs.sentry.io/organization/integrations/integration-platform/webhooks/"
+        }
+      ],
+      "vendor": "Functional Software, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "admin",
+          "event_subscriptions",
+          "reporting_analytics",
+          "scheduling"
+        ],
+        "coverage": "major",
+        "exists": true,
+        "notes": "Pipeline, workflow and job control plus insights; organisation administration is only partly exposed.",
+        "resource_groups": [
+          "contexts",
+          "environment variables",
+          "insights",
+          "jobs",
+          "pipelines",
+          "projects",
+          "schedules",
+          "webhooks",
+          "workflows"
+        ],
+        "types": [
+          "rest",
+          "cli"
+        ]
+      },
+      "app_id": "circleci",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "api_key"
+      ],
+      "auth_notes": "A personal API token is sent in the Circle-Token header; there is no public OAuth flow for the v2 API.",
+      "canonical_name": "CircleCI",
+      "description": "Continuous integration and delivery service driven by pipeline configuration.",
+      "docs_url": "https://circleci.com/docs/api/v2/",
+      "homepage_url": "https://circleci.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://github.com/CircleCI-Public/mcp-server-circleci",
+        "status": "official"
+      },
+      "rate_limits": "documented_qualitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for pipelines, workflows, jobs, contexts, schedules and insights using a personal API token.",
+          "id": "cci-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "CircleCI API v2 reference",
+          "type": "first_party_docs",
+          "url": "https://circleci.com/docs/api/v2/"
+        },
+        {
+          "claim": "States that the API is rate limited and asks clients to back off, without publishing numeric ceilings.",
+          "id": "cci-limits",
+          "supports": [
+            "rate_limit_info"
+          ],
+          "title": "CircleCI API developer's guide",
+          "type": "first_party_docs",
+          "url": "https://circleci.com/docs/api-developers-guide/"
+        },
+        {
+          "claim": "CircleCI publishes an MCP server under its public GitHub organisation.",
+          "id": "cci-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "CircleCI-Public/mcp-server-circleci",
+          "type": "repository",
+          "url": "https://github.com/CircleCI-Public/mcp-server-circleci"
+        },
+        {
+          "claim": "Personal API tokens are created from user settings on the free plan.",
+          "id": "cci-token",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Managing CircleCI API tokens",
+          "type": "first_party_docs",
+          "url": "https://circleci.com/docs/managing-api-tokens/"
+        },
+        {
+          "claim": "Project webhooks deliver workflow and job completion events.",
+          "id": "cci-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "CircleCI webhooks",
+          "type": "first_party_docs",
+          "url": "https://circleci.com/docs/webhooks/"
+        }
+      ],
+      "vendor": "Circle Internet Services, Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "free"
+      },
+      "api": {
+        "capabilities": [
+          "read",
+          "write",
+          "delete",
+          "admin",
+          "user_management",
+          "event_subscriptions",
+          "file_transfer"
+        ],
+        "coverage": "most",
+        "exists": true,
+        "notes": "The REST API covers deployments, projects, domains, DNS and team administration.",
+        "resource_groups": [
+          "aliases",
+          "deployments",
+          "dns",
+          "domains",
+          "edge config",
+          "environment variables",
+          "logs",
+          "projects",
+          "teams",
+          "webhooks"
+        ],
+        "types": [
+          "rest",
+          "sdk",
+          "cli"
+        ]
+      },
+      "app_id": "vercel",
+      "application_type": "saas_application",
+      "auth_methods": [
+        "bearer_token",
+        "oauth2"
+      ],
+      "auth_notes": "Account access tokens presented as bearer tokens; OAuth 2.0 for marketplace integrations.",
+      "canonical_name": "Vercel",
+      "description": "Frontend hosting platform with preview deployments, domains and edge functions.",
+      "docs_url": "https://vercel.com/docs/rest-api",
+      "homepage_url": "https://vercel.com",
+      "mcp": {
+        "maintained": "maintained",
+        "official": true,
+        "source_url": "https://vercel.com/docs/mcp/vercel-mcp",
+        "status": "official"
+      },
+      "rate_limits": "documented_quantitative",
+      "sources": [
+        {
+          "claim": "Documents REST endpoints for deployments, projects, domains, DNS, environment variables and teams using bearer tokens.",
+          "id": "vercel-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_breadth",
+            "api_capabilities",
+            "authentication",
+            "description"
+          ],
+          "title": "Vercel REST API",
+          "type": "first_party_docs",
+          "url": "https://vercel.com/docs/rest-api"
+        },
+        {
+          "claim": "Publishes numeric API and platform limits that differ between Hobby, Pro and Enterprise.",
+          "id": "vercel-limits",
+          "supports": [
+            "rate_limit_info",
+            "access_restrictions"
+          ],
+          "title": "Vercel limits",
+          "type": "first_party_docs",
+          "url": "https://vercel.com/docs/limits"
+        },
+        {
+          "claim": "Vercel documents its own hosted MCP server.",
+          "id": "vercel-mcp",
+          "supports": [
+            "mcp"
+          ],
+          "title": "Vercel MCP",
+          "type": "first_party_docs",
+          "url": "https://vercel.com/docs/mcp/vercel-mcp"
+        },
+        {
+          "claim": "Access tokens are created from account settings on the free Hobby plan.",
+          "id": "vercel-tokens",
+          "supports": [
+            "credential_access"
+          ],
+          "title": "Vercel API authentication",
+          "type": "first_party_docs",
+          "url": "https://vercel.com/docs/rest-api#authentication"
+        },
+        {
+          "claim": "Webhooks deliver deployment lifecycle events to a registered endpoint.",
+          "id": "vercel-webhooks",
+          "supports": [
+            "webhook_support"
+          ],
+          "title": "Vercel webhooks",
+          "type": "first_party_docs",
+          "url": "https://vercel.com/docs/webhooks"
+        }
+      ],
+      "vendor": "Vercel Inc.",
+      "webhooks": "native_webhooks"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "none",
+        "self_hosted": true
+      },
+      "api": {
+        "coverage": "slice",
+        "documented": false,
+        "exists": false,
+        "notes": "Sherlock is consumed as a CLI binary or Python package; it exposes no hosted service to integrate with."
+      },
+      "app_id": "sherlock",
+      "application_type": "cli_tool",
+      "auth_methods": [],
+      "auth_notes": "The tool issues anonymous HTTP requests to public profile URLs; it has no account, no credential and no authentication model.",
+      "canonical_name": "Sherlock",
+      "description": "Open-source command-line tool that searches social networks for a given username.",
+      "docs_url": "https://sherlockproject.xyz/",
+      "homepage_url": "https://github.com/sherlock-project/sherlock",
+      "integration_model": false,
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "notes": "Routed to the CLI branch of the buildability decision tree: no SaaS integration model exists, so buildability is Not applicable rather than Blocked.",
+      "sources": [
+        {
+          "claim": "Sherlock is distributed as a Python package run from the command line; there is no hosted service to authenticate against.",
+          "current": true,
+          "id": "sherlock-pypi",
+          "supports": [
+            "application_type",
+            "credential_access",
+            "description"
+          ],
+          "title": "sherlock-project on PyPI",
+          "type": "registry_listing",
+          "url": "https://pypi.org/project/sherlock-project/"
+        },
+        {
+          "claim": "Distributed as a Python command-line tool that queries public profile pages; there is no hosted service, account or API.",
+          "id": "sherlock-repo",
+          "supports": [
+            "application_type",
+            "api_exists",
+            "authentication",
+            "credential_access",
+            "description"
+          ],
+          "title": "sherlock-project/sherlock",
+          "type": "repository",
+          "url": "https://github.com/sherlock-project/sherlock"
+        },
+        {
+          "claim": "The project site documents installation and CLI usage only.",
+          "id": "sherlock-site",
+          "supports": [
+            "application_type",
+            "description"
+          ],
+          "title": "Sherlock project site",
+          "type": "first_party_site",
+          "url": "https://sherlockproject.xyz/"
+        }
+      ],
+      "vendor": "Sherlock Project (community)"
+    },
+    {
+      "access": {
+        "account": "free",
+        "api_plan": "none",
+        "self_hosted": true
+      },
+      "api": {
+        "coverage": "slice",
+        "documented": false,
+        "exists": false,
+        "notes": "Consumed as an npm binary; there is no hosted endpoint, only a local command."
+      },
+      "app_id": "mermaid-cli",
+      "application_type": "cli_tool",
+      "auth_methods": [],
+      "auth_notes": "A local Node package driving headless Chromium; no account or credential exists.",
+      "canonical_name": "Mermaid CLI",
+      "description": "Command-line renderer that turns Mermaid diagram definitions into SVG, PNG or PDF.",
+      "docs_url": "https://github.com/mermaid-js/mermaid-cli#readme",
+      "homepage_url": "https://github.com/mermaid-js/mermaid-cli",
+      "integration_model": false,
+      "mcp": {
+        "maintained": "unclear",
+        "official": false,
+        "searched": true,
+        "status": null
+      },
+      "notes": "Routed to the CLI branch of the buildability decision tree, for the same reason as Sherlock.",
+      "sources": [
+        {
+          "claim": "Mermaid is used through a local renderer or JavaScript library; the documentation describes no hosted API or rate limits.",
+          "current": true,
+          "id": "mermaid-docs",
+          "supports": [
+            "api_exists",
+            "api_types",
+            "api_capabilities",
+            "rate_limit_info"
+          ],
+          "title": "Mermaid usage documentation",
+          "type": "first_party_docs",
+          "url": "https://mermaid.js.org/config/usage.html"
+        },
+        {
+          "claim": "The npm listing describes a local CLI binary with no network service.",
+          "id": "mermaid-npm",
+          "supports": [
+            "application_type",
+            "description"
+          ],
+          "title": "@mermaid-js/mermaid-cli on npm",
+          "type": "registry_listing",
+          "url": "https://www.npmjs.com/package/@mermaid-js/mermaid-cli"
+        },
+        {
+          "claim": "Published as an npm command-line package that renders diagrams locally; no service, account or API is offered.",
+          "id": "mermaid-repo",
+          "supports": [
+            "application_type",
+            "api_exists",
+            "authentication",
+            "credential_access",
+            "description"
+          ],
+          "title": "mermaid-js/mermaid-cli",
+          "type": "repository",
+          "url": "https://github.com/mermaid-js/mermaid-cli"
+        }
+      ],
+      "vendor": "Mermaid project (community)"
+    }
+  ]
+}

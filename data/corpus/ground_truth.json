@@ -1,0 +1,416 @@
+{
+  "notes": "Channel D decisions. Each entry is a judgement a reviewer reached from the cited sources on a field that Channel B or Channel C put in dispute, or that a review trigger flagged. Confirmations of undisputed fields are not recorded: silence here means no human authority was exercised.",
+  "overrides": [
+    {
+      "app_id": "anthropic",
+      "evidence_ids": [
+        "anthropic::ant-docs"
+      ],
+      "field": "api_breadth",
+      "reason": "The API is the product: messages, batches, files, models and administration together cover essentially all of it.",
+      "status": "resolved",
+      "value": [
+        "very_broad"
+      ]
+    },
+    {
+      "app_id": "ashby",
+      "evidence_ids": [
+        "ashby::ashby-docs"
+      ],
+      "field": "api_breadth",
+      "reason": "The documented groups span candidates, applications, jobs, interviews and offers, which is most of an ATS.",
+      "status": "resolved",
+      "value": [
+        "very_broad"
+      ]
+    },
+    {
+      "app_id": "braze",
+      "evidence_ids": [
+        "braze::braze-pricing"
+      ],
+      "field": "credential_access",
+      "reason": "Braze does not sell self-serve access: the REST API is provisioned on an enterprise contract, so 'enterprise' describes the gate more precisely than 'contact sales'.",
+      "status": "resolved",
+      "value": [
+        "enterprise"
+      ]
+    },
+    {
+      "app_id": "braze",
+      "evidence_ids": [
+        "braze::braze-currents"
+      ],
+      "field": "webhook_support",
+      "reason": "Currents is a continuous event stream to a data destination, not a per-event callback to a URL the developer registers.",
+      "status": "resolved",
+      "value": [
+        "event_streaming"
+      ]
+    },
+    {
+      "app_id": "confluence",
+      "evidence_ids": [
+        "confluence::confluence-auth",
+        "confluence::confluence-docs"
+      ],
+      "field": "blocker",
+      "reason": "The decision tree found nothing in the way; recording that as 'not found' would imply we failed to establish it.",
+      "status": "resolved",
+      "value": [
+        "none"
+      ]
+    },
+    {
+      "app_id": "databricks",
+      "evidence_ids": [
+        "databricks::dbx-auth",
+        "databricks::dbx-docs",
+        "databricks::dbx-trial"
+      ],
+      "field": "blocker",
+      "reason": "Sustained use past the trial requires a paid workspace, which is friction worth naming.",
+      "status": "resolved",
+      "value": [
+        "paid_access"
+      ]
+    },
+    {
+      "app_id": "databricks",
+      "evidence_ids": [
+        "databricks::dbx-auth",
+        "databricks::dbx-trial"
+      ],
+      "field": "credential_access",
+      "reason": "A developer can obtain working credentials on the self-serve trial without talking to anyone; the paid plan governs continued use, not first access.",
+      "status": "resolved",
+      "value": [
+        "self_serve_trial"
+      ]
+    },
+    {
+      "app_id": "freshsales",
+      "evidence_ids": [
+        "freshsales::fs-docs",
+        "freshsales::fs-pricing"
+      ],
+      "field": "blocker",
+      "reason": "Nothing gates API access on the free tier.",
+      "status": "resolved",
+      "value": [
+        "none"
+      ]
+    },
+    {
+      "app_id": "google-chat",
+      "evidence_ids": [
+        "google-chat::gchat-docs"
+      ],
+      "field": "api_breadth",
+      "reason": "The Chat API covers spaces, messages and memberships - a slice of Google Workspace rather than most of the product.",
+      "status": "resolved",
+      "value": [
+        "moderate"
+      ]
+    },
+    {
+      "app_id": "google-chat",
+      "evidence_ids": [
+        "google-chat::gchat-auth",
+        "google-chat::gchat-docs"
+      ],
+      "field": "blocker",
+      "reason": "Both gates apply: administrator enablement, and a paid Workspace subscription for most surfaces.",
+      "status": "resolved",
+      "value": [
+        "admin_approval",
+        "paid_access"
+      ]
+    },
+    {
+      "app_id": "google-chat",
+      "evidence_ids": [
+        "google-chat::gchat-auth"
+      ],
+      "field": "credential_access",
+      "reason": "A Chat app must be published and enabled by a Workspace administrator before it can be used in a domain.",
+      "status": "resolved",
+      "value": [
+        "admin_approval"
+      ]
+    },
+    {
+      "app_id": "greenhouse",
+      "evidence_ids": [
+        "greenhouse::gh-docs",
+        "greenhouse::gh-keys",
+        "greenhouse::gh-pricing"
+      ],
+      "field": "blocker",
+      "reason": "Harvest API keys are issued by an account administrator on a paid plan, and some endpoints are enterprise-tier.",
+      "status": "resolved",
+      "value": [
+        "admin_approval",
+        "enterprise_only",
+        "paid_access"
+      ]
+    },
+    {
+      "app_id": "help-scout",
+      "evidence_ids": [
+        "help-scout::hsc-docs"
+      ],
+      "field": "api_breadth",
+      "reason": "Mailbox surfaces are well covered, but Docs and Beacon sit outside the documented groups.",
+      "status": "resolved",
+      "value": [
+        "broad"
+      ]
+    },
+    {
+      "app_id": "intercom",
+      "evidence_ids": [
+        "intercom::ic-dev",
+        "intercom::ic-docs"
+      ],
+      "field": "blocker",
+      "reason": "A paid workspace is required for production API use.",
+      "status": "resolved",
+      "value": [
+        "paid_access"
+      ]
+    },
+    {
+      "app_id": "intercom",
+      "evidence_ids": [
+        "intercom::ic-dev"
+      ],
+      "field": "credential_access",
+      "reason": "The trial converts to a paid workspace; the API is not available on a free tier.",
+      "status": "resolved",
+      "value": [
+        "self_serve_paid"
+      ]
+    },
+    {
+      "app_id": "jira",
+      "evidence_ids": [
+        "jira::jira-auth",
+        "jira::jira-docs"
+      ],
+      "field": "blocker",
+      "reason": "Nothing gates API access for a Jira Cloud site.",
+      "status": "resolved",
+      "value": [
+        "none"
+      ]
+    },
+    {
+      "app_id": "klaviyo",
+      "evidence_ids": [
+        "klaviyo::kl-docs",
+        "klaviyo::kl-keys"
+      ],
+      "field": "blocker",
+      "reason": "Private API keys are self-serve on the free tier.",
+      "status": "resolved",
+      "value": [
+        "none"
+      ]
+    },
+    {
+      "app_id": "lever",
+      "evidence_ids": [
+        "lever::lever-docs"
+      ],
+      "field": "api_breadth",
+      "reason": "Postings, opportunities, interviews, offers and archive reasons cover most of the product.",
+      "status": "resolved",
+      "value": [
+        "very_broad"
+      ]
+    },
+    {
+      "app_id": "linear",
+      "evidence_ids": [
+        "linear::linear-auth",
+        "linear::linear-docs"
+      ],
+      "field": "blocker",
+      "reason": "Personal API keys are self-serve on the free tier.",
+      "status": "resolved",
+      "value": [
+        "none"
+      ]
+    },
+    {
+      "app_id": "nextcloud",
+      "evidence_ids": [
+        "nextcloud::nc-docs"
+      ],
+      "field": "api_breadth",
+      "reason": "The client APIs cover the core server; the app ecosystem that makes up much of Nextcloud is not part of them.",
+      "status": "resolved",
+      "value": [
+        "broad"
+      ]
+    },
+    {
+      "app_id": "pcloud",
+      "evidence_ids": [
+        "pcloud::pcloud-apps",
+        "pcloud::pcloud-docs"
+      ],
+      "field": "blocker",
+      "reason": "OAuth apps are registered self-serve on a free account.",
+      "status": "resolved",
+      "value": [
+        "none"
+      ]
+    },
+    {
+      "app_id": "razorpay",
+      "evidence_ids": [
+        "razorpay::rzp-docs",
+        "razorpay::rzp-kyc"
+      ],
+      "field": "blocker",
+      "reason": "Live credentials require account activation review.",
+      "status": "resolved",
+      "value": [
+        "admin_approval"
+      ]
+    },
+    {
+      "app_id": "razorpay",
+      "evidence_ids": [
+        "razorpay::rzp-kyc"
+      ],
+      "field": "credential_access",
+      "reason": "Test-mode keys are self-serve and immediate, but live keys are only issued after KYC activation. The two answers are both true of different keys, so the field cannot be resolved to one value.",
+      "status": "unclear",
+      "value": null
+    },
+    {
+      "app_id": "rippling",
+      "evidence_ids": [
+        "rippling::rip-docs",
+        "rippling::rip-partner"
+      ],
+      "field": "blocker",
+      "reason": "Access runs through the partner-facing app programme on paid plans, with administrator installation.",
+      "status": "resolved",
+      "value": [
+        "admin_approval",
+        "enterprise_only",
+        "paid_access"
+      ]
+    },
+    {
+      "app_id": "twenty",
+      "evidence_ids": [
+        "twenty::twenty-docs",
+        "twenty::twenty-repo",
+        "twenty::twenty-selfhost"
+      ],
+      "field": "blocker",
+      "reason": "Buildable only after the reviewer deploys an instance. The blocker taxonomy has no member for self-hosting, so 'other' carries it and the limitation is reported.",
+      "status": "resolved",
+      "value": [
+        "other"
+      ]
+    },
+    {
+      "app_id": "xero",
+      "evidence_ids": [
+        "xero::xero-docs"
+      ],
+      "field": "api_breadth",
+      "reason": "The accounting API is thorough, but payroll, files and projects sit outside the six documented groups, so 'very broad' overstates it.",
+      "status": "resolved",
+      "value": [
+        "broad"
+      ]
+    },
+    {
+      "app_id": "xero",
+      "evidence_ids": [
+        "xero::xero-auth",
+        "xero::xero-docs",
+        "xero::xero-pricing"
+      ],
+      "field": "blocker",
+      "reason": "A paid subscription is required for production data.",
+      "status": "resolved",
+      "value": [
+        "paid_access"
+      ]
+    },
+    {
+      "app_id": "xero",
+      "evidence_ids": [
+        "xero::xero-auth",
+        "xero::xero-pricing"
+      ],
+      "field": "credential_access",
+      "reason": "Developer apps are free against a demo company; production use requires a paying Xero organisation.",
+      "status": "resolved",
+      "value": [
+        "self_serve_paid"
+      ]
+    },
+    {
+      "app_id": "zoho-desk",
+      "evidence_ids": [
+        "zoho-desk::zdesk-docs"
+      ],
+      "field": "api_breadth",
+      "reason": "Ticketing is well covered; large parts of the admin and automation surface are not documented as API resources.",
+      "status": "resolved",
+      "value": [
+        "broad"
+      ]
+    },
+    {
+      "app_id": "zoom",
+      "evidence_ids": [
+        "zoom::zoom-docs",
+        "zoom::zoom-s2s"
+      ],
+      "field": "blocker",
+      "reason": "Administrator activation is the gate.",
+      "status": "resolved",
+      "value": [
+        "admin_approval"
+      ]
+    },
+    {
+      "app_id": "zoom",
+      "evidence_ids": [
+        "zoom::zoom-docs",
+        "zoom::zoom-s2s"
+      ],
+      "field": "buildability",
+      "reason": "Buildable, but only after an administrator creates the app.",
+      "status": "resolved",
+      "value": [
+        "buildable_with_friction"
+      ]
+    },
+    {
+      "app_id": "zoom",
+      "evidence_ids": [
+        "zoom::zoom-s2s"
+      ],
+      "field": "credential_access",
+      "reason": "Server-to-server OAuth apps must be created and activated by an account administrator.",
+      "status": "resolved",
+      "value": [
+        "admin_approval"
+      ]
+    }
+  ],
+  "reviewed_at": "2026-09-16T00:00:00+00:00",
+  "reviewer": "product-ops-reviewer"
+}

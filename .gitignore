@@ -1,0 +1,23 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+
+.env
+.env.local
+
+.DS_Store
+.idea/
+.vscode/
+
+# Generated pipeline artifacts. Curated inputs and reviewed human decisions are
+# tracked explicitly; everything a run can regenerate is not.
+data/raw/
+data/interim/
+logs/
