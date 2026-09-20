@@ -1,299 +1,789 @@
-(function(){
-"use strict";
+/* Composio research intelligence - explorer behaviour.
+   Reads the projection written next to this file and turns the server-rendered
+   report into something you can interrogate. No framework, no requests. */
+(function () {
+  "use strict";
 
-var apps = APPS;
-var cats = CATS;
+  var PAYLOAD_GLOBAL = "COMPOSIO_RESEARCH";
+  var PAYLOAD_FILE = "dataset.js?v=12b21759a526dcd4";
+  var PAYLOAD_NAME = PAYLOAD_FILE.split("?")[0];
+  var data = null;
 
-/* ---------------- helpers ---------------- */
-function label(s){
-  if(s === null || s === undefined) return null;
-  return String(s).split('_').map(function(w){ return w.charAt(0).toUpperCase()+w.slice(1); }).join(' ');
-}
-function labelList(v){
-  if(!v) return null;
-  if(Array.isArray(v)) return v.map(label).join(', ');
-  return label(v);
-}
-function mcpDisplay(a){
-  if(a.mcpVal === 'official') return 'Official';
-  if(a.mcpVal === 'third_party') return 'Third party';
-  if(a.mcp === 'unavailable') return 'Unavailable';
-  return 'Not found';
-}
-function mcpClass(a){
-  if(a.mcpVal === 'official') return 'mcp-official';
-  if(a.mcpVal === 'third_party') return 'mcp-third_party';
-  return 'mcp-none';
-}
-function buildClass(b){ return 'build-' + (b || 'none'); }
-function confClass(c){ return 'conf-' + (c || 'none'); }
+  /* Severity orders, so sorting a column groups by meaning rather than by
+     alphabet. Anything unlisted sorts after, alphabetically. */
+  var ORDERS = {
+    buildability: ["buildable", "buildable_with_friction", "blocked"],
+    credential_access: [
+      "self_serve_free", "self_serve_trial", "self_serve_paid", "admin_approval",
+      "contact_sales", "partner_program", "enterprise", "self_hosted_deployment_dependent"
+    ],
+    mcp: ["official", "third_party", "unavailable", "not_found"],
+    confidence: ["high", "medium", "low"],
+    sample: ["A", "B"]
+  };
 
-var catNameById = {};
-cats.forEach(function(c){ catNameById[c.category_id] = c.name; });
+  var TONE = {
+    buildable: "good", buildable_with_friction: "warn", blocked: "bad",
+    official: "good", third_party: "accent",
+    high: "good", medium: "warn", low: "bad",
+    self_serve_free: "good", self_serve_trial: "good"
+  };
 
-/* ---------------- populate filter selects ---------------- */
-function fillSelect(id, values, labeler){
-  var el = document.getElementById(id);
-  values.forEach(function(v){
-    var opt = document.createElement('option');
-    opt.value = v;
-    opt.textContent = labeler ? labeler(v) : v;
-    el.appendChild(opt);
-  });
-}
-fillSelect('f-cat', cats.map(function(c){return c.category_id;}), function(v){ return catNameById[v]; });
-fillSelect('f-build', ['buildable','buildable_with_friction','blocked'], label);
-fillSelect('f-cred', ['self_serve_free','self_serve_trial','self_serve_paid','admin_approval','enterprise','contact_sales','self_hosted_deployment_dependent'], label);
-fillSelect('f-mcp', ['official','third_party','not_found'], function(v){ return v==='not_found' ? 'Not found' : label(v); });
-fillSelect('f-conf', ['high','medium','low'], label);
-fillSelect('f-sample', ['A','B'], function(v){ return 'Sample ' + v; });
+  var FILTERS = ["category_id", "buildability", "credential_access", "mcp", "confidence", "sample"];
 
-/* ---------------- ledger (category breakdown) ---------------- */
-var ledgerEl = document.getElementById('ledger');
-var byCat = {};
-cats.forEach(function(c){ byCat[c.category_id] = {b:0,f:0,x:0,n:0,total:0}; });
-apps.forEach(function(a){
-  var bucket = byCat[a.cat]; if(!bucket) return;
-  bucket.total++;
-  if(a.build === 'buildable') bucket.b++;
-  else if(a.build === 'buildable_with_friction') bucket.f++;
-  else if(a.build === 'blocked') bucket.x++;
-  else bucket.n++;
-});
-cats.slice().sort(function(a,b){
-  var pa = byCat[a.category_id], pb = byCat[b.category_id];
-  return (pb.b/pb.total) - (pa.b/pa.total);
-}).forEach(function(c){
-  var d = byCat[c.category_id];
-  var row = document.createElement('div');
-  row.className = 'ledger-row';
-  row.innerHTML =
-    '<div><div class="ledger-name">'+c.name+'</div><div class="ledger-count">'+d.total+' apps</div></div>' +
-    '<div class="ledger-bar">' +
-      '<div class="ledger-seg b" data-w="'+(d.b/d.total*100)+'"></div>' +
-      '<div class="ledger-seg f" data-w="'+(d.f/d.total*100)+'"></div>' +
-      '<div class="ledger-seg x" data-w="'+(d.x/d.total*100)+'"></div>' +
-      '<div class="ledger-seg n" data-w="'+(d.n/d.total*100)+'"></div>' +
-    '</div>' +
-    '<div class="ledger-count" style="text-align:right;">'+d.b+' buildable · '+d.f+' friction · '+d.x+' blocked</div>';
-  ledgerEl.appendChild(row);
-});
+  var state = {
+    q: "",
+    sort: "name",
+    dir: "asc",
+    finding: null,
+    selected: null
+  };
+  FILTERS.forEach(function (key) { state[key] = ""; });
 
-var ledgerObserver = new IntersectionObserver(function(entries){
-  entries.forEach(function(entry){
-    if(entry.isIntersecting){
-      var segs = entry.target.querySelectorAll('.ledger-seg');
-      segs.forEach(function(seg, i){
-        setTimeout(function(){ seg.style.width = seg.getAttribute('data-w') + '%'; }, i * 70);
-      });
-      ledgerObserver.unobserve(entry.target);
+  var els = {};
+  var lastFocus = null;
+
+  /* --- helpers ---------------------------------------------------------- */
+
+  function $(id) { return document.getElementById(id); }
+
+  function el(tag, className, text) {
+    var node = document.createElement(tag);
+    if (className) { node.className = className; }
+    if (text !== undefined && text !== null) { node.textContent = String(text); }
+    return node;
+  }
+
+  function human(token) {
+    return token === null || token === undefined ? "-" : String(token).replace(/_/g, " ");
+  }
+
+  function pct(value) {
+    return value === null || value === undefined ? "-" : (value * 100).toFixed(1) + "%";
+  }
+
+  function tone(token) { return TONE[token] || ""; }
+
+  function tag(token, extra) {
+    var node = el("span", "tag " + (extra !== undefined ? extra : tone(token)), human(token));
+    return node;
+  }
+
+  function fieldLabel(name) {
+    var schema = (data && data.field_schema) || [];
+    for (var i = 0; i < schema.length; i++) {
+      if (schema[i].field === name) { return schema[i].label; }
     }
-  });
-}, {threshold:0.25});
-document.querySelectorAll('.ledger-row').forEach(function(row){ ledgerObserver.observe(row); });
-
-/* ---------------- hero stat count-up ---------------- */
-function animateCount(el, target, duration){
-  var startTime = null;
-  var span = el.querySelector('.n');
-  function step(ts){
-    if(!startTime) startTime = ts;
-    var progress = Math.min((ts - startTime) / duration, 1);
-    var eased = 1 - Math.pow(1 - progress, 3);
-    span.textContent = Math.round(eased * target);
-    if(progress < 1) requestAnimationFrame(step);
+    return human(name);
   }
-  requestAnimationFrame(step);
-}
-document.querySelectorAll('.stat-num[data-count]').forEach(function(el, i){
-  var target = parseInt(el.getAttribute('data-count'), 10);
-  setTimeout(function(){ animateCount(el, target, 1100); }, 120 + i * 90);
-});
 
-/* ---------------- table state ---------------- */
-var state = { search:'', cat:'', build:'', cred:'', mcp:'', conf:'', sample:'', sortKey:'name', sortDir:1 };
-var tbody = document.getElementById('table-body');
-var countEl = document.getElementById('result-count');
-var emptyEl = document.getElementById('empty-state');
-
-function matches(a){
-  if(state.cat && a.cat !== state.cat) return false;
-  if(state.build && a.build !== state.build) return false;
-  if(state.cred && a.cred !== state.cred) return false;
-  if(state.conf && a.conf !== state.conf) return false;
-  if(state.sample && a.sample !== state.sample) return false;
-  if(state.mcp){
-    var m = a.mcpVal || 'not_found';
-    if(state.mcp === 'not_found'){ if(a.mcpVal) return false; }
-    else if(m !== state.mcp) return false;
+  function rank(key, value) {
+    var order = ORDERS[key];
+    if (!order) { return -1; }
+    var index = order.indexOf(value);
+    return index === -1 ? order.length : index;
   }
-  if(state.search){
-    var q = state.search.toLowerCase();
-    var hay = (a.name + ' ' + a.id + ' ' + a.catName).toLowerCase();
-    if(hay.indexOf(q) === -1) return false;
+
+  /* --- filtering -------------------------------------------------------- */
+
+  function matches(app) {
+    for (var i = 0; i < FILTERS.length; i++) {
+      var key = FILTERS[i];
+      if (state[key] && app[key] !== state[key]) { return false; }
+    }
+    if (state.finding && state.finding.ids.indexOf(app.id) === -1) { return false; }
+    if (state.q) {
+      var needle = state.q.toLowerCase();
+      var haystack = [app.name, app.id, app.category, app.buildability,
+        app.credential_access, app.mcp, (app.description || "")].join(" ").toLowerCase();
+      if (haystack.indexOf(needle) === -1) { return false; }
+    }
+    return true;
   }
-  return true;
-}
 
-function sortVal(a, key){
-  if(key === 'mcp') return a.mcpVal ? (a.mcpVal === 'official' ? 0 : 1) : 2;
-  if(key === 'build'){
-    var order = {buildable:0, buildable_with_friction:1, blocked:2};
-    return order[a.build] !== undefined ? order[a.build] : 3;
+  function visibleApps() {
+    var rows = data.apps.filter(matches);
+    var key = state.sort;
+    var factor = state.dir === "desc" ? -1 : 1;
+    rows.sort(function (a, b) {
+      var left = a[key], right = b[key];
+      if (ORDERS[key]) {
+        var diff = rank(key, left) - rank(key, right);
+        if (diff !== 0) { return diff * factor; }
+      } else {
+        left = (left === null || left === undefined) ? "" : String(left).toLowerCase();
+        right = (right === null || right === undefined) ? "" : String(right).toLowerCase();
+        if (left < right) { return -1 * factor; }
+        if (left > right) { return 1 * factor; }
+      }
+      return a.name.localeCompare(b.name);
+    });
+    return rows;
   }
-  if(key === 'conf'){
-    var co = {high:0, medium:1, low:2};
-    return co[a.conf] !== undefined ? co[a.conf] : 3;
+
+  function activeFilters() {
+    var chips = [];
+    FILTERS.forEach(function (key) {
+      if (!state[key]) { return; }
+      var label = key === "category_id" ? "Category"
+        : key === "credential_access" ? "Credentials"
+        : key === "mcp" ? "MCP"
+        : key === "sample" ? "Sample"
+        : key.charAt(0).toUpperCase() + key.slice(1);
+      var value = state[key];
+      if (key === "category_id") {
+        data.categories.forEach(function (item) { if (item.id === value) { value = item.name; } });
+      }
+      chips.push({ key: key, text: label + ": " + human(value) });
+    });
+    if (state.q) { chips.push({ key: "q", text: 'Search: "' + state.q + '"' }); }
+    if (state.finding) { chips.push({ key: "finding", text: "Finding: " + state.finding.title }); }
+    return chips;
   }
-  if(key === 'sample') return a.sample ? a.sample : 'ZZ';
-  return a[key] || '';
-}
 
-function render(){
-  var filtered = apps.filter(matches);
-  filtered.sort(function(x,y){
-    var vx = sortVal(x, state.sortKey), vy = sortVal(y, state.sortKey);
-    if(vx < vy) return -1 * state.sortDir;
-    if(vx > vy) return 1 * state.sortDir;
-    return 0;
-  });
-  countEl.textContent = filtered.length;
-  tbody.innerHTML = '';
-  emptyEl.style.display = filtered.length ? 'none' : 'block';
+  /* --- rendering -------------------------------------------------------- */
 
-  filtered.forEach(function(a){
-    var tr = document.createElement('tr');
-    tr.tabIndex = 0;
-    tr.innerHTML =
-      '<td><div class="cell-app"><span class="cell-app-name">'+a.name+'</span><span class="cell-app-id">'+a.id+'</span></div></td>' +
-      '<td>'+a.catName+'</td>' +
-      '<td><span class="tag '+buildClass(a.build)+'">'+ (label(a.build) || '—') +'</span></td>' +
-      '<td>'+(label(a.cred) || '<span class="dim">—</span>')+'</td>' +
-      '<td><span class="tag '+mcpClass(a)+'">'+mcpDisplay(a)+'</span></td>' +
-      '<td><span class="tag '+confClass(a.conf)+'">'+label(a.conf)+'</span></td>' +
-      '<td>'+(a.sample ? '<span class="sample-chip">Sample '+a.sample+'</span>' : '<span class="dim">—</span>')+' <span class="row-go">→</span></td>';
-    tr.addEventListener('click', function(){ openDrawer(a); });
-    tr.addEventListener('keydown', function(e){ if(e.key === 'Enter') openDrawer(a); });
-    tbody.appendChild(tr);
-  });
-}
+  function renderRows(rows) {
+    var body = els.rows;
+    body.textContent = "";
+    rows.forEach(function (app) {
+      var tr = el("tr");
+      tr.tabIndex = 0;
+      tr.setAttribute("data-id", app.id);
+      tr.setAttribute("role", "button");
+      tr.setAttribute("aria-label", "Open details for " + app.name);
+      if (state.selected === app.id) { tr.setAttribute("aria-selected", "true"); }
 
-document.getElementById('search').addEventListener('input', function(e){ state.search = e.target.value; render(); });
-['cat','build','cred','mcp','conf','sample'].forEach(function(k){
-  document.getElementById('f-'+k).addEventListener('change', function(e){ state[k] = e.target.value; render(); });
-});
-document.querySelectorAll('th[data-sort]').forEach(function(th){
-  th.addEventListener('click', function(){
-    var key = th.getAttribute('data-sort');
-    if(state.sortKey === key){ state.sortDir *= -1; }
-    else { state.sortKey = key; state.sortDir = 1; }
-    document.querySelectorAll('th[data-sort]').forEach(function(t){ t.classList.remove('sort-asc','sort-desc'); });
-    th.classList.add(state.sortDir === 1 ? 'sort-asc' : 'sort-desc');
+      var name = el("td", "app");
+      name.appendChild(el("span", "app-name", app.name));
+      name.appendChild(el("span", "app-id", app.id));
+      tr.appendChild(name);
+
+      tr.appendChild(el("td", null, app.category));
+
+      var build = el("td");
+      build.appendChild(tag(app.buildability));
+      tr.appendChild(build);
+
+      tr.appendChild(el("td", null, human(app.credential_access)));
+
+      var mcp = el("td");
+      mcp.appendChild(tag(app.mcp, app.mcp === "official" ? "good" : "plain"));
+      tr.appendChild(mcp);
+
+      var confidence = el("td");
+      confidence.appendChild(tag(app.confidence));
+      tr.appendChild(confidence);
+
+      var sample = el("td");
+      if (app.sample) { sample.appendChild(tag("Sample " + app.sample, "accent")); }
+      else { sample.appendChild(el("span", "muted", "-")); }
+      tr.appendChild(sample);
+
+      tr.appendChild(el("td", "chev", "\u203a"));
+      body.appendChild(tr);
+    });
+  }
+
+  function renderChips(chips) {
+    var bar = els.chips;
+    bar.textContent = "";
+    chips.forEach(function (chip) {
+      var node = el("span", "chip");
+      node.appendChild(document.createTextNode(chip.text));
+      var clear = el("button", null, "\u00d7");
+      clear.type = "button";
+      clear.setAttribute("aria-label", "Remove filter " + chip.text);
+      clear.addEventListener("click", function () { clearOne(chip.key); });
+      node.appendChild(clear);
+      bar.appendChild(node);
+    });
+  }
+
+  function render() {
+    var rows = visibleApps();
+    var chips = activeFilters();
+
+    renderRows(rows);
+    renderChips(chips);
+
+    els.count.innerHTML = "";
+    els.count.appendChild(el("b", null, rows.length));
+    els.count.appendChild(document.createTextNode(
+      " of " + data.apps.length + " application" + (data.apps.length === 1 ? "" : "s")
+    ));
+
+    els.clear.hidden = chips.length === 0;
+    els.empty.hidden = rows.length !== 0;
+    els.tableScroll.hidden = rows.length === 0;
+
+    document.querySelectorAll("th.sortable").forEach(function (th) {
+      var key = th.getAttribute("data-sort");
+      th.setAttribute("aria-sort", key === state.sort
+        ? (state.dir === "asc" ? "ascending" : "descending") : "none");
+      var arrow = th.querySelector(".arrow");
+      if (arrow) { arrow.textContent = key === state.sort && state.dir === "desc" ? "\u25bc" : "\u25b2"; }
+    });
+
+    document.querySelectorAll("[data-filter-value]").forEach(function (node) {
+      var key = node.getAttribute("data-filter-key");
+      var value = node.getAttribute("data-filter-value");
+      node.setAttribute("aria-pressed", state[key] === value ? "true" : "false");
+    });
+
+    syncUrl();
+  }
+
+  /* --- URL state -------------------------------------------------------- */
+
+  function syncUrl() {
+    var parts = [];
+    FILTERS.forEach(function (key) {
+      if (state[key]) { parts.push(key + "=" + encodeURIComponent(state[key])); }
+    });
+    if (state.q) { parts.push("q=" + encodeURIComponent(state.q)); }
+    if (state.finding) { parts.push("finding=" + encodeURIComponent(state.finding.key)); }
+    if (state.sort !== "name" || state.dir !== "asc") {
+      parts.push("sort=" + state.sort + ":" + state.dir);
+    }
+    var current = window.location.hash || "";
+    if (!parts.length && current.indexOf("#dataset?") !== 0) {
+      /* Nothing is filtered and nothing was: leave the reader's URL alone. */
+      return;
+    }
+    var hash = parts.length ? "#dataset?" + parts.join("&") : "#dataset";
+    if (current !== hash) {
+      history.replaceState(null, "", window.location.pathname + window.location.search + hash);
+    }
+  }
+
+  function readUrl() {
+    var hash = window.location.hash || "";
+    var at = hash.indexOf("?");
+    if (at === -1) { return false; }
+    var applied = false;
+    hash.slice(at + 1).split("&").forEach(function (pair) {
+      var bits = pair.split("=");
+      var key = bits[0];
+      var value = decodeURIComponent(bits.slice(1).join("=") || "");
+      if (FILTERS.indexOf(key) !== -1) { state[key] = value; applied = true; }
+      else if (key === "q") { state.q = value; applied = true; }
+      else if (key === "finding") { applied = selectFinding(value, false) || applied; }
+      else if (key === "sort") {
+        var sort = value.split(":");
+        state.sort = sort[0] || "name";
+        state.dir = sort[1] === "desc" ? "desc" : "asc";
+        applied = true;
+      }
+    });
+    return applied;
+  }
+
+  function syncControls() {
+    FILTERS.forEach(function (key) {
+      var control = els.controls[key];
+      if (control) { control.value = state[key]; }
+    });
+    els.search.value = state.q;
+  }
+
+  /* --- actions ---------------------------------------------------------- */
+
+  function clearOne(key) {
+    if (key === "q") { state.q = ""; els.search.value = ""; }
+    else if (key === "finding") { state.finding = null; markFindings(); }
+    else { state[key] = ""; }
+    syncControls();
     render();
-  });
-});
-document.querySelector('th[data-sort="name"]').classList.add('sort-asc');
-
-document.addEventListener('keydown', function(e){
-  if(e.key === '/' && document.activeElement.tagName !== 'INPUT'){
-    e.preventDefault();
-    document.getElementById('search').focus();
-  }
-  if(e.key === 'Escape') closeDrawer();
-});
-
-/* ---------------- drawer ---------------- */
-var drawer = document.getElementById('drawer');
-var backdrop = document.getElementById('backdrop');
-
-function factRow(k, v){
-  if(v === null || v === undefined || v === '') return '';
-  return '<div class="fact"><div class="fact-k">'+k+'</div><div class="fact-v">'+v+'</div></div>';
-}
-
-function openDrawer(a){
-  document.getElementById('d-id').textContent = a.id;
-  document.getElementById('d-name').textContent = a.name;
-  document.getElementById('d-vendor').textContent = (a.vendor ? a.vendor + ' · ' : '') + a.catName;
-
-  var body = document.getElementById('drawer-body');
-  var stampLabel = a.build ? label(a.build).toUpperCase() : 'NOT APPLICABLE';
-  var html = '';
-  html += '<div class="stamp '+(a.build||'none')+'">'+stampLabel+'</div>';
-  html += '<p class="drawer-desc">'+(a.desc || 'No description resolved from the corpus.')+'</p>';
-  if(a.buildRationale){
-    html += '<div class="drawer-rationale"><b>Why:</b> '+a.buildRationale+'</div>';
   }
 
-  html += '<div class="fact-grid">';
-  html += factRow('Blocker', labelList(a.blocker) || 'None recorded');
-  html += factRow('Access conditions', labelList(a.access) || 'None');
-  html += factRow('API breadth', label(a.breadth));
-  html += factRow('Interface types', labelList(a.apiTypes));
-  html += factRow('Authentication', labelList(a.auth));
-  html += factRow('Rate limits', label(a.rate));
-  html += factRow('Webhook support', label(a.webhook));
-  html += factRow('Application type', label(a.appType));
-  html += '</div>';
-
-  var links = '';
-  if(a.home) links += '<a href="'+a.home+'" target="_blank" rel="noopener">Homepage ↗</a>';
-  if(a.docsUrl) links += '<a href="'+a.docsUrl+'" target="_blank" rel="noopener">API docs ↗</a>';
-  if(links) html += '<div class="fact-links">'+links+'</div>';
-
-  if(a.evidence && a.evidence.length){
-    html += '<h4 class="drawer-h3">Evidence ('+a.evidence.length+')</h4>';
-    html += '<ul class="evidence-list">';
-    a.evidence.forEach(function(e, i){
-      html += '<li class="evidence-item" style="animation-delay:'+(i*45)+'ms">' +
-        '<span class="evidence-num">['+(i+1)+']</span>' +
-        '<span class="evidence-body">' +
-          '<div class="evidence-claim">'+e.c+'</div>' +
-          '<div class="evidence-src"><a href="'+e.u+'" target="_blank" rel="noopener">'+e.t+'</a> <span>· '+e.d+'</span></div>' +
-        '</span>' +
-      '</li>';
-    });
-    html += '</ul>';
+  function clearAll() {
+    FILTERS.forEach(function (key) { state[key] = ""; });
+    state.q = "";
+    state.finding = null;
+    markFindings();
+    syncControls();
+    render();
   }
 
-  if(a.verification && a.verification.length){
-    html += '<h4 class="drawer-h3">Verification channels</h4>';
-    a.verification.forEach(function(v){
-      html += '<div class="verif-item"><div class="verif-head"><b>'+v.ch.replace('channel_','Channel ')+'</b><span class="dim">Sample '+v.sample+'</span></div>';
-      if(v.notes) html += '<div class="verif-note">'+v.notes+'</div>';
-      if(v.disc && v.disc.length) html += '<div class="verif-disc">Disagreed on: '+v.disc.map(label).join(', ')+'</div>';
-      html += '</div>';
-    });
-  } else if(a.sample){
-    html += '<h4 class="drawer-h3">Verification channels</h4><div class="verif-note">Selected for Sample '+a.sample+'; channel detail not attached to this projection.</div>';
-  }
-
-  body.innerHTML = html;
-  drawer.classList.add('open');
-  backdrop.classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeDrawer(){
-  drawer.classList.remove('open');
-  backdrop.classList.remove('open');
-  document.body.style.overflow = '';
-}
-document.getElementById('d-close').addEventListener('click', closeDrawer);
-backdrop.addEventListener('click', closeDrawer);
-
-/* ---------------- nav active state on scroll ---------------- */
-var navLinks = document.querySelectorAll('.masthead-nav a');
-var sectionIds = ['overview','findings','dataset','methodology'];
-var sections = sectionIds.map(function(id){ return document.getElementById(id); });
-var navObserver = new IntersectionObserver(function(entries){
-  entries.forEach(function(entry){
-    if(entry.isIntersecting){
-      var id = entry.target.id;
-      navLinks.forEach(function(l){ l.classList.toggle('active', l.getAttribute('href') === '#'+id); });
+  function selectFinding(key, scroll) {
+    var found = null;
+    data.findings.forEach(function (item) { if (item.key === key) { found = item; } });
+    if (!found) { return false; }
+    if (state.finding && state.finding.key === key) {
+      state.finding = null;
+    } else {
+      FILTERS.forEach(function (name) { state[name] = ""; });
+      state.q = "";
+      state.finding = { key: found.key, title: found.title, ids: found.app_ids };
     }
-  });
-}, {rootMargin:'-40% 0px -55% 0px'});
-sections.forEach(function(s){ if(s) navObserver.observe(s); });
+    markFindings();
+    syncControls();
+    if (scroll) {
+      render();
+      $("dataset").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    return true;
+  }
 
-render();
+  function markFindings() {
+    document.querySelectorAll("[data-finding]").forEach(function (node) {
+      var active = state.finding && state.finding.key === node.getAttribute("data-finding");
+      node.setAttribute("aria-pressed", active ? "true" : "false");
+      var action = node.querySelector(".action");
+      if (action) {
+        action.textContent = active
+          ? "Showing these applications - click to clear"
+          : "View applications \u2192";
+      }
+    });
+  }
+
+  function applyFilter(key, value, scroll) {
+    state[key] = state[key] === value ? "" : value;
+    state.finding = null;
+    markFindings();
+    syncControls();
+    render();
+    if (scroll) { $("dataset").scrollIntoView({ behavior: "smooth", block: "start" }); }
+  }
+
+  /* --- detail drawer ---------------------------------------------------- */
+
+  function appById(id) {
+    var found = null;
+    data.apps.forEach(function (app) { if (app.id === id) { found = app; } });
+    return found;
+  }
+
+  function definition(term, value) {
+    var wrap = document.createDocumentFragment();
+    wrap.appendChild(el("dt", null, term));
+    var dd = el("dd");
+    if (typeof value === "string" || typeof value === "number") { dd.textContent = value; }
+    else if (value) { dd.appendChild(value); }
+    wrap.appendChild(dd);
+    return wrap;
+  }
+
+  function block(title, body) {
+    var section = el("section");
+    section.appendChild(el("h3", null, title));
+    section.appendChild(body);
+    return section;
+  }
+
+  function summaryBlock(app) {
+    var dl = el("dl", "summary-grid");
+    dl.appendChild(definition("Buildability", tag(app.buildability)));
+    dl.appendChild(definition("Credentials", human(app.credential_access)));
+    dl.appendChild(definition("MCP", human(app.mcp)));
+    dl.appendChild(definition("Confidence", tag(app.confidence)));
+    dl.appendChild(definition("API breadth", human(app.api_breadth)));
+    dl.appendChild(definition("Evidence items", app.evidence_count));
+    dl.appendChild(definition("Sample", app.sample ? "Sample " + app.sample : "Not sampled"));
+    dl.appendChild(definition("Verification", human(app.verification_status)));
+    return dl;
+  }
+
+  function dimensionsBlock(app) {
+    if (!app.dimensions) { return null; }
+    var wrap = el("div");
+    var row = el("div", "dim-row");
+    [["Technical", app.dimensions.technical],
+     ["Credential", app.dimensions.credential],
+     ["Commercial", app.dimensions.commercial]].forEach(function (pair) {
+      var toneName = pair[1] === "pass" ? "good" : pair[1] === "fail" ? "bad"
+        : pair[1] === "friction" ? "warn" : "";
+      row.appendChild(tag(pair[0] + ": " + human(pair[1]), toneName));
+    });
+    wrap.appendChild(row);
+    var reason = null;
+    app.fields.forEach(function (field, index) {
+      if (data.field_schema[index].field === "buildability" && field.rationale) {
+        reason = field.rationale;
+      }
+    });
+    if (reason) { wrap.appendChild(el("p", "muted", reason)); }
+    return wrap;
+  }
+
+  function fieldsBlock(app) {
+    var list = el("div", "field-list");
+    app.fields.forEach(function (field, index) {
+      var schema = data.field_schema[index];
+      var item = el("div", "field-item");
+      var head = el("div", "head");
+      head.appendChild(el("span", "name", schema.label));
+      if (field.status !== "resolved") { head.appendChild(tag(field.status, "warn")); }
+      if (field.reconciled) { head.appendChild(tag("reconciled", "accent")); }
+      item.appendChild(head);
+
+      var values = el("div", "vals");
+      (field.values || []).forEach(function (value) { values.appendChild(tag(value, "plain")); });
+      if (!field.values || !field.values.length) {
+        values.appendChild(el("span", "muted", human(field.status)));
+      }
+      item.appendChild(values);
+
+      if (field.rationale) { item.appendChild(el("p", "why", field.rationale)); }
+      if (field.evidence_ids && field.evidence_ids.length) {
+        var cites = el("p", "why");
+        cites.textContent = "Cites: " + field.evidence_ids.map(function (id) {
+          return id.split("::")[1] || id;
+        }).join(", ");
+        item.appendChild(cites);
+      }
+      list.appendChild(item);
+    });
+    return list;
+  }
+
+  function evidenceBlock(app) {
+    var list = el("div");
+    app.evidence.forEach(function (item) {
+      var node = el("div", "evidence-item");
+      var link = el("a", "title", item.title);
+      link.href = item.url;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      node.appendChild(link);
+      node.appendChild(el("div", "src", item.url));
+      node.appendChild(el("p", "claim", item.claim));
+      var supports = el("div", "supports");
+      supports.appendChild(tag(human(item.type), "plain"));
+      supports.appendChild(tag(item.retrieval, "plain"));
+      item.supports.forEach(function (field) { supports.appendChild(tag(fieldLabel(field), "plain")); });
+      node.appendChild(supports);
+      list.appendChild(node);
+    });
+    return list;
+  }
+
+  function verificationBlock(app) {
+    if (!app.verification.length && !app.reconciliation.length) { return null; }
+    var wrap = el("div");
+    app.verification.forEach(function (run) {
+      var row = el("div", "check-row");
+      row.appendChild(el("span", "who", human(run.channel)));
+      var summary = [];
+      if (run.checked) {
+        summary.push(run.checked + (run.checked === 1 ? " field checked" : " fields checked"));
+      }
+      if (run.evidence_checked) {
+        summary.push(run.evidence_valid + "/" + run.evidence_checked + " citations valid");
+      }
+      if (run.discrepancies.length) {
+        summary.push("disagrees on " + run.discrepancies.map(fieldLabel).join(", "));
+      } else if (run.checked) {
+        summary.push("no disagreement");
+      }
+      if (run.reviewer) { summary.push("reviewer: " + run.reviewer); }
+      row.appendChild(el("span", null, summary.join(" \u00b7 ")));
+      wrap.appendChild(row);
+    });
+    app.reconciliation.forEach(function (decision) {
+      if (decision.outcome === "confirmed") { return; }
+      var row = el("div", "check-row");
+      row.appendChild(el("span", "who", fieldLabel(decision.field)));
+      var text = human(decision.outcome) + " \u2192 "
+        + ((decision.value && decision.value.length) ? decision.value.map(human).join(", ") : human(decision.status));
+      if (decision.decided_by) { text += " (" + decision.decided_by + ")"; }
+      row.appendChild(el("span", null, text));
+      wrap.appendChild(row);
+    });
+    return wrap;
+  }
+
+  function openApp(id) {
+    var app = appById(id);
+    if (!app) { return; }
+    state.selected = id;
+    lastFocus = document.activeElement;
+
+    els.drawerTitle.textContent = app.name;
+    var sub = el("span");
+    sub.appendChild(document.createTextNode(app.category + " \u00b7 "));
+    var link = el("a", null, app.id);
+    link.href = app.homepage;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    sub.appendChild(link);
+    els.drawerSub.textContent = "";
+    els.drawerSub.appendChild(sub);
+
+    var body = els.drawerBody;
+    body.textContent = "";
+    if (app.description) { body.appendChild(el("p", "prose", app.description)); }
+    body.appendChild(block("Summary", summaryBlock(app)));
+    var dims = dimensionsBlock(app);
+    if (dims) { body.appendChild(block("Buildability assessment", dims)); }
+    var checks = verificationBlock(app);
+    if (checks) { body.appendChild(block("Verification", checks)); }
+    body.appendChild(block("Researched fields", fieldsBlock(app)));
+    body.appendChild(block("Evidence (" + app.evidence.length + ")", evidenceBlock(app)));
+
+    els.drawer.classList.add("open");
+    els.drawer.setAttribute("aria-hidden", "false");
+    els.backdrop.classList.add("open");
+    els.drawerClose.focus();
+    body.scrollTop = 0;
+    render();
+  }
+
+  function closeDrawer() {
+    if (!els.drawer.classList.contains("open")) { return; }
+    els.drawer.classList.remove("open");
+    els.drawer.setAttribute("aria-hidden", "true");
+    els.backdrop.classList.remove("open");
+    state.selected = null;
+    render();
+    if (lastFocus && lastFocus.focus) { lastFocus.focus(); }
+  }
+
+  /* --- pipeline --------------------------------------------------------- */
+
+  function wirePipeline() {
+    var buttons = document.querySelectorAll("[data-stage]");
+    if (!buttons.length) { return; }
+    document.querySelectorAll(".stage-detail").forEach(function (panel, index) {
+      panel.hidden = index !== 0;
+    });
+    buttons.forEach(function (button, index) {
+      button.setAttribute("aria-selected", index === 0 ? "true" : "false");
+      button.addEventListener("click", function () {
+        var key = button.getAttribute("data-stage");
+        buttons.forEach(function (other) {
+          other.setAttribute("aria-selected", other === button ? "true" : "false");
+        });
+        document.querySelectorAll(".stage-detail").forEach(function (panel) {
+          panel.hidden = panel.getAttribute("data-stage-panel") !== key;
+        });
+      });
+    });
+  }
+
+  /* --- clipboard -------------------------------------------------------- */
+
+  function wireCopy() {
+    document.querySelectorAll("[data-copy]").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var text = button.getAttribute("data-copy");
+        var done = function () {
+          var original = button.textContent;
+          button.textContent = "Copied";
+          button.classList.add("done");
+          window.setTimeout(function () {
+            button.textContent = original;
+            button.classList.remove("done");
+          }, 1200);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text, done); });
+        } else {
+          fallbackCopy(text, done);
+        }
+      });
+    });
+  }
+
+  function fallbackCopy(text, done) {
+    var area = document.createElement("textarea");
+    area.value = text;
+    area.setAttribute("readonly", "");
+    area.style.position = "fixed";
+    area.style.opacity = "0";
+    document.body.appendChild(area);
+    area.select();
+    try { document.execCommand("copy"); done(); } catch (error) { /* clipboard unavailable */ }
+    document.body.removeChild(area);
+  }
+
+  /* --- section navigation ----------------------------------------------- */
+
+  function wireNav() {
+    var links = Array.prototype.slice.call(document.querySelectorAll(".tabs a"));
+    if (!links.length || !window.IntersectionObserver) { return; }
+    var sections = links
+      .map(function (link) { return document.querySelector(link.getAttribute("href")); })
+      .filter(Boolean);
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) { return; }
+        links.forEach(function (link) {
+          if (link.getAttribute("href") === "#" + entry.target.id) {
+            link.setAttribute("aria-current", "true");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+      });
+    }, { rootMargin: "-40% 0px -55% 0px" });
+    sections.forEach(function (section) { observer.observe(section); });
+  }
+
+  /* --- boot ------------------------------------------------------------- */
+
+  function wireExplorer() {
+    FILTERS.forEach(function (key) {
+      var control = $("filter-" + key.replace(/_/g, "-"));
+      if (!control) { return; }
+      els.controls[key] = control;
+      control.addEventListener("change", function () {
+        state[key] = control.value;
+        state.finding = null;
+        markFindings();
+        render();
+      });
+    });
+
+    els.search.addEventListener("input", function () {
+      state.q = els.search.value.trim();
+      render();
+    });
+
+    els.clear.addEventListener("click", clearAll);
+    $("empty-clear").addEventListener("click", clearAll);
+
+    document.querySelectorAll("th.sortable").forEach(function (th) {
+      th.addEventListener("click", function () {
+        var key = th.getAttribute("data-sort");
+        if (state.sort === key) { state.dir = state.dir === "asc" ? "desc" : "asc"; }
+        else { state.sort = key; state.dir = "asc"; }
+        render();
+      });
+    });
+
+    els.rows.addEventListener("click", function (event) {
+      var row = event.target.closest("tr[data-id]");
+      if (row) { openApp(row.getAttribute("data-id")); }
+    });
+    els.rows.addEventListener("keydown", function (event) {
+      if (event.key !== "Enter" && event.key !== " ") { return; }
+      var row = event.target.closest("tr[data-id]");
+      if (row) { event.preventDefault(); openApp(row.getAttribute("data-id")); }
+    });
+
+    els.drawerClose.addEventListener("click", closeDrawer);
+    els.backdrop.addEventListener("click", closeDrawer);
+
+    document.querySelectorAll("[data-finding]").forEach(function (card) {
+      card.addEventListener("click", function () {
+        selectFinding(card.getAttribute("data-finding"), true);
+      });
+    });
+
+    document.querySelectorAll("[data-filter-value]").forEach(function (node) {
+      node.addEventListener("click", function () {
+        applyFilter(node.getAttribute("data-filter-key"), node.getAttribute("data-filter-value"), true);
+      });
+    });
+
+    /* While the drawer is open it owns the keyboard: tabbing must not walk off
+       into the table behind it. */
+    els.drawer.addEventListener("keydown", function (event) {
+      if (event.key !== "Tab") { return; }
+      var focusable = els.drawer.querySelectorAll(
+        'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      if (!focusable.length) { return; }
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") { closeDrawer(); return; }
+      if (event.key === "/" && document.activeElement !== els.search) {
+        event.preventDefault();
+        els.search.focus();
+        els.search.select();
+      }
+    });
+  }
+
+  function showError(message) {
+    var panel = $("explorer-error");
+    if (!panel) { return; }
+    panel.hidden = false;
+    var detail = panel.querySelector("[data-error-detail]");
+    if (detail) {
+      detail.textContent = message + " The full table is below, and the dataset "
+        + "is still downloadable as JSON and CSV.";
+    }
+    var shell = $("explorer-shell");
+    if (shell) { shell.hidden = true; }
+    document.documentElement.classList.add("data-fallback");
+  }
+
+  function clearError() {
+    $("explorer-error").hidden = true;
+    $("explorer-shell").hidden = false;
+    document.documentElement.classList.remove("data-fallback");
+  }
+
+  function start() {
+    data = window[PAYLOAD_GLOBAL];
+    if (!data || !data.apps || !data.apps.length) {
+      showError("The dataset projection (" + PAYLOAD_NAME + ") did not load, so the explorer cannot be built.");
+      return false;
+    }
+    clearError();
+
+    els.rows = $("rows");
+    els.chips = $("chips");
+    els.count = $("result-count");
+    els.clear = $("clear-filters");
+    els.empty = $("empty-state");
+    els.tableScroll = $("table-scroll");
+    els.search = $("search");
+    els.drawer = $("drawer");
+    els.drawerBody = $("drawer-body");
+    els.drawerTitle = $("drawer-title");
+    els.drawerSub = $("drawer-sub");
+    els.drawerClose = $("drawer-close");
+    els.backdrop = $("backdrop");
+    els.controls = {};
+
+    wireExplorer();
+    wirePipeline();
+    wireCopy();
+    wireNav();
+    markFindings();
+    readUrl();
+    syncControls();
+    render();
+    return true;
+  }
+
+  function boot() {
+    if (!start()) {
+      var retry = document.querySelector("[data-retry]");
+      if (retry) {
+        retry.addEventListener("click", function () {
+          /* The payload is a sibling script: re-request it, then rebuild. */
+          var script = document.createElement("script");
+          script.src = PAYLOAD_FILE + (PAYLOAD_FILE.indexOf("?") === -1 ? "?" : "&")
+            + "retry=" + Date.now();
+          script.onload = start;
+          script.onerror = function () {
+            showError("Retry failed: " + PAYLOAD_NAME + " is still unavailable.");
+          };
+          document.head.appendChild(script);
+        });
+      }
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", boot);
+  } else {
+    boot();
+  }
 })();
