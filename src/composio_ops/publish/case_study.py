@@ -86,6 +86,73 @@ def _tone(token: str) -> str:
     return TONES.get(token, "")
 
 
+#: Line-art icons, drawn on a 24x24 grid and stroked with the colour they
+#: inherit. Inline because the page makes no external requests.
+ICONS: Dict[str, str] = {
+    "file": (
+        '<path d="M13.5 3H7a1.5 1.5 0 0 0-1.5 1.5v15A1.5 1.5 0 0 0 7 21h10a1.5 '
+        '1.5 0 0 0 1.5-1.5V8z"/><path d="M13.5 3v5h5"/>'
+    ),
+    "document": (
+        '<path d="M13.5 3H7a1.5 1.5 0 0 0-1.5 1.5v15A1.5 1.5 0 0 0 7 21h10a1.5 '
+        '1.5 0 0 0 1.5-1.5V8z"/><path d="M13.5 3v5h5"/>'
+        '<path d="M8.5 13h7"/><path d="M8.5 16.5h4.5"/>'
+    ),
+    "layers": (
+        '<path d="m12 3 8.5 4.5L12 12 3.5 7.5 12 3Z"/>'
+        '<path d="m3.5 12 8.5 4.5 8.5-4.5"/>'
+        '<path d="m3.5 16.5 8.5 4.5 8.5-4.5"/>'
+    ),
+    "clock": '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.2V12l3.2 1.9"/>',
+    "share": (
+        '<circle cx="17.5" cy="6" r="2.5"/><circle cx="17.5" cy="18" r="2.5"/>'
+        '<circle cx="6.5" cy="12" r="2.5"/>'
+        '<path d="m8.8 10.8 6.4-3.5"/><path d="m8.8 13.2 6.4 3.5"/>'
+    ),
+    "database": (
+        '<ellipse cx="12" cy="6" rx="7.5" ry="3"/>'
+        '<path d="M4.5 6v12c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3V6"/>'
+        '<path d="M19.5 12c0 1.66-3.36 3-7.5 3s-7.5-1.34-7.5-3"/>'
+    ),
+    "fingerprint": (
+        '<path d="M5.8 8.4a7 7 0 0 1 12.4 3.6v1.4"/>'
+        '<path d="M9 7.6a4 4 0 0 1 6 3.4v3.6"/>'
+        '<path d="M12 10.9v4.6"/>'
+        '<path d="M4.5 14.4c.4-2 .3-3.9 1-5.6"/>'
+        '<path d="M17.9 17.4c.5-1 .8-2.1.9-3.2"/>'
+        '<path d="M6.6 18.6c1-1.2 1.6-2.5 1.8-3.9"/>'
+        '<path d="M10.8 20.4c1.5-1.3 2.4-3 2.7-4.9"/>'
+    ),
+    "calendar": (
+        '<rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/>'
+        '<path d="M8 3v4"/><path d="M16 3v4"/><path d="M3.5 10h17"/>'
+    ),
+    "grid": (
+        '<rect x="3.5" y="3.5" width="7" height="7" rx="2"/>'
+        '<rect x="13.5" y="3.5" width="7" height="7" rx="2"/>'
+        '<rect x="3.5" y="13.5" width="7" height="7" rx="2"/>'
+        '<rect x="13.5" y="13.5" width="7" height="7" rx="2"/>'
+    ),
+    "target": (
+        '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/>'
+        '<circle cx="12" cy="12" r="1"/>'
+    ),
+    "bulb": (
+        '<path d="M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1.1 1.9h4.8c.1-.8.5-1.5 '
+        '1.1-1.9A6 6 0 0 0 12 3Z"/>'
+        '<path d="M9.8 18.6h4.4"/><path d="M10.7 21h2.6"/>'
+    ),
+    "chevron": '<path d="m9.8 5.8 6.6 6.2-6.6 6.2"/>',
+}
+
+
+def _icon(name: str) -> _Html:
+    return _Html(
+        '<svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" '
+        'focusable="false">{}</svg>'.format(ICONS[name])
+    )
+
+
 def _tag(token: str, tone: Optional[str] = None) -> _Html:
     classes = " ".join(filter(None, ("tag", _tone(token) if tone is None else tone)))
     return _Html('<span class="{}">{}</span>'.format(classes, _e(_humanise(token))))
@@ -185,12 +252,22 @@ def _bar_rows(
     return _Html('<div class="bars">{}</div>'.format("".join(rows)))
 
 
-def _kpi(value: str, label: str, context: str) -> str:
+def _kpi(value: str, label: str, context: str, tone: str, icon: str) -> str:
     return (
-        '<div class="kpi"><div class="value">{value}</div>'
+        '<div class="kpi {tone}"><div class="kpi-top">'
+        '<span class="kpi-icon">{icon}</span>'
+        '<span class="spark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>'
+        "</div>"
+        '<div class="value">{value}</div>'
         '<div class="label">{label}</div>'
         '<div class="context">{context}</div></div>'
-    ).format(value=_e(value), label=_e(label), context=_e(context))
+    ).format(
+        tone=_e(tone),
+        icon=_icon(icon),
+        value=_e(value),
+        label=_e(label),
+        context=_e(context),
+    )
 
 
 def _row_dimension_label(attribute: str) -> str:
@@ -329,10 +406,16 @@ def _header(meta: Dict[str, object]) -> str:
     <div class="header-meta">
       <span class="hide-sm">Dataset: <b>{apps} apps</b></span>
       <span>Updated: <b>{as_of}</b></span>
+      {calendar}
     </div>
   </div>
 </header>
-""".format(tabs=tabs, apps=_e(meta["apps"]), as_of=_e(meta["as_of"]))
+""".format(
+        tabs=tabs,
+        apps=_e(meta["apps"]),
+        as_of=_e(meta["as_of"]),
+        calendar=_icon("calendar"),
+    )
 
 
 def _overview(
@@ -350,6 +433,8 @@ def _overview(
                 str(metric["apps_total"]),
                 "Applications",
                 "{} supplied categories".format(metric["categories_total"]),
+                tone="violet",
+                icon="grid",
             ),
             _kpi(
                 _pct(sample_b.field_level_accuracy if sample_b else None),
@@ -357,11 +442,15 @@ def _overview(
                 "Sample B \u00b7 {} applications \u00b7 {} verified fields".format(
                     sample_b.apps if sample_b else 0, len(VERIFIED_FIELDS)
                 ),
+                tone="mint",
+                icon="target",
             ),
             _kpi(
                 str(evidence_items),
                 "Evidence items",
                 "Cited across {} applications".format(total),
+                tone="amber",
+                icon="document",
             ),
             _kpi(
                 str(metric["mcp_any"]),
@@ -370,16 +459,18 @@ def _overview(
                     metric["mcp_official"],
                     int(metric["mcp_any"]) - int(metric["mcp_official"]),
                 ),
+                tone="sky",
+                icon="share",
             ),
         ]
     )
     facts = [
-        ("Schema", C.SCHEMA_VERSION),
-        ("Master seed", settings.seed),
-        ("Pipeline clock", settings.as_of.date().isoformat()),
-        ("Classifier", dataset.classifier_version),
-        ("Provider", dataset.provider.value),
-        ("Fingerprint", dataset.metadata.source_fingerprint or "-"),
+        ("file", "Schema", C.SCHEMA_VERSION),
+        ("layers", "Master seed", settings.seed),
+        ("clock", "Pipeline clock", settings.as_of.date().isoformat()),
+        ("share", "Classifier", dataset.classifier_version),
+        ("database", "Provider", dataset.provider.value),
+        ("fingerprint", "Fingerprint", dataset.metadata.source_fingerprint or "-"),
     ]
     return """
 <section id="overview" class="hero">
@@ -387,7 +478,7 @@ def _overview(
     <div class="hero-grid">
       <div>
         <span class="eyebrow">Research run \u00b7 {as_of}</span>
-        <h1>Integration buildability intelligence</h1>
+        <h1>Integration buildability <span class="accent">intelligence</span></h1>
         <p class="question">Which integrations can actually be built, and how do we know?</p>
         <div class="prose">
           <p>{description}</p>
@@ -399,14 +490,31 @@ def _overview(
           established by independent verification.</p>
         </div>
       </div>
-      <dl class="run-facts">{facts}</dl>
+      <div class="hero-aside">
+        <dl class="run-facts">{facts}</dl>
+        <div class="hero-flourish" aria-hidden="true">
+          <p class="script-line">From data to real integrations
+            <svg class="rule" viewBox="0 0 180 12" preserveAspectRatio="none" focusable="false">
+              <path d="M2 9C46 2.5 122 2 178 5.5"/>
+            </svg>
+          </p>
+          <p class="tagline">More signal.<br>Less guesswork.<br>Real integrations.</p>
+        </div>
+      </div>
     </div>
     <div class="kpis">{kpis}</div>
-    <div class="note">Two numbers are reported for every sample because one of
-    them alone is misleading. Field-level accuracy asks how many individual
-    values are right. Row-level accuracy asks how many applications are right in
-    <em>every</em> field, and it is always much lower. A pipeline that quotes
-    only the first is hiding the second.</div>
+    <div class="insight">
+      <span class="insight-icon">{bulb}</span>
+      <div class="insight-body">
+        <span class="eyebrow">Key insight</span>
+        <p>Two numbers are reported for every sample because one of them alone is
+        misleading. Field-level accuracy asks how many individual values are
+        right. Row-level accuracy asks how many applications are right in
+        <em>every</em> field, and it is always much lower. A pipeline that quotes
+        only the first is hiding the second.</p>
+      </div>
+      <a class="insight-next" href="#snapshot" aria-label="Skip to the research snapshot">{chevron}</a>
+    </div>
   </div>
 </section>
 """.format(
@@ -415,10 +523,15 @@ def _overview(
         sample=_e(sample_b.apps if sample_b else 0),
         fields=len(VERIFIED_FIELDS),
         facts="".join(
-            "<div><dt>{}</dt><dd>{}</dd></div>".format(_e(label), _e(value))
-            for label, value in facts
+            '<div class="fact"><span class="fact-icon">{icon}</span>'
+            "<div><dt>{label}</dt><dd>{value}</dd></div></div>".format(
+                icon=_icon(icon), label=_e(label), value=_e(value)
+            )
+            for icon, label, value in facts
         ),
         kpis=kpis,
+        bulb=_icon("bulb"),
+        chevron=_icon("chevron"),
     )
 
 
@@ -460,9 +573,12 @@ def _snapshot(analytics: AnalyticsReport, categories: Dict[str, str], total: int
     return """
 <section id="snapshot">
   <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Research snapshot</span>
-      <h2>Where the {total} applications landed</h2>
+    <div class="section-head with-action">
+      <div>
+        <span class="eyebrow">Research snapshot</span>
+        <h2>Where the {total} applications landed</h2>
+      </div>
+      <a class="pill-link" href="#dataset">View full dataset <span aria-hidden="true">\u2192</span></a>
       <p class="prose">Unresolved values are counted rather than dropped: how
       often a field could not be established is a finding about the research, not
       a gap in the chart. <span data-js-only>Select any bar to filter the dataset
