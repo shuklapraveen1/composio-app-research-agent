@@ -1,181 +1,758 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Composio Research — Integration Intelligence</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Which integrations can actually be built, and how we know</title>
+<meta name="description" content="A research operations pipeline over 100 applications: evidence-first classification, deterministic validation, four verification channels, and an accuracy number measured on applications the final rules had never seen.">
+<link rel="stylesheet" href="styles.css?v=12b21759a526dcd4">
+<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
-<div class="backdrop" id="backdrop"></div>
+<a class="visually-hidden" href="#main">Skip to content</a>
 
-<header class="masthead">
-  <div class="wrap masthead-inner">
+<header class="app-header">
+  <div class="wrap">
     <div class="brand">
-      <div class="brand-mark">C</div>
-      <div class="brand-text">
-        <span class="brand-title">Composio Research</span>
+      <span class="brand-mark" aria-hidden="true">CR</span>
+      <span class="brand-text">
+        <span class="brand-name">Composio Research</span>
         <span class="brand-sub">Integration Intelligence</span>
-      </div>
+      </span>
     </div>
-    <nav class="masthead-nav">
-      <a href="#overview" class="active">Overview</a>
-      <a href="#findings">Findings</a>
-      <a href="#dataset">Dataset</a>
-      <a href="#methodology">Methodology</a>
-    </nav>
-    <div class="masthead-meta">
-      <span>Dataset <b>100 apps</b></span>
-      <span>Updated <b>2026-09-16</b></span>
+    <nav class="tabs" aria-label="Sections"><a href="#overview">Overview</a><a href="#findings">Findings</a><a href="#verification">Verification</a><a href="#dataset">Dataset</a><a href="#methodology">Methodology</a></nav>
+    <div class="header-meta">
+      <span class="hide-sm">Dataset: <b>100 apps</b></span>
+      <span>Updated: <b>2026-09-16</b></span>
+      <svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M8 3v4"/><path d="M16 3v4"/><path d="M3.5 10h17"/></svg>
     </div>
   </div>
 </header>
-
-<section class="hero" id="overview">
+<main id="main">
+<section id="overview" class="hero">
   <div class="wrap">
-    <div class="hero-kicker"><span class="dot"></span> Evidence-first audit of 100 SaaS integrations</div>
-    <h1>Which integrations can you <em>actually</em> build today?</h1>
-    <p class="hero-deck">
-      Every field below is cited to a real source or marked unresolved — never guessed.
-      Three independent verification channels re-check the sampled apps, so the
-      confidence you see is measured, not assumed. Read the
-      <a href="#methodology">methodology</a> or jump straight to the
-      <a href="#dataset">full dataset</a>.
-    </p>
-
-    <div class="stat-row">
-      <div class="stat is-buildable">
-        <div class="stat-num" data-count="47"><span class="n">0</span><small>/ 100</small></div>
-        <div class="stat-label">Buildable today</div>
-      </div>
-      <div class="stat is-friction">
-        <div class="stat-num" data-count="35"><span class="n">0</span></div>
-        <div class="stat-label">Buildable with friction</div>
-      </div>
-      <div class="stat is-blocked">
-        <div class="stat-num" data-count="15"><span class="n">0</span></div>
-        <div class="stat-label">Blocked outright</div>
-      </div>
-      <div class="stat is-mcp">
-        <div class="stat-num" data-count="49"><span class="n">0</span><small>(32 official)</small></div>
-        <div class="stat-label">Ship an MCP server</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="block" id="findings">
-  <div class="wrap">
-    <div class="block-head">
+    <div class="hero-grid">
       <div>
-        <div class="block-eyebrow">Findings · by category</div>
-        <h2 class="block-title">Buildability isn't evenly spread</h2>
-      </div>
-      <div class="ledger-legend">
-        <span><i class="b"></i>Buildable</span>
-        <span><i class="f"></i>Friction</span>
-        <span><i class="x"></i>Blocked</span>
-      </div>
-    </div>
-    <div class="ledger" id="ledger"></div>
-  </div>
-</section>
-
-<section class="block" id="dataset">
-  <div class="wrap">
-    <div class="block-head">
-      <div>
-        <div class="block-eyebrow">Dataset explorer</div>
-        <h2 class="block-title">All 100 applications</h2>
-      </div>
-      <p class="block-note">Filter, sort, and open any row for its fields, rationale and the evidence behind it. Press <span class="sample-chip">/</span> to search.</p>
-    </div>
-
-    <div class="panel">
-      <div class="controls">
-        <div class="search-field">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-          <input type="text" id="search" placeholder="Application, id, or category">
-          <span class="search-kbd">/</span>
+        <span class="eyebrow">Research run · 2026-09-16</span>
+        <h1>Integration buildability <span class="accent">intelligence</span></h1>
+        <p class="question">Which integrations can actually be built, and how do we know?</p>
+        <div class="prose">
+          <p>A research operations pipeline over 100 applications: evidence-first classification, deterministic validation, four verification channels, and an accuracy number measured on applications the final rules had never seen.</p>
+          <p>One hundred applications were researched end to end, classified
+          against a fixed taxonomy, and then checked. The headline number is the
+          one that is hardest to flatter: <strong>field-level accuracy on Sample
+          B</strong>, 15 applications the improved classifier had never been
+          evaluated against, scored across 11 verified fields against values
+          established by independent verification.</p>
         </div>
-        <div class="select-field"><select id="f-cat"><option value="">All categories</option></select></div>
-        <div class="select-field"><select id="f-build"><option value="">Any buildability</option></select></div>
-        <div class="select-field"><select id="f-cred"><option value="">Any credential path</option></select></div>
-        <div class="select-field"><select id="f-mcp"><option value="">Any MCP status</option></select></div>
-        <div class="select-field"><select id="f-conf"><option value="">Any confidence</option></select></div>
-        <div class="select-field"><select id="f-sample"><option value="">Any sample</option></select></div>
-        <div class="controls-count"><span id="result-count">100</span> of 100 applications</div>
       </div>
-      <div class="table-scroll">
-        <table class="data">
-          <thead>
-            <tr>
-              <th data-sort="name">Application <span class="arrow">▲</span></th>
-              <th data-sort="catName">Category <span class="arrow">▲</span></th>
-              <th data-sort="build">Buildability <span class="arrow">▲</span></th>
-              <th data-sort="cred">Credentials <span class="arrow">▲</span></th>
-              <th data-sort="mcp">MCP <span class="arrow">▲</span></th>
-              <th data-sort="conf">Confidence <span class="arrow">▲</span></th>
-              <th data-sort="sample">Sample <span class="arrow">▲</span></th>
-            </tr>
-          </thead>
-          <tbody id="table-body"></tbody>
+      <div class="hero-aside">
+        <dl class="run-facts"><div class="fact"><span class="fact-icon"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.5 3H7a1.5 1.5 0 0 0-1.5 1.5v15A1.5 1.5 0 0 0 7 21h10a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M13.5 3v5h5"/></svg></span><div><dt>Schema</dt><dd>2.0.0</dd></div></div><div class="fact"><span class="fact-icon"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3 8.5 4.5L12 12 3.5 7.5 12 3Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5"/><path d="m3.5 16.5 8.5 4.5 8.5-4.5"/></svg></span><div><dt>Master seed</dt><dd>20260916</dd></div></div><div class="fact"><span class="fact-icon"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.2V12l3.2 1.9"/></svg></span><div><dt>Pipeline clock</dt><dd>2026-09-16</dd></div></div><div class="fact"><span class="fact-icon"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="17.5" cy="6" r="2.5"/><circle cx="17.5" cy="18" r="2.5"/><circle cx="6.5" cy="12" r="2.5"/><path d="m8.8 10.8 6.4-3.5"/><path d="m8.8 13.2 6.4 3.5"/></svg></span><div><dt>Classifier</dt><dd>v2</dd></div></div><div class="fact"><span class="fact-icon"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><ellipse cx="12" cy="6" rx="7.5" ry="3"/><path d="M4.5 6v12c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3V6"/><path d="M19.5 12c0 1.66-3.36 3-7.5 3s-7.5-1.34-7.5-3"/></svg></span><div><dt>Provider</dt><dd>corpus</dd></div></div><div class="fact"><span class="fact-icon"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5.8 8.4a7 7 0 0 1 12.4 3.6v1.4"/><path d="M9 7.6a4 4 0 0 1 6 3.4v3.6"/><path d="M12 10.9v4.6"/><path d="M4.5 14.4c.4-2 .3-3.9 1-5.6"/><path d="M17.9 17.4c.5-1 .8-2.1.9-3.2"/><path d="M6.6 18.6c1-1.2 1.6-2.5 1.8-3.9"/><path d="M10.8 20.4c1.5-1.3 2.4-3 2.7-4.9"/></svg></span><div><dt>Fingerprint</dt><dd>12b21759a526dcd4</dd></div></div></dl>
+        <div class="hero-flourish" aria-hidden="true">
+          <p class="script-line">From data to real integrations
+            <svg class="rule" viewBox="0 0 180 12" preserveAspectRatio="none" focusable="false">
+              <path d="M2 9C46 2.5 122 2 178 5.5"/>
+            </svg>
+          </p>
+          <p class="tagline">More signal.<br>Less guesswork.<br>Real integrations.</p>
+        </div>
+      </div>
+    </div>
+    <div class="kpis"><div class="kpi violet"><div class="kpi-top"><span class="kpi-icon"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3.5" y="3.5" width="7" height="7" rx="2"/><rect x="13.5" y="3.5" width="7" height="7" rx="2"/><rect x="3.5" y="13.5" width="7" height="7" rx="2"/><rect x="13.5" y="13.5" width="7" height="7" rx="2"/></svg></span><span class="spark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></div><div class="value">100</div><div class="label">Applications</div><div class="context">10 supplied categories</div></div><div class="kpi mint"><div class="kpi-top"><span class="kpi-icon"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg></span><span class="spark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></div><div class="value">97.6%</div><div class="label">Field-level accuracy</div><div class="context">Sample B · 15 applications · 11 verified fields</div></div><div class="kpi amber"><div class="kpi-top"><span class="kpi-icon"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.5 3H7a1.5 1.5 0 0 0-1.5 1.5v15A1.5 1.5 0 0 0 7 21h10a1.5 1.5 0 0 0 1.5-1.5V8z"/><path d="M13.5 3v5h5"/><path d="M8.5 13h7"/><path d="M8.5 16.5h4.5"/></svg></span><span class="spark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></div><div class="value">465</div><div class="label">Evidence items</div><div class="context">Cited across 100 applications</div></div><div class="kpi sky"><div class="kpi-top"><span class="kpi-icon"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="17.5" cy="6" r="2.5"/><circle cx="17.5" cy="18" r="2.5"/><circle cx="6.5" cy="12" r="2.5"/><path d="m8.8 10.8 6.4-3.5"/><path d="m8.8 13.2 6.4 3.5"/></svg></span><span class="spark" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span></div><div class="value">49</div><div class="label">Applications with MCP</div><div class="context">32 vendor-published, 17 third-party</div></div></div>
+    <div class="insight">
+      <span class="insight-icon"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1.1 1.9h4.8c.1-.8.5-1.5 1.1-1.9A6 6 0 0 0 12 3Z"/><path d="M9.8 18.6h4.4"/><path d="M10.7 21h2.6"/></svg></span>
+      <div class="insight-body">
+        <span class="eyebrow">Key insight</span>
+        <p>Two numbers are reported for every sample because one of them alone is
+        misleading. Field-level accuracy asks how many individual values are
+        right. Row-level accuracy asks how many applications are right in
+        <em>every</em> field, and it is always much lower. A pipeline that quotes
+        only the first is hiding the second.</p>
+      </div>
+      <a class="insight-next" href="#snapshot" aria-label="Skip to the research snapshot"><svg class="icon-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9.8 5.8 6.6 6.2-6.6 6.2"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section id="snapshot">
+  <div class="wrap">
+    <div class="section-head with-action">
+      <div>
+        <span class="eyebrow">Research snapshot</span>
+        <h2>Where the 100 applications landed</h2>
+      </div>
+      <a class="pill-link" href="#dataset">View full dataset <span aria-hidden="true">→</span></a>
+      <p class="prose">Unresolved values are counted rather than dropped: how
+      often a field could not be established is a finding about the research, not
+      a gap in the chart. <span data-js-only>Select any bar to filter the dataset
+      below.</span></p>
+    </div>
+    <div class="grid-3"><div class="panel"><div class="panel-head"><h3>Buildability</h3><span class="meta">100 applications</span></div><div class="panel-body"><div class="bars"><button type="button" class="bar-row" data-filter-key="buildability" data-filter-value="buildable" aria-pressed="false" title="buildable - 47 of 100 applications"><span class="name">buildable</span><span class="track"><span class="fill good" style="width:100.0%"></span></span><span class="count">47<em> / 100</em></span></button><button type="button" class="bar-row" data-filter-key="buildability" data-filter-value="buildable_with_friction" aria-pressed="false" title="buildable with friction - 35 of 100 applications"><span class="name">buildable with friction</span><span class="track"><span class="fill warn" style="width:74.5%"></span></span><span class="count">35<em> / 100</em></span></button><button type="button" class="bar-row" data-filter-key="buildability" data-filter-value="blocked" aria-pressed="false" title="blocked - 15 of 100 applications"><span class="name">blocked</span><span class="track"><span class="fill bad" style="width:31.9%"></span></span><span class="count">15<em> / 100</em></span></button><button type="button" class="bar-row" data-filter-key="buildability" data-filter-value="not_applicable" aria-pressed="false" title="not applicable - 3 of 100 applications"><span class="name">not applicable</span><span class="track"><span class="fill neutral" style="width:6.4%"></span></span><span class="count">3<em> / 100</em></span></button></div></div></div><div class="panel"><div class="panel-head"><h3>MCP server availability</h3><span class="meta">100 applications</span></div><div class="panel-body"><div class="bars"><button type="button" class="bar-row" data-filter-key="mcp" data-filter-value="not_found" aria-pressed="false" title="not found - 50 of 100 applications"><span class="name">not found</span><span class="track"><span class="fill neutral" style="width:100.0%"></span></span><span class="count">50<em> / 100</em></span></button><button type="button" class="bar-row" data-filter-key="mcp" data-filter-value="official" aria-pressed="false" title="official - 32 of 100 applications"><span class="name">official</span><span class="track"><span class="fill good" style="width:64.0%"></span></span><span class="count">32<em> / 100</em></span></button><button type="button" class="bar-row" data-filter-key="mcp" data-filter-value="third_party" aria-pressed="false" title="third party - 17 of 100 applications"><span class="name">third party</span><span class="track"><span class="fill accent" style="width:34.0%"></span></span><span class="count">17<em> / 100</em></span></button><button type="button" class="bar-row" data-filter-key="mcp" data-filter-value="unavailable" aria-pressed="false" title="unavailable - 1 of 100 applications"><span class="name">unavailable</span><span class="track"><span class="fill neutral" style="width:2.0%"></span></span><span class="count">1<em> / 100</em></span></button></div></div></div><div class="panel"><div class="panel-head"><h3>How credentials are obtained</h3><span class="meta">100 applications</span></div><div class="panel-body"><div class="bars"><button type="button" class="bar-row" data-filter-key="credential_access" data-filter-value="self_serve_free" aria-pressed="false" title="self serve free - 46 of 100 applications"><span class="name">self serve free</span><span class="track"><span class="fill good" style="width:100.0%"></span></span><span class="count">46<em> / 100</em></span></button><button type="button" class="bar-row" data-filter-key="credential_access" data-filter-value="admin_approval" aria-pressed="false" title="admin approval - 15 of 100 applications"><span class="name">admin approval</span><span class="track"><span class="fill accent" style="width:32.6%"></span></span><span class="count">15<em> / 100</em></span></button><button type="button" class="bar-row" data-filter-key="credential_access" data-filter-value="self_serve_paid" aria-pressed="false" title="self serve paid - 13 of 100 applications"><span class="name">self serve paid</span><span class="track"><span class="fill accent" style="width:28.3%"></span></span><span class="count">13<em> / 100</em></span></button><button type="button" class="bar-row" data-filter-key="credential_access" data-filter-value="contact_sales" aria-pressed="false" title="contact sales - 10 of 100 applications"><span class="name">contact sales</span><span class="track"><span class="fill accent" style="width:21.7%"></span></span><span class="count">10<em> / 100</em></span></button><button type="button" class="bar-row" data-filter-key="credential_access" data-filter-value="self_hosted_deployment_dependent" aria-pressed="false" title="self hosted deployment dependent - 8 of 100 applications"><span class="name">self hosted deployment dependent</span><span class="track"><span class="fill accent" style="width:17.4%"></span></span><span class="count">8<em> / 100</em></span></button><button type="button" class="bar-row" data-filter-key="credential_access" data-filter-value="enterprise" aria-pressed="false" title="enterprise - 5 of 100 applications"><span class="name">enterprise</span><span class="track"><span class="fill accent" style="width:10.9%"></span></span><span class="count">5<em> / 100</em></span></button><button type="button" class="bar-row" data-filter-key="credential_access" data-filter-value="self_serve_trial" aria-pressed="false" title="self serve trial - 2 of 100 applications"><span class="name">self serve trial</span><span class="track"><span class="fill good" style="width:4.3%"></span></span><span class="count">2<em> / 100</em></span></button><button type="button" class="bar-row" data-filter-key="credential_access" data-filter-value="unclear" aria-pressed="false" title="unclear - 1 of 100 applications"><span class="name">unclear</span><span class="track"><span class="fill neutral" style="width:2.2%"></span></span><span class="count">1<em> / 100</em></span></button></div></div></div></div>
+    <div class="breakdowns"><details><summary>Buildability by supplied category</summary><div class="table-wrap"><table><thead><tr><th scope="col">Category</th><th scope="col" class="num">blocked</th><th scope="col" class="num">buildable</th><th scope="col" class="num">buildable with friction</th><th scope="col" class="num">not applicable</th></tr></thead><tbody><tr><td>AI &amp; Data</td><td class="num">0</td><td class="num">3</td><td class="num">6</td><td class="num">1</td></tr><tr><td>Communication &amp; Messaging</td><td class="num">0</td><td class="num">4</td><td class="num">6</td><td class="num">0</td></tr><tr><td>CRM &amp; Sales</td><td class="num">1</td><td class="num">4</td><td class="num">5</td><td class="num">0</td></tr><tr><td>Developer Tools</td><td class="num">0</td><td class="num">8</td><td class="num">0</td><td class="num">2</td></tr><tr><td>Finance &amp; Payments</td><td class="num">2</td><td class="num">4</td><td class="num">4</td><td class="num">0</td></tr><tr><td>HR &amp; Recruiting</td><td class="num">8</td><td class="num">0</td><td class="num">2</td><td class="num">0</td></tr><tr><td>Marketing &amp; Analytics</td><td class="num">1</td><td class="num">6</td><td class="num">3</td><td class="num">0</td></tr><tr><td>Productivity &amp; Collaboration</td><td class="num">0</td><td class="num">10</td><td class="num">0</td><td class="num">0</td></tr><tr><td>Storage &amp; Documents</td><td class="num">2</td><td class="num">4</td><td class="num">4</td><td class="num">0</td></tr><tr><td>Support &amp; Ticketing</td><td class="num">1</td><td class="num">4</td><td class="num">5</td><td class="num">0</td></tr></tbody></table></div></details><details><summary>Buildability by how credentials are obtained</summary><div class="table-wrap"><table><thead><tr><th scope="col">How credentials are obtained</th><th scope="col" class="num">blocked</th><th scope="col" class="num">buildable</th><th scope="col" class="num">buildable with friction</th><th scope="col" class="num">not applicable</th></tr></thead><tbody><tr><td>admin approval</td><td class="num">0</td><td class="num">0</td><td class="num">15</td><td class="num">0</td></tr><tr><td>contact sales</td><td class="num">10</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr><tr><td>enterprise</td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr><tr><td>self hosted deployment dependent</td><td class="num">0</td><td class="num">0</td><td class="num">5</td><td class="num">3</td></tr><tr><td>self serve free</td><td class="num">0</td><td class="num">46</td><td class="num">0</td><td class="num">0</td></tr><tr><td>self serve paid</td><td class="num">0</td><td class="num">0</td><td class="num">13</td><td class="num">0</td></tr><tr><td>self serve trial</td><td class="num">0</td><td class="num">1</td><td class="num">1</td><td class="num">0</td></tr><tr><td>unclear</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">0</td></tr></tbody></table></div></details><details><summary>MCP server availability by supplied category</summary><div class="table-wrap"><table><thead><tr><th scope="col">Category</th><th scope="col" class="num">not found</th><th scope="col" class="num">official</th><th scope="col" class="num">third party</th><th scope="col" class="num">unavailable</th></tr></thead><tbody><tr><td>AI &amp; Data</td><td class="num">2</td><td class="num">7</td><td class="num">1</td><td class="num">0</td></tr><tr><td>Communication &amp; Messaging</td><td class="num">3</td><td class="num">2</td><td class="num">5</td><td class="num">0</td></tr><tr><td>CRM &amp; Sales</td><td class="num">6</td><td class="num">3</td><td class="num">1</td><td class="num">0</td></tr><tr><td>Developer Tools</td><td class="num">2</td><td class="num">6</td><td class="num">1</td><td class="num">1</td></tr><tr><td>Finance &amp; Payments</td><td class="num">5</td><td class="num">5</td><td class="num">0</td><td class="num">0</td></tr><tr><td>HR &amp; Recruiting</td><td class="num">10</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr><tr><td>Marketing &amp; Analytics</td><td class="num">7</td><td class="num">3</td><td class="num">0</td><td class="num">0</td></tr><tr><td>Productivity &amp; Collaboration</td><td class="num">1</td><td class="num">4</td><td class="num">5</td><td class="num">0</td></tr><tr><td>Storage &amp; Documents</td><td class="num">7</td><td class="num">0</td><td class="num">3</td><td class="num">0</td></tr><tr><td>Support &amp; Ticketing</td><td class="num">7</td><td class="num">2</td><td class="num">1</td><td class="num">0</td></tr></tbody></table></div></details><details><summary>Event delivery by API breadth</summary><div class="table-wrap"><table><thead><tr><th scope="col">API breadth</th><th scope="col" class="num">event streaming</th><th scope="col" class="num">native webhooks</th><th scope="col" class="num">no events</th><th scope="col" class="num">not found</th><th scope="col" class="num">polling only</th></tr></thead><tbody><tr><td>broad</td><td class="num">0</td><td class="num">35</td><td class="num">4</td><td class="num">1</td><td class="num">4</td></tr><tr><td>moderate</td><td class="num">0</td><td class="num">5</td><td class="num">2</td><td class="num">0</td><td class="num">0</td></tr><tr><td>narrow</td><td class="num">0</td><td class="num">0</td><td class="num">1</td><td class="num">2</td><td class="num">0</td></tr><tr><td>not applicable</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">2</td><td class="num">0</td></tr><tr><td>very broad</td><td class="num">3</td><td class="num">39</td><td class="num">1</td><td class="num">0</td><td class="num">1</td></tr></tbody></table></div></details></div>
+  </div>
+</section>
+
+<section id="findings">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Key findings</span>
+      <h2>What the data says</h2>
+      <p class="prose">Each of these is a predicate evaluated over the dataset,
+      and the applications supporting it are listed in
+      <code>patterns.json</code>. If the data changes, the sentence changes with
+      it. <span data-js-only>Open any finding to see exactly which applications
+      it counts.</span></p>
+    </div>
+    <div class="findings">
+<button type="button" class="finding" data-finding="mcp-unestablished" aria-pressed="false">
+  <span class="count">50<span> / 100</span></span>
+  <h3>MCP status is often unestablished</h3>
+  <p>50 of 100 applications have no MCP status that the sources could establish either way.</p>
+  <span class="action">View applications →</span>
+</button>
+
+<button type="button" class="finding" data-finding="friction-is-commercial" aria-pressed="false">
+  <span class="count">32<span> / 100</span></span>
+  <h3>Friction is commercial, not technical</h3>
+  <p>32 of 100 applications are buildable only past a paid plan or an administrator&#x27;s approval.</p>
+  <span class="action">View applications →</span>
+</button>
+
+<button type="button" class="finding" data-finding="mcp-official" aria-pressed="false">
+  <span class="count">32<span> / 100</span></span>
+  <h3>Vendors publishing their own MCP servers</h3>
+  <p>32 of 100 applications ship a vendor-published MCP server.</p>
+  <span class="action">View applications →</span>
+</button>
+
+<button type="button" class="finding" data-finding="broad-api-behind-a-gate" aria-pressed="false">
+  <span class="count">25<span> / 100</span></span>
+  <h3>Capable APIs behind a human gate</h3>
+  <p>25 of 100 applications document a broad API that a developer cannot reach without an administrator, a contract or a partner programme.</p>
+  <span class="action">View applications →</span>
+</button>
+
+<button type="button" class="finding" data-finding="mcp-is-community-first" aria-pressed="false">
+  <span class="count">17<span> / 100</span></span>
+  <h3>MCP coverage is community-first</h3>
+  <p>17 of 100 applications are reachable through an MCP server that the vendor did not publish.</p>
+  <span class="action">View applications →</span>
+</button>
+
+<button type="button" class="finding" data-finding="events-are-not-always-webhooks" aria-pressed="false">
+  <span class="count">16<span> / 100</span></span>
+  <h3>Event delivery is not always a webhook</h3>
+  <p>16 of 100 applications deliver change events by streaming, polling, or not at all.</p>
+  <span class="action">View applications →</span>
+</button>
+
+<button type="button" class="finding" data-finding="access-gates-beat-missing-apis" aria-pressed="false">
+  <span class="count">15<span> / 100</span></span>
+  <h3>Access, not absence of an API, is what blocks</h3>
+  <p>15 of 100 applications are blocked by who may obtain credentials rather than by the absence of an API.</p>
+  <span class="action">View applications →</span>
+</button>
+
+<button type="button" class="finding" data-finding="limits-are-undisclosed" aria-pressed="false">
+  <span class="count">8<span> / 100</span></span>
+  <h3>Rate limits are frequently undisclosed</h3>
+  <p>8 of 100 applications publish no usable numeric rate limit, which is a capacity-planning risk rather than a documentation nicety.</p>
+  <span class="action">View applications →</span>
+</button>
+
+<button type="button" class="finding" data-finding="no-public-api" aria-pressed="false">
+  <span class="count">2<span> / 100</span></span>
+  <h3>Products with no public API at all</h3>
+  <p>2 of 100 applications offer no public API, so no toolkit is possible regardless of commercial terms.</p>
+  <span class="action">View applications →</span>
+</button>
+</div>
+  </div>
+</section>
+
+<section id="verification">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Accuracy</span>
+      <h2>What the first pass got wrong, and what changed</h2>
+      <p class="prose">Sample A is scored against values frozen <em>before</em>
+      the improvement phase, so improving the classifier cannot retroactively
+      improve the first-pass number. Sample B is scored on applications the
+      improved classifier had never been evaluated against.</p>
+    </div>
+
+    <div class="compare">
+      <div class="compare-card">
+        <div class="who">Sample A · first pass</div>
+        <div class="value">86.1%</div>
+        <div class="detail">classifier v1 · 15 applications · 142 of 165 field values correct</div>
+      </div>
+      <div class="compare-arrow" aria-hidden="true">→</div>
+      <div class="compare-card final">
+        <div class="who">Sample B · final</div>
+        <div class="value">97.6%</div>
+        <div class="detail">classifier v2 · 15 applications · 161 of 165 field values correct</div>
+      </div>
+    </div>
+    <p class="prose mt-sm">Field-level accuracy moved +11.5 points across the improvement phase. Not every field improved: the per-field panel shows where the rules still disagree with the verified values.</p>
+
+    <div class="mt-md"><div class="panel"><div class="panel-head"><h3>Both samples, both measurements</h3><span class="meta">row-level requires every field of an app to be right</span></div><div class="panel-body"><div class="table-wrap"><table><thead><tr><th scope="col">Sample</th><th scope="col">Measurement</th><th scope="col">Classifier</th><th scope="col" class="num">Apps</th><th scope="col" class="num">Field-level</th><th scope="col" class="num">Row-level</th><th scope="col" class="num">Evidence validity</th></tr></thead><tbody><tr><td>Sample A</td><td>first pass</td><td>v1</td><td class="num">15</td><td class="num">86.1%</td><td class="num">0.0%</td><td class="num">89.7%</td></tr><tr><td>Sample B</td><td>final</td><td>v2</td><td class="num">15</td><td class="num">97.6%</td><td class="num">73.3%</td><td class="num">100.0%</td></tr></tbody></table></div></div></div></div>
+    <div class="mt-sm"><div class="panel"><div class="panel-head"><h3>Per-field accuracy</h3><span class="meta">first pass vs final</span></div><div class="panel-body"><div class="moves">
+<div class="field-move">
+  <span class="label">API breadth <span class="delta down">-13.3 pts</span></span>
+  <div class="move-bars">
+    <span class="move-line"><span>v1</span>
+      <span class="track"><span class="fill" style="width:93.3%"></span></span>
+      <span class="pct">93.3%</span></span>
+    <span class="move-line final"><span>v2</span>
+      <span class="track"><span class="fill" style="width:80.0%"></span></span>
+      <span class="pct">80.0%</span></span>
+  </div>
+</div>
+
+<div class="field-move">
+  <span class="label">API exists <span class="delta flat">no change</span></span>
+  <div class="move-bars">
+    <span class="move-line"><span>v1</span>
+      <span class="track"><span class="fill" style="width:100.0%"></span></span>
+      <span class="pct">100.0%</span></span>
+    <span class="move-line final"><span>v2</span>
+      <span class="track"><span class="fill" style="width:100.0%"></span></span>
+      <span class="pct">100.0%</span></span>
+  </div>
+</div>
+
+<div class="field-move">
+  <span class="label">Interface types <span class="delta flat">no change</span></span>
+  <div class="move-bars">
+    <span class="move-line"><span>v1</span>
+      <span class="track"><span class="fill" style="width:100.0%"></span></span>
+      <span class="pct">100.0%</span></span>
+    <span class="move-line final"><span>v2</span>
+      <span class="track"><span class="fill" style="width:100.0%"></span></span>
+      <span class="pct">100.0%</span></span>
+  </div>
+</div>
+
+<div class="field-move">
+  <span class="label">Application type <span class="delta flat">no change</span></span>
+  <div class="move-bars">
+    <span class="move-line"><span>v1</span>
+      <span class="track"><span class="fill" style="width:100.0%"></span></span>
+      <span class="pct">100.0%</span></span>
+    <span class="move-line final"><span>v2</span>
+      <span class="track"><span class="fill" style="width:100.0%"></span></span>
+      <span class="pct">100.0%</span></span>
+  </div>
+</div>
+
+<div class="field-move">
+  <span class="label">Authentication mechanisms <span class="delta flat">no change</span></span>
+  <div class="move-bars">
+    <span class="move-line"><span>v1</span>
+      <span class="track"><span class="fill" style="width:100.0%"></span></span>
+      <span class="pct">100.0%</span></span>
+    <span class="move-line final"><span>v2</span>
+      <span class="track"><span class="fill" style="width:100.0%"></span></span>
+      <span class="pct">100.0%</span></span>
+  </div>
+</div>
+
+<div class="field-move">
+  <span class="label">Blockers <span class="delta up">+86.7 pts</span></span>
+  <div class="move-bars">
+    <span class="move-line"><span>v1</span>
+      <span class="track"><span class="fill" style="width:6.7%"></span></span>
+      <span class="pct">6.7%</span></span>
+    <span class="move-line final"><span>v2</span>
+      <span class="track"><span class="fill" style="width:93.3%"></span></span>
+      <span class="pct">93.3%</span></span>
+  </div>
+</div>
+
+<div class="field-move">
+  <span class="label">Buildability <span class="delta up">+6.7 pts</span></span>
+  <div class="move-bars">
+    <span class="move-line"><span>v1</span>
+      <span class="track"><span class="fill" style="width:93.3%"></span></span>
+      <span class="pct">93.3%</span></span>
+    <span class="move-line final"><span>v2</span>
+      <span class="track"><span class="fill" style="width:100.0%"></span></span>
+      <span class="pct">100.0%</span></span>
+  </div>
+</div>
+
+<div class="field-move">
+  <span class="label">How credentials are obtained <span class="delta up">+40.0 pts</span></span>
+  <div class="move-bars">
+    <span class="move-line"><span>v1</span>
+      <span class="track"><span class="fill" style="width:60.0%"></span></span>
+      <span class="pct">60.0%</span></span>
+    <span class="move-line final"><span>v2</span>
+      <span class="track"><span class="fill" style="width:100.0%"></span></span>
+      <span class="pct">100.0%</span></span>
+  </div>
+</div>
+
+<div class="field-move">
+  <span class="label">MCP server availability <span class="delta flat">no change</span></span>
+  <div class="move-bars">
+    <span class="move-line"><span>v1</span>
+      <span class="track"><span class="fill" style="width:100.0%"></span></span>
+      <span class="pct">100.0%</span></span>
+    <span class="move-line final"><span>v2</span>
+      <span class="track"><span class="fill" style="width:100.0%"></span></span>
+      <span class="pct">100.0%</span></span>
+  </div>
+</div>
+
+<div class="field-move">
+  <span class="label">Published rate limits <span class="delta flat">no change</span></span>
+  <div class="move-bars">
+    <span class="move-line"><span>v1</span>
+      <span class="track"><span class="fill" style="width:100.0%"></span></span>
+      <span class="pct">100.0%</span></span>
+    <span class="move-line final"><span>v2</span>
+      <span class="track"><span class="fill" style="width:100.0%"></span></span>
+      <span class="pct">100.0%</span></span>
+  </div>
+</div>
+
+<div class="field-move">
+  <span class="label">Event delivery <span class="delta up">+6.7 pts</span></span>
+  <div class="move-bars">
+    <span class="move-line"><span>v1</span>
+      <span class="track"><span class="fill" style="width:93.3%"></span></span>
+      <span class="pct">93.3%</span></span>
+    <span class="move-line final"><span>v2</span>
+      <span class="track"><span class="fill" style="width:100.0%"></span></span>
+      <span class="pct">100.0%</span></span>
+  </div>
+</div>
+</div></div></div></div>
+
+    <div class="section-head mt-lg">
+      <h3>The rules that changed</h3>
+      <p class="prose">Each failure was traced to the rule that produced it, and
+      the rule was changed once for every application rather than patched per
+      app. The classifier version is recorded on every record, so which rules
+      produced which value is never in doubt.</p>
+    </div>
+    <div class="table-wrap"><table><thead><tr><th scope="col">Change</th><th scope="col">Failure mode</th><th scope="col">What v2 does instead</th><th scope="col" class="num">Sample A misses</th></tr></thead><tbody><tr><td>api breadth coverage anchor</td><td>API breadth was a count of documented resource groups, so a large reference covering one corner of a product scored very_broad.</td><td>v2 caps the count-derived breadth by the documented share of the product the API actually covers.</td><td class="num">1</td></tr><tr><td>blocker completeness</td><td>Blockers were only named when an app was blocked outright, so &#x27;buildable with friction&#x27; records were silent about the friction, and unblocked apps read as though nothing had been established.</td><td>v2 names friction blockers explicitly and records &#x27;none&#x27; when the decision tree found nothing in the way.</td><td class="num">14</td></tr><tr><td>credential access plan gating</td><td>Credential access was read off the signup tier alone, so a product with a free account but a paid-only API was recorded as self_serve_free.</td><td>v2 resolves credential access from the plan that actually unlocks the API, together with partner, approval and self-hosting gates, and derives the matching access restrictions rather than copying only those the source spelled out.</td><td class="num">6</td></tr><tr><td>derived restriction provenance</td><td>Access restrictions were cited to the credential page without saying so, so the citation audit read them as claims the page never made.</td><td>v2 records restrictions as derived from the documented access conditions and says so in the rationale, so the audit judges the citation as support for a conclusion rather than as a quotation.</td><td class="num">0</td></tr><tr><td>event mechanism distinction</td><td>Anything event-like was recorded as native_webhooks, which erased the difference between a callback, a gateway stream and polling.</td><td>v2 keeps the observed event mechanism as the source states it.</td><td class="num">1</td></tr></tbody></table></div>
+  </div>
+</section>
+
+<section id="channels">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Verification design</span>
+      <h2>Four channels, and what each one can catch</h2>
+    </div>
+    <div class="channels">
+<div class="channel">
+  <div class="letter">A</div>
+  <h3>Research</h3>
+  <div class="scope">100 applications</div>
+  <p>Gathers sources and classifies every field.</p>
+</div>
+
+<div class="channel blind">
+  <div class="letter">B</div>
+  <h3>Independent re-derivation</h3>
+  <div class="scope">30 sampled applications</div>
+  <p>Reads the same sources with different rules, without seeing Channel A&#x27;s answer.</p>
+</div>
+
+<div class="channel">
+  <div class="letter">C</div>
+  <h3>Citation audit</h3>
+  <div class="scope">30 sampled applications</div>
+  <p>Checks that each cited page supports the field it is cited for.</p>
+</div>
+
+<div class="channel">
+  <div class="letter">D</div>
+  <h3>Human review</h3>
+  <div class="scope">32 adjudicated fields</div>
+  <p>Rules on disputed and triggered fields, and stays silent everywhere else.</p>
+</div>
+</div>
+    <div class="note"><strong>Channel B is blind to Channel A.</strong> It does
+    not see the recorded answer and does not share the classifier's rules, so
+    agreement between them is evidence rather than an echo. Channel D is silent
+    unless a reviewer actually ruled on a field: a human rubber-stamping the
+    pipeline's own output would make the accuracy number circular.</div>
+  </div>
+</section>
+
+<section id="dataset">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Dataset explorer</span>
+      <h2>All 100 applications</h2>
+      <p class="prose">The final dataset, one row per application. Sampled
+      applications carry the verification that was run on them.
+      <span data-js-only>Filter, sort, and open any row for its fields,
+      rationales and the evidence behind them. Press <kbd>/</kbd> to
+      search.</span></p>
+    </div>
+
+    <div id="explorer-error" class="panel error-state" data-js-only hidden>
+      <h3>Unable to load the dataset</h3>
+      <p data-error-detail>The dataset projection did not load.</p>
+      <button type="button" class="btn primary" data-retry>Retry</button>
+    </div>
+
+    <div id="explorer-shell" class="explorer" data-js-only hidden>
+      <div class="toolbar">
+        <div class="field search">
+          <label for="search">Search</label>
+          <span class="icon" aria-hidden="true">⌕</span>
+          <input id="search" type="search" placeholder="Application, id, or category"
+                 autocomplete="off" spellcheck="false">
+          <kbd>/</kbd>
+        </div>
+        <div class="field">
+          <label for="filter-category-id">Category</label>
+          <select id="filter-category-id"><option value="">All categories</option><option value="ai-and-data">AI &amp; Data (10)</option><option value="communication-and-messaging">Communication &amp; Messaging (10)</option><option value="crm-and-sales">CRM &amp; Sales (10)</option><option value="developer-tools">Developer Tools (10)</option><option value="finance-and-payments">Finance &amp; Payments (10)</option><option value="hr-and-recruiting">HR &amp; Recruiting (10)</option><option value="marketing-and-analytics">Marketing &amp; Analytics (10)</option><option value="productivity-and-collaboration">Productivity &amp; Collaboration (10)</option><option value="storage-and-documents">Storage &amp; Documents (10)</option><option value="support-and-ticketing">Support &amp; Ticketing (10)</option></select>
+        </div>
+        <div class="field">
+          <label for="filter-buildability">Buildability</label>
+          <select id="filter-buildability"><option value="">Any buildability</option><option value="buildable">buildable (47)</option><option value="buildable_with_friction">buildable with friction (35)</option><option value="blocked">blocked (15)</option><option value="not_applicable">not applicable (3)</option></select>
+        </div>
+        <div class="field">
+          <label for="filter-credential-access">Credentials</label>
+          <select id="filter-credential-access"><option value="">Any credential path</option><option value="self_serve_free">self serve free (46)</option><option value="admin_approval">admin approval (15)</option><option value="self_serve_paid">self serve paid (13)</option><option value="contact_sales">contact sales (10)</option><option value="self_hosted_deployment_dependent">self hosted deployment dependent (8)</option><option value="enterprise">enterprise (5)</option><option value="self_serve_trial">self serve trial (2)</option><option value="unclear">unclear (1)</option></select>
+        </div>
+        <div class="field">
+          <label for="filter-mcp">MCP</label>
+          <select id="filter-mcp"><option value="">Any MCP status</option><option value="not_found">not found (50)</option><option value="official">official (32)</option><option value="third_party">third party (17)</option><option value="unavailable">unavailable (1)</option></select>
+        </div>
+        <div class="field">
+          <label for="filter-confidence">Confidence</label>
+          <select id="filter-confidence"><option value="">Any confidence</option><option value="high">high (88)</option><option value="medium">medium (9)</option><option value="low">low (3)</option></select>
+        </div>
+        <div class="field">
+          <label for="filter-sample">Sample</label>
+          <select id="filter-sample"><option value="">Any sample</option><option value="A">Sample A (15)</option><option value="B">Sample B (15)</option></select>
+        </div>
+      </div>
+
+      <div class="status-bar">
+        <span class="count" id="result-count"></span>
+        <span id="chips"></span>
+        <span class="spacer"></span>
+        <button type="button" class="btn" id="clear-filters" hidden>Clear filters</button>
+      </div>
+
+      <div class="table-scroll" id="table-scroll">
+        <table>
+          <caption class="visually-hidden">Applications in the final dataset</caption>
+          <thead><tr><th scope="col" class="sortable" data-sort="name" aria-sort="none" tabindex="0" role="columnheader">Application<span class="arrow">▲</span></th><th scope="col" class="sortable" data-sort="category" aria-sort="none" tabindex="0" role="columnheader">Category<span class="arrow">▲</span></th><th scope="col" class="sortable" data-sort="buildability" aria-sort="none" tabindex="0" role="columnheader">Buildability<span class="arrow">▲</span></th><th scope="col" class="sortable" data-sort="credential_access" aria-sort="none" tabindex="0" role="columnheader">Credentials<span class="arrow">▲</span></th><th scope="col" class="sortable" data-sort="mcp" aria-sort="none" tabindex="0" role="columnheader">MCP<span class="arrow">▲</span></th><th scope="col" class="sortable" data-sort="confidence" aria-sort="none" tabindex="0" role="columnheader">Confidence<span class="arrow">▲</span></th><th scope="col" class="sortable" data-sort="sample" aria-sort="none" tabindex="0" role="columnheader">Sample<span class="arrow">▲</span></th><th scope="col"><span class="visually-hidden">Open</span></th></tr></thead>
+          <tbody id="rows"></tbody>
         </table>
-        <div class="empty-state" id="empty-state" style="display:none;">
-          <strong>No applications match these filters</strong>
-          Try widening the category, buildability, or sample filters.
-        </div>
       </div>
+
+      <div class="empty" id="empty-state" hidden>
+        <h3>No applications match these filters.</h3>
+        <p>Nothing in the dataset satisfies every condition at once.</p>
+        <button type="button" class="btn" id="empty-clear">Clear filters</button>
+      </div>
+    </div>
+
+    <noscript>
+      <p class="prose">The interactive explorer needs JavaScript. The full table
+      is below, and the same data is downloadable as JSON and CSV.</p>
+    </noscript>
+    <div class="no-js-only"><div class="table-wrap"><table><caption>The final dataset, one row per application.</caption><thead><tr><th scope="col">Application</th><th scope="col">Category</th><th scope="col">Buildability</th><th scope="col">Credentials</th><th scope="col">MCP</th><th scope="col">Confidence</th><th scope="col">Sample</th></tr></thead><tbody><tr><td>Adobe Acrobat Sign</td><td>Storage &amp; Documents</td><td><span class="tag bad">blocked</span></td><td>enterprise</td><td>not found</td><td>high</td><td></td></tr><tr><td>Airtable</td><td>Productivity &amp; Collaboration</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>third party</td><td>high</td><td></td></tr><tr><td>Amplitude</td><td>Marketing &amp; Analytics</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>not found</td><td>high</td><td>B</td></tr><tr><td>Anthropic</td><td>AI &amp; Data</td><td><span class="tag warn">buildable with friction</span></td><td>self serve paid</td><td>official</td><td>high</td><td>B</td></tr><tr><td>Apollo.io</td><td>CRM &amp; Sales</td><td><span class="tag warn">buildable with friction</span></td><td>self serve paid</td><td>not found</td><td>high</td><td>B</td></tr><tr><td>Asana</td><td>Productivity &amp; Collaboration</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td></td></tr><tr><td>Ashby</td><td>HR &amp; Recruiting</td><td><span class="tag bad">blocked</span></td><td>contact sales</td><td>not found</td><td>high</td><td>B</td></tr><tr><td>Attio</td><td>CRM &amp; Sales</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>third party</td><td>high</td><td></td></tr><tr><td>BambooHR</td><td>HR &amp; Recruiting</td><td><span class="tag warn">buildable with friction</span></td><td>self serve paid</td><td>not found</td><td>high</td><td></td></tr><tr><td>Bitbucket</td><td>Developer Tools</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>unavailable</td><td>high</td><td></td></tr><tr><td>Box</td><td>Storage &amp; Documents</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>third party</td><td>high</td><td></td></tr><tr><td>Braze</td><td>Marketing &amp; Analytics</td><td><span class="tag bad">blocked</span></td><td>enterprise</td><td>not found</td><td>high</td><td>A</td></tr><tr><td>Brex</td><td>Finance &amp; Payments</td><td><span class="tag bad">blocked</span></td><td>contact sales</td><td>not found</td><td>high</td><td></td></tr><tr><td>Buffer</td><td>Marketing &amp; Analytics</td><td><span class="tag warn">buildable with friction</span></td><td>admin approval</td><td>not found</td><td>high</td><td>B</td></tr><tr><td>CircleCI</td><td>Developer Tools</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td></td></tr><tr><td>ClickUp</td><td>Productivity &amp; Collaboration</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>third party</td><td>high</td><td>B</td></tr><tr><td>Close</td><td>CRM &amp; Sales</td><td><span class="tag warn">buildable with friction</span></td><td>self serve paid</td><td>not found</td><td>high</td><td></td></tr><tr><td>Coda</td><td>Productivity &amp; Collaboration</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>not found</td><td>high</td><td></td></tr><tr><td>Confluence</td><td>Productivity &amp; Collaboration</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td>A</td></tr><tr><td>Copper</td><td>CRM &amp; Sales</td><td><span class="tag warn">buildable with friction</span></td><td>self serve paid</td><td>not found</td><td>high</td><td></td></tr><tr><td>Crisp</td><td>Support &amp; Ticketing</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>not found</td><td>high</td><td></td></tr><tr><td>Customer.io</td><td>Marketing &amp; Analytics</td><td><span class="tag warn">buildable with friction</span></td><td>self serve paid</td><td>not found</td><td>high</td><td></td></tr><tr><td>Databricks</td><td>AI &amp; Data</td><td><span class="tag warn">buildable with friction</span></td><td>self serve trial</td><td>official</td><td>high</td><td>A</td></tr><tr><td>Deel</td><td>HR &amp; Recruiting</td><td><span class="tag bad">blocked</span></td><td>contact sales</td><td>not found</td><td>high</td><td></td></tr><tr><td>Discord</td><td>Communication &amp; Messaging</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>third party</td><td>high</td><td></td></tr><tr><td>DocuSign</td><td>Storage &amp; Documents</td><td><span class="tag warn">buildable with friction</span></td><td>admin approval</td><td>not found</td><td>high</td><td></td></tr><tr><td>Dropbox</td><td>Storage &amp; Documents</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>not found</td><td>high</td><td></td></tr><tr><td>Egnyte</td><td>Storage &amp; Documents</td><td><span class="tag bad">blocked</span></td><td>contact sales</td><td>not found</td><td>high</td><td></td></tr><tr><td>Freshdesk</td><td>Support &amp; Ticketing</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>not found</td><td>high</td><td></td></tr><tr><td>Freshsales</td><td>CRM &amp; Sales</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>not found</td><td>high</td><td>A</td></tr><tr><td>Front</td><td>Support &amp; Ticketing</td><td><span class="tag warn">buildable with friction</span></td><td>admin approval</td><td>not found</td><td>high</td><td></td></tr><tr><td>GitHub</td><td>Developer Tools</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td></td></tr><tr><td>GitLab</td><td>Developer Tools</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>third party</td><td>medium</td><td></td></tr><tr><td>Google Analytics 4</td><td>Marketing &amp; Analytics</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>not found</td><td>high</td><td></td></tr><tr><td>Google Chat</td><td>Communication &amp; Messaging</td><td><span class="tag warn">buildable with friction</span></td><td>admin approval</td><td>not found</td><td>high</td><td>A</td></tr><tr><td>Google Drive</td><td>Storage &amp; Documents</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>not found</td><td>high</td><td></td></tr><tr><td>Gorgias</td><td>Support &amp; Ticketing</td><td><span class="tag warn">buildable with friction</span></td><td>admin approval</td><td>not found</td><td>high</td><td></td></tr><tr><td>Greenhouse</td><td>HR &amp; Recruiting</td><td><span class="tag bad">blocked</span></td><td>contact sales</td><td>not found</td><td>high</td><td>A</td></tr><tr><td>Gusto</td><td>HR &amp; Recruiting</td><td><span class="tag warn">buildable with friction</span></td><td>admin approval</td><td>not found</td><td>high</td><td></td></tr><tr><td>Help Scout</td><td>Support &amp; Ticketing</td><td><span class="tag warn">buildable with friction</span></td><td>admin approval</td><td>not found</td><td>high</td><td>B</td></tr><tr><td>Hootsuite</td><td>Marketing &amp; Analytics</td><td><span class="tag warn">buildable with friction</span></td><td>admin approval</td><td>not found</td><td>high</td><td></td></tr><tr><td>HubSpot</td><td>CRM &amp; Sales</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td></td></tr><tr><td>Hugging Face</td><td>AI &amp; Data</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td></td></tr><tr><td>Intercom</td><td>Support &amp; Ticketing</td><td><span class="tag warn">buildable with friction</span></td><td>self serve paid</td><td>official</td><td>medium</td><td>A</td></tr><tr><td>Jira</td><td>Developer Tools</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td>A</td></tr><tr><td>Jira Service Management</td><td>Support &amp; Ticketing</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td></td></tr><tr><td>Klaviyo</td><td>Marketing &amp; Analytics</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td>A</td></tr><tr><td>Kustomer</td><td>Support &amp; Ticketing</td><td><span class="tag bad">blocked</span></td><td>enterprise</td><td>not found</td><td>high</td><td></td></tr><tr><td>Lever</td><td>HR &amp; Recruiting</td><td><span class="tag bad">blocked</span></td><td>contact sales</td><td>not found</td><td>high</td><td>B</td></tr><tr><td>Linear</td><td>Developer Tools</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td>A</td></tr><tr><td>Mailchimp</td><td>Marketing &amp; Analytics</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>not found</td><td>high</td><td></td></tr><tr><td>Mattermost</td><td>Communication &amp; Messaging</td><td><span class="tag warn">buildable with friction</span></td><td>self hosted deployment dependent</td><td>third party</td><td>high</td><td></td></tr><tr><td>Mermaid CLI</td><td>Developer Tools</td><td><span class="tag">not applicable</span></td><td>self hosted deployment dependent</td><td>not found</td><td>low</td><td></td></tr><tr><td>Microsoft Teams</td><td>Communication &amp; Messaging</td><td><span class="tag warn">buildable with friction</span></td><td>admin approval</td><td>third party</td><td>high</td><td>B</td></tr><tr><td>Miro</td><td>Productivity &amp; Collaboration</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>third party</td><td>high</td><td></td></tr><tr><td>Mixpanel</td><td>Marketing &amp; Analytics</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td></td></tr><tr><td>Monday.com</td><td>Productivity &amp; Collaboration</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td></td></tr><tr><td>Nextcloud</td><td>Storage &amp; Documents</td><td><span class="tag warn">buildable with friction</span></td><td>self hosted deployment dependent</td><td>third party</td><td>high</td><td>B</td></tr><tr><td>Notion</td><td>Productivity &amp; Collaboration</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td>B</td></tr><tr><td>OneDrive</td><td>Storage &amp; Documents</td><td><span class="tag warn">buildable with friction</span></td><td>admin approval</td><td>third party</td><td>high</td><td></td></tr><tr><td>OpenAI</td><td>AI &amp; Data</td><td><span class="tag warn">buildable with friction</span></td><td>self serve paid</td><td>not found</td><td>high</td><td></td></tr><tr><td>PandaDoc</td><td>Storage &amp; Documents</td><td><span class="tag warn">buildable with friction</span></td><td>self serve paid</td><td>not found</td><td>high</td><td></td></tr><tr><td>PayPal</td><td>Finance &amp; Payments</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td></td></tr><tr><td>pCloud</td><td>Storage &amp; Documents</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>not found</td><td>high</td><td>A</td></tr><tr><td>Perplexity</td><td>AI &amp; Data</td><td><span class="tag warn">buildable with friction</span></td><td>self serve paid</td><td>official</td><td>high</td><td></td></tr><tr><td>Personio</td><td>HR &amp; Recruiting</td><td><span class="tag bad">blocked</span></td><td>contact sales</td><td>not found</td><td>high</td><td></td></tr><tr><td>Pinecone</td><td>AI &amp; Data</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td></td></tr><tr><td>Pipedrive</td><td>CRM &amp; Sales</td><td><span class="tag warn">buildable with friction</span></td><td>self serve paid</td><td>official</td><td>high</td><td></td></tr><tr><td>Plaid</td><td>Finance &amp; Payments</td><td><span class="tag warn">buildable with friction</span></td><td>admin approval</td><td>not found</td><td>high</td><td></td></tr><tr><td>PostHog</td><td>Marketing &amp; Analytics</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>medium</td><td></td></tr><tr><td>QuickBooks Online</td><td>Finance &amp; Payments</td><td><span class="tag warn">buildable with friction</span></td><td>admin approval</td><td>not found</td><td>high</td><td></td></tr><tr><td>Ramp</td><td>Finance &amp; Payments</td><td><span class="tag bad">blocked</span></td><td>contact sales</td><td>not found</td><td>high</td><td></td></tr><tr><td>Razorpay</td><td>Finance &amp; Payments</td><td><span class="tag warn">buildable with friction</span></td><td>unclear</td><td>official</td><td>high</td><td>A</td></tr><tr><td>Rippling</td><td>HR &amp; Recruiting</td><td><span class="tag bad">blocked</span></td><td>contact sales</td><td>not found</td><td>high</td><td>A</td></tr><tr><td>Rocket.Chat</td><td>Communication &amp; Messaging</td><td><span class="tag warn">buildable with friction</span></td><td>self hosted deployment dependent</td><td>official</td><td>high</td><td></td></tr><tr><td>Salesforce</td><td>CRM &amp; Sales</td><td><span class="tag bad">blocked</span></td><td>enterprise</td><td>official</td><td>medium</td><td></td></tr><tr><td>Sentry</td><td>Developer Tools</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td></td></tr><tr><td>Sherlock</td><td>Developer Tools</td><td><span class="tag">not applicable</span></td><td>self hosted deployment dependent</td><td>not found</td><td>low</td><td>B</td></tr><tr><td>Slack</td><td>Communication &amp; Messaging</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>third party</td><td>high</td><td></td></tr><tr><td>SmartRecruiters</td><td>HR &amp; Recruiting</td><td><span class="tag bad">blocked</span></td><td>contact sales</td><td>not found</td><td>high</td><td></td></tr><tr><td>Snowflake</td><td>AI &amp; Data</td><td><span class="tag warn">buildable with friction</span></td><td>self serve paid</td><td>third party</td><td>medium</td><td></td></tr><tr><td>Square</td><td>Finance &amp; Payments</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td></td></tr><tr><td>Stripe</td><td>Finance &amp; Payments</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td>B</td></tr><tr><td>Supabase</td><td>AI &amp; Data</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>medium</td><td></td></tr><tr><td>Telegram</td><td>Communication &amp; Messaging</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>third party</td><td>high</td><td></td></tr><tr><td>Todoist</td><td>Productivity &amp; Collaboration</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>third party</td><td>high</td><td></td></tr><tr><td>Trello</td><td>Productivity &amp; Collaboration</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>third party</td><td>high</td><td></td></tr><tr><td>Twenty</td><td>CRM &amp; Sales</td><td><span class="tag warn">buildable with friction</span></td><td>self hosted deployment dependent</td><td>not found</td><td>medium</td><td>B</td></tr><tr><td>Twilio</td><td>Communication &amp; Messaging</td><td><span class="tag good">buildable</span></td><td>self serve trial</td><td>official</td><td>high</td><td></td></tr><tr><td>Vercel</td><td>Developer Tools</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>official</td><td>high</td><td></td></tr><tr><td>Weaviate</td><td>AI &amp; Data</td><td><span class="tag warn">buildable with friction</span></td><td>self hosted deployment dependent</td><td>official</td><td>medium</td><td></td></tr><tr><td>WhatsApp Business Platform</td><td>Communication &amp; Messaging</td><td><span class="tag warn">buildable with friction</span></td><td>admin approval</td><td>not found</td><td>high</td><td></td></tr><tr><td>Wise</td><td>Finance &amp; Payments</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>not found</td><td>high</td><td></td></tr><tr><td>Workday</td><td>HR &amp; Recruiting</td><td><span class="tag bad">blocked</span></td><td>enterprise</td><td>not found</td><td>high</td><td></td></tr><tr><td>Xero</td><td>Finance &amp; Payments</td><td><span class="tag warn">buildable with friction</span></td><td>self serve paid</td><td>official</td><td>medium</td><td>A</td></tr><tr><td>YouTube Transcript API</td><td>AI &amp; Data</td><td><span class="tag">not applicable</span></td><td>self hosted deployment dependent</td><td>not found</td><td>low</td><td></td></tr><tr><td>Zendesk</td><td>Support &amp; Ticketing</td><td><span class="tag warn">buildable with friction</span></td><td>admin approval</td><td>third party</td><td>high</td><td></td></tr><tr><td>Zoho CRM</td><td>CRM &amp; Sales</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>not found</td><td>high</td><td></td></tr><tr><td>Zoho Desk</td><td>Support &amp; Ticketing</td><td><span class="tag good">buildable</span></td><td>self serve free</td><td>not found</td><td>high</td><td>B</td></tr><tr><td>Zoom</td><td>Communication &amp; Messaging</td><td><span class="tag warn">buildable with friction</span></td><td>admin approval</td><td>not found</td><td>high</td><td>A</td></tr></tbody></table></div></div>
+
+    <div class="downloads mt-sm">
+      <a href="data/final_dataset.json" download>Final dataset (JSON)</a>
+      <a href="data/final_dataset.csv" download>Flat table (CSV)</a>
+      <a href="data/analytics.json" download>Analytics</a>
+      <a href="data/patterns.json" download>Patterns</a>
+      <a href="data/accuracy.json" download>Accuracy</a>
     </div>
   </div>
 </section>
 
-<section class="block" id="methodology" style="border-bottom:none;">
+<section id="methodology">
   <div class="wrap">
-    <div class="block-head">
-      <div>
-        <div class="block-eyebrow">Methodology</div>
-        <h2 class="block-title">Four channels, one precedence order</h2>
-      </div>
-      <p class="block-note">Channel A researches all 100 apps once. B, C and D run only over two seeded samples of 30 apps total, plus any review trigger.</p>
+    <div class="section-head">
+      <span class="eyebrow">Method</span>
+      <h2>How the pipeline works</h2>
+      <p class="prose">Deciding which integrations to build is a research problem
+      before it is an engineering one. The facts that matter - is there an API,
+      how broad is it, can a developer actually get credentials, what stands in
+      the way - are scattered across vendor documentation, pricing pages and
+      repositories, and they are exactly the kind of facts a language model will
+      answer fluently whether or not it knows. So the pipeline is built around
+      one rule: <strong>a value is worth nothing without the evidence behind
+      it</strong>.</p>
+      <p class="prose">The stages are fixed in order.
+      <span data-js-only>Select a stage to see what it does, what it covers, and
+      why it is there.</span></p>
     </div>
-    <div class="method-grid">
-      <div class="method-card"><span class="method-letter">A</span><h4>Primary research</h4><p>Classifies every app from a reviewed source corpus — every value traces to a cited URL.</p></div>
-      <div class="method-card"><span class="method-letter">B</span><h4>Independent re-reading</h4><p>A second pass with different tie-breaks, over the sampled apps only.</p></div>
-      <div class="method-card"><span class="method-letter">C</span><h4>Citation audit</h4><p>Checks whether each cited source actually supports the claim it's attached to.</p></div>
-      <div class="method-card"><span class="method-letter">D</span><h4>Human adjudication</h4><p>Resolves disputed fields. Precedence runs D beats C beats B beats A.</p></div>
+    <div class="rail" role="tablist" aria-label="Pipeline stages"><button type="button" data-stage="registry" role="tab" aria-selected="true">Registry</button><span class="sep" aria-hidden="true">›</span><button type="button" data-stage="research" role="tab" aria-selected="false">Research</button><span class="sep" aria-hidden="true">›</span><button type="button" data-stage="evidence" role="tab" aria-selected="false">Evidence extraction</button><span class="sep" aria-hidden="true">›</span><button type="button" data-stage="classification" role="tab" aria-selected="false">Classification</button><span class="sep" aria-hidden="true">›</span><button type="button" data-stage="validation" role="tab" aria-selected="false">Validation</button><span class="sep" aria-hidden="true">›</span><button type="button" data-stage="trigger-review" role="tab" aria-selected="false">Trigger review</button><span class="sep" aria-hidden="true">›</span><button type="button" data-stage="sampling" role="tab" aria-selected="false">Sampling</button><span class="sep" aria-hidden="true">›</span><button type="button" data-stage="verification" role="tab" aria-selected="false">Verification</button><span class="sep" aria-hidden="true">›</span><button type="button" data-stage="reconciliation" role="tab" aria-selected="false">Reconciliation</button><span class="sep" aria-hidden="true">›</span><button type="button" data-stage="accuracy" role="tab" aria-selected="false">Accuracy</button><span class="sep" aria-hidden="true">›</span><button type="button" data-stage="analytics" role="tab" aria-selected="false">Analytics</button></div>
+    
+<div class="panel stage-detail" data-stage-panel="registry">
+  <div class="panel-head"><h3>Registry</h3><span class="meta">100 applications</span></div>
+  <div class="panel-body"><dl>
+    <div><dt>What it does</dt><dd>Normalise the supplied list into stable ids and the ten supplied categories.</dd></div>
+    <div><dt>Scope</dt><dd>100 applications</dd></div>
+    <div><dt>Why it exists</dt><dd>Ids have to be stable and order-independent, or every later stage would reshuffle when the input list is re-sorted.</dd></div>
+  </dl></div>
+</div>
+
+<div class="panel stage-detail" data-stage-panel="research">
+  <div class="panel-head"><h3>Research</h3><span class="meta">100 applications</span></div>
+  <div class="panel-body"><dl>
+    <div><dt>What it does</dt><dd>Channel A reads the sources for every application and records what they say.</dd></div>
+    <div><dt>Scope</dt><dd>100 applications</dd></div>
+    <div><dt>Why it exists</dt><dd>This is the only stage that touches all one hundred, which is what keeps the cost of the expensive checks bounded.</dd></div>
+  </dl></div>
+</div>
+
+<div class="panel stage-detail" data-stage-panel="evidence">
+  <div class="panel-head"><h3>Evidence extraction</h3><span class="meta">465 evidence items</span></div>
+  <div class="panel-body"><dl>
+    <div><dt>What it does</dt><dd>Each claim becomes an evidence item with a URL, a source type and the fields it supports.</dd></div>
+    <div><dt>Scope</dt><dd>465 evidence items</dd></div>
+    <div><dt>Why it exists</dt><dd>A value that cannot name the page it came from is an opinion, and the citation audit later needs something to audit.</dd></div>
+  </dl></div>
+</div>
+
+<div class="panel stage-detail" data-stage-panel="classification">
+  <div class="panel-head"><h3>Classification</h3><span class="meta">13 fields per application</span></div>
+  <div class="panel-body"><dl>
+    <div><dt>What it does</dt><dd>Deterministic rules map the observations onto the fixed taxonomy.</dd></div>
+    <div><dt>Scope</dt><dd>13 fields per application</dd></div>
+    <div><dt>Why it exists</dt><dd>Rules can be versioned, diffed and re-run; a model&#x27;s judgement cannot, so the improvement phase would have nothing to change.</dd></div>
+  </dl></div>
+</div>
+
+<div class="panel stage-detail" data-stage-panel="validation">
+  <div class="panel-head"><h3>Validation</h3><span class="meta">100 records checked</span></div>
+  <div class="panel-body"><dl>
+    <div><dt>What it does</dt><dd>Pure checks: cited evidence exists, derived values follow from their inputs.</dd></div>
+    <div><dt>Scope</dt><dd>100 records checked</dd></div>
+    <div><dt>Why it exists</dt><dd>Catches contradictions mechanically before a human spends attention on them.</dd></div>
+  </dl></div>
+</div>
+
+<div class="panel stage-detail" data-stage-panel="trigger-review">
+  <div class="panel-head"><h3>Trigger review</h3><span class="meta">16 of 100 queued</span></div>
+  <div class="panel-body"><dl>
+    <div><dt>What it does</dt><dd>Risk rules queue records with unresolved identity, contradictions or missing critical evidence.</dd></div>
+    <div><dt>Scope</dt><dd>16 of 100 queued</dd></div>
+    <div><dt>Why it exists</dt><dd>Review capacity is finite, so it goes where the risk is rather than spreading evenly over a hundred applications.</dd></div>
+  </dl></div>
+</div>
+
+<div class="panel stage-detail" data-stage-panel="sampling">
+  <div class="panel-head"><h3>Sampling</h3><span class="meta">2 x 15 applications</span></div>
+  <div class="panel-body"><dl>
+    <div><dt>What it does</dt><dd>Two disjoint stratified samples, seeded from the master seed and frozen at selection.</dd></div>
+    <div><dt>Scope</dt><dd>2 x 15 applications</dd></div>
+    <div><dt>Why it exists</dt><dd>Freezing Sample A before the improvement phase is what stops a better classifier from retroactively improving its own first-pass score.</dd></div>
+  </dl></div>
+</div>
+
+<div class="panel stage-detail" data-stage-panel="verification">
+  <div class="panel-head"><h3>Verification</h3><span class="meta">30 applications</span></div>
+  <div class="panel-body"><dl>
+    <div><dt>What it does</dt><dd>Channels B, C and D re-derive, audit citations and adjudicate disputes.</dd></div>
+    <div><dt>Scope</dt><dd>30 applications</dd></div>
+    <div><dt>Why it exists</dt><dd>Verification only means something if the channels are able to disagree, so they do not share rules or see each other&#x27;s answers.</dd></div>
+  </dl></div>
+</div>
+
+<div class="panel stage-detail" data-stage-panel="reconciliation">
+  <div class="panel-head"><h3>Reconciliation</h3><span class="meta">330 decisions</span></div>
+  <div class="panel-body"><dl>
+    <div><dt>What it does</dt><dd>Fixed precedence D &gt; C &gt; B &gt; A; single-valued disputes downgrade to unclear, multi-valued merge.</dd></div>
+    <div><dt>Scope</dt><dd>330 decisions</dd></div>
+    <div><dt>Why it exists</dt><dd>Settling a disagreement by majority would invent a winner; recording it as unclear keeps the disagreement visible.</dd></div>
+  </dl></div>
+</div>
+
+<div class="panel stage-detail" data-stage-panel="accuracy">
+  <div class="panel-head"><h3>Accuracy</h3><span class="meta">11 verified fields</span></div>
+  <div class="panel-body"><dl>
+    <div><dt>What it does</dt><dd>Score each sample field by field against the values verification established.</dd></div>
+    <div><dt>Scope</dt><dd>11 verified fields</dd></div>
+    <div><dt>Why it exists</dt><dd>Field-level and row-level accuracy are both reported because either one alone flatters the pipeline.</dd></div>
+  </dl></div>
+</div>
+
+<div class="panel stage-detail" data-stage-panel="analytics">
+  <div class="panel-head"><h3>Analytics</h3><span class="meta">100 applications</span></div>
+  <div class="panel-body"><dl>
+    <div><dt>What it does</dt><dd>Deterministic metrics, distributions, cross-tabs and patterns, computed from the final dataset only.</dd></div>
+    <div><dt>Scope</dt><dd>100 applications</dd></div>
+    <div><dt>Why it exists</dt><dd>One canonical source means the page, the CSV and the JSON can never quote different numbers.</dd></div>
+  </dl></div>
+</div>
+
+
+    <div class="section-head mt-lg">
+      <h2>Two judgements that are not left to a model</h2>
+      <p class="prose">Confidence is a function of recorded properties of the
+      evidence: whether the product was identified, whether the vendor's own
+      documentation was cited, whether every critical field carries evidence,
+      whether anything contradicts anything else, and how many distinct sources
+      were found. A record reaches <span class="mono">high</span> only with all
+      of those and at least 3 sources. A single missing critical field,
+      an unresolved identity or a lone source drops it to
+      <span class="mono">low</span> regardless of how confident the prose
+      sounded.</p>
     </div>
-    <div class="accuracy-line">
-      <span class="pill">Sample A · 86.1% field accuracy (v1)</span>
-      <span class="pill">Sample B · 97.6% field accuracy (v2)</span>
-      <span>Measured across 11 verified fields on 30 sampled apps · re-runs are byte-identical.</span>
+    <div class="grid-2">
+      <div class="panel"><div class="panel-head"><h3>Confidence across the final dataset</h3><span class="meta">computed, not declared</span></div><div class="panel-body"><div class="bars"><button type="button" class="bar-row" data-filter-key="confidence" data-filter-value="high" aria-pressed="false" title="high - 88 of 100 applications"><span class="name">high</span><span class="track"><span class="fill good" style="width:100.0%"></span></span><span class="count">88<em> / 100</em></span></button><button type="button" class="bar-row" data-filter-key="confidence" data-filter-value="medium" aria-pressed="false" title="medium - 9 of 100 applications"><span class="name">medium</span><span class="track"><span class="fill warn" style="width:10.2%"></span></span><span class="count">9<em> / 100</em></span></button><button type="button" class="bar-row" data-filter-key="confidence" data-filter-value="low" aria-pressed="false" title="low - 3 of 100 applications"><span class="name">low</span><span class="track"><span class="fill bad" style="width:3.4%"></span></span><span class="count">3<em> / 100</em></span></button></div></div></div>
+      <div class="panel"><div class="panel-head"><h3>API breadth anchors</h3><span class="meta">so the word means the same thing for every app</span></div><div class="panel-body"><div class="table-wrap"><table><thead><tr><th scope="col">Breadth</th><th scope="col">What it means</th></tr></thead><tbody><tr><td>narrow</td><td>Small set of resources or capabilities.</td></tr><tr><td>moderate</td><td>Meaningful API coverage but limited to a subset of the product.</td></tr><tr><td>broad</td><td>Many important resources with meaningful action/CRUD coverage across major product surfaces.</td></tr><tr><td>very broad</td><td>Extensive coverage across most major product capabilities.</td></tr></tbody></table></div></div></div>
+    </div>
+
+    <div class="section-head mt-lg">
+      <h3>Buildability is a decision tree, not an opinion</h3>
+      <p class="prose">Three independent legs are answered first, and the verdict
+      is the worst of them, with a definite failure outranking a gap. That is why
+      a product with an excellent API can still be
+      <span class="mono">blocked</span>: the API was never the binding
+      constraint. Each leg, and the evidence confidence behind it, is recorded on
+      every application and shown in its detail panel.</p>
+    </div>
+    <div class="grid-3">
+<div class="dimension">
+  <h3>Technical feasibility</h3>
+  <p>Is there an API, and does it cover a meaningful part of the product?</p>
+  <div class="asks">api_exists, api_breadth, api_capabilities</div>
+</div>
+
+<div class="dimension">
+  <h3>Credential accessibility</h3>
+  <p>Can a developer obtain working credentials, and on what terms?</p>
+  <div class="asks">credential_access, authentication</div>
+</div>
+
+<div class="dimension">
+  <h3>Commercial accessibility</h3>
+  <p>Does reaching the API require a paid plan, a contract or a partner programme?</p>
+  <div class="asks">access_restrictions, blocker</div>
+</div>
+</div>
+
+    <div class="section-head mt-lg">
+      <h3>Three ways of not knowing</h3>
+      <p class="prose">The taxonomy separates what a single "unknown" would
+      collapse. <span class="mono">not_found</span> means the sources did not
+      say. <span class="mono">unavailable</span> means they did say, and the
+      answer is that the thing does not exist. <span class="mono">unclear</span>
+      means the sources disagree or the question does not resolve to one value.
+      The difference matters: absence of evidence and evidence of absence lead to
+      different decisions.</p>
     </div>
   </div>
 </section>
 
+<section id="boundaries">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Research boundaries</span>
+      <h2>What this does not establish</h2>
+      <p class="prose">These are the limits of the claim, kept next to the claim
+      rather than at the bottom of a page nobody reaches.</p>
+    </div>
+    <div class="boundaries"><div class="boundary"><h3>Evidence is cited, not fetched in this run</h3><p>The committed run replays a reviewed source corpus so that anybody can reproduce it byte for byte without credentials or network access. Every evidence item records retrieval: cited for exactly this reason. A live run would record fetched and carry page excerpts.</p></div><div class="boundary"><h3>5.3% of verified field values are unresolved</h3><p>That is reported rather than filled in. A confident wrong answer is more expensive than an admitted gap.</p></div><div class="boundary"><h3>One reviewer</h3><p>Channel D is a single human. Inter-rater agreement is not measured, so the reconciled values inherit that reviewer&#x27;s judgement on the 32 fields they ruled on.</p></div><div class="boundary"><h3>The taxonomy has gaps</h3><p>Self-hosting is friction that no blocker value names, so it is carried as other and flagged. API breadth is a judgement anchored to documented resource groups; reasonable readers disagree, and Sample B&#x27;s remaining misses are mostly exactly that disagreement.</p></div><div class="boundary"><h3>Accuracy is measured on 15 applications per sample</h3><p>Fifteen apps is enough to locate systematic rule failures and far too few to put a tight confidence interval around the headline number.</p></div><div class="boundary"><h3>Findings are a snapshot</h3><p>Pricing, plans and MCP servers move; the dataset records what the sources said as of 2026-09-16.</p></div></div>
+  </div>
+</section>
+
+<section id="reproducibility">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Reproducibility</span>
+      <h2>Running this yourself</h2>
+      <p class="prose">Everything is seeded from one master seed and stamped with
+      one pipeline clock, so a second run produces byte-identical artifacts and
+      any diff is a real change.</p>
+    </div>
+    <div class="grid-2">
+      <div class="terminal">
+        <div class="terminal-head"><span>composio-ops</span><span>corpus provider · no network</span></div>
+        <div class="terminal-body">
+<div class="terminal-line">
+  <span class="prompt" aria-hidden="true">$</span>
+  <code>pip install -e .</code>
+  <button type="button" class="copy" data-copy="pip install -e ."
+          aria-label="Copy command: pip install -e .">Copy</button>
+</div>
+
+<div class="terminal-line">
+  <span class="prompt" aria-hidden="true">$</span>
+  <code>composio-ops registry load --source apps.json</code>
+  <button type="button" class="copy" data-copy="composio-ops registry load --source apps.json"
+          aria-label="Copy command: composio-ops registry load --source apps.json">Copy</button>
+</div>
+
+<div class="terminal-line">
+  <span class="prompt" aria-hidden="true">$</span>
+  <code>composio-ops pipeline run</code>
+  <button type="button" class="copy" data-copy="composio-ops pipeline run"
+          aria-label="Copy command: composio-ops pipeline run">Copy</button>
+</div>
+
+<div class="terminal-line">
+  <span class="prompt" aria-hidden="true">$</span>
+  <code>composio-ops analyze run</code>
+  <button type="button" class="copy" data-copy="composio-ops analyze run"
+          aria-label="Copy command: composio-ops analyze run">Copy</button>
+</div>
+
+<div class="terminal-line">
+  <span class="prompt" aria-hidden="true">$</span>
+  <code>composio-ops casestudy build</code>
+  <button type="button" class="copy" data-copy="composio-ops casestudy build"
+          aria-label="Copy command: composio-ops casestudy build">Copy</button>
+</div>
+</div>
+      </div>
+      <div class="panel"><div class="panel-head"><h3>This run</h3><span class="meta">recorded on every artifact</span></div><div class="panel-body"><div class="table-wrap"><table><thead><tr><th scope="col">Setting</th><th scope="col">Value</th></tr></thead><tbody><tr><td>Master seed</td><td>20260916</td></tr><tr><td>Sample A namespace</td><td>sample_selection:A</td></tr><tr><td>Sample B namespace</td><td>sample_selection:B</td></tr><tr><td>Pipeline clock</td><td>2026-09-16T00:00:00+00:00</td></tr><tr><td>Research provider</td><td>corpus</td></tr><tr><td>Classifier</td><td>v2</td></tr><tr><td>Schema version</td><td>2.0.0</td></tr><tr><td>Dataset fingerprint</td><td>12b21759a526dcd4</td></tr></tbody></table></div></div></div>
+    </div>
+    <p class="prose mt-sm">Validation ran 100 checks over
+    the research pass and recorded 0 blocking errors and 82
+    warnings; the review triggers queued 16 of 100 applications for
+    human attention.</p>
+  </div>
+</section>
+</main>
 <footer>
-  <div class="wrap footer-row">
-    <span>Composio AI Product Ops take-home — a static, evidence-cited case study. No network calls at runtime.</span>
-    <a href="https://github.com/shuklapraveen1/composio-app-research-agent" target="_blank" rel="noopener">View the repository ↗</a>
+  <div class="wrap">
+    <p>Generated from the artifacts by <code>composio-ops casestudy build</code>.
+    Headline metric <span class="mono">sample_b_field_level_accuracy</span> at 97.6%. Dataset
+    fingerprint <span class="mono">12b21759a526dcd4</span>.</p>
+    <div class="downloads">
+      <a href="data/final_dataset.json" download>JSON</a>
+      <a href="data/final_dataset.csv" download>CSV</a>
+      <a href="data/analytics.json" download>Analytics</a>
+      <a href="data/patterns.json" download>Patterns</a>
+      <a href="data/accuracy.json" download>Accuracy</a>
+    </div>
   </div>
 </footer>
 
-<div class="drawer" id="drawer" role="dialog" aria-modal="true">
+<div id="backdrop" class="backdrop" data-js-only></div>
+<aside id="drawer" class="drawer" role="dialog" aria-modal="true"
+       aria-labelledby="drawer-title" aria-hidden="true" data-js-only>
   <div class="drawer-head">
     <div>
-      <div class="drawer-eyebrow" id="d-id">—</div>
-      <h3 class="drawer-title" id="d-name">—</h3>
-      <div class="drawer-vendor" id="d-vendor"></div>
+      <h2 id="drawer-title">Application</h2>
+      <div class="sub" id="drawer-sub"></div>
     </div>
-    <button class="drawer-close" id="d-close" aria-label="Close">✕</button>
+    <button type="button" class="drawer-close" id="drawer-close" aria-label="Close details">×</button>
   </div>
   <div class="drawer-body" id="drawer-body"></div>
-</div>
+</aside>
 
-<script src="dataset.js"></script>
-<script src="app.js"></script>
+<script src="dataset.js?v=12b21759a526dcd4"></script>
+<script src="app.js?v=12b21759a526dcd4"></script>
 </body>
 </html>
